@@ -26,6 +26,7 @@ export var syncdb;
 
 const DB = process.env.DB;
 
+console.log('DB', DB)
 const opts = {
   databaseUrl: DB,
   requireAuth: false,
