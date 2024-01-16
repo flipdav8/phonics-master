@@ -1,14 +1,22 @@
 <template>
   <div class="fit q-pa-md">
-    <div class="text-caption q-pa-sm">Used with words in each unit</div>
+    <div class="text-caption q-pa-sm">
+      Used with words (within letters) in each unit
+    </div>
 
     <!-- <q-btn @click="getTesting()" no-caps>Testing</q-btn> -->
     <!-- NEW BLOCK -->
-    <q-card v-if="add_block" flat class="fit flex flex-center column">
+    <q-card
+      v-if="add_block && !operation"
+      flat
+      class="fit flex flex-center column"
+    >
       <q-card-section class="fit">
         <q-list>
           <q-item>
-            <q-item-section> Region: AU </q-item-section>
+            <q-item-section>
+              <q-btn no-caps outline size="lg" disable> Region: AU </q-btn>
+            </q-item-section>
 
             <q-item-section>
               <q-select
@@ -25,6 +33,22 @@
                 outlined
                 v-model="new_block.label"
               ></q-input>
+            </q-item-section>
+            <q-item-section
+              @click="addOptionIcon(new_block)"
+              avatar
+              class="cursor-pointer"
+            >
+              <div v-if="new_block.icon == undefined">No Icon..</div>
+              <q-icon v-else-if="new_block.icon.src !== undefined" size="xl">
+                <img :src="new_block.icon.src" type="image/svg+xml" />
+              </q-icon>
+              <q-icon
+                v-else-if="new_block.icon.includes('mdi')"
+                :name="new_block.icon"
+                size="xl"
+              ></q-icon>
+              <div v-else>No Icon</div>
             </q-item-section>
           </q-item>
 
@@ -52,7 +76,10 @@
               avatar
               class="cursor-pointer"
             >
-              <q-icon v-if="option.icon.src !== undefined" size="xl">
+              <div v-if="option.icon == undefined">No Icon..</div>
+              <div v-else-if="option.icon == null">No Icon..</div>
+
+              <q-icon v-else-if="option.icon.src !== undefined" size="xl">
                 <img :src="option.icon.src" type="image/svg+xml" />
               </q-icon>
               <q-icon
@@ -93,6 +120,9 @@
         </q-btn>
       </q-card-section>
     </q-card>
+    <div v-if="operation">
+      <q-linear-progress query color="secondary" class="q-my-sm" rounded />
+    </div>
 
     <!-- NEW OPTION -->
     <q-dialog v-model="add_option" v-if="new_option !== null">
@@ -115,7 +145,7 @@
       </q-card>
     </q-dialog>
 
-    <q-dialog v-model="show_icons">
+    <q-dialog v-model="show_icons" full-height full-width>
       <IconList
         v-model:model_icon="edit_option.icon"
         :icons="icons"
@@ -123,7 +153,7 @@
       ></IconList>
     </q-dialog>
 
-    <q-dialog v-model="show_sounds">
+    <q-dialog v-model="show_sounds" full-height full-width>
       <SoundList
         v-model:model_sound="edit_option.sound"
         :sounds="sounds"
@@ -252,9 +282,8 @@ export default defineComponent({
       block_template: {
         id: 0,
         label: "",
-        // value: "ae",
         type: "sound",
-        icon: "mdi-snail",
+        icon: "",
         options: [
           // { label: "ay", sound: null, icon: "" },
           // { label: "a-e", sound: null, icon: "" },
@@ -282,6 +311,7 @@ export default defineComponent({
       show_icons: false,
       show_sounds: false,
       edit_option: null,
+      operation: false,
     };
   },
   mounted() {
@@ -418,6 +448,7 @@ export default defineComponent({
     }, //not working.. not sure how to add email to public realm..
 
     async addBlock() {
+      this.operation = true;
       let realmId = "rlm-public";
 
       let dbid = process.env.DBID;
@@ -462,6 +493,7 @@ export default defineComponent({
       this.cancelNew();
       // this.getBlocksAPI();
       // this.$emit("refresh");
+      this.operation = false;
       return;
 
       try {
@@ -482,6 +514,7 @@ export default defineComponent({
       }
 
       if (result) {
+        this.operation = true;
         let dbid = process.env.DBID;
         let base_url = `https://${dbid}.dexie.cloud`;
         let token = await this.getGlobalToken();
@@ -505,6 +538,8 @@ export default defineComponent({
         if (deleted) {
           this.$emit("removeBlock", id);
         }
+
+        this.operation = false;
         return deleted;
       }
     },

@@ -1,32 +1,46 @@
 <template>
   <div class="fit q-pa-md">
     <!-- NEW WORD -->
-    <q-card v-if="add_word" flat class="fit flex flex-center column">
+    <q-card
+      v-if="add_word && !operation"
+      flat
+      class="fit flex flex-center column"
+    >
+      <!-- WORD -->
       <q-card-section class="fit">
         <q-list>
           <q-item>
-            <q-item-section>
-              <div class="flex row items-center">
-                <span v-show="new_word.block !== null">Block</span>
-                <q-btn flat @click="addOptionBlock(new_word)" no-caps>
-                  <span v-if="new_word.block == null">Add Block</span>
-                  <span v-else>{{ new_word.block.label }}</span>
-                </q-btn>
-              </div>
-            </q-item-section>
-            <q-item-section>Region: AU</q-item-section>
-          </q-item>
-
-          <!-- word, correct, icon -->
-          <q-item>
+            <!-- TYPE -->
             <q-item-section>
               <q-select
                 label="type"
                 outlined
                 v-model="new_word.type"
                 :options="word_types"
+                @update:model-value="(e) => (prefill_type = e)"
+                outline="warning"
               ></q-select>
             </q-item-section>
+
+            <!-- BLOCK -->
+            <q-item-section>
+              <q-btn
+                @click="addOptionBlock(new_word)"
+                no-caps
+                outline
+                size="lg"
+              >
+                <span v-if="new_word.block == null">Add Block</span>
+                <span v-else>Block: {{ new_word.block.label }} </span>
+              </q-btn>
+            </q-item-section>
+            <!-- REGION -->
+            <q-item-section>
+              <q-btn no-caps outline size="lg" disable> Region: AU </q-btn>
+            </q-item-section>
+          </q-item>
+
+          <q-item>
             <q-item-section>
               <q-input label="word" outlined v-model="new_word.word"></q-input>
             </q-item-section>
@@ -58,7 +72,12 @@
               </q-btn>
             </q-item-section>
           </q-item>
+        </q-list>
+      </q-card-section>
 
+      <!-- PATTERN -->
+      <q-card-section class="fit q-pa-md">
+        <q-list>
           <div class="q-ma-md">
             <div class="flex column q-mx-sm q-gutter-sm items-center">
               <span class="flex row">
@@ -75,7 +94,6 @@
                 class="flex row items-center my-pill fit justify-between q-px-sm q-mt-md"
               >
                 <!-- :class="{ 'bg-warning': s.input && s.block == null }" -->
-
                 <!-- LETTERS -->
                 <div class="col-2">
                   <q-input
@@ -95,8 +113,9 @@
                 </div>
 
                 <!-- ICON + SOUND -->
-                <div>
-                  <q-btn v-if="s.input" flat @click="addOptionIcon(s)">
+                <div class="flex q-gutter-x-sm">
+                  <!-- ICON -->
+                  <q-btn @click="addOptionIcon(s)" outline no-caps>
                     <q-icon v-if="s.icon.src !== undefined" size="xl">
                       <img :src="s.icon.src" type="image/svg+xml" />
                     </q-icon>
@@ -105,25 +124,25 @@
                       :name="s.icon"
                       size="md"
                     ></q-icon>
-                    <q-btn v-else icon-right="mdi-plus" size="md" no-caps flat>
-                      Icon
-                    </q-btn>
+                    <div v-else>Icon <q-icon name="mdi-plus" size="md" /></div>
                   </q-btn>
 
-                  <q-btn
-                    :icon="s.sound === null ? 'mdi-speaker-off' : 'mdi-speaker'"
-                    :color="s.sound !== null ? 'green' : 'warning'"
-                    @click="addOptionSound(s)"
-                    flat
-                  >
+                  <q-btn @click="addOptionSound(s)" outline no-caps>
+                    Sound
+                    <q-icon
+                      :name="
+                        s.sound === null ? 'mdi-speaker-off' : 'mdi-speaker'
+                      "
+                      :color="s.sound !== null ? 'green' : 'warning'"
+                    />
                   </q-btn>
                 </div>
 
-                <q-btn
+                <!-- <q-btn
                   icon="mdi-pencil-plus-outline"
                   flat
                   @click="editWordPattern(idx)"
-                ></q-btn>
+                ></q-btn> -->
 
                 <!-- DELETE -->
                 <q-btn
@@ -134,27 +153,29 @@
                 ></q-btn>
 
                 <div
-                  v-if="edit_pattern == idx"
-                  class="col-12 q-my-sm flex row justify-around items-center"
+                  v-if="s.input"
+                  class="col-12 q-my-sm flex row justify-start items-center"
                 >
                   <!-- BLOCK -->
-                  <div v-if="s.input" class="flex row items-center">
-                    <span class="text-caption" v-show="s.block !== null"
-                      >Block</span
-                    >
-                    <q-btn flat @click="addOptionBlock(s)" no-caps>
-                      <span v-if="s.block == null">Add Block</span>
-                      <span v-else>{{ s.block.label }}</span>
-                    </q-btn>
-                  </div>
+                  <q-btn @click="addOptionBlock(s)" no-caps outline size="lg">
+                    <span v-if="s.block == null">Add Block</span>
+                    <span v-else>Block: {{ s.block.label }}</span>
+                  </q-btn>
                 </div>
 
                 <div
-                  v-if="edit_pattern == idx && s.input && s.block !== null"
-                  class="col-12 q-my-sm flex row justify-around items-center"
+                  v-if="s.input && s.block !== null"
+                  class="col-12 q-my-sm flex row justify-between items-center"
                 >
                   <!-- CORRECT -->
-                  <div v-if="s.input && s.block !== null" class="col-5">
+                  <div
+                    v-if="
+                      s.input &&
+                      s.block !== null &&
+                      new_word.type === 'spelling'
+                    "
+                    class="col-5"
+                  >
                     <q-select
                       label="correct"
                       v-model="s.correct"
@@ -244,9 +265,13 @@
         </q-btn>
       </q-card-section>
     </q-card>
+
+    <div v-if="operation">
+      <q-linear-progress query color="secondary" class="q-my-sm" rounded />
+    </div>
     <!--  -->
 
-    <q-dialog v-model="show_icons">
+    <q-dialog v-model="show_icons" full-height full-width>
       <IconList
         v-if="edit_option === null"
         v-model:model_icon="new_word.homo"
@@ -262,7 +287,7 @@
       ></IconList>
     </q-dialog>
 
-    <q-dialog v-model="show_sounds">
+    <q-dialog v-model="show_sounds" full-height full-width>
       <SoundList
         v-model:model_sound="edit_option.sound"
         :sounds="sounds"
@@ -270,11 +295,13 @@
       ></SoundList>
     </q-dialog>
 
-    <q-dialog v-model="show_blocks">
+    <q-dialog v-model="show_blocks" full-height full-width>
       <BlockList
         v-model:model_block="edit_option.block"
         :blocks="blocks.map((e) => ({ ...e.block, id: e.id }))"
         @close="show_blocks = false"
+        @update="(e) => (prefill_block = e)"
+        :filter_type="new_word.type"
       >
       </BlockList>
     </q-dialog>
@@ -320,6 +347,7 @@
       <!-- @isCorrect="isCorrect" -->
       <!-- @isIncorrect="isIncorrect" -->
     </div>
+
     <q-table
       :columns="columns"
       :rows="word_rows"
@@ -501,7 +529,8 @@ export default defineComponent({
         ],
         homo: null,
       },
-
+      prefill_block: null,
+      prefill_type: "sound",
       edit_option: null,
       show_icons: false,
       show_sounds: false,
@@ -512,6 +541,7 @@ export default defineComponent({
       preview_key: 0,
       //
       filter: "",
+      operation: false,
     };
   },
   mounted() {
@@ -529,7 +559,12 @@ export default defineComponent({
         this.cancelNew();
       } else {
         this.add_word = true;
-        this.new_word = JSON.parse(JSON.stringify(this.word_template));
+        this.new_word = JSON.parse(
+          JSON.stringify({
+            ...this.word_template,
+            ...{ block: this.prefill_block, type: this.prefill_type },
+          })
+        );
       }
     },
 
@@ -569,7 +604,12 @@ export default defineComponent({
     },
     addPattern() {
       this.new_word.pattern.push(
-        JSON.parse(JSON.stringify(this.pattern_template))
+        JSON.parse(
+          JSON.stringify({
+            ...this.pattern_template,
+            ...{ block: this.prefill_block },
+          })
+        )
       );
     },
 
@@ -605,6 +645,7 @@ export default defineComponent({
     },
 
     async addWord() {
+      this.operation = true;
       let realmId = "rlm-public";
 
       let dbid = process.env.DBID;
@@ -613,6 +654,8 @@ export default defineComponent({
       let token = await this.getGlobalToken();
 
       // this.new_unit.id = this.units.length + 1;
+      this.prefill_block = new_word.block;
+      this.prefill_type = new_word.type;
 
       let item = {
         region: "AU",
@@ -654,6 +697,7 @@ export default defineComponent({
       this.cancelNew();
       // this.getUnitsAPI();
       this.$emit("refresh");
+      this.operation = false;
     },
     async deleteWord(id) {
       if (this.edit_id === null) {
@@ -662,6 +706,7 @@ export default defineComponent({
         var result = true;
       }
       if (result) {
+        this.operation = true;
         let dbid = process.env.DBID;
         let base_url = `https://${dbid}.dexie.cloud`;
         let token = await this.getGlobalToken();
@@ -686,6 +731,7 @@ export default defineComponent({
         if (deleted) {
           this.$emit("removeWord", id);
         }
+        this.operation = false;
         return deleted;
       }
     },
@@ -744,5 +790,6 @@ export default defineComponent({
 .my-pill {
   border: solid 1px;
   border-radius: 10px;
+  padding: 20px;
 }
 </style>

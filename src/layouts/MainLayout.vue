@@ -114,7 +114,7 @@ export default defineComponent({
     // this.$q.dark.set(true);
     // console.log("this", this.$route.path);
     // this.checkViewAs();
-    this.checkMode();
+    // this.checkMode();
   },
 
   methods: {

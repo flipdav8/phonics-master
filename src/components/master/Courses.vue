@@ -1,7 +1,11 @@
 <template>
   <div class="fit q-pa-md">
     <!-- NEW Course -->
-    <q-card v-if="add_course" flat class="fit flex flex-center column">
+    <q-card
+      v-if="add_course && !operation"
+      flat
+      class="fit flex flex-center column"
+    >
       <q-card-section class="fit">
         <q-list>
           <q-item>
@@ -30,6 +34,7 @@
                 :key="idx"
                 class="flex row items-center my-pill fit justify-between q-px-sm q-mt-md q-pa-sm"
               >
+                <!-- UNIT -->
                 <div class="col-2">
                   <q-select
                     label="Unit"
@@ -40,16 +45,17 @@
                     v-model="s.unit"
                     clearable
                     dense
-                    @update:model-value="
-                      (e) =>
-                        e !== null
-                          ? (s['id'] = e.id + `-${new_course.units.length}`)
-                          : (s['id'] = null)
-                    "
+                    @update:model-value="(e) => selectUnit(e, s)"
                   >
                   </q-select>
                 </div>
+                <!-- LABEL -->
+                <div>
+                  <q-input label="Label" outlined v-model="s.label" dense>
+                  </q-input>
+                </div>
 
+                <!-- TYPE -->
                 <div>
                   <q-select
                     label="Type"
@@ -61,6 +67,7 @@
                   </q-select>
                 </div>
 
+                <!-- TARGE -->
                 <div>
                   <q-input
                     label="Word Correct Target"
@@ -120,7 +127,9 @@
         </q-btn>
       </q-card-section>
     </q-card>
-
+    <div v-if="operation">
+      <q-linear-progress query color="secondary" class="q-my-sm" rounded />
+    </div>
     <q-table
       :columns="columns"
       :rows="course_rows"
@@ -235,10 +244,12 @@ export default defineComponent({
         id: null,
         unit: null,
         target: 3,
+        label: "",
         type: "normal",
       },
 
       edit_unit: null,
+      operation: false,
     };
   },
   mounted() {
@@ -303,11 +314,27 @@ export default defineComponent({
       }
     },
 
+    selectUnit(e, s) {
+      // (e) =>
+      //   e !== null
+      //     ? (s["id"] = e.id + `-${new_course.units.length}`)
+      //     : (s["id"] = null);
+
+      if (e !== null) {
+        s["id"] = e.id + `-${this.new_course.units.length}`;
+        s.label = e.label;
+      } else {
+        s["id"] = null;
+        s.label = "";
+      }
+    },
+
     removeUnit(idx) {
       this.new_course.units.splice(idx, 1);
     },
 
     async addCourse() {
+      this.operation = true;
       let realmId = "rlm-public";
 
       let dbid = process.env.DBID;
@@ -351,6 +378,7 @@ export default defineComponent({
       this.cancelNew();
       // this.getCoursesAPI();
       this.$emit("refresh");
+      this.operation = false;
     },
     async deleteCourse(id) {
       if (this.edit_id === null) {
@@ -359,6 +387,7 @@ export default defineComponent({
         var result = true;
       }
       if (result) {
+        this.operation = true;
         let dbid = process.env.DBID;
         let base_url = `https://${dbid}.dexie.cloud`;
         let token = await this.getGlobalToken();
@@ -383,6 +412,7 @@ export default defineComponent({
         if (deleted) {
           this.$emit("removeCourse");
         }
+        this.operation = false;
         return deleted;
       }
     },

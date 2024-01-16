@@ -1,32 +1,49 @@
 <template>
-  <div class="flex flex-center q-pa-sm">
-    <q-card
-      v-for="(sound, idx) in sounds"
-      :key="idx"
-      class="flex column items-center q-pa-sm q-ma-sm"
-      :class="{ selected: model_sound !== null && model_sound.id === sound.id }"
-    >
-      {{ sound.label }}
-      <br />
-      <br />
+  <q-card
+    class="items-center q-pa-sm bg-blue-2"
+    style="max-width: 1000px !important; border-radius: 20px"
+  >
+    <q-card-section class="col-12 flex row justify-center q-gutter-sm">
+      <q-input dense outlined color="primary" v-model="search" label="search">
+        <template v-slot:append>
+          <q-icon name="search" />
+        </template>
+      </q-input>
 
-      <q-btn
-        style="font-size: 20px"
-        icon="mdi-volume-high"
-        @click="playSound(sound)"
+      <q-btn flat icon="mdi-close" @click="$emit('close')"></q-btn>
+    </q-card-section>
+
+    <q-card-section class="flex row justify-center">
+      <q-card
+        v-for="(sound, idx) in filterSounds"
+        :key="idx"
+        class="flex column items-center q-pa-sm q-ma-sm q-gutter-y-sm col-4"
+        style="border-radius: 10px"
+        :class="{
+          selected: model_sound !== null && model_sound.id === sound.id,
+        }"
       >
-      </q-btn>
-      <q-btn style="font-size: 20px" @click="selectSound(sound)" flat>
-        Select</q-btn
+        <div class="text-h5">{{ sound.label }}</div>
+
+        <q-btn
+          style="font-size: 20px"
+          icon="mdi-volume-high"
+          @click="playSound(sound)"
+        >
+        </q-btn>
+
+        <q-btn @click="selectSound(sound)" color="green"> Select</q-btn>
+        <br />
+      </q-card>
+      <q-card
+        class="flex column items-center justify-center q-pa-sm q-ma-sm cursor-pointer q-gutter-y-sm col-4"
+        style="border-radius: 10px"
+        @click="noSound()"
       >
-    </q-card>
-    <q-card
-      class="flex column items-center q-pa-sm q-ma-sm cursor-pointer"
-      @click="noSound()"
-    >
-      None
-    </q-card>
-  </div>
+        No Sound
+      </q-card>
+    </q-card-section>
+  </q-card>
 </template>
 
 <script>
@@ -46,12 +63,27 @@ export default defineComponent({
   data() {
     return {
       select_sound: null,
+      search: "",
     };
   },
   mounted() {
     //
   },
+  computed: {
+    filterSounds() {
+      return this.sounds.filter((e) => this.searchFilter(e));
+    },
+  },
   methods: {
+    searchFilter(e) {
+      // return e.label;
+      return e.label
+        .toLocaleLowerCase()
+        .indexOf(this.search.toLocaleLowerCase()) > -1
+        ? true
+        : false;
+    },
+
     selectSound(sound) {
       this.select_sound = sound;
       let set_sound = { src: sound.src, label: sound.label, id: sound.id };

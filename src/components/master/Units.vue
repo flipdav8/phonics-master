@@ -1,7 +1,11 @@
 <template>
   <div class="fit q-pa-md">
     <!-- NEW UNIT -->
-    <q-card v-if="add_unit" flat class="fit flex flex-center column">
+    <q-card
+      v-if="add_unit && !operation"
+      flat
+      class="fit flex flex-center column"
+    >
       <q-card-section class="fit">
         <q-list>
           <q-item>
@@ -24,14 +28,6 @@
           </q-item>
 
           <q-item>
-            <q-item-section avatar>Default Block</q-item-section>
-            <q-item-section>
-              <q-btn flat @click="addOptionBlock(new_unit)" no-caps>
-                <span v-if="new_unit.block == null">Add Block</span>
-                <span v-else>{{ new_unit.block.label }}</span>
-              </q-btn>
-            </q-item-section>
-
             <q-item-section>
               <q-select
                 label="Default Type"
@@ -40,21 +36,34 @@
                 :options="word_types"
               ></q-select>
             </q-item-section>
+
+            <q-item-section>
+              <q-btn
+                @click="addOptionBlock(new_unit)"
+                no-caps
+                outline
+                size="lg"
+              >
+                <span v-if="new_unit.block == null">Add Default Block</span>
+                <span v-else>Default Block: {{ new_unit.block.label }} </span>
+              </q-btn>
+            </q-item-section>
           </q-item>
 
           <!-- Prefilled Type.. ee + icon is bee sound.. -->
 
           <q-item-label header>
-            {{ new_unit.words.length }} Words
             <q-btn
               no-caps
               color="green"
-              flat
+              outline
               icon="mdi-plus"
               @click="add_word = true"
-              >Add Word</q-btn
-            ></q-item-label
-          >
+              class="q-mr-md"
+              >Add Word/s</q-btn
+            >
+            {{ new_unit.words.length }} Words
+          </q-item-label>
           <div class="flex row q-mx-sm q-gutter-sm">
             <div
               v-for="(word, idx) in new_unit.words"
@@ -65,13 +74,6 @@
               <div avatar>
                 <q-chip>{{ word.word }}</q-chip>
               </div>
-              <!-- <div avatar>
-                <q-btn
-                  @click="editWord(word)"
-                  icon="mdi-pencil-outline"
-                  flat
-                ></q-btn>
-              </div> -->
 
               <div avatar>
                 <q-btn
@@ -79,6 +81,7 @@
                   icon="mdi-close"
                   color="red"
                   flat
+                  rounded
                 ></q-btn>
               </div>
             </div>
@@ -94,46 +97,30 @@
         </q-btn>
       </q-card-section>
     </q-card>
-    <!-- NEW WORD -->
+    <div v-if="operation">
+      <q-linear-progress query color="secondary" class="q-my-sm" rounded />
+    </div>
 
-    <q-dialog v-model="add_word">
+    <!-- NEW WORD -->
+    <q-dialog v-model="add_word" full-height full-width>
       <WordList
         :words="words.map((e) => ({ ...e.word, id: e.id }))"
         @close="add_word = false"
         @select="addWord"
+        @selectWords="addWords"
+        :filter_type="new_unit.type"
+        :filter_block="new_unit.block"
+        :selected_words="new_unit.words"
       >
       </WordList>
     </q-dialog>
 
-    <q-dialog v-model="show_icons">
-      <IconList
-        v-if="edit_option === null"
-        v-model:model_icon="new_word.homo"
-        :icons="icons"
-        @close="show_icons = false"
-      ></IconList>
-
-      <IconList
-        v-else
-        v-model:model_icon="edit_option.icon"
-        :icons="icons"
-        @close="show_icons = false"
-      ></IconList>
-    </q-dialog>
-
-    <q-dialog v-model="show_sounds">
-      <SoundList
-        v-model:model_sound="edit_option.sound"
-        :sounds="sounds"
-        @close="show_sounds = false"
-      ></SoundList>
-    </q-dialog>
-
-    <q-dialog v-model="show_blocks">
+    <q-dialog v-model="show_blocks" full-height full-width>
       <BlockList
         v-model:model_block="edit_option.block"
         :blocks="blocks.map((e) => ({ ...e.block, id: e.id }))"
         @close="show_blocks = false"
+        :filter_type="new_unit.type"
       >
       </BlockList>
     </q-dialog>
@@ -188,16 +175,12 @@ import { syncdb } from "src/database/dbCloud";
 // import Classroom from "src/components/classrooms/Classroom.vue";
 import axios from "axios";
 
-import IconList from "src/components/master/IconList.vue";
-import SoundList from "src/components/master/SoundList.vue";
 import BlockList from "src/components/master/BlockList.vue";
 import WordList from "src/components/master/WordList.vue";
 
 export default defineComponent({
   name: "UnitsPage",
   components: {
-    IconList,
-    SoundList,
     BlockList,
     WordList,
   },
@@ -259,68 +242,27 @@ export default defineComponent({
         id: 0,
         label: "Unit 1",
         type: "sound",
+        block: null,
         info: "text..",
         words: [],
         word_ids: [],
+
         // order: 1,
         // revision_rule: "default",
       },
-      edit_pattern: null, //id for edit pattern
-      pattern_template: {
-        letters: "...",
-        input: false,
-        icon: "",
-        sound: null,
-        block: null,
-        exclude: [],
-        correct: "", // for spelling type..
-      },
+
       edit_word: false,
       word_types: ["sound", "spelling"],
-      word_template: {
-        id: 0,
-        word: "",
-        icon: "",
-        phonic_option_id: null, // ay, etc..
-        correct: "",
-        type: "sound",
-        pattern: [
-          // {
-          //   letters: "ai",
-          //   input: true,
-          //   icon: "mdi-snail",
-          //   sound: null,
-          //   block: null,
-          //   exclude: [],
-          //   correct: "",
-          // },
-          // {
-          //   letters: "d",
-          //   input: false,
-          //   icon: "mdi-dog-side",
-          //   sound: null,
-          //   block: null,
-          //   exclude: [],
-          //   correct: "",
-          // },
-        ],
-        homo: null,
-      },
 
       edit_option: null,
-      show_icons: false,
-      show_sounds: false,
       show_blocks: null,
+
+      operation: false,
     };
   },
   mounted() {
-    // this.getBlocks();
-    // this.getBlocksAPI();
-    // this.getUnits();
-    // this.getUnitsAPI();
     // this.testAPI(); //testing public_test
     // this.addNew();
-    // this.setNewWord();
   },
 
   methods: {
@@ -353,21 +295,6 @@ export default defineComponent({
 
       this.cancelNew();
     },
-    async getUnits() {
-      try {
-        useObservable(
-          from(
-            liveQuery(async () => {
-              this.units = await syncdb.units.toArray();
-              this.makeRows();
-            })
-          )
-        );
-      } catch (error) {
-        let status = `Failed to read units: ${error}`;
-        console.log("status error", status);
-      }
-    },
 
     addNew() {
       if (this.add_unit) {
@@ -387,8 +314,6 @@ export default defineComponent({
       this.add_unit = false;
       this.edit_id = null;
       this.new_unit = null;
-      this.edit_pattern = null;
-      this.edit_icon = null;
       this.edit_word = false;
     },
 
@@ -400,6 +325,14 @@ export default defineComponent({
       this.add_word = false;
     }, //latest verion
 
+    addWords(words) {
+      // this.new_unit.word_list.push(word);
+      // this.add_word = false;
+      this.new_unit.words.push(...words);
+      this.new_unit.word_ids.push(...words.map((e) => e.id));
+      this.add_word = false;
+    },
+
     editWord(word) {
       this.new_word = word;
       this.edit_word = true;
@@ -410,36 +343,6 @@ export default defineComponent({
       this.new_unit.word_ids.splice(idx, 1);
     },
 
-    setNewWord() {
-      this.edit_word = false;
-      this.add_word = true;
-      let new_word = JSON.parse(JSON.stringify(this.word_template));
-      new_word.id = this.new_unit.words.length + 1;
-      this.new_word = new_word;
-      // this.new_unit.words.push(new_word);
-      this.edit_pattern = null;
-      this.edit_icon = null;
-    },
-    editWordPattern(idx) {
-      if (this.edit_pattern === idx) {
-        this.edit_pattern = null;
-      } else {
-        this.edit_pattern = idx;
-      }
-    },
-    removePattern(idx) {
-      this.new_word.pattern.splice(idx, 1);
-    },
-    addPattern() {
-      this.new_word.pattern.push(
-        JSON.parse(JSON.stringify(this.pattern_template))
-      );
-    },
-
-    addNewWord() {
-      this.new_unit.words.push(this.new_word);
-      this.new_word = null;
-    }, //OLD
     editUnit(unit, item_id) {
       // console.log("item_id", item_id);
       // console.log("unit", unit);
@@ -448,26 +351,13 @@ export default defineComponent({
       this.add_unit = true;
     },
 
-    addHomoIcon(new_word) {
-      this.show_icons = true;
-      this.edit_option = null;
-    },
-    addOptionIcon(option) {
-      this.show_icons = true;
-      this.edit_option = option;
-    },
-
-    addOptionSound(option) {
-      this.show_sounds = true;
-      this.edit_option = option;
-    },
-
     addOptionBlock(option) {
       this.show_blocks = true;
       this.edit_option = option;
     },
 
     async addUnit() {
+      this.operation = true;
       let realmId = "rlm-public";
 
       let dbid = process.env.DBID;
@@ -515,8 +405,8 @@ export default defineComponent({
         });
 
       this.cancelNew();
-      // this.getUnitsAPI();
       this.$emit("refresh");
+      this.operation = false;
     },
 
     async updateWords(words, unit_id, remove) {
@@ -593,6 +483,7 @@ export default defineComponent({
         var result = true;
       }
       if (result) {
+        this.operation = true;
         if (this.edit_id === null && words !== undefined) {
           this.updateWords(words, id, "remove");
         }
@@ -621,6 +512,7 @@ export default defineComponent({
         if (deleted) {
           this.$emit("removeUnit", id);
         }
+        this.operation = false;
         return deleted;
       }
     },
@@ -665,10 +557,6 @@ export default defineComponent({
           // return undefined;
         });
       return token;
-    },
-
-    async addMember() {
-      //
     },
   },
 });
