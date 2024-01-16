@@ -25,8 +25,8 @@ const accounts = useAccountsStore();
 export var syncdb;
 
 const DB = process.env.DB;
-console.log('process.env', process.env)
-console.log('DB', DB)
+// console.log('DB', DB)
+
 const opts = {
   databaseUrl: DB,
   requireAuth: false,

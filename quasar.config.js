@@ -15,6 +15,8 @@ const {
 
 
 module.exports = configure(function ( /* ctx */ ) {
+  require('dotenv').config()
+
   return {
     eslint: {
       // fix: true,
@@ -65,7 +67,13 @@ module.exports = configure(function ( /* ctx */ ) {
       },
 
       vueRouterMode: 'history', // available values: 'hash', 'history'
-      env: require('dotenv').config().parsed,
+      // env: require('dotenv').config().parsed, // doesn;t work with netlify..
+      env: {
+        clientId: process.env.clientId,
+        clientSecret: process.env.clientSecret,
+        DB: process.env.DB,
+        DBID: process.env.DBID,
+      },
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
