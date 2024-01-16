@@ -17,10 +17,10 @@ import {
   from
 } from "@vueuse/rxjs";
 
-import {
-  useAccountsStore
-} from 'src/stores/accounts';
-const accounts = useAccountsStore();
+// import {
+//   useAccountsStore
+// } from 'src/stores/accounts';
+// const accounts = useAccountsStore();
 
 export var syncdb;
 
@@ -80,7 +80,7 @@ export const setupSync = function () {
   // Connect your dexie-cloud database:
   syncdb.cloud.configure(opts);
 
-  setupAccountData();
+  // setupAccountData();
 
   return syncdb;
 }

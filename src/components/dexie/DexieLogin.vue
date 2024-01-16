@@ -233,6 +233,7 @@ export default {
     async setup() {
       if (this.accountStore.syncdb == null) {
         this.syncdb = await setupSync();
+        this.setupAccountData(this.syncdb);
       } else {
         this.syncdb = this.accountStore.syncdb;
       }
@@ -241,6 +242,32 @@ export default {
       this.currentUser = useObservable(this.syncdb.cloud.currentUser);
       this.userPrompts = useObservable(this.syncdb.cloud.userInteraction);
       // console.log("subscription", this.accountStore.subscription);
+    },
+
+    setupAccountData(syncdb) {
+      this.accountStore.syncdb = syncdb;
+      this.accountStore.currentUser = useObservable(syncdb.cloud.currentUser);
+      this.accountStore.userPrompts = useObservable(
+        syncdb.cloud.userInteraction
+      );
+      this.accountStore.socketStatus = useObservable(
+        syncdb.cloud.webSocketStatus
+      );
+      this.accountStore.syncState = useObservable(syncdb.cloud.syncState);
+      this.accountStore.invites = useObservable(syncdb.cloud.invites);
+
+      this.accountStore.roles = useObservable(syncdb.cloud.roles);
+
+      useObservable(
+        from(
+          liveQuery(async () => {
+            // console.log(this.accountStore.syncdb);
+            this.accountStore.subscription = await syncdb.subscription
+              .toCollection()
+              .last();
+          })
+        )
+      );
     },
 
     login() {

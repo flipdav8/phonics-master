@@ -157,6 +157,11 @@ export default defineComponent({
     };
   },
   mounted() {
+    let allowed = ["flipdav8@gmail.com", "rubdav@hotmail.com"];
+
+    if (!allowed.includes(this.accounts.currentUser.userId)) {
+      this.$router.push("/");
+    }
     this.getBlocksAPI();
     this.getWordsAPI();
     this.getUnitsAPI();

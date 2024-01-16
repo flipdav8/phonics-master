@@ -3,7 +3,6 @@ import {
 } from 'pinia';
 
 
-
 export const useAccountsStore = defineStore('accounts', {
   state: () => ({
     showDialog: false, //for accounts login
@@ -17,6 +16,7 @@ export const useAccountsStore = defineStore('accounts', {
     syncState: null,
     invites: null,
     roles: null,
+
 
     view_as: null,
     view_student: null,

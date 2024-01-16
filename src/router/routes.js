@@ -13,7 +13,10 @@ const routes = [{
     children: [{
       path: '',
       component: () => import('pages/Master.vue')
-    }]
+    }],
+    meta: {
+      requiresAuth: true
+    }
   },
 
   // Always leave this as last one,

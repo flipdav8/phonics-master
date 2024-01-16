@@ -17,6 +17,9 @@ import routes from './routes'
  * async/await or return a Promise which resolves
  * with the Router instance.
  */
+import {
+  authGuard
+} from '/src/guards/authGuard.js';
 
 export default route(function ( /* { store, ssrContext } */ ) {
   const createHistory = process.env.SERVER ?
@@ -39,6 +42,10 @@ export default route(function ( /* { store, ssrContext } */ ) {
   Router.beforeEach((to, from, next) => {
     console.log('change router here', );
 
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+      console.log(to)
+      authGuard(to, from, next);
+    } else
     if (from.path !== to.path) {
       let locked = localStorage.getItem("classroom_locked");
       if (locked === "true") {
