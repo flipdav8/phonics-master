@@ -308,6 +308,8 @@ export default defineComponent({
         },
       ],
 
+      //
+
       show_icons: false,
       show_sounds: false,
       edit_option: null,

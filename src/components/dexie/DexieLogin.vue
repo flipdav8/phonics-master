@@ -47,7 +47,6 @@
       </q-card>
     </div>
     <div v-else class="text-h4">Login/Register</div>
-
     <q-card
       v-if="
         userPrompts &&
@@ -99,24 +98,14 @@
 
       <q-card-actions align="center">
         <div v-if="userPrompts.type === 'email'">
-          <q-btn
-            flat
-            no-caps
-            label="Submit"
-            @click="
-              userPrompts.onSubmit({
-                email: this.email,
-                grant_type: 'demo',
-              })
-            "
-          ></q-btn>
+          <q-btn flat no-caps label="Submit" @click="loginEmail()"></q-btn>
           <!-- <q-btn no-caps @click="loginDemo()" label="Demo login"></q-btn> -->
         </div>
         <div v-if="userPrompts.type === 'otp'">
           <!-- <q-btn no-caps label="Cancel" @click="userPrompts.onCancel()"></q-btn> -->
           <q-btn
             no-caps
-            label="Submit"
+            label="Verify OTP"
             @click="
               userPrompts.onSubmit({
                 otp: this.otp,
@@ -136,38 +125,6 @@
     >
       Processing request..
     </q-card>
-
-    <!-- <div
-      style="max-width: 500px"
-      v-if="currentUser && currentUser.userId == 'unauthorized'"
-    >
-      <q-btn label="login guest" @click="loginGuest()"></q-btn>
-    </div> -->
-
-    <div v-if="currentUser && currentUser.name.split('@')[1] === 'demo.local'">
-      guest: {{ currentUser.name }}
-      <q-btn no-caps label="Logout Guest" @click="logout()"></q-btn>
-      <!-- Realms: {{ realms }} -->
-      <q-btn @click="createRealm()" label="Create Realm"></q-btn>
-      <q-btn @click="testAddGuest()" label="Test Add as Guest"></q-btn>
-      <p
-        style="max-width: 500px"
-        v-for="(network, index) in accountStore.networks"
-        :key="index"
-      >
-        {{ network }}
-      </p>
-    </div>
-
-    <div class="q-mt-md hidden">
-      <p>userPrompts: {{ accountStore.userPrompts }}</p>
-      <p>Websocket: {{ accountStore.socketStatus }}</p>
-      <p>Sync: {{ accountStore.syncState }}</p>
-      <p>Invites: {{ accountStore.invites }}</p>
-      <p>Roles: {{ accountStore.roles }}</p>
-      <q-btn @click="test()" label="Test (add)" no-caps></q-btn>
-      <q-btn @click="readTest()" label="Read Test " no-caps></q-btn>
-    </div>
   </div>
 </template>
 
@@ -203,7 +160,7 @@ export default {
     return {
       show_login: false,
       otp: "",
-      email: "",
+      email: "phil@demo.local",
       //
       realms: [],
       userPrompts: null,
@@ -270,6 +227,12 @@ export default {
       );
     },
 
+    loginEmail() {
+      this.userPrompts.onSubmit({
+        email: this.email,
+        grant_type: "demo",
+      });
+    },
     login() {
       this.syncdb.cloud.login();
       // this.syncdb.cloud.login({ grant_type: "demo", "alice@demo.local": {} });

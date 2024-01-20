@@ -1,5 +1,5 @@
 <template>
-  <div class="fit q-pa-md">
+  <div class="fit q-pa-md non-selectable">
     <!-- NEW WORD -->
     <q-card
       v-if="add_word && !operation"
@@ -7,6 +7,7 @@
       class="fit flex flex-center column"
     >
       <!-- WORD -->
+      <!-- //TODO:  ADD DICTATION SENTENCE -->
       <q-card-section class="fit">
         <q-list>
           <q-item>
@@ -43,6 +44,23 @@
           <q-item>
             <q-item-section>
               <q-input label="word" outlined v-model="new_word.word"></q-input>
+            </q-item-section>
+
+            <q-item-section>
+              <q-btn
+                @click="addOptionSound(new_word)"
+                outline
+                no-caps
+                size="lg"
+              >
+                Sound
+                <q-icon
+                  :name="
+                    new_word.sound === null ? 'mdi-speaker-off' : 'mdi-speaker'
+                  "
+                  :color="new_word.sound !== null ? 'green' : 'warning'"
+                />
+              </q-btn>
             </q-item-section>
 
             <q-item-section>
@@ -110,6 +128,11 @@
                 <div class="flex row items-center">
                   <span class="text-caption">Input</span>
                   <q-toggle v-model="s.input"></q-toggle>
+                </div>
+                <!-- schwar -->
+                <div class="flex row items-center">
+                  <span class="text-caption">schwar</span>
+                  <q-checkbox v-model="s.schwar"></q-checkbox>
                 </div>
 
                 <!-- ICON + SOUND -->
@@ -252,6 +275,37 @@
         </q-list>
       </q-card-section>
 
+      <!-- Dictations.. -->
+      <q-card-section class="fit q-pa-md">
+        <div class="flex row items-center justify-center">
+          Dictations:
+          <q-btn
+            @click="add_dictation = !add_dictation"
+            flat
+            no-caps
+            icon="mdi-plus"
+          >
+          </q-btn>
+
+          <div class="flex column full-width q-gutter-sm">
+            <div
+              v-for="(dict, i) in new_word.dictations"
+              :key="i"
+              class="col-grow"
+            >
+              <q-input
+                v-model="new_word.dictations[i]"
+                outlined
+                type="textarea"
+                autogrow
+                clearable
+                @clear="removeDictation(i)"
+              ></q-input>
+            </div>
+          </div>
+        </div>
+      </q-card-section>
+
       <q-card-section class="self-end q-gutter-x-sm">
         <q-btn no-caps @click="cancelNew()">Cancel</q-btn>
 
@@ -304,6 +358,18 @@
         :filter_type="new_word.type"
       >
       </BlockList>
+    </q-dialog>
+
+    <q-dialog v-model="add_dictation">
+      <q-card>
+        <q-card-section>
+          <q-input outlined v-model="dictation" type="textarea" autogrow>
+          </q-input>
+        </q-card-section>
+        <q-card-section>
+          <q-btn @click="addDictation()">Add/Edit</q-btn>
+        </q-card-section>
+      </q-card>
     </q-dialog>
 
     <div v-if="preview_word" class="q-pa-md">
@@ -497,9 +563,14 @@ export default defineComponent({
         block: null,
         exclude: [],
         correct: "", // for spelling type..
+        schwar: false,
       },
       edit_word: false,
-      word_types: ["sound", "spelling"],
+      word_types: [
+        "sound",
+        "spelling",
+        { label: "something else", disable: true },
+      ],
       word_template: {
         id: 0,
         word: "",
@@ -528,6 +599,8 @@ export default defineComponent({
           // },
         ],
         homo: null,
+        sound: null,
+        dictations: [],
       },
       prefill_block: null,
       prefill_type: "sound",
@@ -535,6 +608,9 @@ export default defineComponent({
       show_icons: false,
       show_sounds: false,
       show_blocks: null,
+      //
+      dictation: "",
+      add_dictation: false,
       //
       preview_word: false,
       preview_mode: "testing",
@@ -581,7 +657,7 @@ export default defineComponent({
       // console.log("item_id", item_id);
       // console.log("unit", unit);
       this.edit_id = item_id;
-      this.new_word = word;
+      this.new_word = { ...this.word_template, ...word };
       this.add_word = true;
 
       // this.new_word = word;
@@ -654,8 +730,8 @@ export default defineComponent({
       let token = await this.getGlobalToken();
 
       // this.new_unit.id = this.units.length + 1;
-      this.prefill_block = new_word.block;
-      this.prefill_type = new_word.type;
+      this.prefill_block = this.new_word.block;
+      this.prefill_type = this.new_word.type;
 
       let item = {
         region: "AU",
@@ -782,6 +858,15 @@ export default defineComponent({
       // TBA
       this.preview_word = word.word;
       this.preview_key++;
+    },
+
+    addDictation() {
+      this.new_word.dictations.push(this.dictation);
+      this.add_dictation = false;
+    },
+
+    removeDictation(i) {
+      this.new_word.dictations.splice(i, 1);
     },
   },
 });
