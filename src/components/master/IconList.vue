@@ -49,6 +49,14 @@
 
         <q-btn @click="noIcon()" color="green"> Select</q-btn>
       </q-card>
+
+      <q-card
+        class="flex column items-center justify-center q-pa-sm q-ma-sm cursor-pointer q-gutter-y-sm col-auto"
+        style="border-radius: 10px"
+      >
+        No Icon
+        <q-btn @click="nullIcon()" color="green"> Select</q-btn>
+      </q-card>
     </q-card-section>
   </q-card>
 </template>
@@ -66,16 +74,19 @@ export default defineComponent({
   props: {
     icons: { required: true },
     model_icon: {},
+    letters: {},
   },
   data() {
     return {
       select_icon: null,
-      mdi_icon: "mdi-snail",
+      mdi_icon: "mdi-egg-outline",
       search: "",
     };
   },
   mounted() {
-    //
+    if (this.letters != undefined) {
+      // this.search = this.letters;
+    }
   },
   computed: {
     filterIcons() {
@@ -101,6 +112,11 @@ export default defineComponent({
 
     noIcon() {
       this.$emit("update:model_icon", this.mdi_icon);
+      this.$emit("close");
+    },
+
+    nullIcon() {
+      this.$emit("update:model_icon", null);
       this.$emit("close");
     },
 

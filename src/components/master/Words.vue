@@ -42,10 +42,17 @@
           </q-item>
 
           <q-item>
+            <!-- word -->
             <q-item-section>
-              <q-input label="word" outlined v-model="new_word.word"></q-input>
+              <q-input
+                label="word"
+                outlined
+                v-model="new_word.word"
+                @blur="makePatternFromWord()"
+              ></q-input>
             </q-item-section>
 
+            <!-- sound -->
             <q-item-section>
               <q-btn
                 @click="addOptionSound(new_word)"
@@ -62,7 +69,7 @@
                 />
               </q-btn>
             </q-item-section>
-
+            <!-- homophone -->
             <q-item-section>
               <q-btn
                 flat
@@ -88,6 +95,22 @@
                 ></q-icon>
                 <q-icon v-else name="mdi-plus" size="md"></q-icon>
               </q-btn>
+            </q-item-section>
+
+            <!-- tense -->
+            <q-item-section>
+              <q-checkbox
+                v-model="new_word.use_tense"
+                label="tense?"
+              ></q-checkbox>
+              <q-select
+                v-if="new_word.use_tense"
+                dense
+                outlined
+                v-model="new_word['tense']"
+                label="tense"
+                :options="['past', 'present', 'future']"
+              ></q-select>
             </q-item-section>
           </q-item>
         </q-list>
@@ -129,10 +152,27 @@
                   <span class="text-caption">Input</span>
                   <q-toggle v-model="s.input"></q-toggle>
                 </div>
-                <!-- schwar -->
+                <!-- schwa -->
                 <div class="flex row items-center">
-                  <span class="text-caption">schwar</span>
-                  <q-checkbox v-model="s.schwar"></q-checkbox>
+                  <span class="text-caption">schwa</span>
+                  <q-checkbox v-model="s.schwa"></q-checkbox>
+                </div>
+
+                <div class="flex row items-center">
+                  <span class="text-caption">silent</span>
+                  <q-checkbox
+                    v-model="s.silent"
+                    @update="s['silent_letters'] = s.letters"
+                  ></q-checkbox>
+                </div>
+
+                <div class="flex row items-center" v-if="s.silent">
+                  <q-input
+                    label="Silent letters"
+                    dense
+                    outlined
+                    v-model="s['silent_letters']"
+                  ></q-input>
                 </div>
 
                 <!-- ICON + SOUND -->
@@ -151,7 +191,7 @@
                   </q-btn>
 
                   <q-btn @click="addOptionSound(s)" outline no-caps>
-                    Sound
+                    Sound {{ s.sound === null ? "" : s.sound.id.split("-")[0] }}
                     <q-icon
                       :name="
                         s.sound === null ? 'mdi-speaker-off' : 'mdi-speaker'
@@ -278,12 +318,13 @@
       <!-- Dictations.. -->
       <q-card-section class="fit q-pa-md">
         <div class="flex row items-center justify-center">
-          Dictations:
+          Dictations: (tba.. need to make objects to enter recordings)
           <q-btn
             @click="add_dictation = !add_dictation"
             flat
             no-caps
             icon="mdi-plus"
+            disabled
           >
           </q-btn>
 
@@ -300,6 +341,31 @@
                 autogrow
                 clearable
                 @clear="removeDictation(i)"
+              ></q-input>
+            </div>
+          </div>
+        </div>
+      </q-card-section>
+
+      <!-- Homophones.. -->
+      <q-card-section class="fit q-pa-md">
+        <div class="flex row items-center justify-center">
+          Homophones:
+          <q-btn
+            @click="add_homophone = !add_homophone"
+            flat
+            no-caps
+            icon="mdi-plus"
+          >
+          </q-btn>
+
+          <div class="flex row full-width q-gutter-sm">
+            <div v-for="(hom, i) in new_word.homophones" :key="i" class="col-">
+              <q-input
+                v-model="new_word.homophones[i]"
+                outlined
+                clearable
+                @clear="removeHomophone(i)"
               ></q-input>
             </div>
           </div>
@@ -345,6 +411,9 @@
       <SoundList
         v-model:model_sound="edit_option.sound"
         :sounds="sounds"
+        :letters="edit_option.letters"
+        :block="new_word.block"
+        :input="edit_option.input"
         @close="show_sounds = false"
       ></SoundList>
     </q-dialog>
@@ -368,6 +437,17 @@
         </q-card-section>
         <q-card-section>
           <q-btn @click="addDictation()">Add/Edit</q-btn>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="add_homophone">
+      <q-card>
+        <q-card-section>
+          <q-input outlined v-model="homophone"> </q-input>
+        </q-card-section>
+        <q-card-section>
+          <q-btn @click="addHomophone()">Add/Edit</q-btn>
         </q-card-section>
       </q-card>
     </q-dialog>
@@ -421,6 +501,7 @@
       bordered
       separator="cell"
       row-key="name"
+      :pagination="initialPagination"
     >
       <template v-slot:top>
         <q-input dense outlined color="primary" v-model="filter">
@@ -431,6 +512,88 @@
 
         <q-space />
         <q-btn @click="addNew()" no-caps color="green"> Add Word </q-btn>
+      </template>
+
+      <template v-slot:body-cell-pattern="props">
+        <q-td :props="props">
+          <span v-for="(pattern, i) in props.row.word.pattern" :key="i">
+            <span v-if="pattern.sound != null">
+              <strong v-if="pattern.input">
+                {{ pattern.sound.id.split("-")[0] }}</strong
+              >
+              <span v-else>
+                {{ pattern.sound.id.split("-")[0] }}
+                <span v-if="pattern.sound.id.split('-')[0] === 'th'">
+                  ({{ pattern.sound.id.split("-")[1][0] }})
+                </span>
+              </span>
+              <span v-if="i < props.row.word.pattern.length - 1">-</span>
+            </span>
+            <span v-else>
+              <q-icon
+                name="mdi-alert-rhombus-outline"
+                color="negative"
+              ></q-icon>
+            </span>
+          </span>
+        </q-td>
+      </template>
+      <template v-slot:body-cell-iconpattern="props">
+        <q-td :props="props">
+          <span v-for="(pattern, i) in props.row.word.pattern" :key="'i' + i">
+            <span v-if="pattern.icon == null">
+              <q-icon
+                name="mdi-alert-rhombus-outline"
+                color="negative"
+              ></q-icon>
+            </span>
+            <span v-else>
+              <span v-if="typeof pattern.icon === 'object'">
+                <!-- {{ pattern.icon.label }} -->
+                <span v-if="pattern.icon.label == 'TBA'">p</span>
+                <q-icon v-else size="md">
+                  <img :src="pattern.icon.src" type="image/svg+xml" />
+                </q-icon>
+              </span>
+              <span v-else>
+                <span v-if="!pattern.icon.includes('mdi')">?</span>
+                <q-icon
+                  v-else
+                  size="md"
+                  :name="pattern.icon"
+                  color="warning"
+                ></q-icon>
+              </span>
+            </span>
+          </span>
+        </q-td>
+      </template>
+
+      <template v-slot:body-cell-label="props">
+        <q-td :props="props">
+          {{ props.row.word.word }}
+          <span
+            v-if="
+              props.row.homophones != undefined &&
+              props.row.homophones.length > 0
+            "
+          >
+            <q-icon name="mdi-alpha-h-circle-outline"></q-icon>
+          </span>
+
+          <span
+            v-if="props.row.word.pattern.filter((e) => e.input).length !== 1"
+          >
+            <!-- <span class="text-caption">No Input</span> -->
+            <q-icon name="mdi-alert-rhombus-outline" color="negative"></q-icon>
+          </span>
+
+          <strong
+            v-if="props.row.word.pattern.filter((e) => e.schwa).length > 0"
+          >
+            ə
+          </strong>
+        </q-td>
       </template>
 
       <template v-slot:body-cell-actions="props">
@@ -547,12 +710,35 @@ export default defineComponent({
         },
 
         {
+          name: "pattern",
+          field: "pattern",
+          label: "Sound Pattern",
+          sortable: true,
+          align: "left",
+        },
+
+        {
+          name: "iconpattern",
+          field: "iconpattern",
+          label: "Icon Pattern",
+          sortable: true,
+          align: "left",
+        },
+
+        {
           name: "actions",
           field: "actions",
           label: "Actions",
           align: "center",
         },
       ],
+      initialPagination: {
+        sortBy: "desc",
+        descending: false,
+        page: 1,
+        rowsPerPage: 20,
+        // rowsNumber: xx if getting data from a server
+      },
 
       edit_pattern: null, //id for edit pattern
       pattern_template: {
@@ -563,7 +749,8 @@ export default defineComponent({
         block: null,
         exclude: [],
         correct: "", // for spelling type..
-        schwar: false,
+        schwa: false,
+        silent: false,
       },
       edit_word: false,
       word_types: [
@@ -601,6 +788,8 @@ export default defineComponent({
         homo: null,
         sound: null,
         dictations: [],
+        homophones: [],
+        use_tense: false,
       },
       prefill_block: null,
       prefill_type: "sound",
@@ -611,6 +800,9 @@ export default defineComponent({
       //
       dictation: "",
       add_dictation: false,
+      //
+      homophone: "",
+      add_homophone: false,
       //
       preview_word: false,
       preview_mode: "testing",
@@ -689,10 +881,6 @@ export default defineComponent({
       );
     },
 
-    addNewWord() {
-      this.new_unit.words.push(this.new_word);
-      this.new_word = null;
-    },
     editUnit(unit, item_id) {
       // console.log("item_id", item_id);
       // console.log("unit", unit);
@@ -752,6 +940,7 @@ export default defineComponent({
         if (!deleted) {
           return;
         }
+        this.updateUnits(item);
       }
 
       await axios
@@ -854,6 +1043,104 @@ export default defineComponent({
       return token;
     },
 
+    // updates the word in units... maybe better to use word_ids in unit instead?
+    async updateUnits(item) {
+      console.log("updated word .. now to units", item);
+
+      let unit_ids = item.unit_ids;
+
+      let remove_unit_ids = [];
+      // remove unit_id from item.. do later.. will have to put an await before this method.
+
+      for (let idx = 0; idx < unit_ids.length; idx++) {
+        const unit_id = unit_ids[idx];
+        const unit = await this.getUnit(unit_id);
+        if (unit == undefined) {
+          //unit has been deleted...
+        } else {
+          console.log("unit", unit);
+          let unit_words = unit.unit.words;
+          let unit_replace = unit_words.findIndex((e) => e.id === item.id);
+          //note should not have multiple words with the same id in a unit..
+          if (unit_replace > -1) {
+            let replace_word = { ...item.word, id: item.id };
+            unit_words.splice(unit_replace, 1, replace_word);
+            console.log("unit_words", unit_words);
+            this.updateUnit({
+              ...unit,
+              ...{ unit: { ...unit.unit, ...{ words: unit_words } } },
+            });
+          } else {
+            // word has been deleted from unit at some point..
+          }
+        }
+      }
+    },
+    async getUnit(id) {
+      try {
+        return await syncdb.units.get(id);
+      } catch (error) {
+        let status = `Failed to read units: ${error}`;
+        console.log("status error", status);
+        return null;
+      }
+    },
+    async updateUnit(item) {
+      let deleted = await this.deleteUnit(item.id);
+      if (!deleted) {
+        return;
+      }
+
+      console.log("updated unit item", item);
+
+      let dbid = process.env.DBID;
+      let base_url = `https://${dbid}.dexie.cloud`;
+      let token = await this.getGlobalToken();
+
+      await axios
+        .post(`${base_url}/public/units`, item, {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then(function (response) {
+          console.log("response updated unit", response);
+        })
+        .catch(function (error) {
+          console.log("error", error);
+          // return undefined;
+        });
+    },
+    async deleteUnit(id) {
+      let dbid = process.env.DBID;
+      let base_url = `https://${dbid}.dexie.cloud`;
+      let token = await this.getGlobalToken();
+
+      let deleted = false;
+      await axios
+        .delete(`${base_url}/public/units/${id}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then(function (response) {
+          console.log("deleted ", response);
+          deleted = true;
+        })
+        .catch(function (error) {
+          console.log("error", error);
+          // return undefined;
+          deleted = false;
+        });
+
+      if (deleted) {
+        this.$emit("removeUnit", id);
+      }
+      this.operation = false;
+      return deleted;
+    },
+
     previewWord(word) {
       // TBA
       this.preview_word = word.word;
@@ -867,6 +1154,28 @@ export default defineComponent({
 
     removeDictation(i) {
       this.new_word.dictations.splice(i, 1);
+    },
+
+    addHomophone() {
+      this.new_word.homophones.push(this.homophone);
+      this.add_homophone = false;
+    },
+
+    removeHomophone(i) {
+      this.new_word.homophones.splice(i, 1);
+    },
+
+    makePatternFromWord() {
+      let word = this.new_word.word;
+
+      let split = word.split("");
+      // console.log("split", split);
+
+      for (let idx = 0; idx < split.length; idx++) {
+        const letter = split[idx];
+        this.pattern_template.letters = letter;
+        this.addPattern();
+      }
     },
   },
 });

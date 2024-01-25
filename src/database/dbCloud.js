@@ -51,12 +51,13 @@ export const setupSync = function () {
   // setupEncrypt();
 
 
-  syncdb.version(29).stores({
+  syncdb.version(32).stores({
     subscription: '@id, userId',
     settings: '@id ',
     classrooms: '@id, title, realmId',
     students: '@id, realmId, classroom.id, &userName', //make sure class is always an object with an id
     progress: '@id, realmId, courseId, studentId, [courseId+studentId]',
+    revision: '@id, realmId, courseId, unitId, studentId, [courseId+unitId+studentId]', //
     links: '@id, studentId',
     //
     blocks: '@id, region', //public

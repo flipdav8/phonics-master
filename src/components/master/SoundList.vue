@@ -59,6 +59,9 @@ export default defineComponent({
   props: {
     sounds: { required: true },
     model_sound: {},
+    letters: {},
+    block: {},
+    input: {},
   },
   data() {
     return {
@@ -67,7 +70,29 @@ export default defineComponent({
     };
   },
   mounted() {
-    //
+    // console.log("this.letters", this.letters);
+
+    if (this.input && this.block != undefined) {
+      // console.log('this.block.label.split("/")', this.block.label.split("/"));
+      if (this.block.label.includes("/")) {
+        this.search = this.block.label.split("/")[1] + "-";
+      }
+    } else if (this.letters != undefined) {
+      if (this.letters.includes("-")) {
+        let split = this.letters.split("-");
+        this.search = split[0] + split[1];
+      } else {
+        if (this.letters === "c") {
+          this.search = "k-";
+        } else if (this.letters === "ph") {
+          this.search = "f-";
+        } else if (this.letters === "kn") {
+          this.search = "n-";
+        } else {
+          this.search = this.letters + "-";
+        }
+      }
+    }
   },
   computed: {
     filterSounds() {
@@ -86,7 +111,11 @@ export default defineComponent({
 
     selectSound(sound) {
       this.select_sound = sound;
-      let set_sound = { src: sound.src, label: sound.label, id: sound.id };
+      let set_sound = {
+        src: sound.src,
+        // label: sound.label,
+        id: sound.id,
+      };
       this.$emit("update:model_sound", set_sound);
       this.$emit("close");
     },
@@ -97,6 +126,7 @@ export default defineComponent({
     },
 
     playSound(sound) {
+      // console.log("sound", sound);
       const audio = new Audio(sound.src);
       audio.play();
     },

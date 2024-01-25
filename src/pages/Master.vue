@@ -295,6 +295,7 @@ export default defineComponent({
           block: word.block == null ? null : word.block.label,
           type: word.type,
           word: word,
+          homophones: word.homophones,
         });
       }
       this.word_rows = word_rows;
@@ -355,7 +356,7 @@ export default defineComponent({
     },
     makeUnitRows() {
       let units = this.units;
-      // console.log("units", units);
+      console.log("units", units);
       let unit_rows = [];
       for (let idx = 0; idx < units.length; idx++) {
         const unit = units[idx];
