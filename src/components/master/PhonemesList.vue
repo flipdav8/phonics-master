@@ -15,7 +15,7 @@
 
     <q-card-section class="flex row justify-center">
       <q-card
-        v-for="(icon, idx) in filterIcons"
+        v-for="(phoneme, idx) in filterPhonemes"
         :key="idx"
         class="flex column items-center q-pa-sm q-ma-sm q-gutter-y-sm col-auto"
         style="border-radius: 10px"
@@ -23,31 +23,24 @@
           selected:
             model_icon !== null &&
             model_icon.id !== undefined &&
-            model_icon.id === icon.id,
+            model_icon.id === phoneme.id,
         }"
       >
-        {{ icon.label }}
+        {{ phoneme.label }}
 
-        <q-icon style="font-size: 120px">
-          <img :src="icon.src" type="image/svg+xml" />
-        </q-icon>
-
-        <q-btn @click="selectIcon(icon)" color="green"> Select</q-btn>
+        <component
+          v-if="phoneme.icon_name != undefined"
+          :is="phoneme.icon_name"
+          color="grey-10"
+          :label="false"
+          :dots="false"
+          :center="true"
+          :scale="true"
+          style="border-radius: 10px; font-size: 100px"
+          class="bg-grey overflow-hidden"
+        ></component>
+        <q-btn @click="selectPhoneme(phoneme)" color="green"> Select</q-btn>
         <br />
-      </q-card>
-
-      <q-card
-        class="flex column items-center justify-center q-pa-sm q-ma-sm cursor-pointer q-gutter-y-sm col-auto"
-        style="border-radius: 10px"
-      >
-        <q-input outlined v-model="mdi_icon" label="MDI icon">
-          <template v-slot:after>
-            <q-btn icon="mdi-link" @click="mdiIcons()" flat round></q-btn>
-          </template>
-        </q-input>
-        <q-icon size="xl" :name="mdi_icon"></q-icon>
-
-        <q-btn @click="noIcon()" color="green"> Select</q-btn>
       </q-card>
 
       <q-card
@@ -72,15 +65,17 @@ export default defineComponent({
   name: "icon-list",
   components: {},
   props: {
-    icons: { required: true },
     phonemes: { required: true },
     model_icon: {},
     letters: {},
+    block: {},
+    input: {},
+    type: {},
+    correct: {},
+    option: {},
   },
   data() {
     return {
-      select_icon: null,
-      mdi_icon: "mdi-egg-outline",
       search: "",
     };
   },
@@ -88,10 +83,47 @@ export default defineComponent({
     if (this.letters != undefined) {
       // this.search = this.letters;
     }
+    // console.log("this.input", this.input);
+    // console.log("this.block", this.block);
+    console.log("this.type", this.type);
+
+    if (this.option != undefined) {
+      if (this.option.schwa) {
+        this.search = "schwa";
+        return;
+      }
+    }
+
+    if (this.type === "spelling" && this.input) {
+      if (this.correct == null || this.correct.length < 1) {
+        alert("missing correct");
+      }
+      this.search = this.correct;
+    } else if (this.input && this.block != undefined) {
+      // console.log('this.block.label.split("/")', this.block.label.split("/"));
+      if (this.block.label.includes("/")) {
+        this.search = this.block.label.split("/")[1];
+      }
+    } else if (this.letters != undefined) {
+      if (this.letters.includes("-")) {
+        let split = this.letters.split("-");
+        this.search = split[0] + split[1];
+      } else {
+        if (this.letters === "c") {
+          this.search = "k";
+        } else if (this.letters === "ph") {
+          this.search = "f";
+        } else if (this.letters === "kn") {
+          this.search = "n";
+        } else {
+          this.search = this.letters;
+        }
+      }
+    }
   },
   computed: {
-    filterIcons() {
-      return this.icons.filter((e) => this.searchFilter(e));
+    filterPhonemes() {
+      return this.phonemes.filter((e) => this.searchFilter(e));
     },
   },
   methods: {
@@ -104,26 +136,20 @@ export default defineComponent({
         : false;
     },
 
-    selectIcon(icon) {
-      this.select_icon = icon;
-      let set_icon = { src: icon.src, label: icon.label, id: icon.id };
+    selectPhoneme(phoneme) {
+      let set_icon = {
+        id: phoneme.id,
+        label: phoneme.label,
+        icon_name: phoneme.icon_name,
+        sound_src: phoneme.sound_src,
+      };
       this.$emit("update:model_icon", set_icon);
-      this.$emit("close");
-    },
-
-    noIcon() {
-      this.$emit("update:model_icon", this.mdi_icon);
       this.$emit("close");
     },
 
     nullIcon() {
       this.$emit("update:model_icon", null);
       this.$emit("close");
-    },
-
-    mdiIcons() {
-      let url = "https://pictogrammers.com/library/mdi/";
-      window.open(url, "_blank").focus();
     },
   },
 });

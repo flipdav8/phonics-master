@@ -58,6 +58,7 @@ export default defineComponent({
   components: {},
   props: {
     sounds: { required: true },
+    phonemes: { required: true },
     model_sound: {},
     letters: {},
     block: {},

@@ -38,6 +38,7 @@
           @removeBlock="deleteBlock"
           :icons="ICONS"
           :sounds="SOUNDS"
+          :phonemes="phonemes"
         ></Blocks>
       </q-tab-panel>
       <!-- @refresh="getBlocksAPI()" -->
@@ -62,6 +63,7 @@
           @removeWord="deleteWord"
           :icons="ICONS"
           :sounds="SOUNDS"
+          :phonemes="phonemes"
         ></Words>
       </q-tab-panel>
       <!-- @refresh="getWordsAPI()" -->
@@ -125,6 +127,9 @@ const ICONS = ICONLIST.list;
 import SOUNDLIST from "src/components/master/sounds.js";
 const SOUNDS = SOUNDLIST.list;
 
+import PHONEMES from "src/components/icons/phonemes.js";
+const phonemes = PHONEMES.list;
+
 export default defineComponent({
   name: "MasterPage",
   components: {
@@ -139,11 +144,12 @@ export default defineComponent({
       accounts,
       ICONS,
       SOUNDS,
+      phonemes,
     };
   },
   data() {
     return {
-      tab: "blocks",
+      tab: "words",
 
       //
       blocks: [],
@@ -230,6 +236,7 @@ export default defineComponent({
           id: block.id,
           label: block.block.label,
           block: block.block,
+          icon: block.block.icon != null ? block.block.icon.icon_name : ".",
           options: block.block.options.length,
           type: block.block.type,
         });
@@ -356,7 +363,7 @@ export default defineComponent({
     },
     makeUnitRows() {
       let units = this.units;
-      console.log("units", units);
+      // console.log("units", units);
       let unit_rows = [];
       for (let idx = 0; idx < units.length; idx++) {
         const unit = units[idx];

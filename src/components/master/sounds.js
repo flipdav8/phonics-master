@@ -114,6 +114,14 @@ const list = [
   },
 
 
+  {
+    id: 'gz-sound',
+    label: 'gz-label',
+    value: 'gz-sound',
+    src: "/src/assets/phonic-sounds/gz.mp3",
+  },
+
+
 
   {
     id: 'h-sound',
@@ -263,6 +271,13 @@ const list = [
   },
 
   {
+    id: 'our-sound',
+    label: 'our-label',
+    value: 'our-sound',
+    src: "/src/assets/phonic-sounds/our.mp3",
+  },
+
+  {
     id: 'p-sound',
     label: 'p-label',
     value: 'p-sound',
@@ -357,6 +372,14 @@ const list = [
     label: 'y-label',
     value: 'y-sound',
     src: "/src/assets/phonic-sounds/y.mp3",
+  },
+
+
+  {
+    id: 'yoo-sound',
+    label: 'yoo-label',
+    value: 'yoo-sound',
+    src: "/src/assets/phonic-sounds/yoo.mp3",
   },
 
 

@@ -34,26 +34,43 @@
                 v-model="new_block.label"
               ></q-input>
             </q-item-section>
-            <q-item-section
+            <!-- <q-item-section
               @click="addOptionIcon(new_block)"
               avatar
               class="cursor-pointer"
             >
-              <div v-if="new_block.icon == undefined">No Icon..</div>
-              <q-icon v-else-if="new_block.icon.src !== undefined" size="xl">
-                <img :src="new_block.icon.src" type="image/svg+xml" />
-              </q-icon>
-              <q-icon
-                v-else-if="new_block.icon.includes('mdi')"
-                :name="new_block.icon"
-                size="xl"
-              ></q-icon>
+              <div v-if="new_block.icon != null">
+                {{ new_block.icon }}
+              </div>
               <div v-else>No Icon</div>
+            </q-item-section> -->
+
+            <q-item-section
+              v-if="new_block.type === 'sound'"
+              @click="addOptionPhoneme(new_block)"
+              avatar
+              class="cursor-pointer"
+            >
+              ++Icon/Sound
+              <span v-if="new_block.icon != null">
+                <component
+                  :is="new_block.icon.icon_name"
+                  color="grey-10"
+                  :label="false"
+                  :dots="false"
+                  :center="true"
+                  :scale="true"
+                  style="border-radius: 10px; font-size: 40px"
+                  class="overflow-hidden"
+                ></component>
+              </span>
             </q-item-section>
           </q-item>
 
           <!-- {{ new_block }} -->
+        </q-list>
 
+        <q-list>
           <q-item-label header>
             {{ new_block.options.length }} Options
             <q-btn
@@ -65,11 +82,12 @@
               >Add Option</q-btn
             ></q-item-label
           >
+
           <q-item v-for="(option, idx) in new_block.options" :key="idx">
             <q-item-section avatar>
               <q-input label="label" v-model="option.label" outlined></q-input>
             </q-item-section>
-
+            <!--
             <q-item-section
               v-if="new_block.type === 'spelling'"
               @click="addOptionIcon(option)"
@@ -88,9 +106,9 @@
                 size="xl"
               ></q-icon>
               <q-btn v-else icon-right="mdi-plus" no-caps flat>Icon</q-btn>
-              <!-- <q-input label="icon" v-model="option.icon" outlined></q-input> -->
-            </q-item-section>
-            <q-item-section avatar>
+            </q-item-section> -->
+
+            <!-- <q-item-section avatar>
               <div>
                 <q-btn
                   :icon="
@@ -100,6 +118,31 @@
                   @click="addOptionSound(option)"
                   flat
                 >
+                </q-btn>
+              </div>
+            </q-item-section> -->
+
+            <q-item-section avatar v-if="new_block.type === 'spelling'">
+              <div>
+                <q-btn
+                  :color="option.icon != null ? 'green' : 'warning'"
+                  @click="addOptionPhoneme(option)"
+                  flat
+                  no-caps
+                >
+                  ++Icon/Sound
+                  <span v-if="option.icon != null">
+                    <component
+                      :is="option.icon.icon_name"
+                      color="grey-10"
+                      :label="false"
+                      :dots="false"
+                      :center="true"
+                      :scale="true"
+                      style="border-radius: 10px; font-size: 40px"
+                      class="overflow-hidden"
+                    ></component>
+                  </span>
                 </q-btn>
               </div>
             </q-item-section>
@@ -149,14 +192,24 @@
       <IconList
         v-model:model_icon="edit_option.icon"
         :icons="icons"
+        :phonemes="phonemes"
         @close="show_icons = false"
       ></IconList>
+    </q-dialog>
+
+    <q-dialog v-model="show_phonemes" full-height full-width>
+      <PhonemesList
+        v-model:model_icon="edit_option.icon"
+        :phonemes="phonemes"
+        @close="show_phonemes = false"
+      ></PhonemesList>
     </q-dialog>
 
     <q-dialog v-model="show_sounds" full-height full-width>
       <SoundList
         v-model:model_sound="edit_option.sound"
         :sounds="sounds"
+        :phonemes="phonemes"
         @close="show_sounds = false"
       ></SoundList>
     </q-dialog>
@@ -214,18 +267,21 @@ import axios from "axios";
 
 import IconList from "src/components/master/IconList.vue";
 import SoundList from "src/components/master/SoundList.vue";
+import PhonemesList from "src/components/master/PhonemesList.vue";
 
 export default defineComponent({
   name: "BlocksPage",
   components: {
     IconList,
     SoundList,
+    PhonemesList,
   },
   props: {
     block_rows: {},
     blocks: {},
     icons: {},
     sounds: {},
+    phonemes: {},
   },
   setup() {
     const accounts = useAccountsStore();
@@ -258,6 +314,14 @@ export default defineComponent({
           align: "left",
           sortable: true,
         },
+
+        {
+          name: "icon",
+          field: "icon",
+          label: "icon",
+          align: "left",
+          sortable: true,
+        },
         {
           name: "type",
           field: "type",
@@ -283,7 +347,8 @@ export default defineComponent({
         id: 0,
         label: "",
         type: "sound",
-        icon: "",
+        icon: null,
+        sound: null,
         options: [
           // { label: "ay", sound: null, icon: "" },
           // { label: "a-e", sound: null, icon: "" },
@@ -293,7 +358,7 @@ export default defineComponent({
         ], // TODO: shuffle order..
         // longest: "a-e",
       },
-      option_template: { label: "ay", sound: null, icon: "" },
+      option_template: { label: "ay", sound: null, icon: null },
       phonic_options: [
         {
           id: 2,
@@ -312,6 +377,7 @@ export default defineComponent({
 
       show_icons: false,
       show_sounds: false,
+      show_phonemes: false,
       edit_option: null,
       operation: false,
     };
@@ -347,10 +413,23 @@ export default defineComponent({
     addNewOption() {
       this.new_block.options.push(this.new_option);
       this.new_option = null;
+      return;
+      if (this.new_option.includes(",")) {
+        this.new_block.options.push(...this.new_option.split(","));
+        this.new_option = null;
+      } else {
+        this.new_block.options.push(this.new_option);
+        this.new_option = null;
+      }
     },
 
     addOptionIcon(option) {
       this.show_icons = true;
+      this.edit_option = option;
+    },
+
+    addOptionPhoneme(option) {
+      this.show_phonemes = true;
       this.edit_option = option;
     },
 
@@ -366,7 +445,8 @@ export default defineComponent({
     editBlock(block, item_id) {
       console.log("block", block);
       this.edit_id = item_id;
-      this.new_block = block;
+      // this.new_block = block;
+      this.new_block = { ...this.block_template, ...block };
       this.add_block = true;
     },
 

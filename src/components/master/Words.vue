@@ -49,11 +49,19 @@
                 outlined
                 v-model="new_word.word"
                 @blur="makePatternFromWord()"
-              ></q-input>
+              >
+                <template v-slot:after>
+                  <q-icon
+                    @click="checkExistsInOtherRotation(new_word.word)"
+                    class="cursor-pointer"
+                    name="mdi-clipboard-text-clock-outline"
+                  ></q-icon>
+                </template>
+              </q-input>
             </q-item-section>
 
-            <!-- sound -->
-            <q-item-section>
+            <!-- sound return later -->
+            <q-item-section class="hidden">
               <q-btn
                 @click="addOptionSound(new_word)"
                 outline
@@ -113,10 +121,42 @@
               ></q-select>
             </q-item-section>
           </q-item>
+
+          <q-item>
+            <!-- phonemes word .. for making things quicker..   -->
+            <q-item-section>
+              <q-input
+                label="word letters"
+                outlined
+                v-model="word_letters"
+                @blur="makePatternFromWordV2()"
+              >
+              </q-input>
+            </q-item-section>
+
+            <!-- phonemes word .. for making things quicker..   -->
+            <q-item-section>
+              <q-input
+                label="word phonemes"
+                outlined
+                v-model="word_phonemes"
+                @blur="guessPhonemes()"
+              >
+              </q-input>
+            </q-item-section>
+          </q-item>
         </q-list>
       </q-card-section>
 
       <!-- PATTERN -->
+
+      <div class="flex row justify-center">
+        <q-btn @click="clearSounds()" flat no-caps>Clear Sounds</q-btn>
+        <q-btn @click="clearBlocks()" flat no-caps
+          >Clear Non-input Blocks</q-btn
+        >
+      </div>
+
       <q-card-section class="fit q-pa-md">
         <q-list>
           <div class="q-ma-md">
@@ -150,7 +190,10 @@
                 <!-- INPUT -->
                 <div class="flex row items-center">
                   <span class="text-caption">Input</span>
-                  <q-toggle v-model="s.input"></q-toggle>
+                  <q-toggle
+                    v-model="s.input"
+                    @update:model-value="updateInput(s)"
+                  ></q-toggle>
                 </div>
                 <!-- schwa -->
                 <div class="flex row items-center">
@@ -178,7 +221,11 @@
                 <!-- ICON + SOUND -->
                 <div class="flex q-gutter-x-sm">
                   <!-- ICON -->
-                  <q-btn @click="addOptionIcon(s)" outline no-caps>
+                  <span v-if="s.icon != null && s.icon.icon_name">
+                    {{ s.icon.icon_name }}
+                  </span>
+
+                  <!-- <q-btn @click="addOptionIcon(s)" outline no-caps>
                     <q-icon v-if="s.icon.src !== undefined" size="xl">
                       <img :src="s.icon.src" type="image/svg+xml" />
                     </q-icon>
@@ -188,7 +235,7 @@
                       size="md"
                     ></q-icon>
                     <div v-else>Icon <q-icon name="mdi-plus" size="md" /></div>
-                  </q-btn>
+                  </q-btn> -->
 
                   <q-btn @click="addOptionSound(s)" outline no-caps>
                     Sound {{ s.sound === null ? "" : s.sound.id.split("-")[0] }}
@@ -198,6 +245,27 @@
                       "
                       :color="s.sound !== null ? 'green' : 'warning'"
                     />
+                  </q-btn>
+
+                  <q-btn
+                    :color="s.icon != null ? 'green' : 'warning'"
+                    @click="addOptionPhoneme(s)"
+                    outline
+                    no-caps
+                  >
+                    ++Icon/Sound
+                    <span v-if="s.icon != null">
+                      <component
+                        :is="s.icon.icon_name"
+                        color="grey-10"
+                        :label="false"
+                        :dots="false"
+                        :center="true"
+                        :scale="true"
+                        style="border-radius: 10px; font-size: 40px"
+                        class="overflow-hidden"
+                      ></component>
+                    </span>
                   </q-btn>
                 </div>
 
@@ -215,14 +283,29 @@
                   @click="removePattern(idx)"
                 ></q-btn>
 
+                <!-- v-if="s.input" -->
                 <div
-                  v-if="s.input"
                   class="col-12 q-my-sm flex row justify-start items-center"
+                  :class="
+                    (!s.input && s.block != null) ||
+                    (s.input && s.block == null)
+                      ? 'bg-red'
+                      : ''
+                  "
                 >
                   <!-- BLOCK -->
                   <q-btn @click="addOptionBlock(s)" no-caps outline size="lg">
                     <span v-if="s.block == null">Add Block</span>
                     <span v-else>Block: {{ s.block.label }}</span>
+                  </q-btn>
+                  <q-btn
+                    v-if="s.block !== null"
+                    @click="s.block = null"
+                    icon="mdi-close"
+                    flat
+                    no-caps
+                    color="negative"
+                  >
                   </q-btn>
                 </div>
 
@@ -396,6 +479,7 @@
         v-if="edit_option === null"
         v-model:model_icon="new_word.homo"
         :icons="icons"
+        :phonemes="phonemes"
         @close="show_icons = false"
       ></IconList>
 
@@ -403,6 +487,7 @@
         v-else
         v-model:model_icon="edit_option.icon"
         :icons="icons"
+        :phonemes="phonemes"
         @close="show_icons = false"
       ></IconList>
     </q-dialog>
@@ -414,8 +499,45 @@
         :letters="edit_option.letters"
         :block="new_word.block"
         :input="edit_option.input"
+        :phonemes="phonemes"
         @close="show_sounds = false"
       ></SoundList>
+    </q-dialog>
+
+    <q-dialog v-model="show_phonemes" full-height full-width>
+      <!-- Homophones not yet done..  -->
+      <PhonemesList
+        v-model:model_icon="edit_option.icon"
+        :phonemes="phonemes"
+        :letters="edit_option.letters"
+        :block="new_word.block"
+        :input="edit_option.input"
+        :type="new_word.type"
+        :correct="edit_option.correct"
+        :option="edit_option"
+        @close="show_phonemes = false"
+      ></PhonemesList>
+    </q-dialog>
+
+    <q-dialog v-model="word_exists">
+      <div class="flex column q-gutter-sm">
+        <q-card
+          v-for="(word, i) in existing_words"
+          :key="i"
+          @click="selectPriorWord(word)"
+          class="cursor-pointer"
+          :class="{
+            disabled: word.word.type !== new_word.type,
+            'no-pointer-events': word.word.type !== new_word.type,
+          }"
+        >
+          <q-card-section>
+            {{ word.word.type }}
+            <q-chip> {{ word.word.word }} </q-chip>
+            {{ word.word.block.label }}
+          </q-card-section>
+        </q-card>
+      </div>
     </q-dialog>
 
     <q-dialog v-model="show_blocks" full-height full-width>
@@ -517,7 +639,34 @@
       <template v-slot:body-cell-pattern="props">
         <q-td :props="props">
           <span v-for="(pattern, i) in props.row.word.pattern" :key="i">
-            <span v-if="pattern.sound != null">
+            <span v-if="pattern.icon == null">
+              <q-icon
+                name="mdi-alert-rhombus-outline"
+                color="negative"
+              ></q-icon>
+            </span>
+            <span v-else>
+              <span v-if="typeof pattern.icon === 'object'">
+                <span v-if="pattern.icon.icon_name != undefined">
+                  <strong v-if="pattern.input">
+                    {{ pattern.icon.label }}
+                  </strong>
+                  <span v-else> {{ pattern.icon.label }}</span>
+                  <span v-if="i < props.row.word.pattern.length - 1">-</span>
+                </span>
+                <q-icon v-else size="md">
+                  <img :src="pattern.icon.src" type="image/svg+xml" />
+                </q-icon>
+              </span>
+              <span v-else>
+                <q-icon
+                  name="mdi-alert-rhombus-outline"
+                  color="negative"
+                ></q-icon>
+              </span>
+            </span>
+
+            <!-- <span v-if="pattern.sound != null">
               <strong v-if="pattern.input">
                 {{ pattern.sound.id.split("-")[0] }}</strong
               >
@@ -534,10 +683,11 @@
                 name="mdi-alert-rhombus-outline"
                 color="negative"
               ></q-icon>
-            </span>
+            </span> -->
           </span>
         </q-td>
       </template>
+
       <template v-slot:body-cell-iconpattern="props">
         <q-td :props="props">
           <span v-for="(pattern, i) in props.row.word.pattern" :key="'i' + i">
@@ -549,8 +699,19 @@
             </span>
             <span v-else>
               <span v-if="typeof pattern.icon === 'object'">
-                <!-- {{ pattern.icon.label }} -->
                 <span v-if="pattern.icon.label == 'TBA'">p</span>
+                <span v-else-if="pattern.icon.icon_name != undefined">
+                  <component
+                    :is="pattern.icon.icon_name"
+                    color="green-6"
+                    :label="false"
+                    :dots="false"
+                    :center="true"
+                    :scale="true"
+                    style="border-radius: 10px; font-size: 40px"
+                    class="overflow-hidden"
+                  ></component>
+                </span>
                 <q-icon v-else size="md">
                   <img :src="pattern.icon.src" type="image/svg+xml" />
                 </q-icon>
@@ -640,6 +801,7 @@ import axios from "axios";
 import IconList from "src/components/master/IconList.vue";
 import SoundList from "src/components/master/SoundList.vue";
 import BlockList from "src/components/master/BlockList.vue";
+import PhonemesList from "src/components/master/PhonemesList.vue";
 
 import PhonicsWord from "src/components/phonics/PhonicsWord.vue";
 
@@ -650,6 +812,7 @@ export default defineComponent({
     SoundList,
     BlockList,
     PhonicsWord,
+    PhonemesList,
   },
   props: {
     words: {},
@@ -657,6 +820,7 @@ export default defineComponent({
     blocks: {},
     icons: {},
     sounds: {},
+    phonemes: {},
   },
   setup() {
     const accounts = useAccountsStore();
@@ -797,6 +961,7 @@ export default defineComponent({
       show_icons: false,
       show_sounds: false,
       show_blocks: null,
+      show_phonemes: false,
       //
       dictation: "",
       add_dictation: false,
@@ -810,6 +975,12 @@ export default defineComponent({
       //
       filter: "",
       operation: false,
+      //
+      word_exists: false,
+      existing_words: [],
+      //
+      word_phonemes: "",
+      word_letters: "",
     };
   },
   mounted() {
@@ -848,6 +1019,7 @@ export default defineComponent({
     editWord(word, item_id) {
       // console.log("item_id", item_id);
       // console.log("unit", unit);
+      // console.log("word", word);
       this.edit_id = item_id;
       this.new_word = { ...this.word_template, ...word };
       this.add_word = true;
@@ -875,7 +1047,7 @@ export default defineComponent({
         JSON.parse(
           JSON.stringify({
             ...this.pattern_template,
-            ...{ block: this.prefill_block },
+            // ...{ block: this.prefill_block }, // add's to all words we just want for input..
           })
         )
       );
@@ -908,6 +1080,11 @@ export default defineComponent({
       this.edit_option = option;
     },
 
+    addOptionPhoneme(option) {
+      this.show_phonemes = true;
+      this.edit_option = option;
+    },
+
     async addWord() {
       this.operation = true;
       let realmId = "rlm-public";
@@ -916,6 +1093,9 @@ export default defineComponent({
       let base_url = `https://${dbid}.dexie.cloud`;
       // let token = this.accounts.currentUser.accessToken;
       let token = await this.getGlobalToken();
+      // console.log("token", token);
+      // let token =
+      //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyaGRnYzRpNXE5NXZ1aW9nQGRleGllLmNsb3VkIiwic2NvcGVzIjpbIkFDQ0VTU19EQiIsIklNUEVSU09OQVRFIiwiTUFOQUdFX0RCIiwiR0xPQkFMX1JFQUQiLCJHTE9CQUxfV1JJVEUiXSwidXNlclR5cGUiOiJjbGllbnQiLCJsaWNlbnNlIjoib2siLCJybCI6InByb2QiLCJpYXQiOjE3MDY1MDU1NjcsIm5iZiI6MTcwNjUwNTI2NywiZXhwIjoxNzA2NTA5MTY3LCJhdWQiOlsiaHR0cHM6Ly96NXc5eHF3ZmQuZGV4aWUuY2xvdWQiLCJ6NXc5eHF3ZmQiXSwiaXNzIjoiaHR0cHM6Ly9kZXhpZS5jbG91ZCJ9.GQ4AQEdQUmlvt7RBsoPIiHctAvNgHsQgfDIiNXp-VfA";
 
       // this.new_unit.id = this.units.length + 1;
       this.prefill_block = this.new_word.block;
@@ -943,7 +1123,9 @@ export default defineComponent({
         this.updateUnits(item);
       }
 
+      // ..bring await back alter
       await axios
+        // axios
         .post(`${base_url}/public/words`, item, {
           headers: {
             "Content-Type": "application/json",
@@ -975,6 +1157,8 @@ export default defineComponent({
         let dbid = process.env.DBID;
         let base_url = `https://${dbid}.dexie.cloud`;
         let token = await this.getGlobalToken();
+        // let token =
+        //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyaGRnYzRpNXE5NXZ1aW9nQGRleGllLmNsb3VkIiwic2NvcGVzIjpbIkFDQ0VTU19EQiIsIklNUEVSU09OQVRFIiwiTUFOQUdFX0RCIiwiR0xPQkFMX1JFQUQiLCJHTE9CQUxfV1JJVEUiXSwidXNlclR5cGUiOiJjbGllbnQiLCJsaWNlbnNlIjoib2siLCJybCI6InByb2QiLCJpYXQiOjE3MDY1MDU1NjcsIm5iZiI6MTcwNjUwNTI2NywiZXhwIjoxNzA2NTA5MTY3LCJhdWQiOlsiaHR0cHM6Ly96NXc5eHF3ZmQuZGV4aWUuY2xvdWQiLCJ6NXc5eHF3ZmQiXSwiaXNzIjoiaHR0cHM6Ly9kZXhpZS5jbG91ZCJ9.GQ4AQEdQUmlvt7RBsoPIiHctAvNgHsQgfDIiNXp-VfA";
 
         let deleted = false;
         await axios
@@ -1167,6 +1351,13 @@ export default defineComponent({
 
     makePatternFromWord() {
       let word = this.new_word.word;
+      this.checkExistsInOtherRotation(word);
+      if (this.new_word.pattern.length > 0) return;
+
+      return; // see v2
+      //check if word already exists first!!
+
+      console.log(this.new_word);
 
       let split = word.split("");
       // console.log("split", split);
@@ -1175,6 +1366,115 @@ export default defineComponent({
         const letter = split[idx];
         this.pattern_template.letters = letter;
         this.addPattern();
+      }
+    },
+
+    async checkExistsInOtherRotation(word) {
+      let check = false;
+      try {
+        check = await syncdb.words.where("word.word").equals(word).toArray();
+      } catch (error) {
+        let status = `Failed to read words: ${error}`;
+        console.log("status error", status);
+      }
+
+      console.log("same word exists elsewhere?", check);
+
+      if (check !== false) {
+        // this.new_word.past
+        this.word_exists = true;
+        this.existing_words = check;
+      }
+    },
+
+    updateInput(option) {
+      // console.log("option", option);
+      if (option.input) {
+        option.block = this.prefill_block;
+      } else {
+        option.block = null;
+      }
+    },
+
+    clearSounds() {
+      this.new_word.pattern.forEach(function (w) {
+        w.sound = null;
+      });
+    },
+
+    clearBlocks() {
+      // for (let idx = 0; idx < this.new_word.pattern.length; idx++) {
+      //   const w = this.new_word.pattern[idx];
+      //   if (!w.input  && w.block != null) {
+      //     w.block = null;
+      //   }
+      // }
+      this.new_word.pattern.forEach(function (w) {
+        if (w.input === false && w.block != null) {
+          w.block = null;
+        }
+      });
+    },
+
+    makePatternFromWordV2() {
+      if (this.new_word.pattern.length > 0) return;
+      let split = this.word_letters.split(/(\s+)/).filter(function (e) {
+        return e.trim().length > 0;
+      });
+
+      for (let idx = 0; idx < split.length; idx++) {
+        const letter = split[idx];
+        this.pattern_template.letters = letter;
+        this.addPattern();
+      }
+
+      for (let idx = 0; idx < this.new_word.pattern.length; idx++) {
+        const pattern = this.new_word.pattern[idx];
+        this.guessPhoneme(pattern, pattern.letters);
+      }
+    },
+
+    guessPhonemes() {
+      // console.log("word_ponemes", this.word_phonemes.split(/(\s+)/));
+      let split_p = this.word_letters.split(/(\s+)/).filter(function (e) {
+        return e.trim().length > 0;
+      });
+      for (let idx = 0; idx < this.new_word.pattern.length; idx++) {
+        const pattern = this.new_word.pattern[idx];
+        let letters = split_p[idx];
+        if (letters != undefined) {
+          this.guessPhoneme(pattern, letters);
+        }
+      }
+    },
+
+    guessPhoneme(pattern, letters) {
+      let search_label = letters;
+      if (letters === "*") {
+        search_label = "schwa";
+      }
+
+      // console.log("guestt", pattern, letters);
+      let phoneme = this.phonemes.find((e) => e.label === search_label);
+
+      if (phoneme !== undefined) {
+        let set_icon = {
+          id: phoneme.id,
+          label: phoneme.label,
+          icon_name: phoneme.icon_name,
+          sound_src: phoneme.sound_src,
+        };
+        pattern.icon = set_icon;
+      }
+    },
+
+    selectPriorWord(word) {
+      this.new_word.pattern = JSON.parse(JSON.stringify(word.word.pattern));
+
+      for (let idx = 0; idx < this.new_word.pattern.length; idx++) {
+        const element = this.new_word.pattern[idx];
+        element.input = false;
+        element.block = null;
       }
     },
   },

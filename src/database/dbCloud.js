@@ -51,26 +51,27 @@ export const setupSync = function () {
   // setupEncrypt();
 
 
-  syncdb.version(32).stores({
+  syncdb.version(34).stores({
     subscription: '@id, userId',
     settings: '@id ',
     classrooms: '@id, title, realmId',
     students: '@id, realmId, classroom.id, &userName', //make sure class is always an object with an id
+    preferences: '@id, studentId',
     progress: '@id, realmId, courseId, studentId, [courseId+studentId]',
     revision: '@id, realmId, courseId, unitId, studentId, [courseId+unitId+studentId]', //
     links: '@id, studentId',
     //
     blocks: '@id, region', //public
-    words: '@id, region', //public
+    words: '@id, region, word.word', //public
     units: '@id, region', // public
     courses: '@id, region', //public
-    student_usernames: "@id, &studentId, &userName", // public
     // lessons: '@id, students, realmId',
     // Access Control tables
     realms: "@realmId",
     members: "@id, email , userId, custom", // Optionally, index things also, like "realmId" or "email".
     roles: "[realmId+name]",
   });
+
 
 
   syncdb.open().catch(function (err) {
