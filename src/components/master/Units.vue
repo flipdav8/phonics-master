@@ -52,39 +52,53 @@
 
           <!-- Prefilled Type.. ee + icon is bee sound.. -->
 
-          <q-item-label header>
-            <q-btn
-              no-caps
-              color="green"
-              outline
-              icon="mdi-plus"
-              @click="add_word = true"
-              class="q-mr-md"
-              >Add Word/s</q-btn
-            >
-            {{ new_unit.words.length }} Words
-          </q-item-label>
-          <div class="flex row q-mx-sm q-gutter-sm">
-            <div
-              v-for="(word, idx) in new_unit.words"
-              :key="idx"
-              class="flex row"
-              style="border: solid 1px; border-radius: 10px"
-            >
-              <div avatar>
-                <q-chip>{{ word.word }}</q-chip>
-              </div>
+          <q-item>
+            <q-item-label header>
+              <q-btn
+                no-caps
+                color="green"
+                outline
+                icon="mdi-plus"
+                @click="add_word = true"
+                class="q-mr-md"
+                >Add Word/s</q-btn
+              >
+              {{ new_unit.words.length }} Words
+            </q-item-label>
 
-              <div avatar>
-                <q-btn
-                  @click="removeWord(idx)"
-                  icon="mdi-close"
-                  color="red"
-                  flat
-                  rounded
-                ></q-btn>
+            <q-btn @click="alphabatize()" flat no-caps size="sm"
+              >Alphabetize</q-btn
+            >
+          </q-item>
+
+          <div>
+            <VueDraggable
+              v-model="new_unit.words"
+              animation="150"
+              :sort="true"
+              class="flex row q-mx-sm q-gutter-sm"
+            >
+              <div
+                v-for="(word, idx) in new_unit.words"
+                :key="idx"
+                class="flex row"
+                style="border: solid 1px; border-radius: 10px"
+              >
+                <div avatar>
+                  <q-chip>{{ word.word }}</q-chip>
+                </div>
+
+                <div avatar>
+                  <q-btn
+                    @click="removeWord(idx)"
+                    icon="mdi-close"
+                    color="red"
+                    flat
+                    rounded
+                  ></q-btn>
+                </div>
               </div>
-            </div>
+            </VueDraggable>
           </div>
         </q-list>
       </q-card-section>
@@ -246,7 +260,7 @@ export default defineComponent({
         info: "text..",
         words: [],
         word_ids: [],
-
+        version: 0,
         // order: 1,
         // revision_rule: "default",
       },
@@ -409,7 +423,10 @@ export default defineComponent({
       this.operation = false;
     },
 
+    //TODO: turn back on later after first preview
     async updateWords(words, unit_id, remove) {
+      return false;
+
       let word_ids = words.map((e) => e.id);
       for (let idx = 0; idx < word_ids.length; idx++) {
         const word_id = word_ids[idx];
@@ -557,6 +574,10 @@ export default defineComponent({
           // return undefined;
         });
       return token;
+    },
+
+    alphabatize() {
+      this.new_unit.words.sort((a, b) => a.word.localeCompare(b.word));
     },
   },
 });

@@ -27,8 +27,13 @@
             </q-item-section>
           </q-item>
 
-          <div class="q-ma-md">
-            <div class="flex column q-mx-sm q-gutter-sm items-center">
+          <div class="q-ma-md flex column">
+            <VueDraggable
+              v-model="new_course.units"
+              animation="150"
+              :sort="true"
+              class="flex column q-mx-sm q-gutter-sm items-center"
+            >
               <div
                 v-for="(s, idx) in new_course.units"
                 :key="idx"
@@ -81,10 +86,10 @@
                 </div>
 
                 <!-- <q-btn
-                  icon="mdi-pencil-plus-outline"
-                  flat
-                  @click="editUnit(idx)"
-                ></q-btn> -->
+              icon="mdi-pencil-plus-outline"
+              flat
+              @click="editUnit(idx)"
+            ></q-btn> -->
 
                 <!-- DELETE -->
                 <q-btn
@@ -101,15 +106,16 @@
                   More things to edit..
                 </div>
               </div>
-              <q-btn
-                flat
-                icon-right="mdi-plus"
-                size="md"
-                @click="addUnit()"
-                no-caps
-                >Add Unit</q-btn
-              >
-            </div>
+            </VueDraggable>
+
+            <q-btn
+              flat
+              icon-right="mdi-plus"
+              size="md"
+              @click="addUnit()"
+              no-caps
+              >Add Unit</q-btn
+            >
           </div>
         </q-list>
       </q-card-section>
@@ -246,6 +252,7 @@ export default defineComponent({
         target: 3,
         label: "",
         type: "normal",
+        version: 0,
       },
 
       edit_unit: null,

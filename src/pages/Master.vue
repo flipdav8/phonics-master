@@ -149,7 +149,7 @@ export default defineComponent({
   },
   data() {
     return {
-      tab: "words",
+      tab: "units",
 
       //
       blocks: [],

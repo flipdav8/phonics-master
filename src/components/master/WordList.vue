@@ -20,6 +20,7 @@
         :options="['all', 'sound', 'spelling']"
       ></q-select>
 
+      <q-input outlined v-model="block_search" label="phoneme"></q-input>
       <q-chip
         v-if="block !== 'all'"
         square
@@ -32,11 +33,15 @@
       </q-chip>
       <q-chip v-else square outline size="lg"> All Blocks </q-chip>
 
-      <q-btn flat icon="mdi-close" @click="$emit('close')"></q-btn>
+      <q-btn flat icon="mdi-close" @click="$emit('close')">Close</q-btn>
     </q-card-section>
 
     <div class="flex row justify-center q-gutter-x-md">
       <!-- <q-toggle v-model="multiselect" label="multiselect"></q-toggle> -->
+      <q-btn @click="highlightAllWords()" color="green" no-caps>
+        Highlight All {{ filterWords.length }}
+      </q-btn>
+
       <q-btn
         :disable="selected.length < 1"
         @click="selectWords()"
@@ -62,6 +67,7 @@
         <!-- :class="{ selected: model_word != null && model_word.id === word.id }" -->
         <strong class="text-h4">{{ word.word }} </strong>
         <div class="text-caption">{{ word.type }}</div>
+        <div class="text-caption">{{ word.block.label }}</div>
 
         <!-- <q-btn @click="selectWord(word)" color="green" no-caps> Select</q-btn> -->
         <br />
@@ -94,6 +100,7 @@ export default defineComponent({
       exclude: [],
       search: "",
       block: "all",
+      block_search: "",
       type: "all",
       multiselect: true,
       selected: [],
@@ -135,7 +142,11 @@ export default defineComponent({
       }
     },
     blockFilter(e) {
-      if (this.block === "all") {
+      if (this.block_search.length > 1) {
+        return (
+          e.block != undefined && e.block.label.includes(this.block_search)
+        );
+      } else if (this.block === "all") {
         return true;
       } else {
         return e.block != undefined && e.block.id === this.block.id;
@@ -163,6 +174,10 @@ export default defineComponent({
 
     selectWords() {
       this.$emit("selectWords", this.selected);
+    },
+
+    highlightAllWords() {
+      this.selected = this.filterWords;
     },
   },
 });

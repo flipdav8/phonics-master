@@ -30,6 +30,7 @@
                 no-caps
                 outline
                 size="lg"
+                :color="new_word.block === null ? 'warning' : ''"
               >
                 <span v-if="new_word.block == null">Add Block</span>
                 <span v-else>Block: {{ new_word.block.label }} </span>
@@ -120,12 +121,17 @@
                 :options="['past', 'present', 'future']"
               ></q-select>
             </q-item-section>
+
+            <q-item-section>
+              <q-checkbox v-model="new_word.plural" label="plural"></q-checkbox>
+            </q-item-section>
           </q-item>
 
           <q-item>
             <!-- phonemes word .. for making things quicker..   -->
             <q-item-section>
               <q-input
+                class="show_border"
                 label="word letters"
                 outlined
                 v-model="word_letters"
@@ -150,11 +156,13 @@
 
       <!-- PATTERN -->
 
-      <div class="flex row justify-center">
-        <q-btn @click="clearSounds()" flat no-caps>Clear Sounds</q-btn>
-        <q-btn @click="clearBlocks()" flat no-caps
-          >Clear Non-input Blocks</q-btn
-        >
+      <div class="flex row justify-center hidden">
+        <!-- <q-btn @click="clearSounds()" flat no-caps>Clear Sounds</q-btn> -->
+        <!-- <q-btn @click="clearBlocks()" flat no-caps>
+          Clear Non-input Blocks
+        </q-btn> -->
+
+        <q-btn @click="redoIcons()" flat no-caps> Redo Icons </q-btn>
       </div>
 
       <q-card-section class="fit q-pa-md">
@@ -220,33 +228,6 @@
 
                 <!-- ICON + SOUND -->
                 <div class="flex q-gutter-x-sm">
-                  <!-- ICON -->
-                  <span v-if="s.icon != null && s.icon.icon_name">
-                    {{ s.icon.icon_name }}
-                  </span>
-
-                  <!-- <q-btn @click="addOptionIcon(s)" outline no-caps>
-                    <q-icon v-if="s.icon.src !== undefined" size="xl">
-                      <img :src="s.icon.src" type="image/svg+xml" />
-                    </q-icon>
-                    <q-icon
-                      v-else-if="s.icon.includes('mdi')"
-                      :name="s.icon"
-                      size="md"
-                    ></q-icon>
-                    <div v-else>Icon <q-icon name="mdi-plus" size="md" /></div>
-                  </q-btn> -->
-
-                  <q-btn @click="addOptionSound(s)" outline no-caps>
-                    Sound {{ s.sound === null ? "" : s.sound.id.split("-")[0] }}
-                    <q-icon
-                      :name="
-                        s.sound === null ? 'mdi-speaker-off' : 'mdi-speaker'
-                      "
-                      :color="s.sound !== null ? 'green' : 'warning'"
-                    />
-                  </q-btn>
-
                   <q-btn
                     :color="s.icon != null ? 'green' : 'warning'"
                     @click="addOptionPhoneme(s)"
@@ -350,6 +331,13 @@
                         </q-item>
                       </template>
                     </q-select>
+
+                    <q-icon
+                      v-if="s.correct.length < 1"
+                      name="mdi-alert"
+                      color="negative"
+                      size="md"
+                    ></q-icon>
                   </div>
                   <!-- EXCLUDE -->
                   <div v-if="s.input && s.block !== null" class="col-5">
@@ -703,7 +691,7 @@
                 <span v-else-if="pattern.icon.icon_name != undefined">
                   <component
                     :is="pattern.icon.icon_name"
-                    color="green-6"
+                    :color="pattern.input ? 'green-6' : 'grey-8'"
                     :label="false"
                     :dots="false"
                     :center="true"
@@ -754,6 +742,25 @@
           >
             ə
           </strong>
+
+          <strong
+            v-if="
+              props.row.word.pattern.filter((e) => e.schwa).length < 1 &&
+              props.row.word.pattern.filter(
+                (e) => e.icon != null && e.icon.label == 'schwa'
+              ).length > 0
+            "
+          >
+            <q-icon name="mdi-alert" color="negative" size="md"></q-icon> ə
+          </strong>
+
+          <!-- <span
+            v-if="
+              props.row.word.pattern.filter((e) => e.sound != null).length > 0
+            "
+          >
+            <q-icon name="mdi-alert" color="negative" size="md"></q-icon>
+          </span> -->
         </q-td>
       </template>
 
@@ -908,7 +915,7 @@ export default defineComponent({
       pattern_template: {
         letters: "...",
         input: false,
-        icon: "",
+        icon: null,
         sound: null,
         block: null,
         exclude: [],
@@ -954,6 +961,7 @@ export default defineComponent({
         dictations: [],
         homophones: [],
         use_tense: false,
+        plural: false,
       },
       prefill_block: null,
       prefill_type: "sound",
@@ -1014,6 +1022,9 @@ export default defineComponent({
       this.edit_pattern = null;
       this.edit_icon = null;
       this.edit_word = false;
+
+      this.word_phonemes = "";
+      this.word_letters = "";
     },
 
     editWord(word, item_id) {
@@ -1023,6 +1034,7 @@ export default defineComponent({
       this.edit_id = item_id;
       this.new_word = { ...this.word_template, ...word };
       this.add_word = true;
+      window.scrollTo(0, 0);
 
       // this.new_word = word;
       // this.edit_word = true;
@@ -1042,15 +1054,25 @@ export default defineComponent({
     removePattern(idx) {
       this.new_word.pattern.splice(idx, 1);
     },
-    addPattern() {
-      this.new_word.pattern.push(
-        JSON.parse(
+    addPattern(make_input) {
+      let pattern_object;
+
+      if (make_input != undefined) {
+        pattern_object = JSON.parse(
+          JSON.stringify({
+            ...this.pattern_template,
+            ...{ input: true, block: this.new_word.block },
+          })
+        );
+      } else {
+        pattern_object = JSON.parse(
           JSON.stringify({
             ...this.pattern_template,
             // ...{ block: this.prefill_block }, // add's to all words we just want for input..
           })
-        )
-      );
+        );
+      }
+      this.new_word.pattern.push(pattern_object);
     },
 
     editUnit(unit, item_id) {
@@ -1380,7 +1402,7 @@ export default defineComponent({
 
       console.log("same word exists elsewhere?", check);
 
-      if (check !== false) {
+      if (check !== false && check.length > 0) {
         // this.new_word.past
         this.word_exists = true;
         this.existing_words = check;
@@ -1422,23 +1444,87 @@ export default defineComponent({
         return e.trim().length > 0;
       });
 
+      // this.new_word.word = split.join("");
+      this.new_word.word = this.makeWordFromPattern(split);
+
+      this.checkExistsInOtherRotation(this.new_word.word);
+
+      let block_options = [];
+      // console.log("this.new_word.block ", this.new_word.block);
+      if (this.new_word.block !== null && this.new_word.type === "sound") {
+        let unmapped_block_options = this.blocks.find(
+          (e) => e.id === this.new_word.block.id
+        ).block.options;
+
+        block_options = unmapped_block_options.map((e) => e.label);
+        // console.log("block options", block_options);
+      }
+
       for (let idx = 0; idx < split.length; idx++) {
-        const letter = split[idx];
-        this.pattern_template.letters = letter;
-        this.addPattern();
+        const letters = split[idx];
+        this.pattern_template.letters = letters;
+
+        if (block_options.includes(letters)) {
+          this.addPattern(true);
+        } else {
+          this.addPattern();
+        }
       }
 
       for (let idx = 0; idx < this.new_word.pattern.length; idx++) {
         const pattern = this.new_word.pattern[idx];
-        this.guessPhoneme(pattern, pattern.letters);
+        if (pattern.input) {
+          // let block_label = this.new_word.block.label.split("/")[1];
+          // this.guessPhoneme(pattern, block_label);
+        } else {
+          this.guessPhoneme(pattern, pattern.letters);
+        }
       }
+    },
+
+    makeWordFromPattern(map) {
+      let w = map.join("");
+
+      if (w.includes("-")) {
+        // let str = "ba-er";
+        // let str = "ga-ez";
+        // let str = "ama-ezd";
+        // let str = "volu-em";
+        let str = w;
+        let split = str.split("");
+        function rearrangeArray(arr) {
+          let result = [];
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === "-" && i + 1 < arr.length) {
+              result.push(arr[i + 2]);
+              result.push(arr[i + 1]);
+            } else if (i === 0 || (arr[i - 2] !== "-" && arr[i - 1] !== "-")) {
+              result.push(arr[i]);
+            }
+          }
+          return result;
+        }
+
+        let arr = split;
+        let re = rearrangeArray(arr);
+        w = re.join("");
+      }
+
+      let ww = w;
+      //exists because of words like yo-yo
+      if (w.includes("_")) {
+        ww = w.replaceAll("_", "-");
+      }
+
+      return ww;
     },
 
     guessPhonemes() {
       // console.log("word_ponemes", this.word_phonemes.split(/(\s+)/));
-      let split_p = this.word_letters.split(/(\s+)/).filter(function (e) {
+      let split_p = this.word_phonemes.split(/(\s+)/).filter(function (e) {
         return e.trim().length > 0;
       });
+
       for (let idx = 0; idx < this.new_word.pattern.length; idx++) {
         const pattern = this.new_word.pattern[idx];
         let letters = split_p[idx];
@@ -1452,6 +1538,32 @@ export default defineComponent({
       let search_label = letters;
       if (letters === "*") {
         search_label = "schwa";
+      } else if (letters.includes("-")) {
+        let split = letters.split("-");
+        search_label = split[0] + split[1];
+      } else {
+        if (letters === "c") {
+          search_label = "k";
+        } else if (letters === "ph") {
+          search_label = "f";
+        } else if (letters === "kn") {
+          search_label = "n";
+        } else if (letters === "ll") {
+          search_label = "l";
+        } else if (letters === "nn") {
+          search_label = "n";
+        } else if (letters === "gg") {
+          search_label = "g";
+        } else if (letters === "rr") {
+          search_label = "r";
+        } else if (letters === "ss") {
+          search_label = "s";
+        } else if (letters === "y") {
+          // search_label = "";
+          // will depend if y is at the end of word.. might be ee..
+        } else {
+          search_label = letters;
+        }
       }
 
       // console.log("guestt", pattern, letters);
@@ -1465,6 +1577,8 @@ export default defineComponent({
           sound_src: phoneme.sound_src,
         };
         pattern.icon = set_icon;
+      } else {
+        pattern.icon = null;
       }
     },
 
@@ -1473,9 +1587,17 @@ export default defineComponent({
 
       for (let idx = 0; idx < this.new_word.pattern.length; idx++) {
         const element = this.new_word.pattern[idx];
-        element.input = false;
+        // element.input = false;
         element.block = null;
       }
+    },
+
+    redoIcons() {
+      for (let idx = 0; idx < this.new_word.pattern.length; idx++) {
+        const pattern = this.new_word.pattern[idx];
+        this.guessPhoneme(pattern, pattern.letters);
+      }
+      // alert("done");
     },
   },
 });

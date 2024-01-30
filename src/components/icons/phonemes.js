@@ -4,7 +4,7 @@ const list = [
     id: 'a-phoneme',
     label: 'a',
     value: 'a-phoneme',
-    sound_src: "/src/assets/phonic-sounds/a.mp3",
+    sound_src: "a.mp3",
     spellings: [],
     icon_name: 'aIcon',
   },
@@ -14,7 +14,7 @@ const list = [
     id: 'ae-phoneme',
     label: 'ae',
     value: 'ae-phoneme',
-    sound_src: "/src/assets/phonic-sounds/ae.mp3",
+    sound_src: "ae.mp3",
     spellings: [],
     icon_name: 'aeIcon'
   },
@@ -24,7 +24,7 @@ const list = [
     id: 'air-phoneme',
     label: 'air',
     value: 'air-phoneme',
-    sound_src: "/src/assets/phonic-sounds/air.mp3",
+    sound_src: "air.mp3",
     spellings: [],
     icon_name: 'airIcon'
   },
@@ -33,7 +33,7 @@ const list = [
     id: 'ar-phoneme',
     label: 'ar',
     value: 'ar-phoneme',
-    sound_src: "/src/assets/phonic-sounds/ar.mp3",
+    sound_src: "ar.mp3",
     spellings: [],
     icon_name: 'arIcon'
   },
@@ -42,7 +42,7 @@ const list = [
     id: 'b-phoneme',
     label: 'b',
     value: 'b-phoneme',
-    sound_src: "/src/assets/phonic-sounds/b.mp3",
+    sound_src: "b.mp3",
     spellings: [],
     icon_name: 'bIcon'
   },
@@ -53,7 +53,7 @@ const list = [
     id: 'ch-phoneme',
     label: 'ch',
     value: 'ch-phoneme',
-    sound_src: "/src/assets/phonic-sounds/ch.mp3",
+    sound_src: "ch.mp3",
     spellings: [],
     icon_name: 'chIcon'
   },
@@ -63,7 +63,7 @@ const list = [
     id: 'd-phoneme',
     label: 'd',
     value: 'd-phoneme',
-    sound_src: "/src/assets/phonic-sounds/d.mp3",
+    sound_src: "d.mp3",
     spellings: [],
     icon_name: 'dIcon'
   },
@@ -73,7 +73,7 @@ const list = [
     id: 'e-phoneme',
     label: 'e',
     value: 'e-phoneme',
-    sound_src: "/src/assets/phonic-sounds/e.mp3",
+    sound_src: "e.mp3",
     spellings: [],
     icon_name: 'eIcon'
   },
@@ -84,7 +84,7 @@ const list = [
     id: 'ee-phoneme',
     label: 'ee',
     value: 'ee-phoneme',
-    sound_src: "/src/assets/phonic-sounds/ee.mp3",
+    sound_src: "ee.mp3",
     spellings: [],
     icon_name: 'eeIcon'
   },
@@ -94,7 +94,7 @@ const list = [
     id: 'eer-phoneme',
     label: 'eer',
     value: 'eer-phoneme',
-    sound_src: "/src/assets/phonic-sounds/eer.mp3",
+    sound_src: "eer.mp3",
     spellings: [],
     icon_name: 'eerIcon'
   },
@@ -103,7 +103,7 @@ const list = [
     id: 'er-phoneme',
     label: 'er',
     value: 'er-phoneme',
-    sound_src: "/src/assets/phonic-sounds/er.mp3",
+    sound_src: "er.mp3",
     spellings: [],
     icon_name: 'erIcon'
   },
@@ -112,7 +112,7 @@ const list = [
     id: 'f-phoneme',
     label: 'f',
     value: 'f-phoneme',
-    sound_src: "/src/assets/phonic-sounds/f.mp3",
+    sound_src: "f.mp3",
     spellings: [],
     icon_name: 'fIcon'
   },
@@ -121,7 +121,7 @@ const list = [
     id: 'g-phoneme',
     label: 'g',
     value: 'g-phoneme',
-    sound_src: "/src/assets/phonic-sounds/g.mp3",
+    sound_src: "g.mp3",
     spellings: [],
     icon_name: 'gIcon'
   },
@@ -131,7 +131,7 @@ const list = [
     id: 'gz-phoneme',
     label: 'gz',
     value: 'gz-phoneme',
-    sound_src: "/src/assets/phonic-sounds/gz.mp3",
+    sound_src: "gz.mp3",
     spellings: [],
     icon_name: 'gzIcon'
   },
@@ -142,7 +142,7 @@ const list = [
     id: 'h-phoneme',
     label: 'h',
     value: 'h-phoneme',
-    sound_src: "/src/assets/phonic-sounds/h.mp3",
+    sound_src: "h.mp3",
     spellings: [],
     icon_name: 'hIcon'
   },
@@ -152,7 +152,7 @@ const list = [
     id: 'i-phoneme',
     label: 'i',
     value: 'i-phoneme',
-    sound_src: "/src/assets/phonic-sounds/i.mp3",
+    sound_src: "i.mp3",
     spellings: [],
     icon_name: 'iIcon'
   },
@@ -161,7 +161,7 @@ const list = [
     id: 'ie-phoneme',
     label: 'ie',
     value: 'ie-phoneme',
-    sound_src: "/src/assets/phonic-sounds/ie.mp3",
+    sound_src: "ie.mp3",
     spellings: [],
     icon_name: 'ieIcon'
   },
@@ -171,7 +171,7 @@ const list = [
     id: 'j-phoneme',
     label: 'j',
     value: 'j-phoneme',
-    sound_src: "/src/assets/phonic-sounds/j.mp3",
+    sound_src: "j.mp3",
     spellings: [],
     icon_name: 'jIcon'
   },
@@ -180,7 +180,7 @@ const list = [
     id: 'k-phoneme',
     label: 'k',
     value: 'k-phoneme',
-    sound_src: "/src/assets/phonic-sounds/k.mp3",
+    sound_src: "k.mp3",
     spellings: [],
     icon_name: 'kIcon'
   },
@@ -190,7 +190,7 @@ const list = [
     id: 'ks-phoneme',
     label: 'ks',
     value: 'ks-phoneme',
-    sound_src: "/src/assets/phonic-sounds/ks.mp3",
+    sound_src: "ks.mp3",
     spellings: [],
     icon_name: 'ksIcon'
   },
@@ -200,7 +200,7 @@ const list = [
     id: 'l-phoneme',
     label: 'l',
     value: 'l-phoneme',
-    sound_src: "/src/assets/phonic-sounds/l.mp3",
+    sound_src: "l.mp3",
     spellings: [],
     icon_name: 'lIcon'
   },
@@ -210,7 +210,7 @@ const list = [
     id: 'm-phoneme',
     label: 'm',
     value: 'm-phoneme',
-    sound_src: "/src/assets/phonic-sounds/m.mp3",
+    sound_src: "m.mp3",
     spellings: [],
     icon_name: 'mIcon'
   },
@@ -221,7 +221,7 @@ const list = [
     id: 'n-phoneme',
     label: 'n',
     value: 'n-phoneme',
-    sound_src: "/src/assets/phonic-sounds/n.mp3",
+    sound_src: "n.mp3",
     spellings: [],
     icon_name: 'nIcon'
   },
@@ -230,7 +230,7 @@ const list = [
     id: 'ng-phoneme',
     label: 'ng',
     value: 'ng-phoneme',
-    sound_src: "/src/assets/phonic-sounds/ng.mp3",
+    sound_src: "ng.mp3",
     spellings: [],
     icon_name: 'ngIcon'
   },
@@ -240,7 +240,7 @@ const list = [
     id: 'o-phoneme',
     label: 'o',
     value: 'o-phoneme',
-    sound_src: "/src/assets/phonic-sounds/o.mp3",
+    sound_src: "o.mp3",
     spellings: [],
     icon_name: 'oIcon'
   },
@@ -249,7 +249,7 @@ const list = [
     id: 'oe-phoneme',
     label: 'oe',
     value: 'oe-phoneme',
-    sound_src: "/src/assets/phonic-sounds/oe.mp3",
+    sound_src: "oe.mp3",
     spellings: [],
     icon_name: 'oeIcon'
   },
@@ -260,7 +260,7 @@ const list = [
     id: 'oi-phoneme',
     label: 'oi',
     value: 'oi-phoneme',
-    sound_src: "/src/assets/phonic-sounds/oi.mp3",
+    sound_src: "oi.mp3",
     spellings: [],
     icon_name: 'oiIcon'
   },
@@ -271,7 +271,7 @@ const list = [
     id: 'oo-book-phoneme',
     label: 'oo-book',
     value: 'oo-book-phoneme',
-    sound_src: "/src/assets/phonic-sounds/oo-book.mp3",
+    sound_src: "oo-book.mp3",
     spellings: [],
     icon_name: 'bookIcon'
   },
@@ -280,7 +280,7 @@ const list = [
     id: 'oo-moon-phoneme',
     label: 'oo-moon',
     value: 'oo-moon-phoneme',
-    sound_src: "/src/assets/phonic-sounds/oo-moon.mp3",
+    sound_src: "oo-moon.mp3",
     spellings: [],
     icon_name: 'moonIcon'
   },
@@ -291,7 +291,7 @@ const list = [
     id: 'o-oo-phoneme',
     label: 'o-oo',
     value: 'o-oo-phoneme',
-    sound_src: "/src/assets/phonic-sounds/o-oo.mp3",
+    sound_src: "o-oo.mp3",
     spellings: [],
     icon_name: 'oOOIcon'
   },
@@ -300,7 +300,7 @@ const list = [
     id: 'oo-tools-phoneme',
     label: 'oo-tools',
     value: 'oo-tools-phoneme',
-    sound_src: "/src/assets/phonic-sounds/oo-tools.mp3",
+    sound_src: "oo-tools.mp3",
     spellings: [],
     icon_name: 'toolsIcon'
   },
@@ -309,7 +309,7 @@ const list = [
     id: 'or-phoneme',
     label: 'or',
     value: 'or-phoneme',
-    sound_src: "/src/assets/phonic-sounds/or.mp3",
+    sound_src: "or.mp3",
     spellings: [],
     icon_name: 'orIcon'
   },
@@ -318,7 +318,7 @@ const list = [
     id: 'ou-phoneme',
     label: 'ou',
     value: 'ou-phoneme',
-    sound_src: "/src/assets/phonic-sounds/ou.mp3",
+    sound_src: "ou.mp3",
     spellings: [],
     icon_name: 'ouIcon'
   },
@@ -327,7 +327,7 @@ const list = [
     id: 'our-phoneme',
     label: 'our',
     value: 'our-phoneme',
-    sound_src: "/src/assets/phonic-sounds/our.mp3",
+    sound_src: "our.mp3",
     spellings: [],
     icon_name: 'ourIcon'
   },
@@ -336,7 +336,7 @@ const list = [
     id: 'p-phoneme',
     label: 'p',
     value: 'p-phoneme',
-    sound_src: "/src/assets/phonic-sounds/p.mp3",
+    sound_src: "p.mp3",
     spellings: [],
     icon_name: 'pIcon'
   },
@@ -344,7 +344,7 @@ const list = [
     id: 'qu-phoneme',
     label: 'qu',
     value: 'qu-phoneme',
-    sound_src: "/src/assets/phonic-sounds/qu.mp3",
+    sound_src: "qu.mp3",
     spellings: [],
     icon_name: 'quIcon'
   },
@@ -353,7 +353,7 @@ const list = [
     id: 'r-phoneme',
     label: 'r',
     value: 'r-phoneme',
-    sound_src: "/src/assets/phonic-sounds/r.mp3",
+    sound_src: "r.mp3",
     spellings: [],
     icon_name: 'rIcon'
   },
@@ -362,7 +362,7 @@ const list = [
     id: 's-phoneme',
     label: 's',
     value: 's-phoneme',
-    sound_src: "/src/assets/phonic-sounds/s.mp3",
+    sound_src: "s.mp3",
     spellings: [],
     icon_name: 'sIcon'
   },
@@ -371,7 +371,7 @@ const list = [
     id: 'schwa-phoneme',
     label: 'schwa',
     value: 'schwa-phoneme',
-    sound_src: "/src/assets/phonic-sounds/schwa.mp3",
+    sound_src: "schwa.mp3",
     spellings: [],
     icon_name: 'schwaIcon'
   },
@@ -380,16 +380,16 @@ const list = [
     id: 'sh-phoneme',
     label: 'sh',
     value: 'sh-phoneme',
-    sound_src: "/src/assets/phonic-sounds/sh.mp3",
+    sound_src: "sh.mp3",
     spellings: [],
     icon_name: 'shIcon'
-  }, //No icon?
+  },
 
   {
     id: 't-phoneme',
     label: 't',
     value: 't-phoneme',
-    sound_src: "/src/assets/phonic-sounds/t.mp3",
+    sound_src: "t.mp3",
     spellings: [],
     icon_name: 'tIcon'
   },
@@ -399,7 +399,7 @@ const list = [
     id: 'th-unvoiced-phoneme',
     label: 'th-unvoiced',
     value: 'th-unvoiced-phoneme',
-    sound_src: "/src/assets/phonic-sounds/th-unvoiced.mp3",
+    sound_src: "th-unvoiced.mp3",
     spellings: [],
     icon_name: 'thUIcon'
   },
@@ -408,7 +408,7 @@ const list = [
     id: 'th-voiced-phoneme',
     label: 'th-voiced',
     value: 'th-voiced-phoneme',
-    sound_src: "/src/assets/phonic-sounds/th-voiced.mp3",
+    sound_src: "th-voiced.mp3",
     spellings: [],
     icon_name: 'thVIcon'
   },
@@ -418,7 +418,7 @@ const list = [
     id: 'u-phoneme',
     label: 'u',
     value: 'u-phoneme',
-    sound_src: "/src/assets/phonic-sounds/u.mp3",
+    sound_src: "u.mp3",
     spellings: [],
     icon_name: 'uIcon'
   },
@@ -428,7 +428,7 @@ const list = [
     id: 'v-phoneme',
     label: 'v',
     value: 'v-phoneme',
-    sound_src: "/src/assets/phonic-sounds/v.mp3",
+    sound_src: "v.mp3",
     spellings: [],
     icon_name: 'vIcon'
   },
@@ -439,7 +439,7 @@ const list = [
     id: 'w-phoneme',
     label: 'w',
     value: 'w-phoneme',
-    sound_src: "/src/assets/phonic-sounds/w.mp3",
+    sound_src: "w.mp3",
     spellings: [],
     icon_name: 'wIcon'
   },
@@ -449,7 +449,7 @@ const list = [
     id: 'y-phoneme',
     label: 'y',
     value: 'y-phoneme',
-    sound_src: "/src/assets/phonic-sounds/y.mp3",
+    sound_src: "y.mp3",
     spellings: [],
     icon_name: 'yIcon'
   },
@@ -459,7 +459,7 @@ const list = [
     id: 'yoo-phoneme',
     label: 'yoo',
     value: 'yoo-phoneme',
-    sound_src: "/src/assets/phonic-sounds/yoo.mp3",
+    sound_src: "yoo.mp3",
     spellings: [],
     icon_name: 'yooIcon'
   },
@@ -469,7 +469,7 @@ const list = [
     id: 'yu-phoneme',
     label: 'yu',
     value: 'yu-phoneme',
-    sound_src: "/src/assets/phonic-sounds/yu.mp3",
+    sound_src: "yu.mp3",
     spellings: [],
     icon_name: 'yuIcon'
   },
@@ -479,7 +479,7 @@ const list = [
     id: 'z-phoneme',
     label: 'z',
     value: 'z-phoneme',
-    sound_src: "/src/assets/phonic-sounds/z.mp3",
+    sound_src: "z.mp3",
     spellings: [],
     icon_name: 'zIcon'
   },
@@ -488,7 +488,7 @@ const list = [
     id: 'zh-phoneme',
     label: 'zh',
     value: 'zh-phoneme',
-    sound_src: "/src/assets/phonic-sounds/zh.mp3",
+    sound_src: "zh.mp3",
     spellings: [],
     icon_name: 'zhIcon'
   },
@@ -496,9 +496,28 @@ const list = [
 
   {
     id: 'ghost-phoneme',
-    label: 'ghost',
+    label: 'ghost-silent',
     value: 'ghost-phoneme',
     sound_src: null,
+    spellings: [],
+    icon_name: 'ghostIcon'
+  },
+
+
+  {
+    id: 'ghost-y-phoneme',
+    label: 'ghost-y',
+    value: 'ghost-phoneme',
+    sound_src: "y.mp3",
+    spellings: [],
+    icon_name: 'ghostIcon'
+  },
+
+  {
+    id: 'ghost-w-phoneme',
+    label: 'ghost-w',
+    value: 'ghost-phoneme',
+    sound_src: "w.mp3",
     spellings: [],
     icon_name: 'ghostIcon'
   },

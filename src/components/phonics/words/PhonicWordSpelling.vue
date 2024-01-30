@@ -30,15 +30,18 @@
               class="text-h4"
               :class="animatedClass"
             >
-              <div v-if="s.icon.src === undefined">
+              <!-- {{ s.icon }} -->
+              {{ s.label }}
+              <!-- <div v-if="s.icon.src === undefined">
                 <span v-if="s.icon.length < 1">{{ s.label }}</span>
                 <q-icon v-else :name="s.icon" size="xl"></q-icon>
               </div>
               <div v-else>
+
                 <q-icon>
                   <img :src="s.icon.src" type="image/svg+xml" />
                 </q-icon>
-              </div>
+              </div> -->
             </q-chip>
           </div>
         </div>
@@ -231,6 +234,9 @@ export default defineComponent({
       this.changed = true;
       this.$emit("changed");
       pattern["option_label"] = option_label;
+
+      console.log("option_label", option_label);
+      console.log("pattern.correnct", pattern.correct);
       if (pattern.correct === option_label) {
         pattern.selected = pattern.letters;
       } else {

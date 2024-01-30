@@ -102,7 +102,7 @@ export default defineComponent({
     } else if (this.input && this.block != undefined) {
       // console.log('this.block.label.split("/")', this.block.label.split("/"));
       if (this.block.label.includes("/")) {
-        this.search = this.block.label.split("/")[1];
+        this.search = this.parseSoundBlockLabel(this.block.label);
       }
     } else if (this.letters != undefined) {
       if (this.letters.includes("-")) {
@@ -150,6 +150,11 @@ export default defineComponent({
     nullIcon() {
       this.$emit("update:model_icon", null);
       this.$emit("close");
+    },
+
+    parseSoundBlockLabel(label) {
+      //improve later..
+      return label.split("/")[1];
     },
   },
 });
