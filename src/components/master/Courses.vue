@@ -72,7 +72,7 @@
                   </q-select>
                 </div>
 
-                <!-- TARGE -->
+                <!-- TARGET -->
                 <div>
                   <q-input
                     label="Word Correct Target"
@@ -83,6 +83,13 @@
                     dense
                   >
                   </q-input>
+                </div>
+                <!-- <q-btn flat no-caps size="sm" @click="getWordCount(s)">
+                  Get
+                </q-btn> -->
+                <div>
+                  words:
+                  {{ s.word_count }}
                 </div>
 
                 <!-- <q-btn
@@ -243,6 +250,7 @@ export default defineComponent({
         label: "Course Name",
         info: "text..",
         units: [],
+        version: 0,
       },
 
       unit_types: ["normal", "revision"],
@@ -252,7 +260,7 @@ export default defineComponent({
         target: 3,
         label: "",
         type: "normal",
-        version: 0,
+        word_count: 0,
       },
 
       edit_unit: null,
@@ -302,9 +310,10 @@ export default defineComponent({
       this.edit_id = null;
       this.new_course = null;
     },
-    editCourse(unit, item_id) {
+    editCourse(course, item_id) {
       this.edit_id = item_id;
-      this.new_course = unit;
+      this.new_course = { ...this.course_template, ...course };
+
       this.add_course = true;
     },
 
@@ -321,6 +330,7 @@ export default defineComponent({
       }
     },
 
+    // TODO: be careful changing id..
     selectUnit(e, s) {
       // (e) =>
       //   e !== null
@@ -334,6 +344,9 @@ export default defineComponent({
         s["id"] = null;
         s.label = "";
       }
+      // console.log("s", s);
+
+      this.getWordCount(s);
     },
 
     removeUnit(idx) {
@@ -364,6 +377,8 @@ export default defineComponent({
         if (!deleted) {
           return;
         }
+        item.course.version++;
+        item["version"] = item.course.version;
       }
 
       await axios
@@ -464,6 +479,14 @@ export default defineComponent({
           // return undefined;
         });
       return token;
+    },
+
+    getWordCount(s) {
+      let unit_id = s.unit.id;
+      let unit = this.units.find((e) => e.id === unit_id);
+      if (unit == undefined) return;
+      let word_count = unit.unit.words.length;
+      s["word_count"] = word_count;
     },
   },
 });

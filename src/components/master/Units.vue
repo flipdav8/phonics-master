@@ -69,6 +69,8 @@
             <q-btn @click="alphabatize()" flat no-caps size="sm"
               >Alphabetize</q-btn
             >
+
+            <q-btn flat no-caps @click="clearWords">Clear Words..</q-btn>
           </q-item>
 
           <div>
@@ -81,12 +83,21 @@
               <div
                 v-for="(word, idx) in new_unit.words"
                 :key="idx"
-                class="flex row"
+                class="flex row items-center"
                 style="border: solid 1px; border-radius: 10px"
               >
                 <div avatar>
                   <q-chip>{{ word.word }}</q-chip>
                 </div>
+
+                <q-btn
+                  v-if="word['target'] == undefined"
+                  @click="word['target'] = 1"
+                  icon="mdi-bullseye"
+                  flat
+                  rounded
+                ></q-btn>
+                <div v-else @click="removeTarget(word)">Target = 1</div>
 
                 <div avatar>
                   <q-btn
@@ -578,6 +589,15 @@ export default defineComponent({
 
     alphabatize() {
       this.new_unit.words.sort((a, b) => a.word.localeCompare(b.word));
+    },
+
+    removeTarget(word) {
+      delete word["target"];
+    },
+
+    clearWords() {
+      this.new_unit.words = [];
+      this.new_unit.word_ids = [];
     },
   },
 });

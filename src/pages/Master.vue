@@ -64,6 +64,7 @@
           :icons="ICONS"
           :sounds="SOUNDS"
           :phonemes="phonemes"
+          :homophones="homophones"
         ></Words>
       </q-tab-panel>
       <!-- @refresh="getWordsAPI()" -->
@@ -130,6 +131,9 @@ const SOUNDS = SOUNDLIST.list;
 import PHONEMES from "src/components/icons/phonemes.js";
 const phonemes = PHONEMES.list;
 
+import HOMOPHONES from "src/components/icons/homophones.js";
+const homophones = HOMOPHONES.list;
+
 export default defineComponent({
   name: "MasterPage",
   components: {
@@ -145,11 +149,12 @@ export default defineComponent({
       ICONS,
       SOUNDS,
       phonemes,
+      homophones,
     };
   },
   data() {
     return {
-      tab: "units",
+      tab: "words",
 
       //
       blocks: [],
@@ -295,6 +300,13 @@ export default defineComponent({
       for (let idx = 0; idx < words.length; idx++) {
         const element = words[idx];
         const word = element.word;
+
+        if (idx === 0) {
+          // console.log("word", word);
+        }
+        let homophones =
+          word.homophones != undefined ? word.homophones.length : 0;
+
         word_rows.push({
           id: element.id,
           units_count: element.unit_ids.length,
@@ -302,7 +314,7 @@ export default defineComponent({
           block: word.block == null ? null : word.block.label,
           type: word.type,
           word: word,
-          homophones: word.homophones,
+          homophones: homophones,
         });
       }
       this.word_rows = word_rows;

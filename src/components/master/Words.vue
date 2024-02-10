@@ -1,10 +1,156 @@
 <template>
   <div class="fit q-pa-md non-selectable">
-    <!-- NEW WORD -->
+    <div class="text-caption q-pa-sm class flex row">
+      <q-btn no-caps flat @click="loadBulk()" :disable="bulk_block == null"
+        >Load Bulk</q-btn
+      >
+      <q-select
+        class="q-col-4"
+        outlined
+        v-model="bulk_type"
+        :options="['sound', 'spelling']"
+      ></q-select>
+      <q-btn no-caps flat @click="show_bulk_block = !show_bulk_block">
+        Pick Block
+        <span v-if="bulk_block != null">
+          {{ bulk_block.label }}
+        </span>
+      </q-btn>
+    </div>
+
+    <q-card v-if="load_bulk && !add_word">
+      <q-card-section>
+        <q-btn @click="addBulk()">Add Bulk</q-btn>
+        <!-- {{ bulk_block.label.split("_")[1] }} -->
+
+        <div
+          v-for="(bulk_word, i) in bulk_words"
+          :key="i"
+          class="flex row justify-around"
+        >
+          <div class="text-left">
+            {{ bulk_word.word }}
+          </div>
+          <div class="flex row">
+            <div v-for="(p, ii) in bulk_word.pattern" :key="ii">
+              <strong v-if="p.input">
+                {{ p.letters }}
+              </strong>
+              <span v-else>{{ p.letters }}</span>
+              <span v-if="ii < bulk_word.pattern.length - 1" class="q-mx-sm"
+                >-
+              </span>
+            </div>
+          </div>
+
+          <div class="flex row">
+            <div v-for="(p, ii) in bulk_word.pattern" :key="ii">
+              <span v-if="p.icon == null">
+                <q-icon
+                  name="mdi-alert-rhombus-outline"
+                  color="negative"
+                ></q-icon>
+              </span>
+              <span v-else>
+                <span v-if="typeof p.icon === 'object'">
+                  <span v-if="p.icon.icon_name != undefined">
+                    <component
+                      :is="p.icon.icon_name"
+                      :color="p.input ? 'green' : 'grey-10'"
+                      :label="false"
+                      :dots="false"
+                      :center="true"
+                      :scale="true"
+                      style="border-radius: 10px; font-size: 40px"
+                      class="overflow-hidden"
+                    ></component>
+                    <span v-if="ii < bulk_word.pattern.length - 1">-</span>
+                  </span>
+                  <span v-else> ? </span>
+                </span>
+                <span v-else>
+                  <q-icon
+                    name="mdi-alert-rhombus-outline"
+                    color="negative"
+                  ></q-icon>
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="flex row items-center">
+            <span
+              v-if="bulk_word.homo != null && bulk_word.homo.name !== undefined"
+            >
+              <q-icon size="lg">
+                <img
+                  :src="`/homophone-icons/${bulk_word.homo.src}.svg`"
+                  type="image/svg+xml"
+                />
+              </q-icon>
+            </span>
+            <q-btn flat no-caps @click="editBulkWord(bulk_word)">Edit</q-btn>
+
+            <q-icon
+              v-if="bulk_words_info[i].should_be_hom"
+              name="mdi-alpha-h-circle-outline"
+              color="black"
+            ></q-icon>
+
+            <q-icon
+              v-if="
+                bulk_words_info[i].should_be_hom &&
+                (bulk_word.homo == null ||
+                  (bulk_words_info[i].missing_hom &&
+                    bulk_word.homophones.length < 1))
+              "
+              name="mdi-alpha-h-circle-outline"
+              color="red"
+            ></q-icon>
+
+            <q-icon
+              v-if="bulk_words_info[i].bonus_homophones.length > 0"
+              name="mdi-alpha-h-circle-outline"
+              color="blue"
+            ></q-icon>
+
+            <q-icon
+              v-if="bulk_words_info[i].input_count !== 1"
+              name="mdi-greater-than-or-equal"
+              color="purple"
+            ></q-icon>
+
+            <div v-if="bulk_words_info[i].warning">
+              <q-icon name="mdi-alert" color="purple"></q-icon>
+            </div>
+          </div>
+        </div>
+      </q-card-section>
+    </q-card>
+
+    <!-- WORD -->
+    <EditWord
+      v-if="add_word && !operation"
+      :input_word="new_word"
+      :edit_id="edit_id"
+      v-model:prefill_block="prefill_block"
+      :icons="icons"
+      :sounds="sounds"
+      :phonemes="phonemes"
+      :homophones="homophones"
+      :words="words"
+      :word_rows="word_rows"
+      :blocks="blocks"
+      :bulk_mode="bulk_mode"
+      @cancel="cancelNew"
+      @addWord="addWord"
+    >
+    </EditWord>
+
     <q-card
       v-if="add_word && !operation"
       flat
-      class="fit flex flex-center column"
+      class="fit flex flex-center column hidden"
     >
       <!-- WORD -->
       <!-- //TODO:  ADD DICTATION SENTENCE -->
@@ -87,8 +233,19 @@
                 no-caps
               >
                 <span> Homophone</span>
-                <q-icon
+                <span
                   v-if="
+                    new_word.homo != null && new_word.homo.name !== undefined
+                  "
+                >
+                  {{ new_word.homo.label }}
+                  <img
+                    :src="`/homophone-icons/${new_word.homo.src}.svg`"
+                    type="image/svg+xml"
+                  />
+                </span>
+                <q-icon
+                  v-else-if="
                     new_word.homo != null && new_word.homo.src !== undefined
                   "
                   size="xl"
@@ -420,7 +577,28 @@
 
       <!-- Homophones.. -->
       <q-card-section class="fit q-pa-md">
+        <!-- homophone -->
+
         <div class="flex row items-center justify-center">
+          <q-btn
+            flat
+            @click="addHomoIcon(new_word)"
+            class="cursor-pointer"
+            no-caps
+          >
+            <span> Homophone</span>
+            <span
+              v-if="new_word.homo != null && new_word.homo.name !== undefined"
+            >
+              {{ new_word.homo.label }}
+              <img
+                :src="`/homophone-icons/${new_word.homo.src}.svg`"
+                type="image/svg+xml"
+              />
+            </span>
+            <q-icon v-else name="mdi-plus" size="md"></q-icon>
+          </q-btn>
+
           Homophones:
           <q-btn
             @click="add_homophone = !add_homophone"
@@ -463,13 +641,14 @@
     <!--  -->
 
     <q-dialog v-model="show_icons" full-height full-width>
-      <IconList
+      <!-- homophones -->
+      <HomophonesList
         v-if="edit_option === null"
         v-model:model_icon="new_word.homo"
-        :icons="icons"
-        :phonemes="phonemes"
+        :homophones="homophones"
+        :word="new_word"
         @close="show_icons = false"
-      ></IconList>
+      ></HomophonesList>
 
       <IconList
         v-else
@@ -535,6 +714,17 @@
         @close="show_blocks = false"
         @update="(e) => (prefill_block = e)"
         :filter_type="new_word.type"
+      >
+      </BlockList>
+    </q-dialog>
+
+    <q-dialog v-model="show_bulk_block" full-height full-width>
+      <BlockList
+        v-model:model_block="bulk_block"
+        :blocks="blocks.map((e) => ({ ...e.block, id: e.id }))"
+        @close="show_bulk_block = false"
+        @update="bulkBlockPicked"
+        :filter_type="bulk_type"
       >
       </BlockList>
     </q-dialog>
@@ -718,17 +908,39 @@
         </q-td>
       </template>
 
+      <template v-slot:body-cell-homophones="props">
+        <q-td :props="props">
+          <span v-if="props.row.homophones > 0">
+            <q-icon name="mdi-alpha-h-circle-outline"></q-icon>
+          </span>
+          <span> {{ props.row.homophones }}</span>
+          <span v-if="props.row.homophones > 0">
+            <span v-if="props.row.word.homo == null">
+              <q-icon
+                name="mdi-alert-rhombus-outline"
+                color="negative"
+                size="md"
+              ></q-icon>
+            </span>
+
+            <span
+              v-if="
+                props.row.word.homo !== null &&
+                props.row.word.homo.name == undefined
+              "
+            >
+              <q-icon
+                name="mdi-alert-rhombus-outline"
+                color="warning"
+                size="md"
+              ></q-icon>
+            </span>
+          </span>
+        </q-td>
+      </template>
       <template v-slot:body-cell-label="props">
         <q-td :props="props">
           {{ props.row.word.word }}
-          <span
-            v-if="
-              props.row.homophones != undefined &&
-              props.row.homophones.length > 0
-            "
-          >
-            <q-icon name="mdi-alpha-h-circle-outline"></q-icon>
-          </span>
 
           <span
             v-if="props.row.word.pattern.filter((e) => e.input).length !== 1"
@@ -737,13 +949,13 @@
             <q-icon name="mdi-alert-rhombus-outline" color="negative"></q-icon>
           </span>
 
-          <strong
+          <!-- <strong
             v-if="props.row.word.pattern.filter((e) => e.schwa).length > 0"
           >
             ə
-          </strong>
+          </strong> -->
 
-          <strong
+          <!-- <strong
             v-if="
               props.row.word.pattern.filter((e) => e.schwa).length < 1 &&
               props.row.word.pattern.filter(
@@ -752,7 +964,7 @@
             "
           >
             <q-icon name="mdi-alert" color="negative" size="md"></q-icon> ə
-          </strong>
+          </strong> -->
 
           <!-- <span
             v-if="
@@ -806,11 +1018,17 @@ import { syncdb } from "src/database/dbCloud";
 import axios from "axios";
 
 import IconList from "src/components/master/IconList.vue";
+import HomophonesList from "src/components/master/HomophonesList.vue";
 import SoundList from "src/components/master/SoundList.vue";
 import BlockList from "src/components/master/BlockList.vue";
 import PhonemesList from "src/components/master/PhonemesList.vue";
 
 import PhonicsWord from "src/components/phonics/PhonicsWord.vue";
+
+import WORDS from "src/components/master/words/unit-words.json";
+import BLOCKS from "src/components/master/blocks/blocks.json";
+
+import EditWord from "./words/EditWord.vue";
 
 export default defineComponent({
   name: "WordsPage",
@@ -820,6 +1038,8 @@ export default defineComponent({
     BlockList,
     PhonicsWord,
     PhonemesList,
+    HomophonesList,
+    EditWord,
   },
   props: {
     words: {},
@@ -828,11 +1048,14 @@ export default defineComponent({
     icons: {},
     sounds: {},
     phonemes: {},
+    homophones: {},
   },
   setup() {
     const accounts = useAccountsStore();
     return {
       accounts,
+      WORDS,
+      BLOCKS,
     };
   },
   data() {
@@ -853,10 +1076,17 @@ export default defineComponent({
         //   label: "ID",
         //   align: "left",
         // },
+        // {
+        //   name: "units_count",
+        //   field: "units_count",
+        //   label: "Unit Count",
+        //   align: "left",
+        // },
         {
-          name: "units_count",
-          field: "units_count",
-          label: "Unit Count",
+          name: "homophones",
+          field: "homophones",
+          label: "homophones",
+          sortable: true,
           align: "left",
         },
         {
@@ -989,6 +1219,15 @@ export default defineComponent({
       //
       word_phonemes: "",
       word_letters: "",
+
+      load_bulk: false,
+      show_bulk_block: false,
+      bulk_type: "sound",
+      bulk_block: null,
+      bulk_block_strip_label: "",
+      bulk_words: [],
+      bulk_words_info: [],
+      bulk_mode: false,
     };
   },
   mounted() {
@@ -1030,7 +1269,7 @@ export default defineComponent({
     editWord(word, item_id) {
       // console.log("item_id", item_id);
       // console.log("unit", unit);
-      // console.log("word", word);
+      console.log("word", word);
       this.edit_id = item_id;
       this.new_word = { ...this.word_template, ...word };
       this.add_word = true;
@@ -1108,6 +1347,13 @@ export default defineComponent({
     },
 
     async addWord() {
+      if (this.bulk_mode) {
+        this.bulk_mode = false;
+        // console.log("edit bulk_word", this.new_word);
+        // console.log("bulk words", this.bulk_words);
+        this.cancelNew();
+        return;
+      }
       this.operation = true;
       let realmId = "rlm-public";
 
@@ -1598,6 +1844,338 @@ export default defineComponent({
         this.guessPhoneme(pattern, pattern.letters);
       }
       // alert("done");
+    },
+
+    async loadBulk() {
+      let bulk = this.WORDS.filter(
+        (e, i) => e.unit == this.bulk_block.label.split("_")[1]
+      );
+
+      let phoneme_label = this.bulk_block_strip_label;
+
+      let words = [];
+      let words_info = [];
+
+      let all_homophones = [];
+      let all_bonus_homophones = [];
+
+      let unit_block = this.BLOCKS.find((e) => e.unit_no === bulk[0].unit);
+      if (unit_block.homs !== undefined) {
+        console.log("unit_homs", unit_block.homs);
+      }
+      let { direct, indirect, delay } = unit_block.homs;
+      let all_unit_homophones = [...direct, ...indirect];
+
+      let block_options = this.blocks.find((e) => e.id === this.bulk_block.id)
+        .block.options;
+
+      for (let idx = 0; idx < bulk.length; idx++) {
+        const word = bulk[idx];
+        let pattern = [];
+        let warning = false;
+        let input_count = 0;
+        for (let ii = 0; ii < word.letter_pattern.length; ii++) {
+          const chars = word.letter_pattern[ii];
+          const p_label = word.label_pattern[ii];
+
+          const pattern_phoneme = this.phonemes.find(
+            (e) => e.label === p_label
+          );
+          const input_block_id = this.bulk_block.id;
+          let icon = null;
+          let block = null;
+          let input = false;
+          let correct = "";
+
+          if (pattern_phoneme !== undefined) {
+            icon = {
+              id: pattern_phoneme.id,
+              label: pattern_phoneme.label,
+              icon_name: pattern_phoneme.icon_name,
+              sound_src: pattern_phoneme.sound_src,
+            };
+            block = {
+              label: pattern_phoneme.label,
+            };
+
+            if (this.bulk_type == "spelling") {
+              if (chars === phoneme_label) {
+                input = true;
+                block["id"] = input_block_id;
+                input_count++;
+
+                // console.log("block_options", block_options);
+                let set_correct = block_options.find(
+                  (e) => e.label === pattern_phoneme.label
+                );
+                if (set_correct !== undefined) {
+                  correct = set_correct.label;
+                } else {
+                  warning = true;
+                }
+
+                // correct = this.bulk_block.options,
+              }
+            } else if (this.bulk_type == "sound") {
+              if (p_label === phoneme_label) {
+                input = true;
+                block["id"] = input_block_id;
+                input_count++;
+              }
+            }
+          }
+
+          let pat = {
+            letters: chars,
+            input: input,
+            icon: icon,
+            // sound: null,
+            block: block,
+            exclude: [],
+            correct: correct, // for spelling type..
+            schwa: p_label === "schwa" ? true : false,
+            silent: false,
+          };
+
+          pattern.push(pat);
+        }
+
+        let hom = null;
+        let homophones = [];
+        let bonus_homophones = [];
+        let strip_word = word.raw_word.replaceAll("!", "");
+        let should_be_hom = false;
+        let missing_hom_flag = false;
+        //Homophon section
+        if (word.hom || all_unit_homophones.includes(strip_word)) {
+          should_be_hom = true;
+
+          // console.log("this.homophones", this.homophones, word.raw_word);
+          let matching_homophones = this.homophones.filter((e) =>
+            e.label.toLocaleLowerCase().includes(strip_word.toLocaleLowerCase())
+          );
+
+          if (matching_homophones.length > 0) {
+            // console.log("matching_homophones", matching_homophones);
+            let final_match = matching_homophones.find(
+              (e) => e.label === strip_word.toLocaleLowerCase()
+            );
+            if (final_match != undefined) {
+              hom = {
+                src: `${final_match.value.split("/")[0]}/${final_match.label}`,
+                label: final_match.label,
+                name: final_match.value,
+                id: final_match.id,
+              };
+            }
+          }
+
+          if (unit_block !== undefined && unit_block.homs !== undefined) {
+            let search_homs = await this.findHomophones(strip_word);
+            let search_map = search_homs.map((e) => e.word);
+            console.log(`search_homs for ${strip_word}`, search_homs);
+
+            let { direct, indirect, delay } = unit_block.homs;
+            for (let xx = 0; xx < direct.length; xx++) {
+              const element = direct[xx];
+              if (search_map.includes(element)) {
+                homophones.push(element);
+              }
+            }
+
+            for (let xx = 0; xx < indirect.length; xx++) {
+              const element = indirect[xx];
+              if (search_map.includes(element)) {
+                homophones.push(element);
+              }
+            }
+
+            for (let xx = 0; xx < delay.length; xx++) {
+              const element = delay[xx];
+              if (search_map.includes(element)) {
+                homophones.push(element + "!");
+              }
+            }
+
+            let filter_search_homs = search_homs
+              .filter((e) => e.score > 900)
+              .map((e) => e.word);
+
+            for (let xx = 0; xx < filter_search_homs.length; xx++) {
+              const element = filter_search_homs[xx];
+              if (!homophones.includes(element)) {
+                bonus_homophones.push(element);
+              }
+            }
+            all_bonus_homophones.push({
+              word: strip_word,
+              bonus: bonus_homophones,
+            });
+
+            console.log(`homs for ${strip_word}`, homophones);
+
+            all_homophones.push(...homophones);
+            if (homophones.length < 1) {
+              missing_hom_flag = true;
+            }
+          }
+          // homophones.push("placeholder!");
+        } else {
+          let search_homs = await this.findHomophones(strip_word);
+          bonus_homophones = search_homs
+            .filter((e) => e.score > 900)
+            .map((e) => e.word);
+
+          all_bonus_homophones.push({
+            word: strip_word,
+            bonus: bonus_homophones,
+          });
+        }
+
+        if (word.letter_pattern.length !== word.label_pattern.length) {
+          warning = true;
+        }
+
+        words.push({
+          id: word.i,
+          word: word.raw_word.replaceAll("!", ""),
+          // icon: "",
+          block: {
+            id: this.bulk_block.id,
+            label: this.bulk_block.label,
+          }, // ay, etc..
+          // correct: "",
+          type: this.bulk_type,
+          pattern: pattern,
+          homo: hom,
+          sound: null,
+          dictations: [],
+          homophones: homophones,
+          use_tense: false,
+          plural: false,
+        });
+        words_info.push({
+          should_be_hom: should_be_hom,
+          missing_hom: missing_hom_flag,
+          warning: warning,
+          bonus_homophones: bonus_homophones,
+          input_count: input_count,
+        });
+      }
+
+      let missing_homophones = [];
+      console.log("all_homophones", all_homophones);
+      for (let xx = 0; xx < all_unit_homophones.length; xx++) {
+        const element = all_unit_homophones[xx];
+        if (!all_homophones.includes(element)) {
+          missing_homophones.push(element);
+        }
+      }
+
+      if (missing_homophones.length > 0) {
+        console.log("missing homophones", missing_homophones);
+        alert("missing homophones");
+      }
+
+      console.log("all bonus homs", all_bonus_homophones);
+
+      // console.log("words", words);
+      this.bulk_words = words;
+      this.bulk_words_info = words_info;
+
+      this.load_bulk = !this.load_bulk;
+    },
+
+    async findHomophones(word) {
+      let vm = this;
+      let homs = [];
+      await axios
+        // .get(`https://api.datamuse.com/words?sl=${this.word_search}`, {
+        .get(`https://api.datamuse.com/words?rel_hom=${word}&md=dpsrf`)
+        .then(function (response) {
+          homs = response.data;
+        })
+        .catch(function (error) {
+          console.log("error", error);
+        });
+
+      return homs;
+    },
+
+    bulkBlockPicked(e) {
+      this.prefill_block = e;
+      if (this.bulk_type === "sound") {
+        let split = e.label.split("/");
+        let label = "";
+        label = split[1];
+        if (split.join("").includes("moon")) {
+          label = "oo-moon";
+        }
+
+        if (split.join("").includes("book")) {
+          label = "oo-book";
+        }
+
+        if (split.join("").includes("o-oo")) {
+          label = "o-oo";
+        }
+
+        if (split.join("").includes("tools")) {
+          label = "oo-tools";
+        }
+
+        this.bulk_block_strip_label = label;
+      } else {
+        let split = e.label.split("<")[1].split(">")[0];
+        let label = split;
+        this.bulk_block_strip_label = label;
+      }
+    },
+    async addBulk() {
+      let bulk_items = this.bulk_words.map((e) => ({
+        word: e,
+        region: "AU",
+        unit_ids: [],
+      }));
+      console.log("add these words", bulk_items);
+
+      return;
+
+      if (bulk_items.length > 0) {
+        // return;
+
+        this.operation = true;
+        let dbid = process.env.DBID;
+        let base_url = `https://${dbid}.dexie.cloud`;
+        let token = await this.getGlobalToken();
+
+        let items = bulk_items;
+
+        await axios
+          .post(`${base_url}/public/words`, items, {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .then(function (response) {
+            console.log("response", response);
+            //
+          })
+          .catch(function (error) {
+            console.log("error", error);
+            // return undefined;
+          });
+
+        this.operation = false;
+        console.log("added bulk");
+      }
+    },
+
+    editBulkWord(bulk_word) {
+      this.new_word = bulk_word;
+      this.bulk_mode = true;
+      this.add_word = true;
     },
   },
 });

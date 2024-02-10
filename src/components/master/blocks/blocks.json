@@ -1,0 +1,1149 @@
+[
+  {
+    "unit_no": 1,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 2,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 3,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 4,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 5,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 6,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 7,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 8,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 9,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 10,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 11,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 12,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 13,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 14,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 15,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 16,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 17,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 18,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 19,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 20,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 21,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 22,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 23,
+    "type": "",
+    "options": []
+  },
+  {
+    "unit_no": 24,
+    "label": "/l/1",
+    "type": "sound",
+    "options": ["al", "el", "il", "l", "le", "ll", "ol"]
+  },
+  {
+    "unit_no": 25,
+    "label": "/or/1",
+    "type": "sound",
+    "options": ["a", "al", "ar", "au", "aw", "or"],
+    "homs": {
+      "direct": ["for", "horse", "sort", "paw", "paws", "pause", "sauce"],
+      "indirect": [],
+      "delay": [
+        "hoarse",
+        "fore",
+        "four",
+        "sought",
+        "pour",
+        "poor",
+        "pore",
+        "source"
+      ]
+    }
+  },
+  {
+    "unit_no": 26,
+    "label": "/or/1",
+    "type": "sound",
+    "options": ["a", "al", "ar", "au", "aw", "or"],
+    "homs": {
+      "direct": ["fort", "sort", "raw", "hall", "haul", "Stalk", "Stork"],
+      "indirect": [],
+      "delay": ["hoarse", "fought", "sought", "roar"]
+    }
+  },
+  {
+    "unit_no": 27,
+    "label": "/air/1",
+    "type": "sound",
+    "options": ["air", "are", "ayer", "ayor", "ear", "eir", "ere"],
+    "homs": {
+      "direct": [
+        "air",
+        "bare",
+        "bear",
+        "fair",
+        "fare",
+        "flair",
+        "flare",
+        "hair",
+        "heir",
+        "mayor",
+        "pair",
+        "pare",
+        "pear",
+        "stair",
+        "stare",
+        "their",
+        "there",
+        "wear",
+        "where"
+      ],
+      "indirect": ["mare", "tare"],
+      "delay": ["they’re"]
+    }
+  },
+  {
+    "unit_no": 28,
+    "label": "/air/2",
+    "type": "sound",
+    "options": ["eir", "ere"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 29,
+    "label": "/w/-",
+    "type": "sound",
+    "options": ["w", "wh", "ghost"],
+    "homs": {
+      "direct": [
+        "whether",
+        "whale",
+        "where",
+        "witch",
+        "wail",
+        "wine",
+        "whine",
+        "waist",
+        "waste",
+        "weather",
+        "wear",
+        "which",
+        "won",
+        "one"
+      ],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 30,
+    "label": "/yu/",
+    "type": "sound",
+    "options": ["eu", "ew", "u", "u-e", "ue", "ueue"],
+    "homs": {
+      "direct": ["knew", "new"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 31,
+    "label": "<ew>",
+    "type": "spelling",
+    "options": ["moon", "yu"],
+    "homs": {
+      "direct": ["flew", "new", "knew"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 32,
+    "label": "/oi/",
+    "type": "sound",
+    "options": ["oi", "oy"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 33,
+    "label": "/ar/1",
+    "type": "sound",
+    "options": [" ", "a", "al", "ar", "are", "au"],
+    "homs": {
+      "direct": ["draft", "draught"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 34,
+    "label": "/air/3",
+    "type": "sound",
+    "options": ["ear", "ere", "e’re"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 35,
+    "label": "/o/1",
+    "type": "sound",
+    "options": ["a", "o"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 36,
+    "label": "<a> ",
+    "type": "spelling",
+    "options": ["a", "ae", "ar", "o"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 37,
+    "label": "/ae/2",
+    "type": "sound",
+    "options": ["a", "a-e", "ai", "ay", "ea", "ei", "eigh", "ey"],
+    "homs": {
+      "direct": [
+        "brake",
+        "break",
+        "graze",
+        "greys",
+        "hay",
+        "hey",
+        "pray",
+        "prey",
+        "rain",
+        "reign",
+        "stake",
+        "steak",
+        "vain",
+        "vein"
+      ],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 38,
+    "label": "/ae/3",
+    "type": "sound",
+    "options": ["a", "a-e", "ai", "ay", "ea", "ei", "eigh", "ey"],
+    "homs": {
+      "direct": [
+        "ate",
+        "eight",
+        "grate",
+        "great",
+        "nay",
+        "neigh",
+        "pail",
+        "pale",
+        "slay",
+        "sleigh",
+        "way",
+        "weigh"
+      ],
+      "indirect": ["whey"],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 39,
+    "label": "/air/4",
+    "type": "sound",
+    "options": ["eir", "ere", "ey’re"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 40,
+    "label": "/d/ ",
+    "type": "sound",
+    "options": ["d", "dd", "ed"],
+    "homs": {
+      "direct": ["made", "maid"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 41,
+    "label": "<ed>",
+    "type": "spelling",
+    "options": ["d", "t"],
+    "homs": {
+      "direct": ["preyed", "prayed"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 42,
+    "label": "/ee/2",
+    "type": "sound",
+    "options": ["e", "ea", "ee", "ey", "i", "ie", "y"],
+    "homs": {
+      "direct": [
+        "flea",
+        "flee",
+        "pea",
+        "pee",
+        "steel",
+        "steal",
+        "tea",
+        "tee",
+        "we",
+        "wee"
+      ],
+      "indirect": ["quay"],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 43,
+    "label": "/ee/3",
+    "type": "sound",
+    "options": ["e", "ea", "ee", "ey", "i", "ie", "y"],
+    "homs": {
+      "direct": ["kneel", "sea", "see"],
+      "indirect": ["feat"],
+      "delay": ["Neil"]
+    }
+  },
+  {
+    "unit_no": 44,
+    "label": "/i/-",
+    "type": "sound",
+    "options": ["i", "u", "ui", "y"],
+    "homs": {
+      "direct": ["him", "hymn", "guilt"],
+      "indirect": ["gilt"],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 45,
+    "label": "<y>-",
+    "type": "spelling",
+    "options": ["ee", "i", "ie", "y"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 46,
+    "label": "/oe/2",
+    "type": "sound",
+    "options": ["ew", "o", "o-e", "oa", "oe", "ol", "ough", "ow"],
+    "homs": {
+      "direct": ["doe", "dough", "Yolk", "yoke"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 47,
+    "label": "/oe/3",
+    "type": "sound",
+    "options": ["ew", "o", "o-e", "oa", "oe", "ol", "ough", "ow"],
+    "homs": {
+      "direct": ["sew", "so", "toe", "tow"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 48,
+    "label": "/o-oo/-",
+    "type": "sound",
+    "options": ["a", "au", "o", "oa", "ou", "ow", "u"],
+    "homs": {
+      "direct": ["hole", "vault", "volt", "whole", "hole", "bolder", "boulder"],
+      "indirect": [],
+      "delay": ["sole"]
+    }
+  },
+  {
+    "unit_no": 49,
+    "label": "/n/1",
+    "type": "sound",
+    "options": ["gn", "kn", "n", "ne", "nn", "nne"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 50,
+    "label": "/n/2",
+    "type": "sound",
+    "options": ["gn", "kn", "n", "ne", "nn", "nne"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 51,
+    "label": "/er/2",
+    "type": "sound",
+    "options": ["ear", "er", "ir", "or", "ur"],
+    "homs": {
+      "direct": ["earn", "urn", "heard", "herd"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 52,
+    "label": "/schwa/1",
+    "type": "sound",
+    "options": ["ar", "er", "or", "our"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 53,
+    "label": "/e/2",
+    "type": "sound",
+    "options": ["a", "ay", "e", "ea", "ei", "eo", "ie", "u"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 54,
+    "label": "/b/-",
+    "type": "sound",
+    "options": ["b", "bb", "bu"],
+    "homs": {
+      "direct": ["buoy", "boy", "buy", "bye", "by"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 55,
+    "label": "/v/-",
+    "type": "sound",
+    "options": ["v", "vv", "ve", "f"],
+    "homs": {
+      "direct": ["convict#verb"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 56,
+    "label": "/m/oo/n/2",
+    "type": "sound",
+    "options": ["ew", "o", "oo", "ou", "ough", "u", "u-e", "ui"],
+    "homs": {
+      "direct": ["route", "root", "wound#"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 57,
+    "label": "/m/oo/n/3",
+    "type": "sound",
+    "options": ["ew", "o", "oo", "ou", "ough", "u", "u-e", "ue", "ui"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 58,
+    "label": "/ou/2",
+    "type": "sound",
+    "options": ["ou", "ough", "ow"],
+    "homs": {
+      "direct": ["bow", "bough"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 59,
+    "label": "<ough>1",
+    "type": "spelling",
+    "options": ["o", "oe", "moon", "ou"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 60,
+    "label": "/j/-",
+    "type": "sound",
+    "options": ["j", "g", "ge", "dge"],
+    "homs": {
+      "direct": ["gem", "Jem", "gym", "Jim"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 61,
+    "label": "/g/1",
+    "type": "sound",
+    "options": ["g", "gg", "gh", "gu"],
+    "homs": {
+      "direct": ["guilt"],
+      "indirect": ["gilt", "garner"],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 62,
+    "label": "/ng/-",
+    "type": "sound",
+    "options": ["n", "ng", "ngh", "ngue"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 63,
+    "label": "<g>-",
+    "type": "spelling",
+    "options": ["j", "g"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 64,
+    "label": "/f/-",
+    "type": "sound",
+    "options": ["f", "ff", "ft", "gh", "ph"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 65,
+    "label": "<gh>-",
+    "type": "spelling",
+    "options": ["f", "g"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 66,
+    "label": "<ou>+<gh>-",
+    "type": "spelling",
+    "options": ["u+f", "o+f"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 67,
+    "label": "/o/2",
+    "type": "sound",
+    "options": ["a", "au", "o", "ou"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 68,
+    "label": "/ar/2",
+    "type": "sound",
+    "options": ["a", "ah", "al", "au", "ear"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 69,
+    "label": "/m/1",
+    "type": "sound",
+    "options": ["m", "mb", "mm", "me", "mn"],
+    "homs": {
+      "direct": ["some", "hymn", "sum"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 70,
+    "label": "/m/2",
+    "type": "sound",
+    "options": ["m", "mb", "mm", "me", "mn"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 71,
+    "label": "/u/2",
+    "type": "sound",
+    "options": ["a", "ah", "o", "ou", "u", "uh"],
+    "homs": {
+      "direct": ["none", "nun", "some"],
+      "indirect": ["sum"],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 72,
+    "label": "/or/3",
+    "type": "sound",
+    "options": ["ar", "au", "aw", "oor", "or", "awe"],
+    "homs": {
+      "direct": [
+        "or",
+        "oar",
+        "ore",
+        "fore",
+        "fought",
+        "hoard",
+        "hoarse",
+        "mourning",
+        "pour",
+        "pore",
+        "roar",
+        "source",
+        "sought",
+        "taught",
+        "wore"
+      ],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 73,
+    "label": "/or/4",
+    "type": "sound",
+    "options": ["oar", "ore", "our", "augh", "ough", "ure"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 74,
+    "label": "/or/5",
+    "type": "sound",
+    "options": ["oar", "ore", "our", "augh", "ough", "ure"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": [
+        "awe",
+        "for",
+        "fort",
+        "horde",
+        "horse",
+        "morning",
+        "or",
+        "poor",
+        "raw",
+        "sauce",
+        "sort",
+        "taut",
+        "war",
+        "saw"
+      ]
+    }
+  },
+  {
+    "unit_no": 75,
+    "label": "<augh>-",
+    "type": "spelling",
+    "options": ["ar+f", "or"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 76,
+    "label": "<ough>2",
+    "type": "spelling",
+    "options": ["moon", "oe", "o+f", "u+f", "or", "schwa"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 77,
+    "label": "/h/-",
+    "type": "sound",
+    "options": ["h", "wh"],
+    "homs": {
+      "direct": ["whole", "hole", "whose", "who’s"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 78,
+    "label": "/k/-",
+    "type": "sound",
+    "options": ["c", "cc", "ch", "ck", "k"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 79,
+    "label": "/ks/-",
+    "type": "sound",
+    "options": ["ck+s", "x"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 80,
+    "label": "/k/2",
+    "type": "sound",
+    "options": ["q", "qu", "que"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 81,
+    "label": "<qu><que>-",
+    "type": "spelling",
+    "options": ["k+w(qu)", "k"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 82,
+    "label": "/r/-",
+    "type": "sound",
+    "options": ["r", "rr", "rh", "wr"],
+    "homs": {
+      "direct": ["right", "ring", "wring", "write"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 83,
+    "label": "/t/-",
+    "type": "sound",
+    "options": ["t", "tt", "bt", "te", "cht"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 84,
+    "label": "/z/-",
+    "type": "sound",
+    "options": ["z", "ze", "zz", "s", "se", "ss"],
+    "homs": {
+      "direct": ["desert", "dessert"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 85,
+    "label": "<o>2",
+    "type": "spelling",
+    "options": ["o", "moon", "oe", "schwa"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 86,
+    "label": "/eer/-",
+    "type": "sound",
+    "options": ["eer", "ear", "ere", "ier"],
+    "homs": {
+      "direct": [
+        "pier",
+        "here",
+        "hear",
+        "peer",
+        "pier",
+        "tear",
+        "tier",
+        "dear",
+        "deer"
+      ],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 87,
+    "label": "<ear>-",
+    "type": "spelling",
+    "options": ["ar", "air", "eer", "er"],
+    "homs": {
+      "direct": ["quay", "gene", "genes"],
+      "indirect": [],
+      "delay": ["key", "Jean", "Jeans", "peat"]
+    }
+  },
+  {
+    "unit_no": 88,
+    "label": "/ee/4",
+    "type": "sound",
+    "options": ["ay", "e-e", "ei", "eo", "i", "oe"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 89,
+    "label": "/y/-",
+    "type": "sound",
+    "options": ["ea", "i", "j", "y", "u"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 90,
+    "label": "/ae/4",
+    "type": "sound",
+    "options": ["ai", "aigh", "au", "ay", "e", "ei", "et"],
+    "homs": {
+      "direct": ["strait", "straight", "gait", "rein"],
+      "indirect": [],
+      "delay": ["gate", "rain", "fate"]
+    }
+  },
+  {
+    "unit_no": 91,
+    "label": "<au>-",
+    "type": "spelling",
+    "options": ["ar", "ae", "o", "or", "schwa"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 92,
+    "label": "/n/3",
+    "type": "sound",
+    "options": ["ne", "nne", "pn"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 93,
+    "label": "/ie/4",
+    "type": "sound",
+    "options": ["ei", "eigh", "i", "ia", "igh", "y"],
+    "homs": {
+      "direct": ["I’ll", "fortnight"],
+      "indirect": [],
+      "delay": ["fortnite"]
+    }
+  },
+  {
+    "unit_no": 94,
+    "label": "/ie/5",
+    "type": "sound",
+    "options": ["ai", "ais", "aye", "eye", "is", "o", "ye"],
+    "homs": {
+      "direct": ["Isle", "Aisle", "rye"],
+      "indirect": [],
+      "delay": ["I’ll", "lie", "wry"]
+    }
+  },
+  {
+    "unit_no": 95,
+    "label": "<eigh>-",
+    "type": "spelling",
+    "options": ["ie", "ae"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 96,
+    "label": "/p/-",
+    "type": "sound",
+    "options": ["p", "pp", "pe"],
+    "homs": {
+      "direct": ["troupe", "troop", "hoped", "hopped"],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 97,
+    "label": "/sh/-",
+    "type": "sound",
+    "options": ["ch", "c", "ci", "s", "sh", "ss", "ssi", "t", "ti"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 98,
+    "label": "/ch/-",
+    "type": "sound",
+    "options": ["ch", "tch", "ci", "s", "sci", "si", "t", "te", "ti", "tu"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 99,
+    "label": "/zh/-",
+    "type": "sound",
+    "options": ["ge", "j", "s", "si", "z"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 100,
+    "label": "/z/-",
+    "type": "sound",
+    "options": ["z", "zz", "s", "ss", "es", "x"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 101,
+    "label": "/er/3",
+    "type": "sound",
+    "options": ["ear", "er", "or", "our", "ur", "yr", "yrrh"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 102,
+    "label": "/g/2",
+    "type": "sound",
+    "options": ["g", "gg", "gh", "gu", "gue"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 103,
+    "label": "/j/-",
+    "type": "sound",
+    "options": ["d", "dge", "di", "g", "ge", "j", "gi"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 104,
+    "label": "/oe/4",
+    "type": "sound",
+    "options": ["eau", "o", "oa", "oe", "ol", "oo"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 105,
+    "label": "/m/3",
+    "type": "sound",
+    "options": ["mm", "mb", "mn", "gm"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  },
+  {
+    "unit_no": 106,
+    "label": "/a/-",
+    "type": "sound",
+    "options": ["a", "al", "au"],
+    "homs": {
+      "direct": [],
+      "indirect": [],
+      "delay": []
+    }
+  }
+]

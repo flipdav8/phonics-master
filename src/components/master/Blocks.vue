@@ -2,7 +2,20 @@
   <div class="fit q-pa-md">
     <div class="text-caption q-pa-sm">
       Used with words (within letters) in each unit
+      <q-btn size="sm" no-caps flat @click="loadBulk()">Load Bulk</q-btn>
     </div>
+
+    <q-card v-if="load_bulk">
+      <q-card-section>
+        <q-btn @click="addBulk('sound')">Add Bulk</q-btn>
+        <div
+          v-for="(bulk_block, i) in BLOCKS.filter((e) => e.label !== undefined)"
+          :key="i"
+        >
+          {{ bulk_block }}
+        </div>
+      </q-card-section>
+    </q-card>
 
     <!-- <q-btn @click="getTesting()" no-caps>Testing</q-btn> -->
     <!-- NEW BLOCK -->
@@ -221,6 +234,7 @@
       bordered
       separator="cell"
       row-key="name"
+      :pagination="initialPagination"
     >
       <template v-slot:top>
         <q-input dense outlined color="primary" v-model="filter">
@@ -269,6 +283,9 @@ import IconList from "src/components/master/IconList.vue";
 import SoundList from "src/components/master/SoundList.vue";
 import PhonemesList from "src/components/master/PhonemesList.vue";
 
+import BLOCKS from "src/components/master/blocks/blocks.json";
+import phonemes from "../icons/phonemes";
+
 export default defineComponent({
   name: "BlocksPage",
   components: {
@@ -286,6 +303,7 @@ export default defineComponent({
   setup() {
     const accounts = useAccountsStore();
     return {
+      BLOCKS,
       accounts,
     };
   },
@@ -341,6 +359,13 @@ export default defineComponent({
           align: "center",
         },
       ],
+      initialPagination: {
+        sortBy: "desc",
+        descending: false,
+        page: 1,
+        rowsPerPage: 20,
+        // rowsNumber: xx if getting data from a server
+      },
       filter: "",
       block_types: ["spelling", "sound"],
       block_template: {
@@ -380,6 +405,8 @@ export default defineComponent({
       show_phonemes: false,
       edit_option: null,
       operation: false,
+
+      load_bulk: false,
     };
   },
   mounted() {
@@ -665,6 +692,168 @@ export default defineComponent({
           // return undefined;
         });
       return token;
+    },
+
+    loadBulk() {
+      this.load_bulk = !this.load_bulk;
+    },
+    async addBulk() {
+      let type = "spelling";
+      let bulk_blocks = BLOCKS.filter(
+        (e) => e.label !== undefined && e.type === type
+      );
+
+      let bulk_items = [];
+      for (let index = 0; index < bulk_blocks.length; index++) {
+        const block = bulk_blocks[index];
+        if (this.blocks.find((e) => e.block.label === block.label)) {
+          // console.log("already entered", block.label);
+          continue;
+        }
+
+        let label = block.label + "_" + block.unit_no;
+        if (this.blocks.find((e) => e.block.label === label)) {
+          continue;
+        }
+
+        let icon = null;
+        if (type === "sound") {
+          let split = label.split("/");
+          let ph = "";
+          ph = split[1];
+          if (split.join("").includes("moon")) {
+            ph = "oo-moon";
+          }
+
+          if (split.join("").includes("book")) {
+            ph = "oo-book";
+          }
+
+          if (split.join("").includes("o-oo")) {
+            ph = "o-oo";
+          }
+
+          if (split.join("").includes("tools")) {
+            ph = "oo-tools";
+          }
+
+          let phoneme = this.phonemes.find((e) => e.label === ph);
+          if (phoneme !== undefined) {
+            // console.log("phoneme", phoneme);
+
+            icon = {
+              id: phoneme.id,
+              label: phoneme.label,
+              icon_name: phoneme.icon_name,
+              sound_src: phoneme.sound_src,
+            };
+          } else {
+            console.log("no phoneme", block);
+          }
+        }
+
+        let block_template = {
+          id: block.unit_no,
+          label: label,
+          type: type,
+          icon: icon,
+          sound: null,
+          options: [],
+        };
+
+        // option_template: { label: "ay", sound: null, icon: null },
+
+        let all_options = block.options;
+        let dual_sounds = false;
+        for (let ii = 0; ii < all_options.length; ii++) {
+          const option_label = all_options[ii];
+
+          let option_icon = null;
+
+          if (type === "spelling") {
+            let option_ph = option_label;
+            if (option_label.includes("moon")) {
+              option_ph = "oo-moon";
+            }
+
+            if (option_label.includes("book")) {
+              option_ph = "oo-book";
+            }
+
+            if (option_label.includes("o-oo")) {
+              option_ph = "o-oo";
+            }
+
+            if (option_label.includes("tools")) {
+              option_ph = "o-tools";
+            }
+
+            let phoneme = this.phonemes.find((e) => e.label === option_ph);
+
+            if (phoneme !== undefined) {
+              // console.log("phoneme", phoneme);
+              option_icon = {
+                id: phoneme.id,
+                label: phoneme.label,
+                icon_name: phoneme.icon_name,
+                sound_src: phoneme.sound_src,
+              };
+            } else {
+              console.log("no phoneme", block);
+              dual_sounds = true;
+            }
+          }
+
+          block_template.options.push({
+            label: option_label,
+            sound: null,
+            icon: option_icon,
+          });
+        }
+
+        if (type === "spelling" && dual_sounds) {
+          block_template["dual_sounds"] = true;
+        }
+
+        bulk_items.push({
+          region: "AU",
+          block: block_template,
+        });
+      }
+
+      // console.log("add these blocks", bulk_items);
+
+      return;
+
+      if (bulk_items.length > 0) {
+        // return;
+
+        this.operation = true;
+        let dbid = process.env.DBID;
+        let base_url = `https://${dbid}.dexie.cloud`;
+        let token = await this.getGlobalToken();
+
+        let items = bulk_items;
+
+        await axios
+          .post(`${base_url}/public/blocks`, items, {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .then(function (response) {
+            console.log("response", response);
+            //
+          })
+          .catch(function (error) {
+            console.log("error", error);
+            // return undefined;
+          });
+
+        this.operation = false;
+        console.log("added bulk");
+      }
     },
   },
 });
