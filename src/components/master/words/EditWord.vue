@@ -104,6 +104,16 @@
                   size="md"
                 ></q-icon>
                 <q-icon v-else name="mdi-plus" size="md"></q-icon>
+
+                <span
+                  v-if="
+                    new_word.homo != null &&
+                    new_word.homo.name !== undefined &&
+                    new_word.homo.more != undefined
+                  "
+                >
+                  + {{ new_word.homo.more.length }} more
+                </span>
               </q-btn>
             </q-item-section>
 
@@ -437,6 +447,26 @@
               />
             </span>
             <q-icon v-else name="mdi-plus" size="md"></q-icon>
+
+            <span
+              v-if="
+                new_word.homo != null &&
+                new_word.homo.name !== undefined &&
+                new_word.homo.more != undefined
+              "
+            >
+              <!-- + {{ new_word.homo.more.length }} more -->
+              +
+              <span v-for="(extra, iii) in new_word.homo.more" :key="iii">
+                <!-- {{ extra.name }} -->
+                <q-icon size="xl">
+                  <img
+                    :src="`/homophone-icons/${extra.src}.svg`"
+                    type="image/svg+xml"
+                  />
+                </q-icon>
+              </span>
+            </span>
           </q-btn>
 
           Homophones:
@@ -583,6 +613,14 @@
 
 <script>
 import { defineComponent } from "vue";
+// import DexieLogin from "src/components/dexie/DexieLogin.vue";
+import { useAccountsStore } from "src/stores/accounts";
+import { useObservable, from } from "@vueuse/rxjs";
+import { liveQuery } from "dexie";
+import { syncdb } from "src/database/dbCloud";
+
+// import Classroom from "src/components/classrooms/Classroom.vue";
+import axios from "axios";
 
 import IconList from "src/components/master/IconList.vue";
 import HomophonesList from "src/components/master/HomophonesList.vue";

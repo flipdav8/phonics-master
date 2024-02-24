@@ -13,6 +13,16 @@
       <q-btn flat icon="mdi-close" @click="$emit('close')"></q-btn>
     </q-card-section>
 
+    <q-card-section class="text-center q-gutter-x-sm">
+      <q-toggle
+        v-model="multiple"
+        label="multiple?"
+        @update:model-value="multipleChange"
+      ></q-toggle>
+      <q-btn :disable="!multiple" @click="selectHoms(icon)">
+        Select Selection</q-btn
+      >
+    </q-card-section>
     <q-card-section class="flex row justify-center">
       <q-card
         v-for="(icon, idx) in filterIcons"
@@ -21,10 +31,13 @@
         style="border-radius: 10px"
         :class="{
           selected:
-            model_icon !== null &&
-            model_icon.id !== undefined &&
-            model_icon.id === icon.id,
+            (model_icon !== null &&
+              model_icon.id !== undefined &&
+              model_icon.id === icon.id &&
+              !multiple) ||
+            selected.map((e) => e.id).includes(icon.id),
         }"
+        @click="selectHom(icon)"
       >
         {{ icon.label }}
 
@@ -37,7 +50,9 @@
           />
         </q-icon>
 
-        <q-btn @click="selectIcon(icon)" color="green"> Select</q-btn>
+        <q-btn :disable="multiple" @click="selectIcon(icon)" color="green">
+          Select</q-btn
+        >
         <br />
       </q-card>
 
@@ -72,6 +87,8 @@ export default defineComponent({
     return {
       select_icon: null,
       search: "",
+      multiple: false,
+      selected: [],
     };
   },
   mounted() {
@@ -117,6 +134,36 @@ export default defineComponent({
     mdiIcons() {
       let url = "https://pictogrammers.com/library/mdi/";
       window.open(url, "_blank").focus();
+    },
+    multipleChange() {
+      this.select_icon = null;
+    },
+    selectHom(icon) {
+      let set_icon = {
+        src: `${icon.value.split("/")[0]}/${icon.label}`,
+        label: icon.label,
+        name: icon.value,
+        id: icon.id,
+      };
+
+      if (this.selected.map((e) => e.id).includes(icon.id)) {
+        let r = this.selected.findIndex((e) => e.id === icon.id);
+        this.selected.splice(r, 1);
+      } else {
+        this.selected.push(set_icon);
+      }
+    },
+
+    selectHoms(icon) {
+      if (this.selected.length < 1) return;
+
+      let set_icon = this.selected[0];
+      if (this.selected.length > 1) {
+        set_icon["more"] = this.selected.slice(1); // index 1+
+      }
+
+      this.$emit("update:model_icon", set_icon);
+      this.$emit("close");
     },
   },
 });

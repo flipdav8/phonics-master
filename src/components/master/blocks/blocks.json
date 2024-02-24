@@ -116,9 +116,15 @@
   },
   {
     "unit_no": 24,
+
     "label": "/l/1",
     "type": "sound",
-    "options": ["al", "el", "il", "l", "le", "ll", "ol"]
+    "options": ["al", "el", "il", "l", "le", "ll", "ol"],
+    "homs": {
+      "direct": ["petrol", "petrel"],
+      "indirect": [],
+      "delay": []
+    }
   },
   {
     "unit_no": 25,

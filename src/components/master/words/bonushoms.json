@@ -1,0 +1,868 @@
+[
+  {
+    "unit": 25,
+    "list": [
+      {
+        "word": "born",
+        "bonus": ["borne"]
+      }
+    ]
+  },
+  {
+    "unit": 26,
+    "list": [
+      {
+        "word": "fort",
+        "bonus": ["forte"]
+      },
+      {
+        "word": "Paul",
+        "bonus": ["pall"]
+      },
+      {
+        "word": "raw",
+        "bonus": ["ra"]
+      }
+    ]
+  },
+
+  {
+    "unit": 27,
+    "list": [
+      {
+        "word": "air",
+        "bonus": ["ere", "err"]
+      },
+      {
+        "word": "bare",
+        "bonus": ["bair"]
+      },
+      {
+        "word": "bear",
+        "bonus": ["bair"]
+      },
+      {
+        "word": "hair",
+        "bonus": ["hare"]
+      },
+      {
+        "word": "heir",
+        "bonus": ["ere", "err"]
+      },
+      {
+        "word": "wear",
+        "bonus": ["ware"]
+      },
+      {
+        "word": "where",
+        "bonus": ["ware"]
+      }
+    ]
+  },
+
+  {
+    "unit": 29,
+    "list": [
+      {
+        "word": "wear",
+        "bonus": ["ware"]
+      },
+      {
+        "word": "when",
+        "bonus": ["win"]
+      },
+      {
+        "word": "where",
+        "bonus": ["ware"]
+      },
+      {
+        "word": "why",
+        "bonus": ["y"]
+      }
+    ]
+  },
+
+  {
+    "unit": 30,
+    "list": [
+      {
+        "word": "cue",
+        "bonus": ["que", "queue", "q"]
+      },
+      {
+        "word": "due",
+        "bonus": ["do"]
+      },
+      {
+        "word": "queue",
+        "bonus": ["que", "cue", "q"]
+      }
+    ]
+  },
+
+  {
+    "unit": 31,
+    "list": [
+      {
+        "word": "blew",
+        "bonus": ["blue"]
+      },
+      {
+        "word": "flew",
+        "bonus": ["flu"]
+      }
+    ]
+  },
+
+  {
+    "unit": 33,
+    "list": [
+      {
+        "word": "are",
+        "bonus": ["r"]
+      },
+      {
+        "word": "balm",
+        "bonus": ["bomb"]
+      },
+      {
+        "word": "calm",
+        "bonus": ["com"]
+      }
+    ]
+  },
+  {
+    "unit": 35,
+    "list": [
+      {
+        "word": "cot",
+        "bonus": ["caught"]
+      }
+    ]
+  },
+
+  {
+    "unit": 36,
+    "list": [
+      {
+        "word": "Ann",
+        "bonus": ["an"]
+      },
+      {
+        "word": "ant",
+        "bonus": ["aunt"]
+      }
+    ]
+  },
+
+  {
+    "unit": 37,
+    "list": [
+      {
+        "word": "aid",
+        "bonus": ["aide"]
+      },
+      {
+        "word": "rain",
+        "bonus": ["rein"]
+      },
+      {
+        "word": "reign",
+        "bonus": ["rein"]
+      },
+      {
+        "word": "vain",
+        "bonus": ["vane"]
+      },
+      {
+        "word": "vein",
+        "bonus": ["vane"]
+      }
+    ]
+  },
+  {
+    "unit": 38,
+    "list": [
+      {
+        "word": "grey",
+        "bonus": ["gray"]
+      },
+      {
+        "word": "train",
+        "bonus": ["trane"]
+      },
+      {
+        "word": "veil",
+        "bonus": ["vale"]
+      }
+    ]
+  },
+
+  {
+    "unit": 42,
+    "list": [
+      {
+        "word": "be",
+        "bonus": ["b", "bee"]
+      }
+    ]
+  },
+
+  {
+    "unit": 43,
+    "list": [
+      {
+        "word": "sweet",
+        "bonus": ["suite"]
+      }
+    ]
+  },
+
+  {
+    "unit": 44,
+    "list": [
+      {
+        "word": "mist",
+        "bonus": ["midst"]
+      }
+    ]
+  },
+
+  {
+    "unit": 45,
+    "list": [
+      {
+        "word": "by",
+        "bonus": ["buy", "bye", "bae"]
+      },
+      {
+        "word": "you",
+        "bonus": ["u", "ewe"]
+      }
+    ]
+  },
+
+  {
+    "unit": 48,
+    "list": [
+      {
+        "word": "coal",
+        "bonus": ["cole"]
+      },
+      {
+        "word": "mould",
+        "bonus": ["mold"]
+      },
+      {
+        "word": "role",
+        "bonus": ["roll"]
+      },
+      {
+        "word": "sole",
+        "bonus": ["soul"]
+      }
+    ]
+  },
+
+  {
+    "unit": 49,
+    "list": [
+      {
+        "word": "knee",
+        "bonus": ["nee"]
+      },
+      {
+        "word": "knew",
+        "bonus": ["new"]
+      },
+      {
+        "word": "knight",
+        "bonus": ["night"]
+      },
+      {
+        "word": "know",
+        "bonus": ["no"]
+      },
+      {
+        "word": "night",
+        "bonus": ["knight"]
+      },
+      {
+        "word": "no",
+        "bonus": ["know"]
+      },
+      {
+        "word": "tonne",
+        "bonus": ["ton"]
+      }
+    ]
+  },
+
+  {
+    "unit": 50,
+    "list": [
+      {
+        "word": "done",
+        "bonus": ["dun"]
+      },
+      {
+        "word": "knit",
+        "bonus": ["nit"]
+      },
+      {
+        "word": "nun",
+        "bonus": ["none"]
+      },
+      {
+        "word": "one",
+        "bonus": ["won"]
+      },
+      {
+        "word": "rain",
+        "bonus": ["rein", "reign"]
+      },
+      {
+        "word": "reign",
+        "bonus": ["rain", "rein"]
+      },
+      {
+        "word": "train",
+        "bonus": ["trane"]
+      }
+    ]
+  },
+  {
+    "unit": 51,
+    "list": [
+      {
+        "word": "earn",
+        "bonus": ["erne"]
+      },
+      {
+        "word": "urn",
+        "bonus": ["erne"]
+      }
+    ]
+  },
+  {
+    "unit": 52,
+    "list": [
+      {
+        "word": "harbour",
+        "bonus": ["harbor"]
+      },
+      {
+        "word": "labour",
+        "bonus": ["labor"]
+      }
+    ]
+  },
+
+  {
+    "unit": 53,
+    "list": [
+      {
+        "word": "berry",
+        "bonus": ["bury"]
+      },
+      {
+        "word": "bury",
+        "bonus": ["berry"]
+      },
+      {
+        "word": "very",
+        "bonus": ["vary"]
+      }
+    ]
+  },
+
+  {
+    "unit": 54,
+    "list": [
+      {
+        "word": "buy",
+        "bonus": ["bae"]
+      },
+      {
+        "word": "by",
+        "bonus": ["bae"]
+      },
+      {
+        "word": "bye",
+        "bonus": ["bae"]
+      }
+    ]
+  },
+  {
+    "unit": 55,
+    "list": [
+      {
+        "word": "very",
+        "bonus": ["vary"]
+      }
+    ]
+  },
+
+  {
+    "unit": 56,
+    "list": [
+      {
+        "word": "lute",
+        "bonus": ["loot"]
+      }
+    ]
+  },
+  {
+    "unit": 57,
+    "list": [
+      {
+        "word": "you",
+        "bonus": ["u", "ewe"]
+      }
+    ]
+  },
+  {
+    "unit": 58,
+    "list": [
+      {
+        "word": "flour",
+        "bonus": ["flower"]
+      },
+      {
+        "word": "flower",
+        "bonus": ["flour"]
+      },
+      {
+        "word": "our",
+        "bonus": ["hour"]
+      },
+      {
+        "word": "plough",
+        "bonus": ["plow"]
+      }
+    ]
+  },
+  {
+    "unit": 59,
+    "list": [
+      {
+        "word": "bough",
+        "bonus": ["bow"]
+      },
+      {
+        "word": "dough",
+        "bonus": ["doe"]
+      },
+      {
+        "word": "plough",
+        "bonus": ["plow"]
+      }
+    ]
+  },
+  {
+    "unit": 63,
+    "list": [
+      {
+        "word": "gate",
+        "bonus": ["gait"]
+      }
+    ]
+  },
+  {
+    "unit": 68,
+    "list": [
+      {
+        "word": "aunt",
+        "bonus": ["ant"]
+      },
+      {
+        "word": "draught",
+        "bonus": ["draft"]
+      }
+    ]
+  },
+  {
+    "unit": 70,
+    "list": [
+      {
+        "word": "bomb",
+        "bonus": ["balm"]
+      }
+    ]
+  },
+  {
+    "unit": 71,
+    "list": [
+      {
+        "word": "done",
+        "bonus": ["dun"]
+      }
+    ]
+  },
+  {
+    "unit": 72,
+    "list": [
+      {
+        "word": "for",
+        "bonus": ["four"]
+      },
+      {
+        "word": "fort",
+        "bonus": ["forte"]
+      },
+      {
+        "word": "raw",
+        "bonus": ["ra"]
+      }
+    ]
+  },
+
+  {
+    "unit": 73,
+    "list": [
+      {
+        "word": "boar",
+        "bonus": ["bore"]
+      },
+      {
+        "word": "board",
+        "bonus": ["bored"]
+      },
+      {
+        "word": "bored",
+        "bonus": ["board"]
+      },
+      {
+        "word": "caught",
+        "bonus": ["cot"]
+      },
+      {
+        "word": "hoarse",
+        "bonus": ["horse"]
+      },
+      {
+        "word": "pore",
+        "bonus": ["pour"]
+      },
+      {
+        "word": "pour",
+        "bonus": ["pore"]
+      },
+      {
+        "word": "taught",
+        "bonus": ["taut"]
+      }
+    ]
+  },
+  {
+    "unit": 74,
+    "list": [
+      {
+        "word": "fore",
+        "bonus": ["four"]
+      },
+      {
+        "word": "four",
+        "bonus": ["fore"]
+      },
+      {
+        "word": "oar",
+        "bonus": ["ore"]
+      },
+      {
+        "word": "soar",
+        "bonus": ["sore"]
+      },
+      {
+        "word": "sore",
+        "bonus": ["soar"]
+      }
+    ]
+  },
+  {
+    "unit": 79,
+    "list": [
+      {
+        "word": "locks",
+        "bonus": ["lox"]
+      },
+      {
+        "word": "tacks",
+        "bonus": ["tax"]
+      },
+      {
+        "word": "wacks",
+        "bonus": ["wax"]
+      }
+    ]
+  },
+
+  {
+    "unit": 80,
+    "list": [
+      {
+        "word": "queue",
+        "bonus": ["que", "cue", "q"]
+      }
+    ]
+  },
+  {
+    "unit": 82,
+    "list": [
+      {
+        "word": "right",
+        "bonus": ["rite", "wright"]
+      },
+      {
+        "word": "write",
+        "bonus": ["rite", "wright"]
+      }
+    ]
+  },
+  {
+    "unit": 85,
+    "list": [
+      {
+        "word": "do",
+        "bonus": ["due"]
+      },
+      {
+        "word": "to",
+        "bonus": ["two", "too"]
+      }
+    ]
+  },
+  {
+    "unit": 87,
+    "list": [
+      {
+        "word": "bear",
+        "bonus": ["bare", "bair"]
+      },
+      {
+        "word": "dear",
+        "bonus": ["deer"]
+      },
+
+      {
+        "word": "heard",
+        "bonus": ["herd"]
+      },
+
+      {
+        "word": "shear",
+        "bonus": ["sheer"]
+      },
+      {
+        "word": "wear",
+        "bonus": ["where", "ware"]
+      }
+    ]
+  },
+
+  {
+    "unit": 88,
+    "list": [
+      {
+        "word": "Neil",
+        "bonus": ["kneel"]
+      },
+      {
+        "word": "quay",
+        "bonus": ["key", "k", "qi"]
+      }
+    ]
+  },
+  {
+    "unit": 89,
+    "list": [
+      {
+        "word": "yolk",
+        "bonus": ["yoke"]
+      }
+    ]
+  },
+  {
+    "unit": 90,
+    "list": [
+      {
+        "word": "coupe",
+        "bonus": ["coop"]
+      },
+      {
+        "word": "gauge",
+        "bonus": ["gage"]
+      },
+      {
+        "word": "rein",
+        "bonus": ["reign"]
+      },
+      {
+        "word": "veil",
+        "bonus": ["vale"]
+      }
+    ]
+  },
+  {
+    "unit": 91,
+    "list": [
+      {
+        "word": "aunt",
+        "bonus": ["ant"]
+      },
+      {
+        "word": "draught",
+        "bonus": ["draft"]
+      },
+      {
+        "word": "gauge",
+        "bonus": ["gage"]
+      },
+      {
+        "word": "haul",
+        "bonus": ["hall"]
+      },
+      {
+        "word": "Paul",
+        "bonus": ["pall"]
+      }
+    ]
+  },
+  {
+    "unit": 92,
+    "list": [
+      {
+        "word": "done",
+        "bonus": ["dun"]
+      },
+      {
+        "word": "nun",
+        "bonus": ["none"]
+      },
+      {
+        "word": "one",
+        "bonus": ["won"]
+      },
+      {
+        "word": "tonne",
+        "bonus": ["ton"]
+      }
+    ]
+  },
+  {
+    "unit": 93,
+    "list": [
+      {
+        "word": "buy",
+        "bonus": ["by", "bye", "bae"]
+      },
+      {
+        "word": "sleight",
+        "bonus": ["slight"]
+      }
+    ]
+  },
+  {
+    "unit": 94,
+    "list": [
+      {
+        "word": "aisle",
+        "bonus": ["isle"]
+      },
+      {
+        "word": "aye",
+        "bonus": ["i", "eye", "ai"]
+      },
+      {
+        "word": "bye",
+        "bonus": ["by", "buy", "bae"]
+      },
+      {
+        "word": "dye",
+        "bonus": ["die"]
+      },
+      {
+        "word": "eye",
+        "bonus": ["i", "ai", "aye"]
+      },
+      {
+        "word": "isle",
+        "bonus": ["aisle"]
+      },
+      {
+        "word": "Thai",
+        "bonus": ["tie", "tai"]
+      }
+    ]
+  },
+  {
+    "unit": 95,
+    "list": [
+      {
+        "word": "eight",
+        "bonus": ["ate"]
+      },
+      {
+        "word": "sleigh",
+        "bonus": ["slay"]
+      },
+      {
+        "word": "sleight",
+        "bonus": ["slight"]
+      },
+      {
+        "word": "weigh",
+        "bonus": ["way"]
+      }
+    ]
+  },
+  {
+    "unit": 96,
+    "list": [
+      {
+        "word": "wrapped",
+        "bonus": ["rapt"]
+      }
+    ]
+  },
+  {
+    "unit": 104,
+    "list": [
+      {
+        "word": "brooch",
+        "bonus": ["broach"]
+      },
+      {
+        "word": "yolk",
+        "bonus": ["yoke"]
+      }
+    ]
+  },
+
+  {
+    "unit": 76,
+    "list": [
+      {
+        "word": "bough",
+        "bonus": ["bow"]
+      },
+      {
+        "word": "dough",
+        "bonus": ["doe"]
+      },
+      {
+        "word": "plough",
+        "bonus": ["plow"]
+      }
+    ]
+  },
+  {
+    "unit": 24,
+    "list": [
+      {
+        "word": "metal",
+        "bonus": ["mettle"]
+      }
+    ]
+  }
+]

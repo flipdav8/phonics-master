@@ -1,7 +1,12 @@
 <template>
-  <div class="fit q-pa-md non-selectable">
+  <!-- non-selectable -->
+  <div class="fit q-pa-md">
     <div class="text-caption q-pa-sm class flex row">
-      <q-btn no-caps flat @click="loadBulk()" :disable="bulk_block == null"
+      <q-btn
+        no-caps
+        flat
+        @click="loadBulk()"
+        :disable="bulk_block == null || bulk_mode"
         >Load Bulk</q-btn
       >
       <q-select
@@ -28,7 +33,7 @@
           :key="i"
           class="flex row justify-around"
         >
-          <div class="text-left">
+          <div class="flex row items-center">
             {{ bulk_word.word }}
           </div>
           <div class="flex row">
@@ -123,13 +128,30 @@
             <div v-if="bulk_words_info[i].warning">
               <q-icon name="mdi-alert" color="purple"></q-icon>
             </div>
+
+            <q-checkbox
+              v-model="bulk_word.skip"
+              checked-icon="mdi-close"
+              unchecked-icon="mdi-check"
+              indeterminate-icon="mdi-check"
+              size="xs"
+            ></q-checkbox>
+
+            <div v-if="bulk_words_info[i].check_exists.length > 0">
+              <q-btn
+                flat
+                no-caps
+                @click="bulkExists(bulk_words_info[i].check_exists, i)"
+                >Exists</q-btn
+              >
+            </div>
           </div>
         </div>
       </q-card-section>
     </q-card>
 
     <!-- WORD -->
-    <EditWord
+    <!-- <EditWord
       v-if="add_word && !operation"
       :input_word="new_word"
       :edit_id="edit_id"
@@ -145,12 +167,12 @@
       @cancel="cancelNew"
       @addWord="addWord"
     >
-    </EditWord>
+    </EditWord> -->
 
     <q-card
       v-if="add_word && !operation"
       flat
-      class="fit flex flex-center column hidden"
+      class="fit flex flex-center column"
     >
       <!-- WORD -->
       <!-- //TODO:  ADD DICTATION SENTENCE -->
@@ -694,8 +716,8 @@
           @click="selectPriorWord(word)"
           class="cursor-pointer"
           :class="{
-            disabled: word.word.type !== new_word.type,
-            'no-pointer-events': word.word.type !== new_word.type,
+            disabled: word.word.type !== bulk_type,
+            'no-pointer-events': word.word.type !== bulk_type,
           }"
         >
           <q-card-section>
@@ -811,7 +833,9 @@
         </q-input>
 
         <q-space />
-        <q-btn @click="addNew()" no-caps color="green"> Add Word </q-btn>
+        <q-btn @click="addNew()" no-caps color="green" :disable="bulk_mode">
+          Add Word
+        </q-btn>
       </template>
 
       <template v-slot:body-cell-pattern="props">
@@ -863,6 +887,8 @@
               ></q-icon>
             </span> -->
           </span>
+
+          <q-btn flat @click="copyToClip(props.row.word.pattern)">Copy</q-btn>
         </q-td>
       </template>
 
@@ -1029,6 +1055,8 @@ import WORDS from "src/components/master/words/unit-words.json";
 import BLOCKS from "src/components/master/blocks/blocks.json";
 
 import EditWord from "./words/EditWord.vue";
+
+import { copyToClipboard } from "quasar";
 
 export default defineComponent({
   name: "WordsPage",
@@ -1228,6 +1256,8 @@ export default defineComponent({
       bulk_words: [],
       bulk_words_info: [],
       bulk_mode: false,
+      bulk_exists: [],
+      bulk_exist_index: null,
     };
   },
   mounted() {
@@ -1829,6 +1859,20 @@ export default defineComponent({
     },
 
     selectPriorWord(word) {
+      if (this.bulk_mode) {
+        let edit_word = this.bulk_words[this.bulk_exist_index];
+        edit_word.pattern = JSON.parse(JSON.stringify(word.word.pattern));
+        edit_word.homophone;
+        edit_word.type = word.word.type;
+        edit_word.homo = word.word.homo;
+        edit_word.homophones = word.word.homophones;
+        edit_word.use_tense = word.word.use_tense;
+        edit_word.plural = word.word.plural;
+
+        // this.bulk_words.splice(this.bulk_exist_index, 1, word.word);
+        // console.log("splice here", this.bulk_words);
+        return;
+      }
       this.new_word.pattern = JSON.parse(JSON.stringify(word.word.pattern));
 
       for (let idx = 0; idx < this.new_word.pattern.length; idx++) {
@@ -1847,6 +1891,10 @@ export default defineComponent({
     },
 
     async loadBulk() {
+      this.bulk_mode = !this.bulk_mode;
+
+      if (!this.bulk_mode) return;
+
       let bulk = this.WORDS.filter(
         (e, i) => e.unit == this.bulk_block.label.split("_")[1]
       );
@@ -1864,13 +1912,20 @@ export default defineComponent({
         console.log("unit_homs", unit_block.homs);
       }
       let { direct, indirect, delay } = unit_block.homs;
-      let all_unit_homophones = [...direct, ...indirect];
+      let all_unit_homophones = [...direct, ...indirect, ...delay];
 
       let block_options = this.blocks.find((e) => e.id === this.bulk_block.id)
         .block.options;
 
       for (let idx = 0; idx < bulk.length; idx++) {
         const word = bulk[idx];
+
+        //check if exists..
+        let check_exists = await syncdb.words
+          .where("word.word")
+          .equals(word.raw_word)
+          .toArray();
+
         let pattern = [];
         let warning = false;
         let input_count = 0;
@@ -1899,6 +1954,11 @@ export default defineComponent({
             };
 
             if (this.bulk_type == "spelling") {
+              // if (phoneme_label.includes(',')) {
+
+              //   let split_label =
+              // }
+              // block.label = phoneme_label; // doesn't matter so mcu
               if (chars === phoneme_label) {
                 input = true;
                 block["id"] = input_block_id;
@@ -2003,7 +2063,9 @@ export default defineComponent({
 
             for (let xx = 0; xx < filter_search_homs.length; xx++) {
               const element = filter_search_homs[xx];
-              if (!homophones.includes(element)) {
+              if (
+                !homophones.map((e) => e.replaceAll("!", "")).includes(element)
+              ) {
                 bonus_homophones.push(element);
               }
             }
@@ -2025,7 +2087,6 @@ export default defineComponent({
           bonus_homophones = search_homs
             .filter((e) => e.score > 900)
             .map((e) => e.word);
-
           all_bonus_homophones.push({
             word: strip_word,
             bonus: bonus_homophones,
@@ -2060,24 +2121,32 @@ export default defineComponent({
           warning: warning,
           bonus_homophones: bonus_homophones,
           input_count: input_count,
+          check_exists: check_exists,
         });
       }
 
       let missing_homophones = [];
       console.log("all_homophones", all_homophones);
-      for (let xx = 0; xx < all_unit_homophones.length; xx++) {
-        const element = all_unit_homophones[xx];
-        if (!all_homophones.includes(element)) {
+      let check_homs = [...indirect, ...delay];
+      for (let xx = 0; xx < check_homs.length; xx++) {
+        const element = check_homs[xx].replaceAll("!", "");
+        if (
+          !all_homophones.map((e) => e.replaceAll("!", "")).includes(element)
+        ) {
           missing_homophones.push(element);
         }
       }
 
-      if (missing_homophones.length > 0) {
-        console.log("missing homophones", missing_homophones);
+      let filter_missing = missing_homophones;
+      if (filter_missing.length > 0) {
+        console.log("missing homophones", filter_missing);
         alert("missing homophones");
       }
 
-      console.log("all bonus homs", all_bonus_homophones);
+      console.log("all bonus homs", {
+        unit: bulk[0].unit,
+        list: all_bonus_homophones.filter((e) => e.bonus.length > 0),
+      });
 
       // console.log("words", words);
       this.bulk_words = words;
@@ -2127,19 +2196,32 @@ export default defineComponent({
         this.bulk_block_strip_label = label;
       } else {
         let split = e.label.split("<")[1].split(">")[0];
+        if (split.includes(">+<")) {
+          split.removeAll(">+<", ",");
+        }
         let label = split;
         this.bulk_block_strip_label = label;
       }
     },
+
+    bulkExists(words, index) {
+      console.log("existing words", words);
+      this.existing_words = words;
+      this.bulk_exist_index = index;
+      this.word_exists = true;
+    },
+
     async addBulk() {
-      let bulk_items = this.bulk_words.map((e) => ({
-        word: e,
-        region: "AU",
-        unit_ids: [],
-      }));
+      let bulk_items = this.bulk_words
+        .filter((e) => !e.skip || e.skip == undefined)
+        .map((e) => ({
+          word: e,
+          region: "AU",
+          unit_ids: [],
+        }));
       console.log("add these words", bulk_items);
 
-      return;
+      // return;
 
       if (bulk_items.length > 0) {
         // return;
@@ -2176,6 +2258,31 @@ export default defineComponent({
       this.new_word = bulk_word;
       this.bulk_mode = true;
       this.add_word = true;
+    },
+
+    copyToClip(pattern) {
+      let copy = "";
+
+      for (let index = 0; index < pattern.length; index++) {
+        const element = pattern[index].letters + " ";
+        copy = copy + element;
+      }
+
+      copy = copy + " ... ";
+
+      for (let index = 0; index < pattern.length; index++) {
+        const element = pattern[index].icon.label + " ";
+        copy = copy + element;
+      }
+
+      copyToClipboard(copy)
+        .then(() => {
+          // success!
+          console.log("copied", copy);
+        })
+        .catch(() => {
+          // fail
+        });
     },
   },
 });
