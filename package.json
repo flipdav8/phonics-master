@@ -16,6 +16,7 @@
     "@quasar/extras": "^1.16.4",
     "@vueuse/rxjs": "^10.7.0",
     "axios": "^1.2.1",
+    "crypto-js": "^4.2.0",
     "dexie": "^4.0.1-beta.6",
     "dexie-cloud-addon": "^4.0.1-beta.54",
     "pinia": "^2.0.11",

@@ -73,6 +73,7 @@ module.exports = configure(function ( /* ctx */ ) {
         clientSecret: process.env.clientSecret,
         DB: process.env.DB,
         DBID: process.env.DBID,
+        ENCRYPT: 'o-G-R-7-n-J-T-4-u-9-f-m-j-H-h-b-r-S-J-T-K-Q-A-N-6-J-q-y-e-d-m-4',
       },
       // vueRouterBase,
       // vueDevtools,

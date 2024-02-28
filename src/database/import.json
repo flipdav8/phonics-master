@@ -1,0 +1,22 @@
+{
+  "data": {
+    "rlm-public": {
+      "products": {
+        "prd1": {
+          "price": 60,
+          "title": "Pink T-shirt, size M",
+          "description": "A nice pink T-shirt (medium2)"
+        },
+        "prd10": {
+          "price": 70,
+          "test": true
+        },
+        "prd2": {
+          "price": 62,
+          "title": "Red Jeans",
+          "description": "Stone washed jeans"
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@
       "
     >
       <q-btn @click="dashboard()">Dashboard</q-btn>
+      <q-btn @click="dashboardNew()">Dashboard 2.0</q-btn>
     </div>
 
     <div v-else class="">Index Page..</div>
@@ -35,11 +36,14 @@ export default defineComponent({
     };
   },
   mounted() {
-    //
+    this.$q.dark.set(true);
   },
   methods: {
     dashboard() {
       this.$router.push("/master-overview");
+    },
+    dashboardNew() {
+      this.$router.push("/master-2");
     },
   },
 });
