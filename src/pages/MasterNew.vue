@@ -84,12 +84,17 @@
         </q-tr>
         <q-tr v-show="props.expand" :props="props" :key="props.row.id">
           <q-td colspan="100%">
-            <div class="text-left">
+            <div>
               <MovingWord
                 :word="props.row.word"
                 :phonemes="props.row.phonemes"
                 :letters="props.row.lttrs[0]"
               ></MovingWord>
+              <br />
+
+              <div>
+                {{ props.row.notes }}
+              </div>
             </div>
           </q-td>
         </q-tr>
@@ -138,6 +143,7 @@ export default defineComponent({
       syncdb: null,
       products: [],
       words: [],
+      notes: [],
       columns: [
         // {
         //   name: "id",
@@ -176,12 +182,12 @@ export default defineComponent({
         //   align: "left",
         // },
 
-        // {
-        //   name: "actions",
-        //   field: "actions",
-        //   label: "Actions",
-        //   align: "center",
-        // },
+        {
+          name: "actions",
+          field: "actions",
+          label: "Actions",
+          align: "center",
+        },
       ],
       rows: [],
       initialPagination: {
@@ -209,24 +215,12 @@ export default defineComponent({
 
     async getTest() {
       try {
-        useObservable(
-          from(
-            liveQuery(async () => {
-              this.words = await syncdb.words.toArray();
-              // console.log(mydb);
-              this.createRows();
-              // this.searchNotes();
-            })
-          )
-        );
-
-        useObservable(
-          from(
-            liveQuery(async () => {
-              this.products = await syncdb.products.toArray();
-            })
-          )
-        );
+        this.notes = await syncdb.notes.toArray();
+        // console.log("notes", this.notes);
+        this.words = await syncdb.words.toArray();
+        // console.log(mydb);
+        this.createRows();
+        // this.products = await syncdb.products.toArray();
       } catch (error) {
         let status = `Failed to read ...: ${error}`;
         console.log("status error", status);
@@ -245,14 +239,8 @@ export default defineComponent({
           phonemes: element.pids.map((f) =>
             phonemes.find((e) => e.list_id === f)
           ),
+          notes: this.notes.filter((e) => e.word_id === element.id),
         });
-      }
-    },
-
-    async searchNotes() {
-      for (let index = 0; index < this.words.length; index++) {
-        const element = this.words[index];
-        await this.getNotes(element.id);
       }
     },
 
@@ -265,6 +253,7 @@ export default defineComponent({
         return null;
       }
     },
+
     async addNote(row) {
       let note = "test note";
       await this.addNewNote(row.id, note);
@@ -272,9 +261,6 @@ export default defineComponent({
 
     async addNewNote(word_id, note) {
       this.operation = true;
-      let realmId = "rlm-public";
-
-      let dbid = process.env.DBID;
       let base_url = "https://zc74t809r.dexie.cloud";
       let token = await this.getGlobalToken();
 
@@ -292,7 +278,6 @@ export default defineComponent({
         }
       }
 
-      // ..bring await back alter
       await axios
         // axios
         .post(`${base_url}/public/notes`, item, {

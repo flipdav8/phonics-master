@@ -16,7 +16,19 @@
           "title": "Red Jeans",
           "description": "Stone washed jeans"
         }
+      },
+      "notes": {
+        "note1": {
+          "word_id": "w000003",
+          "note": "test note"
+        }
       }
     }
+  },
+  "schema": {
+    "words": "@id, word",
+    "products": "@id",
+    "products2": "@id",
+    "notes": "@id, word_id"
   }
 }

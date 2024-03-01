@@ -162,7 +162,7 @@ export default defineComponent({
   overflow-x: hidden;
 }
 .move-letters {
-  animation: moveUp 10s ease-in-out;
+  animation: moveUp 4s ease-in-out;
   animation-fill-mode: forwards;
   animation-direction: forwards;
 }
