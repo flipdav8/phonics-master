@@ -23,6 +23,7 @@
         Select Selection</q-btn
       >
     </q-card-section>
+    {{ model_icon }}
     <q-card-section class="flex row justify-center">
       <q-card
         v-for="(icon, idx) in filterIcons"

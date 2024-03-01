@@ -8,59 +8,91 @@
       :columns="columns"
       :pagination="initialPagination"
     >
-      <template v-slot:body-cell-lttrs="props">
-        <q-td :props="props">
-          <!-- <span>
-            letters <q-btn @click="decrypt(props.row.lttrs)">test</q-btn>
-          </span> -->
-          <!-- <span>{{ decrypt(props.row.lttrs) }}</span> -->
-          <div class="colum">
-            <q-chip
-              v-for="(p, i) in props.row.lttrs"
-              :key="i"
-              outline
-              size="md"
-            >
-              <span v-for="(pp, ii) in p" :key="ii">
-                {{ pp }}
-
-                <span v-if="ii < p.length - 1" class="q-mx-xs"> </span>
-              </span>
-            </q-chip>
-          </div>
-        </q-td>
+      <template v-slot:header="props">
+        <q-tr :props="props">
+          <q-th auto-width />
+          <q-th v-for="col in props.cols" :key="col.name" :props="props">
+            {{ col.label }}
+          </q-th>
+        </q-tr>
       </template>
 
-      <template v-slot:body-cell-phonemes="props">
-        <q-td :props="props">
-          <span v-for="(pattern, i) in props.row.phonemes" :key="'i' + i">
-            <span v-if="pattern.icon_name == undefined">
-              <q-icon
-                name="mdi-alert-rhombus-outline"
-                color="negative"
-                size="md"
-              ></q-icon>
-            </span>
-            <span v-else-if="pattern.icon_name != undefined">
-              <component
-                :is="pattern.icon_name"
-                :color="'grey-1'"
-                :label="false"
-                :dots="false"
-                :center="true"
-                :scale="true"
-                style="border-radius: 10px; font-size: 40px"
-                class="overflow-hidden"
-              ></component>
-            </span>
-          </span>
-        </q-td>
-      </template>
+      <template v-slot:body="props">
+        <q-tr :props="props">
+          <q-td auto-width>
+            <q-btn
+              size="sm"
+              flat
+              round
+              dense
+              @click="props.expand = !props.expand"
+              :icon="props.expand ? 'mdi-chevron-down' : 'mdi-chevron-up'"
+            />
+          </q-td>
+          <q-td
+            v-for="col in props.cols"
+            :key="col.name"
+            :props="props"
+            auto-width
+          >
+            <div v-if="col.name == 'lttrs'" class="column items-start">
+              <div class="column">
+                <q-chip
+                  class="col"
+                  v-for="(p, i) in props.row.lttrs"
+                  :key="i"
+                  size="md"
+                >
+                  <span v-for="(pp, ii) in p" :key="ii">
+                    {{ pp }}
 
-      <template v-slot:body-cell-actions="props">
-        <q-td :props="props">
-          <q-btn no-caps @click="addNote(props.row)">Add Note</q-btn>
-        </q-td>
+                    <span v-if="ii < p.length - 1" class="q-mx-xs"> </span>
+                  </span>
+                </q-chip>
+              </div>
+
+              <div>
+                <span v-for="(pattern, i) in props.row.phonemes" :key="'i' + i">
+                  <span v-if="pattern.icon_name == undefined">
+                    <q-icon
+                      name="mdi-alert-rhombus-outline"
+                      color="negative"
+                      size="md"
+                    ></q-icon>
+                  </span>
+                  <span v-else-if="pattern.icon_name != undefined">
+                    <component
+                      :is="pattern.icon_name"
+                      :color="'grey-10'"
+                      :label="false"
+                      :dots="false"
+                      :center="true"
+                      :scale="true"
+                      style="border-radius: 10px; font-size: 40px"
+                      class="overflow-hidden"
+                    ></component>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div v-else-if="col.name === 'phonemes'">{{ col.name }}</div>
+            <div v-else-if="col.name === 'actions'">
+              <q-btn no-caps @click="addNote(props.row)">Add Note</q-btn>
+            </div>
+            <div v-else>{{ col.value }}</div>
+          </q-td>
+        </q-tr>
+        <q-tr v-show="props.expand" :props="props" :key="props.row.id">
+          <q-td colspan="100%">
+            <div class="text-left">
+              <MovingWord
+                :word="props.row.word"
+                :phonemes="props.row.phonemes"
+                :letters="props.row.lttrs[0]"
+              ></MovingWord>
+            </div>
+          </q-td>
+        </q-tr>
       </template>
     </q-table>
   </q-page>
@@ -80,17 +112,19 @@ import { liveQuery } from "dexie";
 
 import axios from "axios";
 
-import PHONEMES from "src/components/icons/phonemes.js";
+import PHONEMES from "/src/components/icons/phonemes.js";
 const phonemes = PHONEMES.list;
 
 let mydb = null;
 
 import CryptoJS from "crypto-js";
 
+import MovingWord from "/src/components/animations/MovingWord.vue";
+
 export default defineComponent({
   name: "IndexPage2.0",
   components: {
-    //
+    MovingWord,
   },
   setup() {
     const accounts = useAccountsStore();
@@ -105,12 +139,12 @@ export default defineComponent({
       products: [],
       words: [],
       columns: [
-        {
-          name: "id",
-          field: "id",
-          label: "ID",
-          align: "left",
-        },
+        // {
+        //   name: "id",
+        //   field: "id",
+        //   label: "ID",
+        //   align: "left",
+        // },
 
         {
           name: "word",
@@ -134,27 +168,27 @@ export default defineComponent({
           align: "left",
         },
 
-        {
-          name: "phonemes",
-          field: "phonemes",
-          label: "Phonemes",
-          sortable: true,
-          align: "left",
-        },
+        // {
+        //   name: "phonemes",
+        //   field: "phonemes",
+        //   label: "Phonemes",
+        //   sortable: true,
+        //   align: "left",
+        // },
 
-        {
-          name: "actions",
-          field: "actions",
-          label: "Actions",
-          align: "center",
-        },
+        // {
+        //   name: "actions",
+        //   field: "actions",
+        //   label: "Actions",
+        //   align: "center",
+        // },
       ],
       rows: [],
       initialPagination: {
         sortBy: "desc",
         descending: false,
         page: 1,
-        rowsPerPage: 10,
+        rowsPerPage: 15,
         // rowsNumber: xx if getting data from a server
       },
     };

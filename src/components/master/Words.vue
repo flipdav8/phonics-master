@@ -617,7 +617,17 @@
                 :src="`/homophone-icons/${new_word.homo.src}.svg`"
                 type="image/svg+xml"
               />
+              <span
+                v-if="
+                  new_word.homo != null &&
+                  new_word.homo.name !== undefined &&
+                  new_word.homo.more != undefined
+                "
+              >
+                + {{ new_word.homo.more.length }} more
+              </span>
             </span>
+
             <q-icon v-else name="mdi-plus" size="md"></q-icon>
           </q-btn>
 

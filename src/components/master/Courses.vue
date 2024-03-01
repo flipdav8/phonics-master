@@ -123,6 +123,15 @@
               no-caps
               >Add Unit</q-btn
             >
+
+            <q-btn
+              flat
+              icon-right="mdi-plus"
+              size="md"
+              @click="addUnitAll()"
+              no-caps
+              >Add Unit (all)</q-btn
+            >
           </div>
         </q-list>
       </q-card-section>
@@ -321,6 +330,28 @@ export default defineComponent({
       this.new_course.units.push(
         JSON.parse(JSON.stringify(this.unit_template))
       );
+    },
+
+    addUnitAll() {
+      for (let index = 0; index < this.units.length; index++) {
+        const unit = this.units[index];
+        this.new_course.units.push(
+          JSON.parse(JSON.stringify(this.unit_template))
+        );
+        this.new_course.units[this.new_course.units.length - 1].unit = {
+          id: unit.id,
+          label: unit.unit.label,
+        };
+        this.new_course.units[this.new_course.units.length - 1].id =
+          unit.id + `-${this.new_course.units.length}`;
+
+        this.new_course.units[this.new_course.units.length - 1].label =
+          unit.unit.label;
+
+        this.getWordCount(
+          this.new_course.units[this.new_course.units.length - 1]
+        );
+      }
     },
     editUnit(idx) {
       if (this.edit_unit === idx) {
