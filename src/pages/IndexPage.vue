@@ -36,7 +36,7 @@ export default defineComponent({
     };
   },
   mounted() {
-    // this.$q.dark.set(true);
+    this.$q.dark.set(true);
   },
   methods: {
     dashboard() {

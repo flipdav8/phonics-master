@@ -19,6 +19,10 @@
             {{ letters }}
           </span>
         </span>
+        <span v-if="letters.includes('^')">
+          <q-icon name="mdi-ghost-outline" color="grey"></q-icon>
+          <!-- <span> {{ letters.split("^")[1] }}</span> -->
+        </span>
         <span v-else> {{ letters }}</span>
       </div>
     </div>
@@ -34,6 +38,7 @@ export default defineComponent({
     // PhonicOptions
   },
   props: {
+    pattern: { required: true },
     letters: { required: true },
     correct: { required: true },
     exit: {},

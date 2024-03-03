@@ -1,5 +1,57 @@
 <template>
   <div class="fit">
+    <div class="fit hidden">
+      <div
+        class="flex row phonics-word fit justify-center items-center normal-word"
+      >
+        <div>
+          <div>t</div>
+        </div>
+        <div class="floating">
+          <div class="phonic-input flex">
+            <!-- <div>
+            <q-icon>
+              <img src="~assets/phonic-icons/balloon-dots.svg" />
+            </q-icon>
+          </div> -->
+            <!-- <div>e</div> -->
+            <div class="word-letters-2 flex column">ea</div>
+            <!-- <div class="word-letters-3">eas</div> -->
+            <!-- <div class="word-letters-4">ough</div> -->
+          </div>
+        </div>
+
+        <div>s</div>
+        <div>t</div>
+      </div>
+
+      <div
+        class="flex row phonics-word fit justify-center items-center long-word hidden"
+      >
+        <div>b</div>
+        <div class="phonic-input">
+          <!-- <div>
+          <q-icon>
+            <img src="~assets/phonic-icons/balloon-dots.svg" />
+          </q-icon>
+        </div> -->
+          <div>a</div>
+          <!-- <div class="word-letters-2">ea</div> -->
+          <!-- <div class="word-letters-3">eas</div> -->
+          <!-- <div class="word-letters-4">ough</div> -->
+        </div>
+        <div>c</div>
+        <div>k</div>
+        <div>p</div>
+        <div>r</div>
+        <div>e</div>
+        <div>s</div>
+        <div>s</div>
+        <div>u</div>
+        <div>r</div>
+        <div>e</div>
+      </div>
+    </div>
     <Teleport to="#extra_right">
       <div class="flex row items-center q-gutter-md">
         <Homophone
@@ -18,150 +70,102 @@
         </div>
       </div>
     </Teleport>
-    <!-- <div class="absolute z-max" style="bottom: 0px">
-      <q-btn @click="test()">hello</q-btn>
-    </div> -->
 
     <Transition
       v-show="enter"
-      :key="'t' + next_key"
       appear
-      :style="{ animationDuration: next_speed_seconds }"
-      enter-active-class="fadeIn"
-      leave-active-class="slideOutLeft"
+      :key="'t' + next_key"
+      style="animation-duration: 3s"
+      enter-active-class="animate  slideInRight"
+      leave-active-class="animate slideOutLeft"
       class="fit"
     >
-      <div class="fit column" style="position: relative">
-        <Transition
-          v-show="enter_test"
-          :key="'tt' + next_key"
-          appear
-          :style="{ animationDuration: next_speed_seconds }"
-          enter-active-class="zoomIn"
-          leave-active-class="fadeOut"
-          class="fit"
-        >
-          <div class="full-width fist col" style="position: relative">
-            <div v-if="mode === 'testing'" class="fit">
-              <!-- <div class="flex items-center column justify-center fit">hello</div> -->
-
-              <PhonicWordSound
-                ref="word"
-                v-if="word.type === 'sound'"
-                class="fit hiddens"
-                :word="word"
-                :key="word.id + next_key"
-                :blocks="blocks"
-                @next="next()"
-                @isCorrect="isCorrect"
-                @isIncorrect="isIncorrect"
-                @changed="changed = true"
-                :word_progress="word_progress"
-                :target="target"
-              >
-                <template v-slot:homo>
-                  <div class="absolute-full">
-                    <div class="full-width flex row justify-center q-mt-sm">
-                      <Homophone
-                        v-if="word.homo !== null"
-                        :word="word"
-                      ></Homophone>
-                    </div>
-                  </div>
-                </template>
-              </PhonicWordSound>
-
-              <PhonicWordSpelling
-                ref="word"
-                v-if="word.type === 'spelling'"
-                class="fit"
-                :word="word"
-                :key="word.id + next_key"
-                :blocks="blocks"
-                @next="next()"
-                @isCorrect="isCorrect"
-                @isIncorrect="isIncorrect"
-                @changed="changed = true"
-              >
-                <template v-slot:homo>
-                  <div class="absolute-full">
-                    <div class="full-width flex row justify-center q-mt-sm">
-                      <Homophone
-                        v-if="word.homo !== null"
-                        :word="word"
-                      ></Homophone>
-                    </div>
-                  </div>
-                </template>
-              </PhonicWordSpelling>
-            </div>
-            <!-- HELPING MODE WORDs -->
-            <div v-if="mode === 'helping'" class="fit">
-              <PhonicHelp
-                ref="word"
-                class="fit"
-                :key="word.id + next_key"
-                :word="word"
-                @next="next()"
-                @isCorrect="isCorrect"
-                @isIncorrect="isIncorrect"
-                @changed="changed = true"
-              >
-                <template v-slot:homo>
-                  <div class="absolute-full">
-                    <div class="full-width flex row justify-center q-mt-sm">
-                      <Homophone
-                        v-if="word.homo !== null"
-                        :word="word"
-                      ></Homophone>
-                    </div>
-                  </div>
-                </template>
-              </PhonicHelp>
-            </div>
-
-            <div
-              v-if="!$q.platform.is.mobile"
-              class="absolute hidden"
-              style="bottom: 10px; left: 0px; right: 0px; margin: auto"
-            >
-              <div class="flex row justify-center">
+      <div style="position: relative">
+        <div v-if="mode === 'testing'">
+          <PhonicWordSound
+            ref="word"
+            v-if="word.type === 'sound'"
+            class="fit"
+            :word="word"
+            :key="word.id + next_key"
+            :blocks="blocks"
+            @next="next()"
+            @isCorrect="isCorrect"
+            @isIncorrect="isIncorrect"
+            @changed="changed = true"
+          >
+            <!-- <template v-slot:homo>
+              <div class="flex row q-gutter-md">
                 <Homophone v-if="word.homo !== null" :word="word"></Homophone>
               </div>
-            </div>
-          </div>
-        </Transition>
+            </template> -->
+          </PhonicWordSound>
 
-        <GoButton @go="continueWords()" class="q-pa-md"> </GoButton>
+          <PhonicWordSpelling
+            ref="word"
+            v-if="word.type === 'spelling'"
+            class="fit"
+            :word="word"
+            :key="word.id + next_key"
+            :blocks="blocks"
+            @next="next()"
+            @isCorrect="isCorrect"
+            @isIncorrect="isIncorrect"
+            @changed="changed = true"
+          >
+          </PhonicWordSpelling>
+        </div>
+        <!-- HELPING MODE WORDs -->
+        <div v-if="mode === 'helping'">
+          <PhonicHelp
+            ref="word"
+            class="q-px-sm"
+            style="margin-top: 80px"
+            :key="word.id + next_key"
+            :word="word"
+            @next="next()"
+            @isCorrect="isCorrect"
+            @isIncorrect="isIncorrect"
+            @changed="changed = true"
+          ></PhonicHelp>
+        </div>
+
+        <div
+          v-if="!$q.platform.is.mobile"
+          class="absolute"
+          style="top: 100%; right: 10%"
+        >
+          <div class="flex row q-gutter-md">
+            <Homophone v-if="word.homo !== null" :word="word"></Homophone>
+          </div>
+        </div>
       </div>
     </Transition>
 
-    <!-- <div
+    <div
       v-if="$q.platform.is.mobile"
       class="absolute"
       style="top: 10px; right: 10px"
     >
-      <div class="flex row">
+      <div class="flex row q-gutter-md">
         <Homophone
           v-if="word.homo !== null"
           :word="word"
           :floating="false"
         ></Homophone>
       </div>
-    </div> -->
+    </div>
 
-    <!-- v-if="word.type === 'spelling' || mode === 'helping'" -->
     <div
       :class="{ absolute: !preview_mode ? true : false }"
-      class="full-width flex justify-end z-top hidden"
+      class="full-width flex justify-end z-top hiddens"
       style="bottom: 10px; right: 10px"
     >
       <!-- <q-btn no-caps flat style="font-size: 50px">
       <q-icon name="mdi-arrow-left-circle"></q-icon>
     </q-btn> -->
 
-      <GoButton @go="continueWords()"> </GoButton>
-      <!-- <q-btn
+      <q-btn
         @click="continueWords()"
         class="bg-blue-3"
         rounded
@@ -169,9 +173,9 @@
         flat
         size="xl"
       >
-        <strong>go</strong>
+        <q-icon name="mdi-arrow-right-circle"></q-icon>
         <q-tooltip>Submit Word</q-tooltip>
-      </q-btn> -->
+      </q-btn>
     </div>
   </div>
 </template>
@@ -183,15 +187,10 @@ import { useObservable, from } from "@vueuse/rxjs";
 import { liveQuery } from "dexie";
 import { syncdb } from "src/database/dbCloud";
 
-import PhonicWordSound from "./words/sound-stable/PhonicWordSound.vue";
-// import PhonicWordSound from "src/components/tinkering/WordTestV2.3.vue";
-import PhonicWordSpelling from "./words/spelling-stable/PhonicWordSpelling.vue";
-// import PhonicWordSpelling from "src/components/tinkering/WordTestSpellingV2.vue";
-import PhonicHelp from "./words/word-helper/PhonicHelp.vue";
-// import PhonicHelp from "src/components/tinkering/WordHelpV3.vue";
+import PhonicWordSound from "./words/PhonicWordSound.vue";
+import PhonicWordSpelling from "./words/PhonicWordSpelling.vue";
+import PhonicHelp from "./words/PhonicHelp.vue";
 import Homophone from "./words/Homophone.vue";
-
-import GoButton from "./words/GoButton.vue";
 
 export default defineComponent({
   name: "phonics-word",
@@ -200,7 +199,6 @@ export default defineComponent({
     PhonicWordSpelling,
     PhonicHelp,
     Homophone,
-    GoButton,
   },
   props: {
     word: { required: true },
@@ -216,57 +214,25 @@ export default defineComponent({
       next_key: 0,
       changed: false,
       enter: true,
-      enter_test: true,
       button_margin: "2%",
-
-      next_speed_seconds: "2s",
-      next_speed: 2000,
     };
   },
   mounted() {
-    // console.log("mounted word", this.word);
+    // console.log("mounted word");
     this.mounted = true;
   },
   computed: {
-    word_progress() {
-      if (this.look_at_data !== undefined) {
-        if (this.look_at_data.track[this.word.id] !== undefined) {
-          if (this.look_at_data.track[this.word.id] < 0) {
-            return 0;
-          } else {
-            return this.look_at_data.track[this.word.id] / this.target;
-          }
-        } else {
-          return 0;
-        }
-      } else {
-        return 0;
-      }
-    },
+    //
   },
   methods: {
     next() {
-      this.nextStaticVersion();
-      return;
       let vm = this;
       this.enter = false;
-
       // return;
       window.setTimeout(function () {
         vm.$emit("next");
         vm.next_key++;
-      }, this.next_speed);
-    },
-
-    nextStaticVersion() {
-      // this.$emit("next");
-
-      this.enter_test = false;
-      let vm = this;
-      window.setTimeout(function () {
-        vm.$emit("next");
-        vm.enter_test = true;
-      }, this.next_speed);
+      }, 2000);
     },
 
     isCorrect(e) {
@@ -278,13 +244,8 @@ export default defineComponent({
     continueWords() {
       // this.next();
       // return;
-
       this.$refs.word.checkWord(); //will trigger next()
       this.changed = false;
-    },
-
-    test() {
-      this.enter_test = !this.enter_test;
     },
   },
 });
@@ -303,40 +264,21 @@ export default defineComponent({
 
 .phonic-input-icon {
   border-radius: 15%;
-  box-shadow: inset 0 0 50px #69cde4;
-  padding: 2vw;
-  white-space: nowrap;
-}
-
-.phonic-drag {
-  border-radius: 15%;
-  padding: 2vw;
-  white-space: nowrap;
-}
-
-.phonic-input-combo {
-  border-radius: 0px;
-  border-bottom: solid 1px white;
-  padding: 0px;
-  margin: 0px;
+  box-shadow: inset 0 0 50px #72bcf7;
 }
 
 .phonic-input-general {
   border-radius: 15%;
-  box-shadow: inset 0 0 50px #69cde4;
+  box-shadow: inset 0 0 50px #72bcf7;
   padding: 20px;
   margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .phonic-input-general.phonic-selected {
-  box-shadow: inset 0 0 50px #69cde4;
+  box-shadow: inset 0 0 50px #72bcf7;
   animation: colorIn 1s linear;
   border: solid 2px;
-  background: #69cde4;
+  background: #72bcf7;
 }
 
 @keyframes colorIn {
@@ -344,7 +286,7 @@ export default defineComponent({
     background: transparent;
   }
   to {
-    background: #69cde4;
+    background: #72bcf7;
   }
 }
 
@@ -368,12 +310,13 @@ export default defineComponent({
 
 .phonics-word .phonic-input {
   border-radius: 15%;
-  box-shadow: inset 0 0 50px #69cde4;
+  box-shadow: inset 0 0 50px #72bcf7;
   padding: 0%;
   margin: 0%;
   /*width: 20vw; */
   /*height: 20vw; */
-
+  text-align: center;
+  text-justify: center;
   cursor: pointer;
   position: relative;
   background: transparent;
@@ -418,10 +361,6 @@ export default defineComponent({
   white-space: nowrap;
 }
 
-.phonic-adj-vert {
-  margin-bottom: 2vw;
-}
-
 /* Small Screen Width  */
 @media only screen and (min-width: 200px) and (max-width: 600px) {
   /* Normal Size Word 1- 5  */
@@ -432,7 +371,7 @@ export default defineComponent({
 
   .phonics-big-text,
   .phonics-word.normal-word {
-    font-size: 23vw;
+    font-size: 30vw;
   }
 
   /* Long Size Word 5-12  */
@@ -444,7 +383,7 @@ export default defineComponent({
   .phonics-help,
   .phonics-normal-text,
   .phonics-word.long-word {
-    font-size: 9vw;
+    font-size: 12vw;
   }
 }
 
@@ -458,7 +397,7 @@ export default defineComponent({
 
   .phonics-big-text,
   .phonics-word.normal-word {
-    font-size: 16vw;
+    font-size: 20vw;
   }
 
   /* Long Size Word 5-12  */
@@ -470,7 +409,7 @@ export default defineComponent({
   .phonics-help,
   .phonics-normal-text,
   .phonics-word.long-word {
-    font-size: 6vw;
+    font-size: 8vw;
   }
 }
 
@@ -496,7 +435,7 @@ export default defineComponent({
   left: 50%;
   height: 30px;
   width: 110%;
-  box-shadow: 0px 0px 0px 0px #69cde4;
+  box-shadow: 0px 0px 0px 0px #72bcf7;
   border-radius: 50%;
   background-color: rgba(0, 0, 100, 0.05);
   transform: translate(-50%, 40px);
@@ -521,7 +460,7 @@ export default defineComponent({
 @keyframes wobble {
   50% {
     border-radius: 15%;
-    box-shadow: inset 0 0 50px #69cde4;
+    box-shadow: inset 0 0 50px #72bcf7;
     overflow: hidden;
     cursor: pointer;
     font-size: 40pxs;

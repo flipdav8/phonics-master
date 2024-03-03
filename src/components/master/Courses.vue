@@ -268,6 +268,7 @@ export default defineComponent({
         unit: null,
         target: 3,
         label: "",
+        block_label: "",
         type: "normal",
         word_count: 0,
       },
