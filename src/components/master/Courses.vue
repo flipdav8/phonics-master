@@ -6,6 +6,7 @@
       flat
       class="fit flex flex-center column"
     >
+      <q-btn @click="attachBlockLabelAll()">add all block labels</q-btn>
       <q-card-section class="fit">
         <q-list>
           <q-item>
@@ -90,6 +91,11 @@
                 <div>
                   words:
                   {{ s.word_count }}
+                </div>
+
+                <div @click="attachBlockLabel(s)">
+                  block_label:
+                  {{ s.block_label }}
                 </div>
 
                 <!-- <q-btn
@@ -230,7 +236,7 @@ export default defineComponent({
       columns: [
         // {
         //   field: "id",
-        //   label: "ID",
+        //   label: "ID",course_template
         //   align: "left",
         // },
         {
@@ -324,6 +330,7 @@ export default defineComponent({
       this.edit_id = item_id;
       this.new_course = { ...this.course_template, ...course };
 
+      console.log("edit course", this.new_course);
       this.add_course = true;
     },
 
@@ -354,6 +361,7 @@ export default defineComponent({
         );
       }
     },
+
     editUnit(idx) {
       if (this.edit_unit === idx) {
         this.edit_unit = null;
@@ -379,6 +387,7 @@ export default defineComponent({
       // console.log("s", s);
 
       this.getWordCount(s);
+      this.attachBlockLabel(s);
     },
 
     removeUnit(idx) {
@@ -519,6 +528,25 @@ export default defineComponent({
       if (unit == undefined) return;
       let word_count = unit.unit.words.length;
       s["word_count"] = word_count;
+    },
+    attachBlockLabelAll() {
+      for (let index = 0; index < this.new_course.units.length; index++) {
+        const unit = this.new_course.units[index];
+        this.attachBlockLabel(unit);
+      }
+    },
+    attachBlockLabel(s) {
+      let unit_id = s.unit.id;
+      let unit = this.units.find((e) => e.id === unit_id);
+      if (unit == undefined) return;
+
+      let block_label = this.findBlockFromWord(unit.unit.words);
+      s["block_label"] = block_label;
+    },
+
+    findBlockFromWord(words) {
+      console.log("words[0]", words[0]);
+      return words[0].block.label;
     },
   },
 });

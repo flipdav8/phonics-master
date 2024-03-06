@@ -51,7 +51,7 @@ export const setupSync = function () {
   // setupEncrypt();
 
 
-  syncdb.version(34).stores({
+  syncdb.version(38).stores({
     subscription: '@id, userId',
     settings: '@id ',
     classrooms: '@id, title, realmId',

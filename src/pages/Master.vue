@@ -424,6 +424,7 @@ export default defineComponent({
           from(
             liveQuery(async () => {
               this.courses = await syncdb.courses.toArray();
+              console.log("this.courses", this.courses);
               this.makeCourseRows();
             })
           )
