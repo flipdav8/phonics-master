@@ -1,0 +1,16 @@
+{
+  "schema": {
+    "notes": "@id",
+    "roles": "[realmId+name]",
+    "words": "@id",
+    "realms": "@realmId",
+    "members": "@id",
+    "phonemes": "@id",
+    "products": "@id",
+    "products2": "@id",
+    "_encryptionSettings": "id",
+    "$$logins": "claims.sub",
+    "$$baseRevs": "[tableName+clientRev]"
+  },
+  "sealed": false
+}

@@ -31,6 +31,30 @@ const routes = [{
     }
   },
 
+  {
+    path: '/master-supa',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{
+      path: '',
+      component: () => import('pages/MasterSupa.vue')
+    }],
+    // meta: {
+    //   requiresAuth: true
+    // }
+  },
+
+  {
+    path: '/phonemes',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{
+      path: '',
+      component: () => import('pages/Phonemes.vue')
+    }],
+    // meta: {
+    //   requiresAuth: true
+    // }
+  },
+
   // Always leave this as last one,
   // but you can also remove it
   {

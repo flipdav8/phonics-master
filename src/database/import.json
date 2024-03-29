@@ -29,6 +29,7 @@
     "words": "@id, word",
     "products": "@id",
     "products2": "@id",
-    "notes": "@id, word_id"
+    "notes": "@id, word_id",
+    "phonemes": "@id"
   }
 }

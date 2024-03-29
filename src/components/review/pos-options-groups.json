@@ -1,0 +1,106 @@
+[
+  {
+    "i": 0,
+    "value": "noun"
+  },
+  {
+    "i": 1,
+    "value": "verb"
+  },
+  {
+    "i": 2,
+    "value": "adjective or adverb"
+  },
+  {
+    "i": 3,
+    "value": "adjective"
+  },
+  {
+    "i": 4,
+    "value": "adverb"
+  },
+  {
+    "i": 5,
+    "value": "pronoun"
+  },
+  {
+    "i": 6,
+    "value": "?verb"
+  },
+  {
+    "i": 7,
+    "value": "conjunction"
+  },
+  {
+    "i": 8,
+    "value": "?adverb or ?adjective"
+  },
+  {
+    "i": 9,
+    "value": "preposition"
+  },
+  {
+    "i": 10,
+    "value": "abbreviation"
+  },
+  {
+    "i": 11,
+    "value": "interjection"
+  },
+  {
+    "i": 12,
+    "value": "not classified"
+  },
+  {
+    "i": 13,
+    "value": "?noun"
+  },
+  {
+    "i": 14,
+    "value": "undefined"
+  },
+  {
+    "i": 15,
+    "value": "exclamation"
+  },
+  {
+    "i": 16,
+    "value": "prefix"
+  },
+  {
+    "i": 17,
+    "value": "determiner"
+  },
+  {
+    "i": 18,
+    "value": "indefinite article"
+  },
+  {
+    "i": 19,
+    "value": "unknown"
+  },
+  {
+    "i": 20,
+    "value": "suffix"
+  },
+  {
+    "i": 21,
+    "value": "definite article"
+  },
+  {
+    "i": 22,
+    "value": "number"
+  },
+  {
+    "i": 23,
+    "value": "combo-form"
+  },
+  {
+    "i": 24,
+    "value": "combining form"
+  },
+  {
+    "i": 25,
+    "value": "collocation"
+  }
+]

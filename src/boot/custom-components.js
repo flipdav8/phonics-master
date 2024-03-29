@@ -2,6 +2,8 @@ import {
   VueDraggable
 } from "vue-draggable-plus";
 
+import BaseTheme from "src/components/ui/BaseTheme.vue"
+
 // we globally register our component with Vue
 
 import aIcon from "src/components/icons/icons-only/aIcon.vue"
@@ -62,6 +64,8 @@ import ghostIcon from "src/components/icons/icons-only/ghostIcon.vue"
 export default ({
   app
 }) => {
+  app.component('BaseTheme', BaseTheme)
+
   app.component('VueDraggable', VueDraggable)
 
   app.component('aIcon', aIcon)

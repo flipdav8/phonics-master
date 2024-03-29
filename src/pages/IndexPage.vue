@@ -6,9 +6,15 @@
         accounts.currentUser.userId !== 'unauthorized' &&
         accounts.userPrompts == null
       "
+      class="column q-gutter-y-sm"
     >
       <q-btn @click="dashboard()">Dashboard</q-btn>
-      <q-btn @click="dashboardNew()">Dashboard 2.0</q-btn>
+      <q-btn @click="dashboardNew()">Dashboard (sample)</q-btn>
+      <q-btn @click="dashboardSupa()">Dashboard 2.1 (supa)</q-btn>
+      <q-btn @click="gotoPhonemes()">Phonemes</q-btn>
+
+      <AuthSupa></AuthSupa>
+      <!-- <SupaAccount></SupaAccount> -->
     </div>
 
     <div v-else class="">Index Page..</div>
@@ -19,10 +25,14 @@
 import { defineComponent } from "vue";
 import { useAccountsStore } from "src/stores/accounts";
 
+import AuthSupa from "src/components/supabase/AuthSupa.vue";
+// import SupaAccount from "src/components/supabase/SupaAccount.vue";
+
 export default defineComponent({
   name: "IndexPage",
   components: {
-    //
+    AuthSupa,
+    // SupaAccount,
   },
   setup() {
     const accounts = useAccountsStore();
@@ -36,7 +46,7 @@ export default defineComponent({
     };
   },
   mounted() {
-    this.$q.dark.set(true);
+    // this.$q.dark.set(true);
   },
   methods: {
     dashboard() {
@@ -44,6 +54,13 @@ export default defineComponent({
     },
     dashboardNew() {
       this.$router.push("/master-2");
+    },
+
+    dashboardSupa() {
+      this.$router.push("/master-supa");
+    },
+    gotoPhonemes() {
+      this.$router.push("/phonemes");
     },
   },
 });

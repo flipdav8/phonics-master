@@ -1,0 +1,126 @@
+[
+  {
+    "i": 0,
+    "prefix": "anti"
+  },
+  {
+    "i": 1,
+    "prefix": "auto"
+  },
+  {
+    "i": 2,
+    "prefix": "de"
+  },
+  {
+    "i": 3,
+    "prefix": "dis"
+  },
+  {
+    "i": 4,
+    "prefix": "down"
+  },
+  {
+    "i": 5,
+    "prefix": "extra"
+  },
+  {
+    "i": 6,
+    "prefix": "hyper"
+  },
+  {
+    "i": 7,
+    "prefix": "il"
+  },
+  {
+    "i": 8,
+    "prefix": "im"
+  },
+  {
+    "i": 9,
+    "prefix": "in"
+  },
+  {
+    "i": 10,
+    "prefix": "ir"
+  },
+  {
+    "i": 11,
+    "prefix": "inter"
+  },
+  {
+    "i": 12,
+    "prefix": "mega"
+  },
+  {
+    "i": 13,
+    "prefix": "mid"
+  },
+  {
+    "i": 14,
+    "prefix": "mis"
+  },
+  {
+    "i": 15,
+    "prefix": "non"
+  },
+  {
+    "i": 16,
+    "prefix": "over"
+  },
+  {
+    "i": 17,
+    "prefix": "out"
+  },
+  {
+    "i": 18,
+    "prefix": "post"
+  },
+  {
+    "i": 19,
+    "prefix": "pre"
+  },
+  {
+    "i": 20,
+    "prefix": "pro"
+  },
+  {
+    "i": 21,
+    "prefix": "re"
+  },
+  {
+    "i": 22,
+    "prefix": "semi"
+  },
+  {
+    "i": 23,
+    "prefix": "sub"
+  },
+  {
+    "i": 24,
+    "prefix": "super"
+  },
+  {
+    "i": 25,
+    "prefix": "tele"
+  },
+  {
+    "i": 26,
+    "prefix": "trans"
+  },
+  {
+    "i": 27,
+    "prefix": "ultra"
+  },
+  {
+    "i": 28,
+    "prefix": "un"
+  },
+  {
+    "i": 29,
+    "prefix": "under"
+  },
+  {
+    "i": 30,
+    "prefix": "up"
+  }
+]

@@ -74,6 +74,11 @@ module.exports = configure(function ( /* ctx */ ) {
         DB: process.env.DB,
         DBID: process.env.DBID,
         ENCRYPT: 'o-G-R-7-n-J-T-4-u-9-f-m-j-H-h-b-r-S-J-T-K-Q-A-N-6-J-q-y-e-d-m-4',
+        AZURE_SPEECH_KEY: process.env.AZURE_SPEECH_KEY,
+        AZURE_SPEECH_REGION: process.env.AZURE_SPEECH_REGION,
+
+        SUPABASE_URL: process.env.SUPABASE_URL,
+        SUPABASE_KEY: process.env.SUPABASE_KEY,
       },
       // vueRouterBase,
       // vueDevtools,

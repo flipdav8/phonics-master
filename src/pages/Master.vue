@@ -194,8 +194,8 @@ export default defineComponent({
     },
 
     async getBlocksAPI() {
-      await this.getBlocks();
-      return;
+      // await this.getBlocks();
+      // return;
       let dbid = process.env.DBID;
       let base_url = `https://${dbid}.dexie.cloud`;
 
@@ -254,8 +254,8 @@ export default defineComponent({
     },
 
     async getWordsAPI() {
-      await this.getWords();
-      return;
+      // await this.getWords();
+      // return;
       let dbid = process.env.DBID;
       let base_url = `https://${dbid}.dexie.cloud`;
 
@@ -278,6 +278,7 @@ export default defineComponent({
           // return undefined;
         });
     },
+    //FIXME: getWords won't sync when I edit as ...
     async getWords() {
       try {
         useObservable(
@@ -334,8 +335,8 @@ export default defineComponent({
     },
 
     async getUnitsAPI() {
-      await this.getUnits();
-      return;
+      // await this.getUnits();
+      // return;
       let dbid = process.env.DBID;
       let base_url = `https://${dbid}.dexie.cloud`;
 

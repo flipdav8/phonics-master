@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header flat>
-      <q-toolbar class="text-black bg-g">
+      <q-toolbar class="">
         <q-btn
           flat
           dense
@@ -33,7 +33,7 @@
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
-      class="bg-g flex column justify-between no-wrap"
+      class="flex column justify-between no-wrap"
     >
       <q-list>
         <!-- <q-item-label header class="text-black"> Phonics LOGO </q-item-label> -->
@@ -48,6 +48,12 @@
           </q-item-section>
         </q-item>
       </q-list>
+      <q-space></q-space>
+      <q-item>
+        <q-item-section>
+          <BaseTheme></BaseTheme>
+        </q-item-section>
+      </q-item>
     </q-drawer>
     <DexieLogin class="hidden"></DexieLogin>
     <q-page-container>

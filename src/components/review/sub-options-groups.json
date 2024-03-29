@@ -1,0 +1,858 @@
+[
+  {
+    "i": 0,
+    "value": "cube-H0-H-0"
+  },
+  {
+    "i": 1,
+    "value": "cube-M6-M-6"
+  },
+  {
+    "i": 2,
+    "value": "cube-J5-J-5"
+  },
+  {
+    "i": 3,
+    "value": "cube-J0-J-0"
+  },
+  {
+    "i": 4,
+    "value": "cube-K6-K-6"
+  },
+  {
+    "i": 5,
+    "value": "cube-OC-O-C"
+  },
+  {
+    "i": 6,
+    "value": "cube-Pu-P-u"
+  },
+  {
+    "i": 7,
+    "value": "cube-J2-J-2"
+  },
+  {
+    "i": 8,
+    "value": "past"
+  },
+  {
+    "i": 9,
+    "value": "cube-Ic-I-c"
+  },
+  {
+    "i": 10,
+    "value": "cube-G5-G-5"
+  },
+  {
+    "i": 11,
+    "value": "cube-I5-I-5"
+  },
+  {
+    "i": 12,
+    "value": "cube-I0-I-0"
+  },
+  {
+    "i": 13,
+    "value": "plural"
+  },
+  {
+    "i": 14,
+    "value": "cube-Kj-K-j"
+  },
+  {
+    "i": 15,
+    "value": "cube-K8-K-8"
+  },
+  {
+    "i": 16,
+    "value": "cube-Nl-N-l"
+  },
+  {
+    "i": 17,
+    "value": "cube-Qx-Q-x"
+  },
+  {
+    "i": 18,
+    "value": "cube-OD-O-D"
+  },
+  {
+    "i": 19,
+    "value": "cube-L@-L-@"
+  },
+  {
+    "i": 20,
+    "value": "cube-OA-O-A"
+  },
+  {
+    "i": 21,
+    "value": "cube-G0-G-0"
+  },
+  {
+    "i": 22,
+    "value": "cube-Jc-J-c"
+  },
+  {
+    "i": 23,
+    "value": "cube-Jd-J-d"
+  },
+  {
+    "i": 24,
+    "value": "cube-Ki-K-i"
+  },
+  {
+    "i": 25,
+    "value": "cube-H2-H-2"
+  },
+  {
+    "i": 26,
+    "value": "cube-I2-I-2"
+  },
+  {
+    "i": 27,
+    "value": "cube-OB-O-B"
+  },
+  {
+    "i": 28,
+    "value": "cube-Nm-N-m"
+  },
+  {
+    "i": 29,
+    "value": "cube-M7-M-7"
+  },
+  {
+    "i": 30,
+    "value": "cube-V--V--"
+  },
+  {
+    "i": 31,
+    "value": "cube-H5-H-5"
+  },
+  {
+    "i": 32,
+    "value": "cube-K7-K-7"
+  },
+  {
+    "i": 33,
+    "value": "cube-J4-J-4"
+  },
+  {
+    "i": 34,
+    "value": "cube-K9-K-9"
+  },
+  {
+    "i": 35,
+    "value": "cube-H4-H-4"
+  },
+  {
+    "i": 36,
+    "value": "cube-T--T--"
+  },
+  {
+    "i": 37,
+    "value": "cube-OE-O-E"
+  },
+  {
+    "i": 38,
+    "value": "cube-P+-P-+"
+  },
+  {
+    "i": 39,
+    "value": "superlative"
+  },
+  {
+    "i": 40,
+    "value": "cube-Os-O-s"
+  },
+  {
+    "i": 41,
+    "value": "cube-Y>-Y->"
+  },
+  {
+    "i": 42,
+    "value": "cube-W--W--"
+  },
+  {
+    "i": 43,
+    "value": "cube-Oq-O-q"
+  },
+  {
+    "i": 44,
+    "value": "cube-J3-J-3"
+  },
+  {
+    "i": 45,
+    "value": "cube-M8-M-8"
+  },
+  {
+    "i": 46,
+    "value": "cube-Id-I-d"
+  },
+  {
+    "i": 47,
+    "value": "cube-Hc-H-c"
+  },
+  {
+    "i": 48,
+    "value": "cube-Hd-H-d"
+  },
+  {
+    "i": 49,
+    "value": "cube-H3-H-3"
+  },
+  {
+    "i": 50,
+    "value": "cube-Z--Z--"
+  },
+  {
+    "i": 51,
+    "value": "cube-I1-I-1"
+  },
+  {
+    "i": 52,
+    "value": "cube-H1-H-1"
+  },
+  {
+    "i": 53,
+    "value": "comparative"
+  },
+  {
+    "i": 54,
+    "value": "cube-Or-O-r"
+  },
+  {
+    "i": 55,
+    "value": "cube-Ia-I-a"
+  },
+  {
+    "i": 56,
+    "value": "cube-Mj-M-j"
+  },
+  {
+    "i": 57,
+    "value": "past-participle"
+  },
+  {
+    "i": 58,
+    "value": "cube-Qz-Q-z"
+  },
+  {
+    "i": 59,
+    "value": "cube-J1-J-1"
+  },
+  {
+    "i": 60,
+    "value": "cube-Ha-H-a"
+  },
+  {
+    "i": 61,
+    "value": "cube-Gc-G-c"
+  },
+  {
+    "i": 62,
+    "value": "cube-Ja-J-a"
+  },
+  {
+    "i": 63,
+    "value": "cube-I3-I-3"
+  },
+  {
+    "i": 64,
+    "value": "cube-No-N-o"
+  },
+  {
+    "i": 65,
+    "value": "cube-Ga-G-a"
+  },
+  {
+    "i": 66,
+    "value": "cube-Nn-N-n"
+  },
+  {
+    "i": 67,
+    "value": "cube-Gg-G-g"
+  },
+  {
+    "i": 68,
+    "value": "cube-I4-I-4"
+  },
+  {
+    "i": 69,
+    "value": "cube-G2-G-2"
+  },
+  {
+    "i": 70,
+    "value": "cube-Pv-P-v"
+  },
+  {
+    "i": 71,
+    "value": "cube-Pw-P-w"
+  },
+  {
+    "i": 72,
+    "value": "cube-Qy-Q-y"
+  },
+  {
+    "i": 73,
+    "value": "cube-U--U--"
+  },
+  {
+    "i": 74,
+    "value": "cube-Ge-G-e"
+  },
+  {
+    "i": 75,
+    "value": "cube-Ie-I-e"
+  },
+  {
+    "i": 76,
+    "value": "cube-Gf-G-f"
+  },
+  {
+    "i": 77,
+    "value": " C "
+  },
+  {
+    "i": 78,
+    "value": " T "
+  },
+  {
+    "i": 79,
+    "value": "ing"
+  },
+  {
+    "i": 80,
+    "value": "cube-Ib-I-b"
+  },
+  {
+    "i": 81,
+    "value": "cube-Op-O-p"
+  },
+  {
+    "i": 82,
+    "value": "cube-Mi-M-i"
+  },
+  {
+    "i": 83,
+    "value": "cube-Y~-Y-~"
+  },
+  {
+    "i": 84,
+    "value": "cube-Jb-J-b"
+  },
+  {
+    "i": 85,
+    "value": "cube-Gd-G-d"
+  },
+  {
+    "i": 86,
+    "value": "cube-M9-M-9"
+  },
+  {
+    "i": 87,
+    "value": " U "
+  },
+  {
+    "i": 88,
+    "value": " C or U "
+  },
+  {
+    "i": 89,
+    "value": " S or U "
+  },
+  {
+    "i": 90,
+    "value": " C or S "
+  },
+  {
+    "i": 91,
+    "value": " C/U "
+  },
+  {
+    "i": 92,
+    "value": "cube-Hb-H-b"
+  },
+  {
+    "i": 93,
+    "value": "cube-Lk-L-k"
+  },
+  {
+    "i": 94,
+    "value": "cube-S--S--"
+  },
+  {
+    "i": 95,
+    "value": "cube-Y)-Y-)"
+  },
+  {
+    "i": 96,
+    "value": "cube-Y}-Y-}"
+  },
+  {
+    "i": 97,
+    "value": "cube-Y=-Y-="
+  },
+  {
+    "i": 98,
+    "value": " S "
+  },
+  {
+    "i": 99,
+    "value": " before noun "
+  },
+  {
+    "i": 100,
+    "value": " I "
+  },
+  {
+    "i": 101,
+    "value": "cube-Y:-Y-:"
+  },
+  {
+    "i": 102,
+    "value": " not gradable "
+  },
+  {
+    "i": 103,
+    "value": "cube-Y]-Y-]"
+  },
+  {
+    "i": 104,
+    "value": "+ sing/pl verb"
+  },
+  {
+    "i": 105,
+    "value": " only before noun "
+  },
+  {
+    "i": 106,
+    "value": " I or T "
+  },
+  {
+    "i": 107,
+    "value": " U or C "
+  },
+  {
+    "i": 108,
+    "value": " C usually plural "
+  },
+  {
+    "i": 109,
+    "value": " usually after verb "
+  },
+  {
+    "i": 110,
+    "value": " after verb "
+  },
+  {
+    "i": 111,
+    "value": " I/T "
+  },
+  {
+    "i": 112,
+    "value": " C-  & sing/pl verb "
+  },
+  {
+    "i": 113,
+    "value": " after noun "
+  },
+  {
+    "i": 114,
+    "value": " C usually singular "
+  },
+  {
+    "i": 115,
+    "value": "cube-Ot-O-t"
+  },
+  {
+    "i": 116,
+    "value": " plural "
+  },
+  {
+    "i": 117,
+    "value": " C - usually singular "
+  },
+  {
+    "i": 118,
+    "value": "cube-Gb-G-b"
+  },
+  {
+    "i": 119,
+    "value": " U or plural "
+  },
+  {
+    "i": 120,
+    "value": " usually before noun "
+  },
+  {
+    "i": 121,
+    "value": " U or S "
+  },
+  {
+    "i": 122,
+    "value": " U-  & sing/pl verb "
+  },
+  {
+    "i": 123,
+    "value": " -er/-est only "
+  },
+  {
+    "i": 124,
+    "value": " T often passive "
+  },
+  {
+    "i": 125,
+    "value": " usually plural "
+  },
+  {
+    "i": 126,
+    "value": " usually in negatives "
+  },
+  {
+    "i": 127,
+    "value": " C usually singular or U "
+  },
+  {
+    "i": 128,
+    "value": " T or I "
+  },
+  {
+    "i": 129,
+    "value": " before or after noun "
+  },
+  {
+    "i": 130,
+    "value": " T usually passive "
+  },
+  {
+    "i": 131,
+    "value": " I & to infinitive "
+  },
+  {
+    "i": 132,
+    "value": " C usually singular-  & sing/pl verb "
+  },
+  {
+    "i": 133,
+    "value": " T usually "
+  },
+  {
+    "i": 134,
+    "value": "modal"
+  },
+  {
+    "i": 135,
+    "value": "cube-Gh-G-h"
+  },
+  {
+    "i": 136,
+    "value": " C -  usually singular "
+  },
+  {
+    "i": 137,
+    "value": " T & adv/prep "
+  },
+  {
+    "i": 138,
+    "value": " & to infinitive "
+  },
+  {
+    "i": 139,
+    "value": " mainly after verb "
+  },
+  {
+    "i": 140,
+    "value": " I usually "
+  },
+  {
+    "i": 141,
+    "value": " C often plural "
+  },
+  {
+    "i": 142,
+    "value": " as form of address "
+  },
+  {
+    "i": 143,
+    "value": " I always "
+  },
+  {
+    "i": 144,
+    "value": " T -  usually passive "
+  },
+  {
+    "i": 145,
+    "value": " T - usually passive "
+  },
+  {
+    "i": 146,
+    "value": " U or C usually singular "
+  },
+  {
+    "i": 147,
+    "value": " C usually sing "
+  },
+  {
+    "i": 148,
+    "value": " C usually plural&  U "
+  },
+  {
+    "i": 149,
+    "value": " & question word "
+  },
+  {
+    "i": 150,
+    "value": "  T usually passive "
+  },
+  {
+    "i": 151,
+    "value": "cube-Je-J-e"
+  },
+  {
+    "i": 152,
+    "value": " I & adv/prep "
+  },
+  {
+    "i": 153,
+    "value": " I or T-  & adv/prep "
+  },
+  {
+    "i": 154,
+    "value": " C  "
+  },
+  {
+    "i": 155,
+    "value": "cube-R--R--"
+  },
+  {
+    "i": 156,
+    "value": "ordinal"
+  },
+  {
+    "i": 157,
+    "value": "cube-He-H-e"
+  },
+  {
+    "i": 158,
+    "value": " C - U "
+  },
+  {
+    "i": 159,
+    "value": " C - usually plural "
+  },
+  {
+    "i": 160,
+    "value": " singular "
+  },
+  {
+    "i": 161,
+    "value": " uncount "
+  },
+  {
+    "i": 162,
+    "value": " C or U -  usually singular "
+  },
+  {
+    "i": 163,
+    "value": " adverb "
+  },
+  {
+    "i": 164,
+    "value": " S or C "
+  },
+  {
+    "i": 165,
+    "value": " noun "
+  },
+  {
+    "i": 166,
+    "value": " U & sing/pl verb "
+  },
+  {
+    "i": 167,
+    "value": " singular or U "
+  },
+  {
+    "i": 168,
+    "value": " S-  & sing/pl verb "
+  },
+  {
+    "i": 169,
+    "value": " adjective "
+  },
+  {
+    "i": 170,
+    "value": " S not after the "
+  },
+  {
+    "i": 171,
+    "value": " usually after noun "
+  },
+  {
+    "i": 172,
+    "value": " I - T "
+  },
+  {
+    "i": 173,
+    "value": " C -  usually plural "
+  },
+  {
+    "i": 174,
+    "value": " U or singular "
+  },
+  {
+    "i": 175,
+    "value": " U usually before noun "
+  },
+  {
+    "i": 176,
+    "value": "US usually"
+  },
+  {
+    "i": 177,
+    "value": " I-  & adv/prep "
+  },
+  {
+    "i": 178,
+    "value": " L only & noun -  T "
+  },
+  {
+    "i": 179,
+    "value": " plural or U "
+  },
+  {
+    "i": 180,
+    "value": " C or U  "
+  },
+  {
+    "i": 181,
+    "value": " C - plural "
+  },
+  {
+    "i": 182,
+    "value": " C -  C "
+  },
+  {
+    "i": 183,
+    "value": "  C or U "
+  },
+  {
+    "i": 184,
+    "value": " I -  T often passive "
+  },
+  {
+    "i": 185,
+    "value": " only after n "
+  },
+  {
+    "i": 186,
+    "value": " C or plural "
+  },
+  {
+    "i": 187,
+    "value": " C or "
+  },
+  {
+    "i": 188,
+    "value": " U  "
+  },
+  {
+    "i": 189,
+    "value": " U -  plural "
+  },
+  {
+    "i": 190,
+    "value": " C usually pl "
+  },
+  {
+    "i": 191,
+    "value": " I or T usually passive "
+  },
+  {
+    "i": 192,
+    "value": " U or C usually singular  "
+  },
+  {
+    "i": 193,
+    "value": " C usually plural or U "
+  },
+  {
+    "i": 194,
+    "value": " I ot T "
+  },
+  {
+    "i": 195,
+    "value": " C usually singular&  U "
+  },
+  {
+    "i": 196,
+    "value": " pl "
+  },
+  {
+    "i": 197,
+    "value": " usually S "
+  },
+  {
+    "i": 198,
+    "value": " U/C "
+  },
+  {
+    "i": 199,
+    "value": " I  "
+  },
+  {
+    "i": 200,
+    "value": " C not after the "
+  },
+  {
+    "i": 201,
+    "value": " C usually S or U "
+  },
+  {
+    "i": 202,
+    "value": " always before noun "
+  },
+  {
+    "i": 203,
+    "value": " U OR C "
+  },
+  {
+    "i": 204,
+    "value": " I or T often passive "
+  },
+  {
+    "i": 205,
+    "value": " C usually S "
+  },
+  {
+    "i": 206,
+    "value": "  plural "
+  },
+  {
+    "i": 207,
+    "value": " S-  &sing/pl verb "
+  },
+  {
+    "i": 208,
+    "value": " plural-  & sing/pl verb "
+  },
+  {
+    "i": 209,
+    "value": " S & sing/pl verb "
+  },
+  {
+    "i": 210,
+    "value": " C -  U "
+  },
+  {
+    "i": 211,
+    "value": " C usually singular  "
+  },
+  {
+    "i": 212,
+    "value": " S & sing/pl verb  "
+  },
+  {
+    "i": 213,
+    "value": "auxiliary"
+  }
+]

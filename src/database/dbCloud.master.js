@@ -48,11 +48,12 @@ export const setupSync = function () {
   // setupEncrypt();
 
 
-  syncdb.version(2).stores({
+  syncdb.version(3).stores({
     words: '@id, word',
     products: '@id', //just to test importing..
     products2: '@id', //just to test importing..
     notes: '@id, word_id',
+    phonemes: '@id',
   });
 
 

@@ -218,9 +218,46 @@ export default defineComponent({
         this.notes = await syncdb.notes.toArray();
         // console.log("notes", this.notes);
         this.words = await syncdb.words.toArray();
-        // console.log(mydb);
+        // console.log(syncdb);
+
         this.createRows();
         // this.products = await syncdb.products.toArray();
+
+        // console.log(
+        //   "this.accounts.currentUser.accessToken;",
+        //   this.accounts.currentUser.accessToken
+        // );
+
+        function parseJwt(token) {
+          var base64Url = token.split(".")[1];
+          var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+          var jsonPayload = decodeURIComponent(
+            window
+              .atob(base64)
+              .split("")
+              .map(function (c) {
+                return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+              })
+              .join("")
+          );
+
+          return JSON.parse(jsonPayload);
+        }
+
+        // let token =
+        //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyaGRnYzRpNXE5NXZ1aW9nQGRleGllLmNsb3VkIiwic2NvcGVzIjpbIkFDQ0VTU19EQiIsIklNUEVSU09OQVRFIiwiTUFOQUdFX0RCIiwiR0xPQkFMX1JFQUQiLCJHTE9CQUxfV1JJVEUiXSwidXNlclR5cGUiOiJjbGllbnQiLCJsaWNlbnNlIjoib2siLCJybCI6InByb2QiLCJpYXQiOjE3MDY1MDU1NjcsIm5iZiI6MTcwNjUwNTI2NywiZXhwIjoxNzA2NTA5MTY3LCJhdWQiOlsiaHR0cHM6Ly96NXc5eHF3ZmQuZGV4aWUuY2xvdWQiLCJ6NXc5eHF3ZmQiXSwiaXNzIjoiaHR0cHM6Ly9kZXhpZS5jbG91ZCJ9.GQ4AQEdQUmlvt7RBsoPIiHctAvNgHsQgfDIiNXp-VfA"; expired token
+
+        let parse_token = parseJwt(this.accounts.currentUser.accessToken);
+        // let parse_token = parseJwt(token);
+
+        if (Date.now() >= parse_token?.exp * 1000) {
+          console.log("expired", parse_token);
+        } else {
+          console.log(
+            "not expired ... expires at..",
+            new Date(parse_token.exp * 1000).toString()
+          );
+        }
       } catch (error) {
         let status = `Failed to read ...: ${error}`;
         console.log("status error", status);
