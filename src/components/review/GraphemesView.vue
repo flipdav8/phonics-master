@@ -1,5 +1,12 @@
 <template>
   <div class="flex column" v-if="mounted">
+    <div
+      v-if="
+        approvals.filter((e) => e.lids_changed || e.pids_changed).length > 0
+      "
+    >
+      modifications made.. load todo..
+    </div>
     <div class="flex row" v-for="(group, i) in ordered_letters" :key="i">
       <div class="flex row" v-show="variation_index === i">
         <div class="flex row" v-for="(l, idx) in group" :key="idx">
@@ -9,6 +16,13 @@
             square
             @click="clickPhoneme(idx)"
             clickable
+            :class="
+              search_phonemes
+                .map((e) => e.list_id.toString())
+                .includes(use_pids[idx])
+                ? 'bg-green-3'
+                : ''
+            "
           >
             <!-- <div>{{ l }}</div> -->
             <!-- {{ phonemes.find((e) => e.list_id == use_pids[idx])?.icon_name }} -->
@@ -39,19 +53,27 @@
             <q-badge
               floating
               style="top: -15px"
-              class="q-pa-xs"
+              class="q-pa-xs text-black"
               :color="modified_letters.includes(idx) ? 'pink-4' : ''"
             >
               {{ l }}
             </q-badge>
-            <q-badge
+            <!-- <q-badge
               class="absolute"
               style="bottom: -5px; left: -0px"
               color="transparent"
               v-if="stress_array[idx] != undefined && stress_array[idx] > 0"
             >
               <q-icon size="xs" color="green" name="mdi-circle"></q-icon>
-            </q-badge>
+            </q-badge> -->
+
+            <div
+              v-if="stress_array[idx] != undefined && stress_array[idx] > 0"
+              class="absolute"
+              style="bottom: -20px; left: 0px; right: 0px"
+            >
+              <span>▲</span>
+            </div>
           </q-chip>
         </div>
       </div>
@@ -171,16 +193,6 @@
                         : l
                     }}
                   </q-badge>
-                  <q-badge
-                    class="absolute"
-                    style="bottom: -5px; left: -0px"
-                    color="transparent"
-                    v-if="
-                      stress_array[idx] != undefined && stress_array[idx] > 0
-                    "
-                  >
-                    <q-icon size="xs" color="green" name="mdi-circle"></q-icon>
-                  </q-badge>
                 </q-chip>
               </div>
             </div>
@@ -295,6 +307,9 @@ export default defineComponent({
     pids: { required: true },
     variation_index: { default: 0 },
     stress: {},
+    search_phonemes: {},
+    approvals: {},
+    word: {},
   },
   setup() {
     return {
@@ -371,9 +386,66 @@ export default defineComponent({
     orderGraphemes(letters) {
       if (letters.length > 1) {
         // console.log("letters", letters);
+        //split spellings
+        //double letters > other combos
+
+        let vowels = ["a", "e", "i", "o", "u"];
+        let touching = [];
+        let not_touching = [];
+
+        let array = JSON.parse(JSON.stringify(letters));
+        for (let index = 0; index < array.length; index++) {
+          const pattern = array[index];
+          let touch_array = [];
+          for (let xx = 0; xx < pattern.length; xx++) {
+            const graphemes = pattern[xx];
+            if (graphemes.includes("-") || graphemes.includes("^")) {
+              touch_array.push(false);
+              break;
+            }
+
+            if (this.word.includes("tion") && graphemes == "ti") {
+              touch_array.push(false);
+              break;
+            }
+            let chars = graphemes.split("");
+
+            let char_types = [];
+            for (let ww = 0; ww < chars.length; ww++) {
+              const char = chars[ww];
+
+              if (vowels.includes(char)) {
+                char_types.push("v");
+              } else {
+                char_types.push("c");
+              }
+            }
+
+            if (char_types.includes("v") && char_types.includes("c")) {
+              touch_array.push(true);
+            } else {
+              touch_array.push(false);
+            }
+          }
+
+          if (touch_array.filter((e) => e).length > 0) {
+            touching.push(pattern);
+          } else {
+            not_touching.push(pattern);
+          }
+        }
+
+        // if (this.word === "abandoned") {
+        //   console.log("not_touching", not_touching);
+        //   console.log("touching", touching);
+        // }
+
+        this.ordered_letters = [...not_touching, ...touching];
+      } else {
+        this.ordered_letters = JSON.parse(JSON.stringify(letters));
       }
 
-      this.ordered_letters = JSON.parse(JSON.stringify(letters));
+      // this.ordered_letters = JSON.parse(JSON.stringify(letters));
       // this.ordered_letters = shuffle(letters);
       // return letters;
     },
