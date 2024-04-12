@@ -8,7 +8,7 @@
       modifications made.. load todo..
     </div>
     <div class="flex row" v-for="(group, i) in ordered_letters" :key="i">
-      <div class="flex row" v-show="variation_index === i">
+      <div class="flex row items-center" v-show="variation_index === i">
         <div class="flex row" v-for="(l, idx) in group" :key="idx">
           <q-chip
             size="md"
@@ -76,10 +76,16 @@
             </div>
           </q-chip>
         </div>
+        <q-icon
+          v-if="letters.length > 1"
+          name="mdi-shuffle"
+          class="cursor-pointer"
+          @click="show_variations_button = !show_variations_button"
+        ></q-icon>
       </div>
     </div>
 
-    <div v-if="letters.length > 1" class="col-12">
+    <div v-if="letters.length > 1 && show_variations_button" class="col-12">
       <br />
       <div v-if="!letters_changed">
         <q-btn flat color="grey" no-caps @click="changeVariation()">
@@ -340,6 +346,7 @@ export default defineComponent({
       filterFields: ["label"],
       valid_letters: null,
       letters_changed: false,
+      show_variations_button: false,
     };
   },
   mounted() {

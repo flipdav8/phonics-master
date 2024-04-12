@@ -198,7 +198,7 @@
 
       <template v-slot:item="props">
         <div
-          class="q-pa-xs col-xs-12 col-sm-6 col-md-4"
+          class="q-pa-xs col-xs-12 col-sm-6 col-md-6"
           v-show="
             (!hide_approved || !props.row.approved) &&
             (!hide_multi || !props.row.multi)

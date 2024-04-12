@@ -1,12 +1,53 @@
 <template>
   <div class="flex column full-width">
     <div class="full-width flex row">
-      <q-btn flat no-caps @click="getActualWords()">Load</q-btn>
+      <q-btn
+        flat
+        no-caps
+        @click="
+          actual_words.length < 1
+            ? getActualWords()
+            : (show_loaded = !show_loaded)
+        "
+        >Load</q-btn
+      >
       <q-space></q-space>
       <q-btn flat no-caps @click="show_hidden = !show_hidden" size="sm">
         <q-icon :name="show_hidden ? 'mdi-eye' : 'mdi-eye-off'"></q-icon>
         <q-tooltip>Show words not on any of our lists</q-tooltip>
       </q-btn>
+    </div>
+
+    <div
+      v-if="actual_words.length > 0 && show_loaded"
+      class="q-my-sm q-gutter-sm"
+    >
+      <!-- @changeVariation="(e) => (rows[actual_words[0]Index].select_variation = e)" -->
+
+      <div
+        v-for="actual in actual_words.sort(
+          (a, b) => a.pids.length - b.pids.length
+        )"
+        :key="actual.id"
+      >
+        <div class="flex row full-width items-center">
+          <span class="col-2">{{ actual.word }}</span>
+          <GraphemesView
+            class="col-grow"
+            :ref="actual.id"
+            :letters="actual.lids"
+            :pids="actual.pids"
+            :stress="actual.stress"
+            :variation_index="actual.select_variation"
+            :search_phonemes="[]"
+            :approvals="actual.approved_1"
+            :word="actual.word"
+          ></GraphemesView>
+          <q-btn :disable="true" no-caps flat color="green" size="sm"
+            >Approve</q-btn
+          >
+        </div>
+      </div>
     </div>
     <div v-for="(group, i) in forms" :key="i">
       <div
@@ -45,6 +86,7 @@
         </div>
       </div>
     </div>
+
     <q-separator />
     <div>
       <q-btn class="q-mt-sm" no-caps flat @click="getMore()">More</q-btn>
@@ -130,6 +172,8 @@ import sense_tags from "./sense-tag-ids.json";
 
 import { supabase } from "src/components/supabase/supabase.js";
 
+import GraphemesView from "/src/components/review/GraphemesView.vue";
+
 let message_types = [
   {
     value: "same",
@@ -156,6 +200,7 @@ let message_types = [
 export default defineComponent({
   // name: "forms",
   components: {
+    GraphemesView,
     // MoveLetters
   },
   props: {
@@ -180,6 +225,8 @@ export default defineComponent({
       show_more: false,
       show_extra: false,
       more_data: [],
+      actual_words: [],
+      show_loaded: false,
     };
   },
   mounted() {
@@ -280,7 +327,8 @@ export default defineComponent({
     },
 
     async getActualWords() {
-      console.log(this.forms);
+      this.show_loaded = true;
+      // console.log(this.forms);
 
       let all_forms = [];
       for (let index = 0; index < this.forms.length; index++) {
@@ -292,7 +340,7 @@ export default defineComponent({
 
       let or = all_forms.map((e) => `word_id.eq.${e}`).join(",");
 
-      console.log("all_forms (or)", or);
+      // console.log("all_forms (or)", or);
 
       // let select = `id,word_id,word,pids,lids,pos,stress,lemma,tags,inlist0,inlist4,
       // approved_1(id),words(sim),grammar_forms(*)`;
@@ -314,6 +362,7 @@ export default defineComponent({
 
       console.log("data", data);
       // this.more_data = data;
+      this.actual_words = data;
     },
   },
 });
