@@ -34,6 +34,11 @@
           <span class="col-2">{{ actual.word }}</span>
           <GraphemesView
             class="col-grow"
+            :class="{
+              'bg-orange-2': !actual.pids.toString().includes(pids.toString())
+                ? true
+                : false,
+            }"
             :ref="actual.id"
             :letters="actual.lids"
             :pids="actual.pids"
@@ -209,6 +214,7 @@ export default defineComponent({
     other: { required: true },
     word: { required: true },
     row: { required: true },
+    pids: { required: true },
   },
   setup() {
     return {

@@ -311,6 +311,7 @@
                 :forms="props.row.forms"
                 :other="props.row.other"
                 :word="props.row.word"
+                :pids="props.row.pids"
                 :row="props.row"
               ></FormsView>
             </q-card-section>
