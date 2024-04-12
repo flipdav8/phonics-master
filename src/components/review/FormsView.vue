@@ -22,7 +22,7 @@
       v-if="actual_words.length > 0 && show_loaded"
       class="q-my-sm q-gutter-sm"
     >
-      <!-- @changeVariation="(e) => (rows[actual_words[0]Index].select_variation = e)" -->
+      <!--  -->
 
       <div
         v-for="actual in actual_words.sort(
@@ -42,6 +42,7 @@
             :search_phonemes="[]"
             :approvals="actual.approved_1"
             :word="actual.word"
+            @changeVariation="(e) => (actual.select_variation = e)"
           ></GraphemesView>
           <q-btn :disable="true" no-caps flat color="green" size="sm"
             >Approve</q-btn
