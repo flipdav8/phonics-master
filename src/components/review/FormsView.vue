@@ -4,7 +4,8 @@
       <q-btn flat no-caps @click="getActualWords()">Load</q-btn>
       <q-space></q-space>
       <q-btn flat no-caps @click="show_hidden = !show_hidden" size="sm">
-        <q-icon name="mdi-eye"></q-icon>
+        <q-icon :name="show_hidden ? 'mdi-eye' : 'mdi-eye-off'"></q-icon>
+        <q-tooltip>Show words not on any of our lists</q-tooltip>
       </q-btn>
     </div>
     <div v-for="(group, i) in forms" :key="i">
