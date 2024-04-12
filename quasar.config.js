@@ -79,6 +79,8 @@ module.exports = configure(function ( /* ctx */ ) {
 
         SUPABASE_URL: process.env.SUPABASE_URL,
         SUPABASE_KEY: process.env.SUPABASE_KEY,
+        SUPABASE_URL_EXTRA: process.env.SUPABASE_URL_EXTRA,
+        SUPABASE_KEY_EXTRA: process.env.SUPABASE_KEY_EXTRA,
       },
       // vueRouterBase,
       // vueDevtools,

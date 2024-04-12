@@ -1,0 +1,12822 @@
+[
+  {
+    "value": "uncountable",
+    "i": 0
+  },
+  {
+    "value": "countable",
+    "i": 1
+  },
+  {
+    "value": "Britain",
+    "i": 2
+  },
+  {
+    "value": "alt-of",
+    "i": 3
+  },
+  {
+    "value": "alternative",
+    "i": 4
+  },
+  {
+    "value": "in-plural",
+    "i": 5
+  },
+  {
+    "value": "transitive",
+    "i": 6
+  },
+  {
+    "value": null,
+    "i": 7
+  },
+  {
+    "value": "intransitive",
+    "i": 8
+  },
+  {
+    "value": "obsolete",
+    "i": 9
+  },
+  {
+    "value": "of a fever",
+    "i": 10
+  },
+  {
+    "value": "of a spell of settled weather",
+    "i": 11
+  },
+  {
+    "value": "of a storm",
+    "i": 12
+  },
+  {
+    "value": "of morning",
+    "i": 13
+  },
+  {
+    "value": "slang",
+    "i": 14
+  },
+  {
+    "value": "in programming",
+    "i": 15
+  },
+  {
+    "value": "specifically",
+    "i": 16
+  },
+  {
+    "value": "of a wave of water",
+    "i": 17
+  },
+  {
+    "value": "ergative",
+    "i": 18
+  },
+  {
+    "value": "of a sound",
+    "i": 19
+  },
+  {
+    "value": "with for",
+    "i": 20
+  },
+  {
+    "value": "copulative",
+    "i": 21
+  },
+  {
+    "value": "informal",
+    "i": 22
+  },
+  {
+    "value": "of a male voice",
+    "i": 23
+  },
+  {
+    "value": "of a voice",
+    "i": 24
+  },
+  {
+    "value": "of an emulsion",
+    "i": 25
+  },
+  {
+    "value": "archaic",
+    "i": 26
+  },
+  {
+    "value": "UK",
+    "i": 27
+  },
+  {
+    "value": "abbreviation",
+    "i": 28
+  },
+  {
+    "value": "dated",
+    "i": 29
+  },
+  {
+    "value": "historical",
+    "i": 30
+  },
+  {
+    "value": "mainly",
+    "i": 31
+  },
+  {
+    "value": "rare",
+    "i": 32
+  },
+  {
+    "value": "physical",
+    "i": 33
+  },
+  {
+    "value": "of metal",
+    "i": 34
+  },
+  {
+    "value": "of criminal",
+    "i": 35
+  },
+  {
+    "value": "of a route",
+    "i": 36
+  },
+  {
+    "value": "of an abstract noun",
+    "i": 37
+  },
+  {
+    "value": "followed by 'with'",
+    "i": 38
+  },
+  {
+    "value": "postpositional",
+    "i": 39
+  },
+  {
+    "value": "in combinations such as \"two-greats\"",
+    "i": 40
+  },
+  {
+    "value": "not-comparable",
+    "i": 41
+  },
+  {
+    "value": "ditransitive",
+    "i": 42
+  },
+  {
+    "value": "with person as subject",
+    "i": 43
+  },
+  {
+    "value": "with baked thing as subject",
+    "i": 44
+  },
+  {
+    "value": "figuratively",
+    "i": 45
+  },
+  {
+    "value": "with \"in\" or \"into\"",
+    "i": 46
+  },
+  {
+    "value": "Australia",
+    "i": 47
+  },
+  {
+    "value": "New-Zealand",
+    "i": 48
+  },
+  {
+    "value": "especially",
+    "i": 49
+  },
+  {
+    "value": "US",
+    "i": 50
+  },
+  {
+    "value": "Barbados",
+    "i": 51
+  },
+  {
+    "value": "sometimes",
+    "i": 52
+  },
+  {
+    "value": "form-of",
+    "i": 53
+  },
+  {
+    "value": "past",
+    "i": 54
+  },
+  {
+    "value": "colloquial",
+    "i": 55
+  },
+  {
+    "value": "nonstandard",
+    "i": 56
+  },
+  {
+    "value": "participle",
+    "i": 57
+  },
+  {
+    "value": "poetic",
+    "i": 58
+  },
+  {
+    "value": "of clothing",
+    "i": 59
+  },
+  {
+    "value": "auxiliary",
+    "i": 60
+  },
+  {
+    "value": "irregular",
+    "i": 61
+  },
+  {
+    "value": "formal",
+    "i": 62
+  },
+  {
+    "value": "Caribbean",
+    "i": 63
+  },
+  {
+    "value": "Ireland",
+    "i": 64
+  },
+  {
+    "value": "not conjugated",
+    "i": 65
+  },
+  {
+    "value": "with-dummy-subject",
+    "i": 66
+  },
+  {
+    "value": "with a cardinal numeral",
+    "i": 67
+  },
+  {
+    "value": "with a dummy subject it",
+    "i": 68
+  },
+  {
+    "value": "with since",
+    "i": 69
+  },
+  {
+    "value": "regional",
+    "i": 70
+  },
+  {
+    "value": "impersonal",
+    "i": 71
+  },
+  {
+    "value": "often",
+    "i": 72
+  },
+  {
+    "value": "with it as a dummy subject",
+    "i": 73
+  },
+  {
+    "value": "in progressive tenses",
+    "i": 74
+  },
+  {
+    "value": "literary",
+    "i": 75
+  },
+  {
+    "value": "usually",
+    "i": 76
+  },
+  {
+    "value": "in perfect tenses",
+    "i": 77
+  },
+  {
+    "value": "dialectal",
+    "i": 78
+  },
+  {
+    "value": "possibly",
+    "i": 79
+  },
+  {
+    "value": "of a person",
+    "i": 80
+  },
+  {
+    "value": "of an ink or dye",
+    "i": 81
+  },
+  {
+    "value": "of a phonological rule",
+    "i": 82
+  },
+  {
+    "value": "plural-normally",
+    "i": 83
+  },
+  {
+    "value": "with-up",
+    "i": 84
+  },
+  {
+    "value": "of a device",
+    "i": 85
+  },
+  {
+    "value": "of a vending machine or similar device",
+    "i": 86
+  },
+  {
+    "value": "stative",
+    "i": 87
+  },
+  {
+    "value": "plural",
+    "i": 88
+  },
+  {
+    "value": "childish",
+    "i": 89
+  },
+  {
+    "value": "Polari",
+    "i": 90
+  },
+  {
+    "value": "Sheffield",
+    "i": 91
+  },
+  {
+    "value": "Yorkshire",
+    "i": 92
+  },
+  {
+    "value": "ellipsis",
+    "i": 93
+  },
+  {
+    "value": "Canada",
+    "i": 94
+  },
+  {
+    "value": "vulgar",
+    "i": 95
+  },
+  {
+    "value": "masculine",
+    "i": 96
+  },
+  {
+    "value": "nominative",
+    "i": 97
+  },
+  {
+    "value": "personal",
+    "i": 98
+  },
+  {
+    "value": "singular",
+    "i": 99
+  },
+  {
+    "value": "third-person",
+    "i": 100
+  },
+  {
+    "value": "proscribed",
+    "i": 101
+  },
+  {
+    "value": "reduplication",
+    "i": 102
+  },
+  {
+    "value": "uncommon",
+    "i": 103
+  },
+  {
+    "value": "Internet",
+    "i": 104
+  },
+  {
+    "value": "Jamaica",
+    "i": 105
+  },
+  {
+    "value": "derogatory",
+    "i": 106
+  },
+  {
+    "value": "offensive",
+    "i": 107
+  },
+  {
+    "value": "ironic",
+    "i": 108
+  },
+  {
+    "value": "attributive",
+    "i": 109
+  },
+  {
+    "value": "plural-only",
+    "i": 110
+  },
+  {
+    "value": "with from",
+    "i": 111
+  },
+  {
+    "value": "of living things",
+    "i": 112
+  },
+  {
+    "value": "broadly",
+    "i": 113
+  },
+  {
+    "value": "of a place",
+    "i": 114
+  },
+  {
+    "value": "person",
+    "i": 115
+  },
+  {
+    "value": "of a situation",
+    "i": 116
+  },
+  {
+    "value": "modal",
+    "i": 117
+  },
+  {
+    "value": "verb",
+    "i": 118
+  },
+  {
+    "value": "Cincinnati",
+    "i": 119
+  },
+  {
+    "value": "Commonwealth",
+    "i": 120
+  },
+  {
+    "value": "in-compounds",
+    "i": 121
+  },
+  {
+    "value": "feminine",
+    "i": 122
+  },
+  {
+    "value": "endearing",
+    "i": 123
+  },
+  {
+    "value": "used mostly for men",
+    "i": 124
+  },
+  {
+    "value": "of an animal",
+    "i": 125
+  },
+  {
+    "value": "of males",
+    "i": 126
+  },
+  {
+    "value": "of a limb",
+    "i": 127
+  },
+  {
+    "value": "construed with of",
+    "i": 128
+  },
+  {
+    "value": "stressed",
+    "i": 129
+  },
+  {
+    "value": "of a fact",
+    "i": 130
+  },
+  {
+    "value": "of a bed",
+    "i": 131
+  },
+  {
+    "value": "euphemistic",
+    "i": 132
+  },
+  {
+    "value": "of human skin",
+    "i": 133
+  },
+  {
+    "value": "from pain in the neck",
+    "i": 134
+  },
+  {
+    "value": "India",
+    "i": 135
+  },
+  {
+    "value": "of a music",
+    "i": 136
+  },
+  {
+    "value": "of a theatrical performance",
+    "i": 137
+  },
+  {
+    "value": "of a theatrical company or band",
+    "i": 138
+  },
+  {
+    "value": "with-on",
+    "i": 139
+  },
+  {
+    "value": "reciprocal",
+    "i": 140
+  },
+  {
+    "value": "humorous",
+    "i": 141
+  },
+  {
+    "value": "misspelling",
+    "i": 142
+  },
+  {
+    "value": "imperative",
+    "i": 143
+  },
+  {
+    "value": "of a possession",
+    "i": 144
+  },
+  {
+    "value": "literally",
+    "i": 145
+  },
+  {
+    "value": "of a vehicle",
+    "i": 146
+  },
+  {
+    "value": "of a path",
+    "i": 147
+  },
+  {
+    "value": "reflexive",
+    "i": 148
+  },
+  {
+    "value": "of a material",
+    "i": 149
+  },
+  {
+    "value": "of a ship",
+    "i": 150
+  },
+  {
+    "value": "of ink",
+    "i": 151
+  },
+  {
+    "value": "of a plant",
+    "i": 152
+  },
+  {
+    "value": "of a mechanical device",
+    "i": 153
+  },
+  {
+    "value": "with 'the'",
+    "i": 154
+  },
+  {
+    "value": "with modifier",
+    "i": 155
+  },
+  {
+    "value": "Germanic",
+    "i": 156
+  },
+  {
+    "value": "in reply to no way",
+    "i": 157
+  },
+  {
+    "value": "with comparative or modified adjective",
+    "i": 158
+  },
+  {
+    "value": "with positive adjective",
+    "i": 159
+  },
+  {
+    "value": "as \"whale of a ___\"",
+    "i": 160
+  },
+  {
+    "value": "as bare noun",
+    "i": 161
+  },
+  {
+    "value": "in expressions such as 'give someone the bird'",
+    "i": 162
+  },
+  {
+    "value": "with-definite-article",
+    "i": 163
+  },
+  {
+    "value": "Philippines",
+    "i": 164
+  },
+  {
+    "value": "of a school or university course",
+    "i": 165
+  },
+  {
+    "value": "proper-noun",
+    "i": 166
+  },
+  {
+    "value": "of a body part",
+    "i": 167
+  },
+  {
+    "value": "of a sandwich",
+    "i": 168
+  },
+  {
+    "value": "comparable",
+    "i": 169
+  },
+  {
+    "value": "of a formula",
+    "i": 170
+  },
+  {
+    "value": "of a set",
+    "i": 171
+  },
+  {
+    "value": "of a walk",
+    "i": 172
+  },
+  {
+    "value": "of a file",
+    "i": 173
+  },
+  {
+    "value": "of valve or damper",
+    "i": 174
+  },
+  {
+    "value": "of a switch or circuit breaker",
+    "i": 175
+  },
+  {
+    "value": "of correspondence",
+    "i": 176
+  },
+  {
+    "value": "of a syllable",
+    "i": 177
+  },
+  {
+    "value": "used before \"code\"",
+    "i": 178
+  },
+  {
+    "value": "of a multi-word compound",
+    "i": 179
+  },
+  {
+    "value": "of a switch",
+    "i": 180
+  },
+  {
+    "value": "Manglish",
+    "i": 181
+  },
+  {
+    "value": "in the definite",
+    "i": 182
+  },
+  {
+    "value": "also",
+    "i": 183
+  },
+  {
+    "value": "of a clock or the like",
+    "i": 184
+  },
+  {
+    "value": "of a period of time",
+    "i": 185
+  },
+  {
+    "value": "reduced",
+    "i": 186
+  },
+  {
+    "value": "with as",
+    "i": 187
+  },
+  {
+    "value": "Australian",
+    "i": 188
+  },
+  {
+    "value": "Kenya",
+    "i": 189
+  },
+  {
+    "value": "of a man",
+    "i": 190
+  },
+  {
+    "value": "in Aboriginal culture",
+    "i": 191
+  },
+  {
+    "value": "with \"up\"",
+    "i": 192
+  },
+  {
+    "value": "clipping",
+    "i": 193
+  },
+  {
+    "value": "ethnic",
+    "i": 194
+  },
+  {
+    "value": "slur",
+    "i": 195
+  },
+  {
+    "value": "Cockney",
+    "i": 196
+  },
+  {
+    "value": "Malaysia",
+    "i": 197
+  },
+  {
+    "value": "g-person",
+    "i": 198
+  },
+  {
+    "value": "Multicultural-London-English",
+    "i": 199
+  },
+  {
+    "value": "not in formal use",
+    "i": 200
+  },
+  {
+    "value": "of an object or substance",
+    "i": 201
+  },
+  {
+    "value": "of a machine",
+    "i": 202
+  },
+  {
+    "value": "with another verb",
+    "i": 203
+  },
+  {
+    "value": "of time",
+    "i": 204
+  },
+  {
+    "value": "of a wicket",
+    "i": 205
+  },
+  {
+    "value": "of a batsman",
+    "i": 206
+  },
+  {
+    "value": "followed by a preposition",
+    "i": 207
+  },
+  {
+    "value": "British",
+    "i": 208
+  },
+  {
+    "value": "of an object",
+    "i": 209
+  },
+  {
+    "value": "of a person or animal",
+    "i": 210
+  },
+  {
+    "value": "of a temper",
+    "i": 211
+  },
+  {
+    "value": "of a draft/check",
+    "i": 212
+  },
+  {
+    "value": "of food",
+    "i": 213
+  },
+  {
+    "value": "of an electric musical instrument",
+    "i": 214
+  },
+  {
+    "value": "of a vehicle or aircraft",
+    "i": 215
+  },
+  {
+    "value": "in the phrase \"come in hot\"",
+    "i": 216
+  },
+  {
+    "value": "negative",
+    "i": 217
+  },
+  {
+    "value": "in the US",
+    "i": 218
+  },
+  {
+    "value": "with certain modes of transport",
+    "i": 219
+  },
+  {
+    "value": "Nigeria",
+    "i": 220
+  },
+  {
+    "value": "Singapore",
+    "i": 221
+  },
+  {
+    "value": "superlative",
+    "i": 222
+  },
+  {
+    "value": "of plants",
+    "i": 223
+  },
+  {
+    "value": "acronym",
+    "i": 224
+  },
+  {
+    "value": "Singlish",
+    "i": 225
+  },
+  {
+    "value": "with following adjective",
+    "i": 226
+  },
+  {
+    "value": "Scotland",
+    "i": 227
+  },
+  {
+    "value": "without adjective",
+    "i": 228
+  },
+  {
+    "value": "Hong-Kong",
+    "i": 229
+  },
+  {
+    "value": "with over",
+    "i": 230
+  },
+  {
+    "value": "followed by out",
+    "i": 231
+  },
+  {
+    "value": "in “worm out of”",
+    "i": 232
+  },
+  {
+    "value": "used as a neutral",
+    "i": 233
+  },
+  {
+    "value": "emphatic",
+    "i": 234
+  },
+  {
+    "value": "metonymically",
+    "i": 235
+  },
+  {
+    "value": "followed by \"of\"",
+    "i": 236
+  },
+  {
+    "value": "Northern-England",
+    "i": 237
+  },
+  {
+    "value": "capitalized",
+    "i": 238
+  },
+  {
+    "value": "of a tick",
+    "i": 239
+  },
+  {
+    "value": "of hair",
+    "i": 240
+  },
+  {
+    "value": "of the skin",
+    "i": 241
+  },
+  {
+    "value": "of a dog or its coat",
+    "i": 242
+  },
+  {
+    "value": "of a card",
+    "i": 243
+  },
+  {
+    "value": "particle",
+    "i": 244
+  },
+  {
+    "value": "sequence",
+    "i": 245
+  },
+  {
+    "value": "conjunctive",
+    "i": 246
+  },
+  {
+    "value": "collective",
+    "i": 247
+  },
+  {
+    "value": "England",
+    "i": 248
+  },
+  {
+    "value": "with-infinitive",
+    "i": 249
+  },
+  {
+    "value": "of a morpheme",
+    "i": 250
+  },
+  {
+    "value": "of a variable",
+    "i": 251
+  },
+  {
+    "value": "used in plural",
+    "i": 252
+  },
+  {
+    "value": "as \"the brown\"",
+    "i": 253
+  },
+  {
+    "value": "of Asians",
+    "i": 254
+  },
+  {
+    "value": "of East-Eurasian ancestry",
+    "i": 255
+  },
+  {
+    "value": "in the passive voice",
+    "i": 256
+  },
+  {
+    "value": "of words or a way of speaking",
+    "i": 257
+  },
+  {
+    "value": "used in names",
+    "i": 258
+  },
+  {
+    "value": "of marijuana",
+    "i": 259
+  },
+  {
+    "value": "of fowls and fish",
+    "i": 260
+  },
+  {
+    "value": "nonce-word",
+    "i": 261
+  },
+  {
+    "value": "of a number",
+    "i": 262
+  },
+  {
+    "value": "of a fictional character",
+    "i": 263
+  },
+  {
+    "value": "in US",
+    "i": 264
+  },
+  {
+    "value": "with \"out\"",
+    "i": 265
+  },
+  {
+    "value": "in phenomenology",
+    "i": 266
+  },
+  {
+    "value": "of the sun",
+    "i": 267
+  },
+  {
+    "value": "in various games",
+    "i": 268
+  },
+  {
+    "value": "used especially of a batsman or batter in cricket or baseball",
+    "i": 269
+  },
+  {
+    "value": "of ideas",
+    "i": 270
+  },
+  {
+    "value": "of options",
+    "i": 271
+  },
+  {
+    "value": "of certain services",
+    "i": 272
+  },
+  {
+    "value": "of a user of a service",
+    "i": 273
+  },
+  {
+    "value": "of lamps",
+    "i": 274
+  },
+  {
+    "value": "of an organization",
+    "i": 275
+  },
+  {
+    "value": "of flowers",
+    "i": 276
+  },
+  {
+    "value": "of calculations or measurements",
+    "i": 277
+  },
+  {
+    "value": "in phrases such as 'in town' or 'to town'",
+    "i": 278
+  },
+  {
+    "value": "traditional",
+    "i": 279
+  },
+  {
+    "value": "catenative",
+    "i": 280
+  },
+  {
+    "value": "used with \"out of\" or \"off\"",
+    "i": 281
+  },
+  {
+    "value": "of a square-rigged ship",
+    "i": 282
+  },
+  {
+    "value": "of a sugar cane plant",
+    "i": 283
+  },
+  {
+    "value": "contraction",
+    "i": 284
+  },
+  {
+    "value": "in law",
+    "i": 285
+  },
+  {
+    "value": "with \"out\" or \"aside\"",
+    "i": 286
+  },
+  {
+    "value": "followed by with",
+    "i": 287
+  },
+  {
+    "value": "interrogative",
+    "i": 288
+  },
+  {
+    "value": "with through",
+    "i": 289
+  },
+  {
+    "value": "of a bowler",
+    "i": 290
+  },
+  {
+    "value": "said of one's voice",
+    "i": 291
+  },
+  {
+    "value": "of a team",
+    "i": 292
+  },
+  {
+    "value": "of a punch or boxing combination",
+    "i": 293
+  },
+  {
+    "value": "in questions",
+    "i": 294
+  },
+  {
+    "value": "place",
+    "i": 295
+  },
+  {
+    "value": "with 'a' and the name of a person",
+    "i": 296
+  },
+  {
+    "value": "in the form be doing [somewhere]",
+    "i": 297
+  },
+  {
+    "value": "of steak",
+    "i": 298
+  },
+  {
+    "value": "of a dog or cat",
+    "i": 299
+  },
+  {
+    "value": "of women",
+    "i": 300
+  },
+  {
+    "value": "singular-only",
+    "i": 301
+  },
+  {
+    "value": "of Moon",
+    "i": 302
+  },
+  {
+    "value": "of a coin or token",
+    "i": 303
+  },
+  {
+    "value": "Newfoundland",
+    "i": 304
+  },
+  {
+    "value": "Wales",
+    "i": 305
+  },
+  {
+    "value": "of a statement",
+    "i": 306
+  },
+  {
+    "value": "of an aim or missile in archery",
+    "i": 307
+  },
+  {
+    "value": "of a mechanical part",
+    "i": 308
+  },
+  {
+    "value": "of a literary genre",
+    "i": 309
+  },
+  {
+    "value": "of shooting",
+    "i": 310
+  },
+  {
+    "value": "not in common modern use",
+    "i": 311
+  },
+  {
+    "value": "with the",
+    "i": 312
+  },
+  {
+    "value": "of a sound recording",
+    "i": 313
+  },
+  {
+    "value": "comparative",
+    "i": 314
+  },
+  {
+    "value": "indicative",
+    "i": 315
+  },
+  {
+    "value": "present",
+    "i": 316
+  },
+  {
+    "value": "of coffee",
+    "i": 317
+  },
+  {
+    "value": "of a rule or punishment",
+    "i": 318
+  },
+  {
+    "value": "of an illness or pain",
+    "i": 319
+  },
+  {
+    "value": "of weather",
+    "i": 320
+  },
+  {
+    "value": "of a medicine or cosmetic",
+    "i": 321
+  },
+  {
+    "value": "used in the imperative",
+    "i": 322
+  },
+  {
+    "value": "with indirect interrogative clause",
+    "i": 323
+  },
+  {
+    "value": "of a couple",
+    "i": 324
+  },
+  {
+    "value": "used with another verb",
+    "i": 325
+  },
+  {
+    "value": "of a vessel",
+    "i": 326
+  },
+  {
+    "value": "of a knot",
+    "i": 327
+  },
+  {
+    "value": "of an audio recording",
+    "i": 328
+  },
+  {
+    "value": "with relative clause",
+    "i": 329
+  },
+  {
+    "value": "with to",
+    "i": 330
+  },
+  {
+    "value": "South-Africa",
+    "i": 331
+  },
+  {
+    "value": "of an exam",
+    "i": 332
+  },
+  {
+    "value": "said of the sea",
+    "i": 333
+  },
+  {
+    "value": "of a fortification",
+    "i": 334
+  },
+  {
+    "value": "Pennsylvania",
+    "i": 335
+  },
+  {
+    "value": "Virginia",
+    "i": 336
+  },
+  {
+    "value": "West",
+    "i": 337
+  },
+  {
+    "value": "of horses",
+    "i": 338
+  },
+  {
+    "value": "of a zoology",
+    "i": 339
+  },
+  {
+    "value": "pronunciation-spelling",
+    "i": 340
+  },
+  {
+    "value": "Tyneside",
+    "i": 341
+  },
+  {
+    "value": "indefinite",
+    "i": 342
+  },
+  {
+    "value": "pronoun",
+    "i": 343
+  },
+  {
+    "value": "followed by for",
+    "i": 344
+  },
+  {
+    "value": "Leet",
+    "i": 345
+  },
+  {
+    "value": "deliberate",
+    "i": 346
+  },
+  {
+    "value": "sarcastic",
+    "i": 347
+  },
+  {
+    "value": "relative",
+    "i": 348
+  },
+  {
+    "value": "Scottish",
+    "i": 349
+  },
+  {
+    "value": "in negative constructions",
+    "i": 350
+  },
+  {
+    "value": "as if a plural noun",
+    "i": 351
+  },
+  {
+    "value": "Guernsey",
+    "i": 352
+  },
+  {
+    "value": "followed by up",
+    "i": 353
+  },
+  {
+    "value": "followed by together or up",
+    "i": 354
+  },
+  {
+    "value": "with \"for\"",
+    "i": 355
+  },
+  {
+    "value": "followed by \"on\"",
+    "i": 356
+  },
+  {
+    "value": "of a station",
+    "i": 357
+  },
+  {
+    "value": "from obsolete scientific theory",
+    "i": 358
+  },
+  {
+    "value": "of a cheque/check",
+    "i": 359
+  },
+  {
+    "value": "of an e-mail message",
+    "i": 360
+  },
+  {
+    "value": "in Ireland and Scotland",
+    "i": 361
+  },
+  {
+    "value": "modern",
+    "i": 362
+  },
+  {
+    "value": "construed as plural",
+    "i": 363
+  },
+  {
+    "value": "with out or through",
+    "i": 364
+  },
+  {
+    "value": "of a fish",
+    "i": 365
+  },
+  {
+    "value": "of an insect",
+    "i": 366
+  },
+  {
+    "value": "in a stricter sense",
+    "i": 367
+  },
+  {
+    "value": "with possessive",
+    "i": 368
+  },
+  {
+    "value": "with auxiliary \"could\"",
+    "i": 369
+  },
+  {
+    "value": "with gender pronouns as object",
+    "i": 370
+  },
+  {
+    "value": "with \"to\"",
+    "i": 371
+  },
+  {
+    "value": "of a proposal",
+    "i": 372
+  },
+  {
+    "value": "of a type of moth or butterfly",
+    "i": 373
+  },
+  {
+    "value": "of a ball",
+    "i": 374
+  },
+  {
+    "value": "of an opinion or practice",
+    "i": 375
+  },
+  {
+    "value": "of a lifestyle",
+    "i": 376
+  },
+  {
+    "value": "with \"on\" or \"about\"",
+    "i": 377
+  },
+  {
+    "value": "of a body of water",
+    "i": 378
+  },
+  {
+    "value": "of a card or hand",
+    "i": 379
+  },
+  {
+    "value": "of meat",
+    "i": 380
+  },
+  {
+    "value": "of a sailing ship",
+    "i": 381
+  },
+  {
+    "value": "no-past-participle",
+    "i": 382
+  },
+  {
+    "value": "no-present-participle",
+    "i": 383
+  },
+  {
+    "value": "Northeastern",
+    "i": 384
+  },
+  {
+    "value": "of a space",
+    "i": 385
+  },
+  {
+    "value": "of persons",
+    "i": 386
+  },
+  {
+    "value": "New-York",
+    "i": 387
+  },
+  {
+    "value": "of either a woman's anus or her vagina",
+    "i": 388
+  },
+  {
+    "value": "in subordinate clauses and gerunds",
+    "i": 389
+  },
+  {
+    "value": "with an infinitive",
+    "i": 390
+  },
+  {
+    "value": "of milk",
+    "i": 391
+  },
+  {
+    "value": "with close",
+    "i": 392
+  },
+  {
+    "value": "with from or sometimes of",
+    "i": 393
+  },
+  {
+    "value": "of grain",
+    "i": 394
+  },
+  {
+    "value": "with at",
+    "i": 395
+  },
+  {
+    "value": "neologism",
+    "i": 396
+  },
+  {
+    "value": "in the tailoring context",
+    "i": 397
+  },
+  {
+    "value": "as a drill command",
+    "i": 398
+  },
+  {
+    "value": "used only with indefinite or interrogative pronouns",
+    "i": 399
+  },
+  {
+    "value": "from joystick",
+    "i": 400
+  },
+  {
+    "value": "of a male horse",
+    "i": 401
+  },
+  {
+    "value": "said of a card",
+    "i": 402
+  },
+  {
+    "value": "of the heart or spirit",
+    "i": 403
+  },
+  {
+    "value": "initialism",
+    "i": 404
+  },
+  {
+    "value": "Philadelphia",
+    "i": 405
+  },
+  {
+    "value": "of large mammals",
+    "i": 406
+  },
+  {
+    "value": "with into or through",
+    "i": 407
+  },
+  {
+    "value": "of a cow or heifer",
+    "i": 408
+  },
+  {
+    "value": "of a bull",
+    "i": 409
+  },
+  {
+    "value": "with \"of\"",
+    "i": 410
+  },
+  {
+    "value": "of hands",
+    "i": 411
+  },
+  {
+    "value": "of physical features",
+    "i": 412
+  },
+  {
+    "value": "of the moon",
+    "i": 413
+  },
+  {
+    "value": "of garments",
+    "i": 414
+  },
+  {
+    "value": "first-person",
+    "i": 415
+  },
+  {
+    "value": "second-person",
+    "i": 416
+  },
+  {
+    "value": "passive",
+    "i": 417
+  },
+  {
+    "value": "of a railroad car",
+    "i": 418
+  },
+  {
+    "value": "subjunctive",
+    "i": 419
+  },
+  {
+    "value": "as plurale tantum",
+    "i": 420
+  },
+  {
+    "value": "idiomatic",
+    "i": 421
+  },
+  {
+    "value": "of a sibling",
+    "i": 422
+  },
+  {
+    "value": "of an industry or other field",
+    "i": 423
+  },
+  {
+    "value": "used as an intensifier",
+    "i": 424
+  },
+  {
+    "value": "in the Southern US",
+    "i": 425
+  },
+  {
+    "value": "Southern-US",
+    "i": 426
+  },
+  {
+    "value": "Myanmar",
+    "i": 427
+  },
+  {
+    "value": "of a liquid",
+    "i": 428
+  },
+  {
+    "value": "of chocolate",
+    "i": 429
+  },
+  {
+    "value": "with it",
+    "i": 430
+  },
+  {
+    "value": "of an alcohol",
+    "i": 431
+  },
+  {
+    "value": "of people or animals",
+    "i": 432
+  },
+  {
+    "value": "with with",
+    "i": 433
+  },
+  {
+    "value": "of capabilities",
+    "i": 434
+  },
+  {
+    "value": "of quantities",
+    "i": 435
+  },
+  {
+    "value": "with possessive pronoun",
+    "i": 436
+  },
+  {
+    "value": "as imperative",
+    "i": 437
+  },
+  {
+    "value": "in reduplicative expressions",
+    "i": 438
+  },
+  {
+    "value": "followed by an -ing form of a verb",
+    "i": 439
+  },
+  {
+    "value": "indicating time",
+    "i": 440
+  },
+  {
+    "value": "used for skills (including in activities) or areas of knowledge",
+    "i": 441
+  },
+  {
+    "value": "of vegetables",
+    "i": 442
+  },
+  {
+    "value": "in the comparative or superlative",
+    "i": 443
+  },
+  {
+    "value": "of a cattle brand",
+    "i": 444
+  },
+  {
+    "value": "of a dog",
+    "i": 445
+  },
+  {
+    "value": "in particular",
+    "i": 446
+  },
+  {
+    "value": "followed by of",
+    "i": 447
+  },
+  {
+    "value": "of a buoy",
+    "i": 448
+  },
+  {
+    "value": "of weapons",
+    "i": 449
+  },
+  {
+    "value": "of a woman or female animal",
+    "i": 450
+  },
+  {
+    "value": "of an investment",
+    "i": 451
+  },
+  {
+    "value": "of a thing",
+    "i": 452
+  },
+  {
+    "value": "polite",
+    "i": 453
+  },
+  {
+    "value": "Appalachia",
+    "i": 454
+  },
+  {
+    "value": "of a wind",
+    "i": 455
+  },
+  {
+    "value": "of a catch",
+    "i": 456
+  },
+  {
+    "value": "of a ball delivered by the bowler",
+    "i": 457
+  },
+  {
+    "value": "of ice",
+    "i": 458
+  },
+  {
+    "value": "in street names or addresses",
+    "i": 459
+  },
+  {
+    "value": "of box-shaped objects such as buildings or metal frames",
+    "i": 460
+  },
+  {
+    "value": "followed by \"at\"",
+    "i": 461
+  },
+  {
+    "value": "with off or out",
+    "i": 462
+  },
+  {
+    "value": "of structures",
+    "i": 463
+  },
+  {
+    "value": "with-down",
+    "i": 464
+  },
+  {
+    "value": "with certain prepositions",
+    "i": 465
+  },
+  {
+    "value": "with \"it\"",
+    "i": 466
+  },
+  {
+    "value": "Mormonism",
+    "i": 467
+  },
+  {
+    "value": "used with on or upon",
+    "i": 468
+  },
+  {
+    "value": "of sugar",
+    "i": 469
+  },
+  {
+    "value": "defective",
+    "i": 470
+  },
+  {
+    "value": "in definitions or explanations",
+    "i": 471
+  },
+  {
+    "value": "with away",
+    "i": 472
+  },
+  {
+    "value": "of a person or skin",
+    "i": 473
+  },
+  {
+    "value": "of coffee or tea",
+    "i": 474
+  },
+  {
+    "value": "of tea",
+    "i": 475
+  },
+  {
+    "value": "of a set of armor",
+    "i": 476
+  },
+  {
+    "value": "used alone",
+    "i": 477
+  },
+  {
+    "value": "of clouds",
+    "i": 478
+  },
+  {
+    "value": "of rainfall with regard to a location",
+    "i": 479
+  },
+  {
+    "value": "in North America",
+    "i": 480
+  },
+  {
+    "value": "used with compass directions",
+    "i": 481
+  },
+  {
+    "value": "Northern-Ireland",
+    "i": 482
+  },
+  {
+    "value": "with a possessive pronoun",
+    "i": 483
+  },
+  {
+    "value": "in passive",
+    "i": 484
+  },
+  {
+    "value": "with into",
+    "i": 485
+  },
+  {
+    "value": "with-of",
+    "i": 486
+  },
+  {
+    "value": "with for and a bare noun",
+    "i": 487
+  },
+  {
+    "value": "in expressions such as 'for a start'",
+    "i": 488
+  },
+  {
+    "value": "with names",
+    "i": 489
+  },
+  {
+    "value": "in representations of dialectal speech",
+    "i": 490
+  },
+  {
+    "value": "as direct object",
+    "i": 491
+  },
+  {
+    "value": "used in progressive tenses",
+    "i": 492
+  },
+  {
+    "value": "not preceded by an article",
+    "i": 493
+  },
+  {
+    "value": "of a building",
+    "i": 494
+  },
+  {
+    "value": "of a story",
+    "i": 495
+  },
+  {
+    "value": "of a cup of coffee",
+    "i": 496
+  },
+  {
+    "value": "of liquids",
+    "i": 497
+  },
+  {
+    "value": "used only in progressive tenses",
+    "i": 498
+  },
+  {
+    "value": "diminutive",
+    "i": 499
+  },
+  {
+    "value": "of an unwelcome event",
+    "i": 500
+  },
+  {
+    "value": "focus",
+    "i": 501
+  },
+  {
+    "value": "used with prepositions and adverbs",
+    "i": 502
+  },
+  {
+    "value": "in botany",
+    "i": 503
+  },
+  {
+    "value": "in idiomatic expressions",
+    "i": 504
+  },
+  {
+    "value": "of a fabric",
+    "i": 505
+  },
+  {
+    "value": "in Britain",
+    "i": 506
+  },
+  {
+    "value": "of a male",
+    "i": 507
+  },
+  {
+    "value": "of data",
+    "i": 508
+  },
+  {
+    "value": "noun-from-verb",
+    "i": 509
+  },
+  {
+    "value": "with respect to clothing",
+    "i": 510
+  },
+  {
+    "value": "Belize",
+    "i": 511
+  },
+  {
+    "value": "Guyana",
+    "i": 512
+  },
+  {
+    "value": "East",
+    "i": 513
+  },
+  {
+    "value": "Midlands",
+    "i": 514
+  },
+  {
+    "value": "error-lua-exec",
+    "i": 515
+  },
+  {
+    "value": "of a place or situation",
+    "i": 516
+  },
+  {
+    "value": "of water",
+    "i": 517
+  },
+  {
+    "value": "in a person",
+    "i": 518
+  },
+  {
+    "value": "in a place or situation",
+    "i": 519
+  },
+  {
+    "value": "universal",
+    "i": 520
+  },
+  {
+    "value": "of a musical performance",
+    "i": 521
+  },
+  {
+    "value": "with in",
+    "i": 522
+  },
+  {
+    "value": "of human users",
+    "i": 523
+  },
+  {
+    "value": "of a person with a particular hair color",
+    "i": 524
+  },
+  {
+    "value": "with a number",
+    "i": 525
+  },
+  {
+    "value": "causative",
+    "i": 526
+  },
+  {
+    "value": "with \"up\" or \"down\"",
+    "i": 527
+  },
+  {
+    "value": "punctuation",
+    "i": 528
+  },
+  {
+    "value": "of a black person",
+    "i": 529
+  },
+  {
+    "value": "Southern",
+    "i": 530
+  },
+  {
+    "value": "Kent",
+    "i": 531
+  },
+  {
+    "value": "Westminster-system",
+    "i": 532
+  },
+  {
+    "value": "of a horse",
+    "i": 533
+  },
+  {
+    "value": "excessive",
+    "i": 534
+  },
+  {
+    "value": "Southern-England",
+    "i": 535
+  },
+  {
+    "value": "with article",
+    "i": 536
+  },
+  {
+    "value": "in early use chiefly African-American Vernacular",
+    "i": 537
+  },
+  {
+    "value": "of the weather",
+    "i": 538
+  },
+  {
+    "value": "of a police officer",
+    "i": 539
+  },
+  {
+    "value": "Wearside",
+    "i": 540
+  },
+  {
+    "value": "of sleep",
+    "i": 541
+  },
+  {
+    "value": "of a vowel or consonant",
+    "i": 542
+  },
+  {
+    "value": "with God as agent",
+    "i": 543
+  },
+  {
+    "value": "with and",
+    "i": 544
+  },
+  {
+    "value": "not with and",
+    "i": 545
+  },
+  {
+    "value": "mildly",
+    "i": 546
+  },
+  {
+    "value": "of mirrors",
+    "i": 547
+  },
+  {
+    "value": "of weather or a day",
+    "i": 548
+  },
+  {
+    "value": "Northern",
+    "i": 549
+  },
+  {
+    "value": "West-Country",
+    "i": 550
+  },
+  {
+    "value": "used with children",
+    "i": 551
+  },
+  {
+    "value": "followed by \"at\" or \"in\"",
+    "i": 552
+  },
+  {
+    "value": "of people",
+    "i": 553
+  },
+  {
+    "value": "of a bus or other vehicle",
+    "i": 554
+  },
+  {
+    "value": "followed by on",
+    "i": 555
+  },
+  {
+    "value": "of soil",
+    "i": 556
+  },
+  {
+    "value": "of a material specimen",
+    "i": 557
+  },
+  {
+    "value": "of the eyes",
+    "i": 558
+  },
+  {
+    "value": "Greek",
+    "i": 559
+  },
+  {
+    "value": "followed by \"up\"",
+    "i": 560
+  },
+  {
+    "value": "in Arabic names",
+    "i": 561
+  },
+  {
+    "value": "in the US and the Philippines",
+    "i": 562
+  },
+  {
+    "value": "in Scotland and Guernsey",
+    "i": 563
+  },
+  {
+    "value": "of source code",
+    "i": 564
+  },
+  {
+    "value": "objective",
+    "i": 565
+  },
+  {
+    "value": "of numbers",
+    "i": 566
+  },
+  {
+    "value": "of a fielding position",
+    "i": 567
+  },
+  {
+    "value": "after 'have' and certain copulative verbs",
+    "i": 568
+  },
+  {
+    "value": "subjective",
+    "i": 569
+  },
+  {
+    "value": "gerund",
+    "i": 570
+  },
+  {
+    "value": "with do",
+    "i": 571
+  },
+  {
+    "value": "in certain collocations",
+    "i": 572
+  },
+  {
+    "value": "Ancient-Rome",
+    "i": 573
+  },
+  {
+    "value": "of a cetacean",
+    "i": 574
+  },
+  {
+    "value": "with \"up\" or with prep phrase headed by \"to\"",
+    "i": 575
+  },
+  {
+    "value": "in the negative",
+    "i": 576
+  },
+  {
+    "value": "predicative",
+    "i": 577
+  },
+  {
+    "value": "of animals",
+    "i": 578
+  },
+  {
+    "value": "of typefaces",
+    "i": 579
+  },
+  {
+    "value": "of lettuce",
+    "i": 580
+  },
+  {
+    "value": "with \"have\" or \"know\" transitively",
+    "i": 581
+  },
+  {
+    "value": "with \"have\" transitively",
+    "i": 582
+  },
+  {
+    "value": "of commercial services",
+    "i": 583
+  },
+  {
+    "value": "of software",
+    "i": 584
+  },
+  {
+    "value": "invariable",
+    "i": 585
+  },
+  {
+    "value": "of a question",
+    "i": 586
+  },
+  {
+    "value": "used uncountably",
+    "i": 587
+  },
+  {
+    "value": "with-to",
+    "i": 588
+  },
+  {
+    "value": "of a church",
+    "i": 589
+  },
+  {
+    "value": "with forth",
+    "i": 590
+  },
+  {
+    "value": "Papua-New-Guinea",
+    "i": 591
+  },
+  {
+    "value": "South-Asia",
+    "i": 592
+  },
+  {
+    "value": "Western",
+    "i": 593
+  },
+  {
+    "value": "in phrases such as 'well off'",
+    "i": 594
+  },
+  {
+    "value": "in phrases such as 'off day'",
+    "i": 595
+  },
+  {
+    "value": "in relation to a vehicle",
+    "i": 596
+  },
+  {
+    "value": "used with for",
+    "i": 597
+  },
+  {
+    "value": "abstract",
+    "i": 598
+  },
+  {
+    "value": "Japan",
+    "i": 599
+  },
+  {
+    "value": "said of people towards animals",
+    "i": 600
+  },
+  {
+    "value": "of bones",
+    "i": 601
+  },
+  {
+    "value": "of an activity or task",
+    "i": 602
+  },
+  {
+    "value": "with to or toward(s)",
+    "i": 603
+  },
+  {
+    "value": "followed by \"for\"",
+    "i": 604
+  },
+  {
+    "value": "of wind",
+    "i": 605
+  },
+  {
+    "value": "of a soup",
+    "i": 606
+  },
+  {
+    "value": "of a railway signal",
+    "i": 607
+  },
+  {
+    "value": "Chinese",
+    "i": 608
+  },
+  {
+    "value": "as \"the Phoenix\"",
+    "i": 609
+  },
+  {
+    "value": "of a drug",
+    "i": 610
+  },
+  {
+    "value": "European-Union",
+    "i": 611
+  },
+  {
+    "value": "as an adjective",
+    "i": 612
+  },
+  {
+    "value": "as a pronoun",
+    "i": 613
+  },
+  {
+    "value": "used with a plural or singular verb",
+    "i": 614
+  },
+  {
+    "value": "with the definite article",
+    "i": 615
+  },
+  {
+    "value": "of an element",
+    "i": 616
+  },
+  {
+    "value": "Roman",
+    "i": 617
+  },
+  {
+    "value": "of food and drink",
+    "i": 618
+  },
+  {
+    "value": "of an internal-combustion engine",
+    "i": 619
+  },
+  {
+    "value": "of a romantic or sexual relation",
+    "i": 620
+  },
+  {
+    "value": "of a telegram",
+    "i": 621
+  },
+  {
+    "value": "with “as” or “like”",
+    "i": 622
+  },
+  {
+    "value": "used only in the vocative",
+    "i": 623
+  },
+  {
+    "value": "of a physical object",
+    "i": 624
+  },
+  {
+    "value": "of a topic",
+    "i": 625
+  },
+  {
+    "value": "of a rate of flow",
+    "i": 626
+  },
+  {
+    "value": "of music",
+    "i": 627
+  },
+  {
+    "value": "of wines or spirits",
+    "i": 628
+  },
+  {
+    "value": "of an aircraft",
+    "i": 629
+  },
+  {
+    "value": "in combinations such as 'as many'",
+    "i": 630
+  },
+  {
+    "value": "with superlatives",
+    "i": 631
+  },
+  {
+    "value": "agent",
+    "i": 632
+  },
+  {
+    "value": "Louisiana",
+    "i": 633
+  },
+  {
+    "value": "of a woman",
+    "i": 634
+  },
+  {
+    "value": "material",
+    "i": 635
+  },
+  {
+    "value": "of waterfowl",
+    "i": 636
+  },
+  {
+    "value": "of a polyhedron",
+    "i": 637
+  },
+  {
+    "value": "British-Columbia",
+    "i": 638
+  },
+  {
+    "value": "used in passive voice",
+    "i": 639
+  },
+  {
+    "value": "with certain nouns",
+    "i": 640
+  },
+  {
+    "value": "with-past-participle",
+    "i": 641
+  },
+  {
+    "value": "with-adjective",
+    "i": 642
+  },
+  {
+    "value": "used in the negative",
+    "i": 643
+  },
+  {
+    "value": "of a jury",
+    "i": 644
+  },
+  {
+    "value": "contrastive",
+    "i": 645
+  },
+  {
+    "value": "after a verb expressing construction",
+    "i": 646
+  },
+  {
+    "value": "with preceding partitive word assumed",
+    "i": 647
+  },
+  {
+    "value": "after a noun",
+    "i": 648
+  },
+  {
+    "value": "of a hawk",
+    "i": 649
+  },
+  {
+    "value": "of alcoholic liquors",
+    "i": 650
+  },
+  {
+    "value": "Pakistan",
+    "i": 651
+  },
+  {
+    "value": "said of clothes",
+    "i": 652
+  },
+  {
+    "value": "of an asset",
+    "i": 653
+  },
+  {
+    "value": "after a negative",
+    "i": 654
+  },
+  {
+    "value": "referring to animals",
+    "i": 655
+  },
+  {
+    "value": "term-of-address",
+    "i": 656
+  },
+  {
+    "value": "of a road",
+    "i": 657
+  },
+  {
+    "value": "of a person's character",
+    "i": 658
+  },
+  {
+    "value": "familiar",
+    "i": 659
+  },
+  {
+    "value": "with positive terms",
+    "i": 660
+  },
+  {
+    "value": "Cornwall",
+    "i": 661
+  },
+  {
+    "value": "Devon",
+    "i": 662
+  },
+  {
+    "value": "common",
+    "i": 663
+  },
+  {
+    "value": "of a female",
+    "i": 664
+  },
+  {
+    "value": "in the phrase \"smudge stick\" = \"stick of incense\"",
+    "i": 665
+  },
+  {
+    "value": "in place names",
+    "i": 666
+  },
+  {
+    "value": "West-Midlands",
+    "i": 667
+  },
+  {
+    "value": "of somebody's age",
+    "i": 668
+  },
+  {
+    "value": "transitive-with-of",
+    "i": 669
+  },
+  {
+    "value": "of a city",
+    "i": 670
+  },
+  {
+    "value": "jargon",
+    "i": 671
+  },
+  {
+    "value": "of eyes",
+    "i": 672
+  },
+  {
+    "value": "in names of species",
+    "i": 673
+  },
+  {
+    "value": "followed by \"to\"",
+    "i": 674
+  },
+  {
+    "value": "in the phrase \"the going of\"",
+    "i": 675
+  },
+  {
+    "value": "after a noun phrase with a superlative",
+    "i": 676
+  },
+  {
+    "value": "of roads or tracks",
+    "i": 677
+  },
+  {
+    "value": "of a nose",
+    "i": 678
+  },
+  {
+    "value": "of a kettle etc.",
+    "i": 679
+  },
+  {
+    "value": "Canadian",
+    "i": 680
+  },
+  {
+    "value": "of a gem",
+    "i": 681
+  },
+  {
+    "value": "of a morphism f",
+    "i": 682
+  },
+  {
+    "value": "of policies and rules and their application and enforcement",
+    "i": 683
+  },
+  {
+    "value": "of muscles or parts of the body",
+    "i": 684
+  },
+  {
+    "value": "of the penis",
+    "i": 685
+  },
+  {
+    "value": "of whipping cream or egg whites",
+    "i": 686
+  },
+  {
+    "value": "of a strike",
+    "i": 687
+  },
+  {
+    "value": "of questions",
+    "i": 688
+  },
+  {
+    "value": "with a reflexive pronoun",
+    "i": 689
+  },
+  {
+    "value": "English",
+    "i": 690
+  },
+  {
+    "value": "followed by a to infinitive",
+    "i": 691
+  },
+  {
+    "value": "adverb",
+    "i": 692
+  },
+  {
+    "value": "of a country",
+    "i": 693
+  },
+  {
+    "value": "Canadian-Prairies",
+    "i": 694
+  },
+  {
+    "value": "of cloth or similar material",
+    "i": 695
+  },
+  {
+    "value": "of light",
+    "i": 696
+  },
+  {
+    "value": "of a drink",
+    "i": 697
+  },
+  {
+    "value": "of pornography",
+    "i": 698
+  },
+  {
+    "value": "of a missile",
+    "i": 699
+  },
+  {
+    "value": "of a relative other than a sibling",
+    "i": 700
+  },
+  {
+    "value": "Judaism",
+    "i": 701
+  },
+  {
+    "value": "of hair or fur",
+    "i": 702
+  },
+  {
+    "value": "Romanian",
+    "i": 703
+  },
+  {
+    "value": "rhetoric",
+    "i": 704
+  },
+  {
+    "value": "as \"on the hummer\"",
+    "i": 705
+  },
+  {
+    "value": "with \"on\"",
+    "i": 706
+  },
+  {
+    "value": "of things",
+    "i": 707
+  },
+  {
+    "value": "of technology",
+    "i": 708
+  },
+  {
+    "value": "with along",
+    "i": 709
+  },
+  {
+    "value": "of behavior",
+    "i": 710
+  },
+  {
+    "value": "of clothing or utensils",
+    "i": 711
+  },
+  {
+    "value": "with out or off",
+    "i": 712
+  },
+  {
+    "value": "of a person or thing",
+    "i": 713
+  },
+  {
+    "value": "with \"as\"",
+    "i": 714
+  },
+  {
+    "value": "of memory",
+    "i": 715
+  },
+  {
+    "value": "of air or ocean currents",
+    "i": 716
+  },
+  {
+    "value": "with rising pitch",
+    "i": 717
+  },
+  {
+    "value": "with falling pitch",
+    "i": 718
+  },
+  {
+    "value": "onomatopoeic",
+    "i": 719
+  },
+  {
+    "value": "of a company",
+    "i": 720
+  },
+  {
+    "value": "of dolphins",
+    "i": 721
+  },
+  {
+    "value": "of a body",
+    "i": 722
+  },
+  {
+    "value": "of a sailor",
+    "i": 723
+  },
+  {
+    "value": "North",
+    "i": 724
+  },
+  {
+    "value": "of a parse tree",
+    "i": 725
+  },
+  {
+    "value": "from the perspective of one on a body of water",
+    "i": 726
+  },
+  {
+    "value": "in measuring the height of horses",
+    "i": 727
+  },
+  {
+    "value": "in the negative plural",
+    "i": 728
+  },
+  {
+    "value": "New-England",
+    "i": 729
+  },
+  {
+    "value": "of an electronic device",
+    "i": 730
+  },
+  {
+    "value": "World-War-I",
+    "i": 731
+  },
+  {
+    "value": "in Python",
+    "i": 732
+  },
+  {
+    "value": "not countable",
+    "i": 733
+  },
+  {
+    "value": "contracted",
+    "i": 734
+  },
+  {
+    "value": "of a person or eyes",
+    "i": 735
+  },
+  {
+    "value": "London",
+    "i": 736
+  },
+  {
+    "value": "of points",
+    "i": 737
+  },
+  {
+    "value": "Ontario",
+    "i": 738
+  },
+  {
+    "value": "of a person or place",
+    "i": 739
+  },
+  {
+    "value": "used with the",
+    "i": 740
+  },
+  {
+    "value": "of land",
+    "i": 741
+  },
+  {
+    "value": "character",
+    "i": 742
+  },
+  {
+    "value": "of temper",
+    "i": 743
+  },
+  {
+    "value": "of sound",
+    "i": 744
+  },
+  {
+    "value": "of looks",
+    "i": 745
+  },
+  {
+    "value": "of behaviour",
+    "i": 746
+  },
+  {
+    "value": "of health",
+    "i": 747
+  },
+  {
+    "value": "of a computer",
+    "i": 748
+  },
+  {
+    "value": "repeated",
+    "i": 749
+  },
+  {
+    "value": "of code",
+    "i": 750
+  },
+  {
+    "value": "of a cargo-carrier",
+    "i": 751
+  },
+  {
+    "value": "of a vehicle or driver",
+    "i": 752
+  },
+  {
+    "value": "of an electrical storage battery",
+    "i": 753
+  },
+  {
+    "value": "hypercorrect",
+    "i": 754
+  },
+  {
+    "value": "of skin",
+    "i": 755
+  },
+  {
+    "value": "of a musical or oral performance",
+    "i": 756
+  },
+  {
+    "value": "of the tide",
+    "i": 757
+  },
+  {
+    "value": "letter",
+    "i": 758
+  },
+  {
+    "value": "uppercase",
+    "i": 759
+  },
+  {
+    "value": "number",
+    "i": 760
+  },
+  {
+    "value": "ordinal",
+    "i": 761
+  },
+  {
+    "value": "lowercase",
+    "i": 762
+  },
+  {
+    "value": "Russia",
+    "i": 763
+  },
+  {
+    "value": "in Canada",
+    "i": 764
+  },
+  {
+    "value": "of a piece of chewing gum",
+    "i": 765
+  },
+  {
+    "value": "of diffuse large B-cell lymphoma",
+    "i": 766
+  },
+  {
+    "value": "mnemonic",
+    "i": 767
+  },
+  {
+    "value": "construed with on or upon",
+    "i": 768
+  },
+  {
+    "value": "of a group",
+    "i": 769
+  },
+  {
+    "value": "Navy",
+    "i": 770
+  },
+  {
+    "value": "British-airforce",
+    "i": 771
+  },
+  {
+    "value": "infinitive",
+    "i": 772
+  },
+  {
+    "value": "with second or last",
+    "i": 773
+  },
+  {
+    "value": "short-form",
+    "i": 774
+  },
+  {
+    "value": "in Ancient Rome",
+    "i": 775
+  },
+  {
+    "value": "no-plural",
+    "i": 776
+  },
+  {
+    "value": "in Egypt",
+    "i": 777
+  },
+  {
+    "value": "of an option",
+    "i": 778
+  },
+  {
+    "value": "in pelvimetry",
+    "i": 779
+  },
+  {
+    "value": "Egyptian",
+    "i": 780
+  },
+  {
+    "value": "Nazism",
+    "i": 781
+  },
+  {
+    "value": "Norse",
+    "i": 782
+  },
+  {
+    "value": "in anatomy",
+    "i": 783
+  },
+  {
+    "value": "of the human body",
+    "i": 784
+  },
+  {
+    "value": "with capitalized initial",
+    "i": 785
+  },
+  {
+    "value": "morpheme",
+    "i": 786
+  },
+  {
+    "value": "Rastafari",
+    "i": 787
+  },
+  {
+    "value": "name",
+    "i": 788
+  },
+  {
+    "value": "from the proprietary name",
+    "i": 789
+  },
+  {
+    "value": "in certain proper names",
+    "i": 790
+  },
+  {
+    "value": "Boston",
+    "i": 791
+  },
+  {
+    "value": "Norfolk",
+    "i": 792
+  },
+  {
+    "value": "Northern-English",
+    "i": 793
+  },
+  {
+    "value": "of eggs",
+    "i": 794
+  },
+  {
+    "value": "of equestrianism",
+    "i": 795
+  },
+  {
+    "value": "Midwestern-US",
+    "i": 796
+  },
+  {
+    "value": "Northern-US",
+    "i": 797
+  },
+  {
+    "value": "after 1990",
+    "i": 798
+  },
+  {
+    "value": "Hinduism",
+    "i": 799
+  },
+  {
+    "value": "Irish",
+    "i": 800
+  },
+  {
+    "value": "of the proper noun senses",
+    "i": 801
+  },
+  {
+    "value": "Africa",
+    "i": 802
+  },
+  {
+    "value": "in certain metaphors or phrases",
+    "i": 803
+  },
+  {
+    "value": "as a combining form",
+    "i": 804
+  },
+  {
+    "value": "symbol",
+    "i": 805
+  },
+  {
+    "value": "in election results",
+    "i": 806
+  },
+  {
+    "value": "gender-neutral",
+    "i": 807
+  },
+  {
+    "value": "with qualifiers",
+    "i": 808
+  },
+  {
+    "value": "with context or qualifier",
+    "i": 809
+  },
+  {
+    "value": "of people and their feelings",
+    "i": 810
+  },
+  {
+    "value": "of medicines or remedies",
+    "i": 811
+  },
+  {
+    "value": "of a scale",
+    "i": 812
+  },
+  {
+    "value": "as chances",
+    "i": 813
+  },
+  {
+    "value": "with \"right\" and/or \"proper\"",
+    "i": 814
+  },
+  {
+    "value": "of cars",
+    "i": 815
+  },
+  {
+    "value": "California",
+    "i": 816
+  },
+  {
+    "value": "in phrases",
+    "i": 817
+  },
+  {
+    "value": "of film and video lighting",
+    "i": 818
+  },
+  {
+    "value": "with either plural",
+    "i": 819
+  },
+  {
+    "value": "used by the traveller community",
+    "i": 820
+  },
+  {
+    "value": "in construction",
+    "i": 821
+  },
+  {
+    "value": "of a lion",
+    "i": 822
+  },
+  {
+    "value": "in the general sense",
+    "i": 823
+  },
+  {
+    "value": "British-Royal-Navy",
+    "i": 824
+  },
+  {
+    "value": "from Christ's bearing of the cross",
+    "i": 825
+  },
+  {
+    "value": "with “The”",
+    "i": 826
+  },
+  {
+    "value": "Northumbria",
+    "i": 827
+  },
+  {
+    "value": "Brunei",
+    "i": 828
+  },
+  {
+    "value": "demonym",
+    "i": 829
+  },
+  {
+    "value": "followed by of-phrase",
+    "i": 830
+  },
+  {
+    "value": "Space-Force",
+    "i": 831
+  },
+  {
+    "value": "Eastern",
+    "i": 832
+  },
+  {
+    "value": "Cumbria",
+    "i": 833
+  },
+  {
+    "value": "of souls",
+    "i": 834
+  },
+  {
+    "value": "Teesside",
+    "i": 835
+  },
+  {
+    "value": "epicene",
+    "i": 836
+  },
+  {
+    "value": "in LGBT contexts",
+    "i": 837
+  },
+  {
+    "value": "said of an action or an utterance",
+    "i": 838
+  },
+  {
+    "value": "with a positive sense",
+    "i": 839
+  },
+  {
+    "value": "said of a person or a person's character",
+    "i": 840
+  },
+  {
+    "value": "Quebec",
+    "i": 841
+  },
+  {
+    "value": "from 1890",
+    "i": 842
+  },
+  {
+    "value": "used with His",
+    "i": 843
+  },
+  {
+    "value": "of cows",
+    "i": 844
+  },
+  {
+    "value": "used in academic debate and role-playing games",
+    "i": 845
+  },
+  {
+    "value": "as two words",
+    "i": 846
+  },
+  {
+    "value": "South",
+    "i": 847
+  },
+  {
+    "value": "of a movie",
+    "i": 848
+  },
+  {
+    "value": "for a medical or pharmacy item",
+    "i": 849
+  },
+  {
+    "value": "of a romantic or sexual act or relationship",
+    "i": 850
+  },
+  {
+    "value": "of an institution or group",
+    "i": 851
+  },
+  {
+    "value": "of appearance or behavior",
+    "i": 852
+  },
+  {
+    "value": "pejorative",
+    "i": 853
+  },
+  {
+    "value": "of a dog's tail",
+    "i": 854
+  },
+  {
+    "value": "Caithness",
+    "i": 855
+  },
+  {
+    "value": "Orkney",
+    "i": 856
+  },
+  {
+    "value": "Shetland",
+    "i": 857
+  },
+  {
+    "value": "in the Kent dialect",
+    "i": 858
+  },
+  {
+    "value": "of behaviour considered to be wrong",
+    "i": 859
+  },
+  {
+    "value": "of an amount",
+    "i": 860
+  },
+  {
+    "value": "of a product",
+    "i": 861
+  },
+  {
+    "value": "in statistics",
+    "i": 862
+  },
+  {
+    "value": "in job listings",
+    "i": 863
+  },
+  {
+    "value": "Indonesia",
+    "i": 864
+  },
+  {
+    "value": "South-Korea",
+    "i": 865
+  },
+  {
+    "value": "of a cycle/path",
+    "i": 866
+  },
+  {
+    "value": "of a graph",
+    "i": 867
+  },
+  {
+    "value": "of certain fiscal policies",
+    "i": 868
+  },
+  {
+    "value": "Ulster",
+    "i": 869
+  },
+  {
+    "value": "with a qualifier",
+    "i": 870
+  },
+  {
+    "value": "Southwestern",
+    "i": 871
+  },
+  {
+    "value": "in the phrase \"under the hood\"",
+    "i": 872
+  },
+  {
+    "value": "of something offered or given in an exchange",
+    "i": 873
+  },
+  {
+    "value": "after a verb",
+    "i": 874
+  },
+  {
+    "value": "of the ball or other playing implement",
+    "i": 875
+  },
+  {
+    "value": "of the sails of a vessel",
+    "i": 876
+  },
+  {
+    "value": "of fire or fuel",
+    "i": 877
+  },
+  {
+    "value": "in modern use",
+    "i": 878
+  },
+  {
+    "value": "of foods",
+    "i": 879
+  },
+  {
+    "value": "Vedic",
+    "i": 880
+  },
+  {
+    "value": "of an aperture",
+    "i": 881
+  },
+  {
+    "value": "as plural",
+    "i": 882
+  },
+  {
+    "value": "in Protestantism",
+    "i": 883
+  },
+  {
+    "value": "New-Jersey",
+    "i": 884
+  },
+  {
+    "value": "in noun compounds",
+    "i": 885
+  },
+  {
+    "value": "with out",
+    "i": 886
+  },
+  {
+    "value": "from Jamaican Creole",
+    "i": 887
+  },
+  {
+    "value": "as postpositioned adjective",
+    "i": 888
+  },
+  {
+    "value": "as a modifier",
+    "i": 889
+  },
+  {
+    "value": "Philippine",
+    "i": 890
+  },
+  {
+    "value": "with a professional title",
+    "i": 891
+  },
+  {
+    "value": "Florida",
+    "i": 892
+  },
+  {
+    "value": "Hawaii",
+    "i": 893
+  },
+  {
+    "value": "used in street names",
+    "i": 894
+  },
+  {
+    "value": "outside-Northumbria",
+    "i": 895
+  },
+  {
+    "value": "of an object taller than its width and depth",
+    "i": 896
+  },
+  {
+    "value": "in full liege lord",
+    "i": 897
+  },
+  {
+    "value": "of a ball or a shot",
+    "i": 898
+  },
+  {
+    "value": "of money",
+    "i": 899
+  },
+  {
+    "value": "with \"his\" or \"your\"",
+    "i": 900
+  },
+  {
+    "value": "definite",
+    "i": 901
+  },
+  {
+    "value": "in batting figures",
+    "i": 902
+  },
+  {
+    "value": "in bowling figures",
+    "i": 903
+  },
+  {
+    "value": "China",
+    "i": 904
+  },
+  {
+    "value": "Thailand",
+    "i": 905
+  },
+  {
+    "value": "in compound terms such as \"moral mafia\"",
+    "i": 906
+  },
+  {
+    "value": "Sunni",
+    "i": 907
+  },
+  {
+    "value": "strict-sense",
+    "i": 908
+  },
+  {
+    "value": "of bacteria",
+    "i": 909
+  },
+  {
+    "value": "in New Zealand",
+    "i": 910
+  },
+  {
+    "value": "European",
+    "i": 911
+  },
+  {
+    "value": "normally with a preposition",
+    "i": 912
+  },
+  {
+    "value": "with a definite article",
+    "i": 913
+  },
+  {
+    "value": "of science",
+    "i": 914
+  },
+  {
+    "value": "followed by around",
+    "i": 915
+  },
+  {
+    "value": "of air-breathing creatures",
+    "i": 916
+  },
+  {
+    "value": "of a whale",
+    "i": 917
+  },
+  {
+    "value": "Latin-America",
+    "i": 918
+  },
+  {
+    "value": "of an individual",
+    "i": 919
+  },
+  {
+    "value": "Texas",
+    "i": 920
+  },
+  {
+    "value": "from 1975",
+    "i": 921
+  },
+  {
+    "value": "from the 16th century",
+    "i": 922
+  },
+  {
+    "value": "standard",
+    "i": 923
+  },
+  {
+    "value": "South-African",
+    "i": 924
+  },
+  {
+    "value": "with capital initial",
+    "i": 925
+  },
+  {
+    "value": "as “the Nazarene”",
+    "i": 926
+  },
+  {
+    "value": "of a fluid",
+    "i": 927
+  },
+  {
+    "value": "Unix",
+    "i": 928
+  },
+  {
+    "value": "Jewish",
+    "i": 929
+  },
+  {
+    "value": "synecdoche",
+    "i": 930
+  },
+  {
+    "value": "followed by a preposition such as \"to\" or \"on\"",
+    "i": 931
+  },
+  {
+    "value": "of a job",
+    "i": 932
+  },
+  {
+    "value": "with “through”",
+    "i": 933
+  },
+  {
+    "value": "of a contest",
+    "i": 934
+  },
+  {
+    "value": "with \"around\" or \"about\"",
+    "i": 935
+  },
+  {
+    "value": "in combinations",
+    "i": 936
+  },
+  {
+    "value": "non-scientific",
+    "i": 937
+  },
+  {
+    "value": "followed by dummy subject it",
+    "i": 938
+  },
+  {
+    "value": "of schools",
+    "i": 939
+  },
+  {
+    "value": "in linguistics",
+    "i": 940
+  },
+  {
+    "value": "of cattle",
+    "i": 941
+  },
+  {
+    "value": "disapproving",
+    "i": 942
+  },
+  {
+    "value": "followed by an ayah (verse) number",
+    "i": 943
+  },
+  {
+    "value": "in university catalogs",
+    "i": 944
+  },
+  {
+    "value": "Jainism",
+    "i": 945
+  },
+  {
+    "value": "used with \"of\"",
+    "i": 946
+  },
+  {
+    "value": "of ore etc.",
+    "i": 947
+  },
+  {
+    "value": "Uganda",
+    "i": 948
+  },
+  {
+    "value": "of type",
+    "i": 949
+  },
+  {
+    "value": "of text",
+    "i": 950
+  },
+  {
+    "value": "of type or text",
+    "i": 951
+  },
+  {
+    "value": "of teachings",
+    "i": 952
+  },
+  {
+    "value": "Indo-European-studies",
+    "i": 953
+  },
+  {
+    "value": "in the works of Markus van Boxhorn",
+    "i": 954
+  },
+  {
+    "value": "Nepal",
+    "i": 955
+  },
+  {
+    "value": "as in set out",
+    "i": 956
+  },
+  {
+    "value": "followed by \"out\"",
+    "i": 957
+  },
+  {
+    "value": "of fruit",
+    "i": 958
+  },
+  {
+    "value": "of a fielder or fielding position",
+    "i": 959
+  },
+  {
+    "value": "of an approach shot or putt",
+    "i": 960
+  },
+  {
+    "value": "of pastries",
+    "i": 961
+  },
+  {
+    "value": "of the manner of bounce of a cricket ball",
+    "i": 962
+  },
+  {
+    "value": "of an electrical circuit",
+    "i": 963
+  },
+  {
+    "value": "with The",
+    "i": 964
+  },
+  {
+    "value": "of a disease or symptom",
+    "i": 965
+  },
+  {
+    "value": "of an argument",
+    "i": 966
+  },
+  {
+    "value": "of a perceived color",
+    "i": 967
+  },
+  {
+    "value": "in multiple unit formations",
+    "i": 968
+  },
+  {
+    "value": "Cebu",
+    "i": 969
+  },
+  {
+    "value": "Rhodesia",
+    "i": 970
+  },
+  {
+    "value": "determiner",
+    "i": 971
+  },
+  {
+    "value": "possessive",
+    "i": 972
+  },
+  {
+    "value": "in similes",
+    "i": 973
+  },
+  {
+    "value": "with give",
+    "i": 974
+  },
+  {
+    "value": "Latin",
+    "i": 975
+  },
+  {
+    "value": "misconstruction",
+    "i": 976
+  },
+  {
+    "value": "of a text",
+    "i": 977
+  },
+  {
+    "value": "from noun sense 5",
+    "i": 978
+  },
+  {
+    "value": "Church-of-England",
+    "i": 979
+  },
+  {
+    "value": "with \"spin\"",
+    "i": 980
+  },
+  {
+    "value": "with plural construction",
+    "i": 981
+  },
+  {
+    "value": "with singular construction",
+    "i": 982
+  },
+  {
+    "value": "of religion",
+    "i": 983
+  },
+  {
+    "value": "Early",
+    "i": 984
+  },
+  {
+    "value": "Modern",
+    "i": 985
+  },
+  {
+    "value": "with a negative connotation",
+    "i": 986
+  },
+  {
+    "value": "of a disease",
+    "i": 987
+  },
+  {
+    "value": "with 'to' and verb infinitive",
+    "i": 988
+  },
+  {
+    "value": "with present participle",
+    "i": 989
+  },
+  {
+    "value": "of bee colonies",
+    "i": 990
+  },
+  {
+    "value": "of a case form",
+    "i": 991
+  },
+  {
+    "value": "of an adjective or possessive pronoun",
+    "i": 992
+  },
+  {
+    "value": "of a comparative or superlative",
+    "i": 993
+  },
+  {
+    "value": "of an adjective form",
+    "i": 994
+  },
+  {
+    "value": "of a usually transitive verb",
+    "i": 995
+  },
+  {
+    "value": "of Celtic languages",
+    "i": 996
+  },
+  {
+    "value": "of a state",
+    "i": 997
+  },
+  {
+    "value": "of a class",
+    "i": 998
+  },
+  {
+    "value": "without reference to any specific academy",
+    "i": 999
+  },
+  {
+    "value": "of an eye",
+    "i": 1000
+  },
+  {
+    "value": "of a goal or status",
+    "i": 1001
+  },
+  {
+    "value": "used in the US",
+    "i": 1002
+  },
+  {
+    "value": "followed by of or that",
+    "i": 1003
+  },
+  {
+    "value": "with in (or sometimes with, to)",
+    "i": 1004
+  },
+  {
+    "value": "of certain geological features",
+    "i": 1005
+  },
+  {
+    "value": "of an angle",
+    "i": 1006
+  },
+  {
+    "value": "of a triangle",
+    "i": 1007
+  },
+  {
+    "value": "of the senses or feelings",
+    "i": 1008
+  },
+  {
+    "value": "said of people and their conviction",
+    "i": 1009
+  },
+  {
+    "value": "of a function",
+    "i": 1010
+  },
+  {
+    "value": "relational",
+    "i": 1011
+  },
+  {
+    "value": "of a process",
+    "i": 1012
+  },
+  {
+    "value": "in Spanish contexts",
+    "i": 1013
+  },
+  {
+    "value": "of a dye",
+    "i": 1014
+  },
+  {
+    "value": "as a participle",
+    "i": 1015
+  },
+  {
+    "value": "of a meeting",
+    "i": 1016
+  },
+  {
+    "value": "of a seaman",
+    "i": 1017
+  },
+  {
+    "value": "of a beverage",
+    "i": 1018
+  },
+  {
+    "value": "of a cookie",
+    "i": 1019
+  },
+  {
+    "value": "of a clock or watch",
+    "i": 1020
+  },
+  {
+    "value": "of an act or product",
+    "i": 1021
+  },
+  {
+    "value": "of a course of action",
+    "i": 1022
+  },
+  {
+    "value": "in higher courts",
+    "i": 1023
+  },
+  {
+    "value": "of an action",
+    "i": 1024
+  },
+  {
+    "value": "said of an illegitimate child",
+    "i": 1025
+  },
+  {
+    "value": "followed by \"to\" or \"with\"",
+    "i": 1026
+  },
+  {
+    "value": "of an emotional state",
+    "i": 1027
+  },
+  {
+    "value": "of wine",
+    "i": 1028
+  },
+  {
+    "value": "of a letter",
+    "i": 1029
+  },
+  {
+    "value": "of a tumour or disease",
+    "i": 1030
+  },
+  {
+    "value": "of a solution or substance",
+    "i": 1031
+  },
+  {
+    "value": "with a prepositional phrase",
+    "i": 1032
+  },
+  {
+    "value": "of a software component etc.",
+    "i": 1033
+  },
+  {
+    "value": "adverbial",
+    "i": 1034
+  },
+  {
+    "value": "of a normally floating craft",
+    "i": 1035
+  },
+  {
+    "value": "of a complaint or problem",
+    "i": 1036
+  },
+  {
+    "value": "of a show",
+    "i": 1037
+  },
+  {
+    "value": "of a room or building",
+    "i": 1038
+  },
+  {
+    "value": "of electrical wiring",
+    "i": 1039
+  },
+  {
+    "value": "in the construction \"alive to\"",
+    "i": 1040
+  },
+  {
+    "value": "intensifier",
+    "i": 1041
+  },
+  {
+    "value": "of an expression",
+    "i": 1042
+  },
+  {
+    "value": "of a field",
+    "i": 1043
+  },
+  {
+    "value": "of notation",
+    "i": 1044
+  },
+  {
+    "value": "of two signals",
+    "i": 1045
+  },
+  {
+    "value": "followed by \"from\"",
+    "i": 1046
+  },
+  {
+    "value": "of paint or other coatings",
+    "i": 1047
+  },
+  {
+    "value": "of person",
+    "i": 1048
+  },
+  {
+    "value": "of leaves",
+    "i": 1049
+  },
+  {
+    "value": "of a series",
+    "i": 1050
+  },
+  {
+    "value": "of a multilinear mapping with all arguments belonging to the same space",
+    "i": 1051
+  },
+  {
+    "value": "of a person or their character",
+    "i": 1052
+  },
+  {
+    "value": "followed by \"of\" or the infinitive",
+    "i": 1053
+  },
+  {
+    "value": "of a document",
+    "i": 1054
+  },
+  {
+    "value": "of acts",
+    "i": 1055
+  },
+  {
+    "value": "as pronoun",
+    "i": 1056
+  },
+  {
+    "value": "with a complement",
+    "i": 1057
+  },
+  {
+    "value": "of words",
+    "i": 1058
+  },
+  {
+    "value": "of a vein",
+    "i": 1059
+  },
+  {
+    "value": "in pornography",
+    "i": 1060
+  },
+  {
+    "value": "of medicine",
+    "i": 1061
+  },
+  {
+    "value": "of a device or system",
+    "i": 1062
+  },
+  {
+    "value": "of a proposition",
+    "i": 1063
+  },
+  {
+    "value": "of a connector or docking port",
+    "i": 1064
+  },
+  {
+    "value": "said about a wound or a rash",
+    "i": 1065
+  },
+  {
+    "value": "said about the elements",
+    "i": 1066
+  },
+  {
+    "value": "of a noun or pronoun",
+    "i": 1067
+  },
+  {
+    "value": "in the sense of a cartoon",
+    "i": 1068
+  },
+  {
+    "value": "of movement",
+    "i": 1069
+  },
+  {
+    "value": "after a noun or in the predicate",
+    "i": 1070
+  },
+  {
+    "value": "of a right circular cone",
+    "i": 1071
+  },
+  {
+    "value": "of a meristem",
+    "i": 1072
+  },
+  {
+    "value": "in UK",
+    "i": 1073
+  },
+  {
+    "value": "specific",
+    "i": 1074
+  },
+  {
+    "value": "of a politician or a title",
+    "i": 1075
+  },
+  {
+    "value": "of persons or things",
+    "i": 1076
+  },
+  {
+    "value": "of a decision",
+    "i": 1077
+  },
+  {
+    "value": "of a weapon",
+    "i": 1078
+  },
+  {
+    "value": "of a creature",
+    "i": 1079
+  },
+  {
+    "value": "of abstract things",
+    "i": 1080
+  },
+  {
+    "value": "with the verb \"to be\"",
+    "i": 1081
+  },
+  {
+    "value": "with turn",
+    "i": 1082
+  },
+  {
+    "value": "of a marriage",
+    "i": 1083
+  },
+  {
+    "value": "used in the passive",
+    "i": 1084
+  },
+  {
+    "value": "of a look or glance",
+    "i": 1085
+  },
+  {
+    "value": "in citation",
+    "i": 1086
+  },
+  {
+    "value": "of a planet",
+    "i": 1087
+  },
+  {
+    "value": "French",
+    "i": 1088
+  },
+  {
+    "value": "used with \"to\" or \"with\"",
+    "i": 1089
+  },
+  {
+    "value": "in deliberative bodies",
+    "i": 1090
+  },
+  {
+    "value": "of a binary operator *",
+    "i": 1091
+  },
+  {
+    "value": "of linked components",
+    "i": 1092
+  },
+  {
+    "value": "followed by that or of",
+    "i": 1093
+  },
+  {
+    "value": "of a request or a message",
+    "i": 1094
+  },
+  {
+    "value": "of a commit in a VCS",
+    "i": 1095
+  },
+  {
+    "value": "of an operation",
+    "i": 1096
+  },
+  {
+    "value": "of a goal",
+    "i": 1097
+  },
+  {
+    "value": "of a language",
+    "i": 1098
+  },
+  {
+    "value": "of a word or phrase",
+    "i": 1099
+  },
+  {
+    "value": "of a musical instrument",
+    "i": 1100
+  },
+  {
+    "value": "in a theater",
+    "i": 1101
+  },
+  {
+    "value": "of a firearm such as a machine gun",
+    "i": 1102
+  },
+  {
+    "value": "of a handgun",
+    "i": 1103
+  },
+  {
+    "value": "of a local variable",
+    "i": 1104
+  },
+  {
+    "value": "of a verb form",
+    "i": 1105
+  },
+  {
+    "value": "in imitation of pirates",
+    "i": 1106
+  },
+  {
+    "value": "of a set of numbers",
+    "i": 1107
+  },
+  {
+    "value": "Dutch",
+    "i": 1108
+  },
+  {
+    "value": "after a preposition",
+    "i": 1109
+  },
+  {
+    "value": "Europe",
+    "i": 1110
+  },
+  {
+    "value": "Trinidad-and-Tobago",
+    "i": 1111
+  },
+  {
+    "value": "of the wind",
+    "i": 1112
+  },
+  {
+    "value": "of a square sail",
+    "i": 1113
+  },
+  {
+    "value": "of an anchor",
+    "i": 1114
+  },
+  {
+    "value": "of a hunting dog",
+    "i": 1115
+  },
+  {
+    "value": "of a justice of the peace",
+    "i": 1116
+  },
+  {
+    "value": "of a gun",
+    "i": 1117
+  },
+  {
+    "value": "of a reciprocating engine",
+    "i": 1118
+  },
+  {
+    "value": "of handwriting",
+    "i": 1119
+  },
+  {
+    "value": "of strokes or throws",
+    "i": 1120
+  },
+  {
+    "value": "of writing",
+    "i": 1121
+  },
+  {
+    "value": "of breath",
+    "i": 1122
+  },
+  {
+    "value": "of a need",
+    "i": 1123
+  },
+  {
+    "value": "with possessive determiner",
+    "i": 1124
+  },
+  {
+    "value": "of an offence",
+    "i": 1125
+  },
+  {
+    "value": "as the head of a compound",
+    "i": 1126
+  },
+  {
+    "value": "East-Anglia",
+    "i": 1127
+  },
+  {
+    "value": "of a statement or account",
+    "i": 1128
+  },
+  {
+    "value": "of a signal",
+    "i": 1129
+  },
+  {
+    "value": "with \"in\"",
+    "i": 1130
+  },
+  {
+    "value": "of language",
+    "i": 1131
+  },
+  {
+    "value": "said of language",
+    "i": 1132
+  },
+  {
+    "value": "of a sports team",
+    "i": 1133
+  },
+  {
+    "value": "of a performance",
+    "i": 1134
+  },
+  {
+    "value": "of people and animals",
+    "i": 1135
+  },
+  {
+    "value": "of places",
+    "i": 1136
+  },
+  {
+    "value": "Dominican-Republic",
+    "i": 1137
+  },
+  {
+    "value": "Venezuela",
+    "i": 1138
+  },
+  {
+    "value": "Marxism",
+    "i": 1139
+  },
+  {
+    "value": "of a metal",
+    "i": 1140
+  },
+  {
+    "value": "referring specifically to a man",
+    "i": 1141
+  },
+  {
+    "value": "of the rim of a firearm cartridge",
+    "i": 1142
+  },
+  {
+    "value": "in phrases such as 'get one's bearings'",
+    "i": 1143
+  },
+  {
+    "value": "of the price of financial instruments",
+    "i": 1144
+  },
+  {
+    "value": "in Commonwealth English",
+    "i": 1145
+  },
+  {
+    "value": "in haggling for a price of a buyer",
+    "i": 1146
+  },
+  {
+    "value": "with a directional preposition",
+    "i": 1147
+  },
+  {
+    "value": "in postal addresses",
+    "i": 1148
+  },
+  {
+    "value": "in the meat industry",
+    "i": 1149
+  },
+  {
+    "value": "of a watch or clock",
+    "i": 1150
+  },
+  {
+    "value": "of a task or the object of a task",
+    "i": 1151
+  },
+  {
+    "value": "with 'to'",
+    "i": 1152
+  },
+  {
+    "value": "of an army",
+    "i": 1153
+  },
+  {
+    "value": "of a pipe or tube",
+    "i": 1154
+  },
+  {
+    "value": "of a temperature",
+    "i": 1155
+  },
+  {
+    "value": "normally belt out",
+    "i": 1156
+  },
+  {
+    "value": "of a garment",
+    "i": 1157
+  },
+  {
+    "value": "of animals etc.",
+    "i": 1158
+  },
+  {
+    "value": "followed by at",
+    "i": 1159
+  },
+  {
+    "value": "followed by against",
+    "i": 1160
+  },
+  {
+    "value": "with \"down\"",
+    "i": 1161
+  },
+  {
+    "value": "of a climate or environment",
+    "i": 1162
+  },
+  {
+    "value": "of rain",
+    "i": 1163
+  },
+  {
+    "value": "Atlantic-Canada",
+    "i": 1164
+  },
+  {
+    "value": "of a correcting lens",
+    "i": 1165
+  },
+  {
+    "value": "of a spouse",
+    "i": 1166
+  },
+  {
+    "value": "used by children",
+    "i": 1167
+  },
+  {
+    "value": "of a residence",
+    "i": 1168
+  },
+  {
+    "value": "of an agreement",
+    "i": 1169
+  },
+  {
+    "value": "of a householder etc.",
+    "i": 1170
+  },
+  {
+    "value": "of a soldier",
+    "i": 1171
+  },
+  {
+    "value": "of fuel",
+    "i": 1172
+  },
+  {
+    "value": "of a biological organism",
+    "i": 1173
+  },
+  {
+    "value": "of an agreement or contract",
+    "i": 1174
+  },
+  {
+    "value": "of humans or other animals",
+    "i": 1175
+  },
+  {
+    "value": "used with a possessive pronoun",
+    "i": 1176
+  },
+  {
+    "value": "in parts of French North Africa",
+    "i": 1177
+  },
+  {
+    "value": "of objects",
+    "i": 1178
+  },
+  {
+    "value": "in chess and similar games",
+    "i": 1179
+  },
+  {
+    "value": "used only of men",
+    "i": 1180
+  },
+  {
+    "value": "in the expression ‘shooting blanks’",
+    "i": 1181
+  },
+  {
+    "value": "of a control surface",
+    "i": 1182
+  },
+  {
+    "value": "of a tree",
+    "i": 1183
+  },
+  {
+    "value": "of corals",
+    "i": 1184
+  },
+  {
+    "value": "of eyes or vision",
+    "i": 1185
+  },
+  {
+    "value": "of an image",
+    "i": 1186
+  },
+  {
+    "value": "of the eye",
+    "i": 1187
+  },
+  {
+    "value": "in-certain-phrases",
+    "i": 1188
+  },
+  {
+    "value": "with 'bake'",
+    "i": 1189
+  },
+  {
+    "value": "of a bus",
+    "i": 1190
+  },
+  {
+    "value": "of snow",
+    "i": 1191
+  },
+  {
+    "value": "numeral",
+    "i": 1192
+  },
+  {
+    "value": "of a computer account or similar",
+    "i": 1193
+  },
+  {
+    "value": "followed by well",
+    "i": 1194
+  },
+  {
+    "value": "of glass",
+    "i": 1195
+  },
+  {
+    "value": "of a woman's hair or dress",
+    "i": 1196
+  },
+  {
+    "value": "of a structure",
+    "i": 1197
+  },
+  {
+    "value": "followed by \"well\"",
+    "i": 1198
+  },
+  {
+    "value": "in the world of entertainment",
+    "i": 1199
+  },
+  {
+    "value": "of a rat",
+    "i": 1200
+  },
+  {
+    "value": "of adjectives associated with heat",
+    "i": 1201
+  },
+  {
+    "value": "taboo",
+    "i": 1202
+  },
+  {
+    "value": "used as singular",
+    "i": 1203
+  },
+  {
+    "value": "of a garment such as a corset or basque",
+    "i": 1204
+  },
+  {
+    "value": "in composition",
+    "i": 1205
+  },
+  {
+    "value": "of clothing or a person",
+    "i": 1206
+  },
+  {
+    "value": "of speech",
+    "i": 1207
+  },
+  {
+    "value": "in boon companion",
+    "i": 1208
+  },
+  {
+    "value": "of an event",
+    "i": 1209
+  },
+  {
+    "value": "of a poset X with partial order ≤",
+    "i": 1210
+  },
+  {
+    "value": "of a gift",
+    "i": 1211
+  },
+  {
+    "value": "in the UK",
+    "i": 1212
+  },
+  {
+    "value": "of multiple figures of the same form",
+    "i": 1213
+  },
+  {
+    "value": "of a stream",
+    "i": 1214
+  },
+  {
+    "value": "of a wheel",
+    "i": 1215
+  },
+  {
+    "value": "of people or behaviour",
+    "i": 1216
+  },
+  {
+    "value": "of actions",
+    "i": 1217
+  },
+  {
+    "value": "used as a singular or plural noun",
+    "i": 1218
+  },
+  {
+    "value": "of the sea",
+    "i": 1219
+  },
+  {
+    "value": "of a baby",
+    "i": 1220
+  },
+  {
+    "value": "of a consonant or vowel",
+    "i": 1221
+  },
+  {
+    "value": "of air",
+    "i": 1222
+  },
+  {
+    "value": "of birth",
+    "i": 1223
+  },
+  {
+    "value": "as breed up",
+    "i": 1224
+  },
+  {
+    "value": "of fish",
+    "i": 1225
+  },
+  {
+    "value": "of a colour",
+    "i": 1226
+  },
+  {
+    "value": "of a voice or sound",
+    "i": 1227
+  },
+  {
+    "value": "of a system",
+    "i": 1228
+  },
+  {
+    "value": "of an accent",
+    "i": 1229
+  },
+  {
+    "value": "of a bone or body part",
+    "i": 1230
+  },
+  {
+    "value": "of a line",
+    "i": 1231
+  },
+  {
+    "value": "of the sky",
+    "i": 1232
+  },
+  {
+    "value": "of a melody",
+    "i": 1233
+  },
+  {
+    "value": "of a promise",
+    "i": 1234
+  },
+  {
+    "value": "of an electronic connection",
+    "i": 1235
+  },
+  {
+    "value": "of a tactic or option",
+    "i": 1236
+  },
+  {
+    "value": "of a bird",
+    "i": 1237
+  },
+  {
+    "value": "of a superheated liquid",
+    "i": 1238
+  },
+  {
+    "value": "of a cat",
+    "i": 1239
+  },
+  {
+    "value": "followed by \"to go to...\"",
+    "i": 1240
+  },
+  {
+    "value": "used in combination with an adjective",
+    "i": 1241
+  },
+  {
+    "value": "with 'of'",
+    "i": 1242
+  },
+  {
+    "value": "from butcher's hook",
+    "i": 1243
+  },
+  {
+    "value": "as \"butt of (a) joke\"",
+    "i": 1244
+  },
+  {
+    "value": "of the point of divergence of an alternate history scenario",
+    "i": 1245
+  },
+  {
+    "value": "Shropshire",
+    "i": 1246
+  },
+  {
+    "value": "said of lips",
+    "i": 1247
+  },
+  {
+    "value": "of a propeller",
+    "i": 1248
+  },
+  {
+    "value": "in genealogy",
+    "i": 1249
+  },
+  {
+    "value": "in communism",
+    "i": 1250
+  },
+  {
+    "value": "Classical",
+    "i": 1251
+  },
+  {
+    "value": "of a pipe",
+    "i": 1252
+  },
+  {
+    "value": "of a brick",
+    "i": 1253
+  },
+  {
+    "value": "of an ice shelf",
+    "i": 1254
+  },
+  {
+    "value": "of an iceberg",
+    "i": 1255
+  },
+  {
+    "value": "of a mail item",
+    "i": 1256
+  },
+  {
+    "value": "in jargon and non-native speakers' English",
+    "i": 1257
+  },
+  {
+    "value": "of a parachute",
+    "i": 1258
+  },
+  {
+    "value": "of a horse or elephant",
+    "i": 1259
+  },
+  {
+    "value": "of knots",
+    "i": 1260
+  },
+  {
+    "value": "of a room in a building",
+    "i": 1261
+  },
+  {
+    "value": "of railway carriage",
+    "i": 1262
+  },
+  {
+    "value": "of a vertebrate animal",
+    "i": 1263
+  },
+  {
+    "value": "of fire",
+    "i": 1264
+  },
+  {
+    "value": "of a tune or phrase",
+    "i": 1265
+  },
+  {
+    "value": "of a person or remark",
+    "i": 1266
+  },
+  {
+    "value": "Israel",
+    "i": 1267
+  },
+  {
+    "value": "Zimbabwe",
+    "i": 1268
+  },
+  {
+    "value": "of storage media or the data on them",
+    "i": 1269
+  },
+  {
+    "value": "of a satellite's orbit",
+    "i": 1270
+  },
+  {
+    "value": "of organic material",
+    "i": 1271
+  },
+  {
+    "value": "of an unstable atom",
+    "i": 1272
+  },
+  {
+    "value": "of a quantum system",
+    "i": 1273
+  },
+  {
+    "value": "Ancient-China",
+    "i": 1274
+  },
+  {
+    "value": "of a nerve impulse",
+    "i": 1275
+  },
+  {
+    "value": "of textiles",
+    "i": 1276
+  },
+  {
+    "value": "of data items",
+    "i": 1277
+  },
+  {
+    "value": "of a species",
+    "i": 1278
+  },
+  {
+    "value": "as of a dead person",
+    "i": 1279
+  },
+  {
+    "value": "of a spirit",
+    "i": 1280
+  },
+  {
+    "value": "of a battery or a device containing a battery",
+    "i": 1281
+  },
+  {
+    "value": "of expenses etc.",
+    "i": 1282
+  },
+  {
+    "value": "of an offense",
+    "i": 1283
+  },
+  {
+    "value": "of character",
+    "i": 1284
+  },
+  {
+    "value": "of a record or artist",
+    "i": 1285
+  },
+  {
+    "value": "in a noun phrase with another noun which is either an agent or action",
+    "i": 1286
+  },
+  {
+    "value": "Harry-Potter",
+    "i": 1287
+  },
+  {
+    "value": "of teeth",
+    "i": 1288
+  },
+  {
+    "value": "of an action or tactic in a game of skill",
+    "i": 1289
+  },
+  {
+    "value": "used with \"off\"",
+    "i": 1290
+  },
+  {
+    "value": "as a printing error",
+    "i": 1291
+  },
+  {
+    "value": "of baggage",
+    "i": 1292
+  },
+  {
+    "value": "of swimwear",
+    "i": 1293
+  },
+  {
+    "value": "of a cough or cold",
+    "i": 1294
+  },
+  {
+    "value": "of black people",
+    "i": 1295
+  },
+  {
+    "value": "Standard",
+    "i": 1296
+  },
+  {
+    "value": "of wood",
+    "i": 1297
+  },
+  {
+    "value": "of chirp",
+    "i": 1298
+  },
+  {
+    "value": "in the past participle",
+    "i": 1299
+  },
+  {
+    "value": "Christian",
+    "i": 1300
+  },
+  {
+    "value": "of a duct",
+    "i": 1301
+  },
+  {
+    "value": "of the surface of water",
+    "i": 1302
+  },
+  {
+    "value": "of chuckle",
+    "i": 1303
+  },
+  {
+    "value": "of a customer",
+    "i": 1304
+  },
+  {
+    "value": "in “Cinnabar Panacea”",
+    "i": 1305
+  },
+  {
+    "value": "indirect",
+    "i": 1306
+  },
+  {
+    "value": "of people or speech",
+    "i": 1307
+  },
+  {
+    "value": "of a person or lodge",
+    "i": 1308
+  },
+  {
+    "value": "in games or sports",
+    "i": 1309
+  },
+  {
+    "value": "of clothes",
+    "i": 1310
+  },
+  {
+    "value": "of events",
+    "i": 1311
+  },
+  {
+    "value": "of clean",
+    "i": 1312
+  },
+  {
+    "value": "Bahamas",
+    "i": 1313
+  },
+  {
+    "value": "Quakerism",
+    "i": 1314
+  },
+  {
+    "value": "of objects or actions",
+    "i": 1315
+  },
+  {
+    "value": "of an Aboriginal Australian",
+    "i": 1316
+  },
+  {
+    "value": "with preposition to",
+    "i": 1317
+  },
+  {
+    "value": "with \"off\"",
+    "i": 1318
+  },
+  {
+    "value": "of a business",
+    "i": 1319
+  },
+  {
+    "value": "of a vowel",
+    "i": 1320
+  },
+  {
+    "value": "of a store or business",
+    "i": 1321
+  },
+  {
+    "value": "in idioms",
+    "i": 1322
+  },
+  {
+    "value": "of fruit juice",
+    "i": 1323
+  },
+  {
+    "value": "with plural cloverleaves",
+    "i": 1324
+  },
+  {
+    "value": "of a primary key",
+    "i": 1325
+  },
+  {
+    "value": "of separate elements",
+    "i": 1326
+  },
+  {
+    "value": "of a whole or a unit",
+    "i": 1327
+  },
+  {
+    "value": "of separate groups or persons",
+    "i": 1328
+  },
+  {
+    "value": "of growing corn",
+    "i": 1329
+  },
+  {
+    "value": "of a road surface",
+    "i": 1330
+  },
+  {
+    "value": "as term of address",
+    "i": 1331
+  },
+  {
+    "value": "Rwanda",
+    "i": 1332
+  },
+  {
+    "value": "of a function F",
+    "i": 1333
+  },
+  {
+    "value": "of two or more things",
+    "i": 1334
+  },
+  {
+    "value": "of waves",
+    "i": 1335
+  },
+  {
+    "value": "of a sheaf",
+    "i": 1336
+  },
+  {
+    "value": "of a firearm",
+    "i": 1337
+  },
+  {
+    "value": "of two events",
+    "i": 1338
+  },
+  {
+    "value": "of two objects",
+    "i": 1339
+  },
+  {
+    "value": "of a vascular bundle",
+    "i": 1340
+  },
+  {
+    "value": "in communist countries",
+    "i": 1341
+  },
+  {
+    "value": "of an account",
+    "i": 1342
+  },
+  {
+    "value": "in some proper nouns",
+    "i": 1343
+  },
+  {
+    "value": "in Chile",
+    "i": 1344
+  },
+  {
+    "value": "Medieval",
+    "i": 1345
+  },
+  {
+    "value": "as the phrasal verb commiserate with",
+    "i": 1346
+  },
+  {
+    "value": "of a ship or boat",
+    "i": 1347
+  },
+  {
+    "value": "Latinism",
+    "i": 1348
+  },
+  {
+    "value": "of an update to a database etc.",
+    "i": 1349
+  },
+  {
+    "value": "of a disease etc",
+    "i": 1350
+  },
+  {
+    "value": "of a binary operation",
+    "i": 1351
+  },
+  {
+    "value": "of an algebraic structure",
+    "i": 1352
+  },
+  {
+    "value": "of a diagram of morphisms",
+    "i": 1353
+  },
+  {
+    "value": "of a set in a topological space",
+    "i": 1354
+  },
+  {
+    "value": "of a payment",
+    "i": 1355
+  },
+  {
+    "value": "of a cell wall",
+    "i": 1356
+  },
+  {
+    "value": "of the cervix",
+    "i": 1357
+  },
+  {
+    "value": "of someone's character",
+    "i": 1358
+  },
+  {
+    "value": "of prices",
+    "i": 1359
+  },
+  {
+    "value": "of a metric space",
+    "i": 1360
+  },
+  {
+    "value": "of a lattice",
+    "i": 1361
+  },
+  {
+    "value": "of a category",
+    "i": 1362
+  },
+  {
+    "value": "of a proof system of a formal system with respect to a given semantics",
+    "i": 1363
+  },
+  {
+    "value": "of a problem",
+    "i": 1364
+  },
+  {
+    "value": "in scientific works translated from German",
+    "i": 1365
+  },
+  {
+    "value": "of a surface embedded in a 3-dimensional manifold",
+    "i": 1366
+  },
+  {
+    "value": "of a polygon",
+    "i": 1367
+  },
+  {
+    "value": "of a real-valued function on the reals",
+    "i": 1368
+  },
+  {
+    "value": "in Commonwealth",
+    "i": 1369
+  },
+  {
+    "value": "of a literary work",
+    "i": 1370
+  },
+  {
+    "value": "in negative sense",
+    "i": 1371
+  },
+  {
+    "value": "in rewriting systems",
+    "i": 1372
+  },
+  {
+    "value": "of two or more objects or shapes",
+    "i": 1373
+  },
+  {
+    "value": "of bacteria and algae",
+    "i": 1374
+  },
+  {
+    "value": "of a complex number",
+    "i": 1375
+  },
+  {
+    "value": "of an element of an extension field",
+    "i": 1376
+  },
+  {
+    "value": "of an organic compound or part of such a compound",
+    "i": 1377
+  },
+  {
+    "value": "of a verb",
+    "i": 1378
+  },
+  {
+    "value": "of conjure",
+    "i": 1379
+  },
+  {
+    "value": "of a blow",
+    "i": 1380
+  },
+  {
+    "value": "with \"well-\"",
+    "i": 1381
+  },
+  {
+    "value": "of a topological space",
+    "i": 1382
+  },
+  {
+    "value": "in ancient Rome",
+    "i": 1383
+  },
+  {
+    "value": "of a set etc.",
+    "i": 1384
+  },
+  {
+    "value": "of a polynomial with coefficients in a GCD domain",
+    "i": 1385
+  },
+  {
+    "value": "with upon or on",
+    "i": 1386
+  },
+  {
+    "value": "of a function between two topological spaces",
+    "i": 1387
+  },
+  {
+    "value": "of a piece of music",
+    "i": 1388
+  },
+  {
+    "value": "with \"on\" or \"upon\"",
+    "i": 1389
+  },
+  {
+    "value": "of a set in Euclidean space",
+    "i": 1390
+  },
+  {
+    "value": "with \"within\"",
+    "i": 1391
+  },
+  {
+    "value": "of an alcoholic drink",
+    "i": 1392
+  },
+  {
+    "value": "of an MP3 audio file",
+    "i": 1393
+  },
+  {
+    "value": "of accounting records",
+    "i": 1394
+  },
+  {
+    "value": "Georgia",
+    "i": 1395
+  },
+  {
+    "value": "of an African-American English",
+    "i": 1396
+  },
+  {
+    "value": "of a group or body etc.",
+    "i": 1397
+  },
+  {
+    "value": "of a project etc.",
+    "i": 1398
+  },
+  {
+    "value": "of body movement",
+    "i": 1399
+  },
+  {
+    "value": "British-Army",
+    "i": 1400
+  },
+  {
+    "value": "with “to”",
+    "i": 1401
+  },
+  {
+    "value": "of an engine",
+    "i": 1402
+  },
+  {
+    "value": "of turbines and rotor blades",
+    "i": 1403
+  },
+  {
+    "value": "of an actor",
+    "i": 1404
+  },
+  {
+    "value": "with to or with",
+    "i": 1405
+  },
+  {
+    "value": "of a place or institution",
+    "i": 1406
+  },
+  {
+    "value": "of men",
+    "i": 1407
+  },
+  {
+    "value": "as \"the couch\"",
+    "i": 1408
+  },
+  {
+    "value": "Northwestern",
+    "i": 1409
+  },
+  {
+    "value": "of a statistic",
+    "i": 1410
+  },
+  {
+    "value": "of a store",
+    "i": 1411
+  },
+  {
+    "value": "of a noun",
+    "i": 1412
+  },
+  {
+    "value": "of a bolt or screw",
+    "i": 1413
+  },
+  {
+    "value": "genitive",
+    "i": 1414
+  },
+  {
+    "value": "of Native Americans",
+    "i": 1415
+  },
+  {
+    "value": "in medicine",
+    "i": 1416
+  },
+  {
+    "value": "of a publication",
+    "i": 1417
+  },
+  {
+    "value": "followed by \"from\" to show what caused the bad feeling",
+    "i": 1418
+  },
+  {
+    "value": "without \"from\"",
+    "i": 1419
+  },
+  {
+    "value": "of an approach and landing",
+    "i": 1420
+  },
+  {
+    "value": "of a pubescent boy's voice",
+    "i": 1421
+  },
+  {
+    "value": "of a crank or similar",
+    "i": 1422
+  },
+  {
+    "value": "of a straight bolt or rod",
+    "i": 1423
+  },
+  {
+    "value": "with \"feel\"",
+    "i": 1424
+  },
+  {
+    "value": "of a god",
+    "i": 1425
+  },
+  {
+    "value": "of a created thing",
+    "i": 1426
+  },
+  {
+    "value": "of something seen or heard",
+    "i": 1427
+  },
+  {
+    "value": "of talk",
+    "i": 1428
+  },
+  {
+    "value": "of fabric",
+    "i": 1429
+  },
+  {
+    "value": "of a frog",
+    "i": 1430
+  },
+  {
+    "value": "normally confined to the expression come a cropper",
+    "i": 1431
+  },
+  {
+    "value": "of an Ethernet cable",
+    "i": 1432
+  },
+  {
+    "value": "in the days of sail",
+    "i": 1433
+  },
+  {
+    "value": "of a person or behavior",
+    "i": 1434
+  },
+  {
+    "value": "in soap-making",
+    "i": 1435
+  },
+  {
+    "value": "of an offensive",
+    "i": 1436
+  },
+  {
+    "value": "positive",
+    "i": 1437
+  },
+  {
+    "value": "of speech or writing",
+    "i": 1438
+  },
+  {
+    "value": "in reference to curtains closing at the end of a stage show",
+    "i": 1439
+  },
+  {
+    "value": "analytic",
+    "i": 1440
+  },
+  {
+    "value": "adjective",
+    "i": 1441
+  },
+  {
+    "value": "error-misspelling",
+    "i": 1442
+  },
+  {
+    "value": "of a shot",
+    "i": 1443
+  },
+  {
+    "value": "of a compound",
+    "i": 1444
+  },
+  {
+    "value": "of an automatic weapon",
+    "i": 1445
+  },
+  {
+    "value": "of dabble",
+    "i": 1446
+  },
+  {
+    "value": "of an extinguished fire",
+    "i": 1447
+  },
+  {
+    "value": "of a linear dynamic system",
+    "i": 1448
+  },
+  {
+    "value": "of a worker honey bee",
+    "i": 1449
+  },
+  {
+    "value": "of a source of light",
+    "i": 1450
+  },
+  {
+    "value": "of colour",
+    "i": 1451
+  },
+  {
+    "value": "of race horses",
+    "i": 1452
+  },
+  {
+    "value": "of a time period",
+    "i": 1453
+  },
+  {
+    "value": "of a television station",
+    "i": 1454
+  },
+  {
+    "value": "of hopes or dreams",
+    "i": 1455
+  },
+  {
+    "value": "general",
+    "i": 1456
+  },
+  {
+    "value": "of another person",
+    "i": 1457
+  },
+  {
+    "value": "of a battery",
+    "i": 1458
+  },
+  {
+    "value": "of a golf ball",
+    "i": 1459
+  },
+  {
+    "value": "of an instrument",
+    "i": 1460
+  },
+  {
+    "value": "of a work of art",
+    "i": 1461
+  },
+  {
+    "value": "of a controversy",
+    "i": 1462
+  },
+  {
+    "value": "of a contest etc.",
+    "i": 1463
+  },
+  {
+    "value": "of substantives",
+    "i": 1464
+  },
+  {
+    "value": "based on the word’s Latin etymon",
+    "i": 1465
+  },
+  {
+    "value": "of a coupon or offer",
+    "i": 1466
+  },
+  {
+    "value": "of distance or position",
+    "i": 1467
+  },
+  {
+    "value": "of a color or flavour",
+    "i": 1468
+  },
+  {
+    "value": "in relation to sleep",
+    "i": 1469
+  },
+  {
+    "value": "of flavour",
+    "i": 1470
+  },
+  {
+    "value": "of a lexeme",
+    "i": 1471
+  },
+  {
+    "value": "Arabic",
+    "i": 1472
+  },
+  {
+    "value": "of a script",
+    "i": 1473
+  },
+  {
+    "value": "of abjad script",
+    "i": 1474
+  },
+  {
+    "value": "of an installation etc",
+    "i": 1475
+  },
+  {
+    "value": "of an argument etc",
+    "i": 1476
+  },
+  {
+    "value": "with the definite article the",
+    "i": 1477
+  },
+  {
+    "value": "of qualities",
+    "i": 1478
+  },
+  {
+    "value": "of a human or system",
+    "i": 1479
+  },
+  {
+    "value": "of an encoding or function",
+    "i": 1480
+  },
+  {
+    "value": "of an eigenvalue",
+    "i": 1481
+  },
+  {
+    "value": "of the fruiting body of a fungus",
+    "i": 1482
+  },
+  {
+    "value": "in a university",
+    "i": 1483
+  },
+  {
+    "value": "of Irish/Manx/Scottish (Gaelic) verb forms",
+    "i": 1484
+  },
+  {
+    "value": "of an emotion",
+    "i": 1485
+  },
+  {
+    "value": "of a clause in a testament",
+    "i": 1486
+  },
+  {
+    "value": "with “of”",
+    "i": 1487
+  },
+  {
+    "value": "followed by the preposition \"of\"",
+    "i": 1488
+  },
+  {
+    "value": "of a Turing machine",
+    "i": 1489
+  },
+  {
+    "value": "of an algorithm",
+    "i": 1490
+  },
+  {
+    "value": "said of a country",
+    "i": 1491
+  },
+  {
+    "value": "of film",
+    "i": 1492
+  },
+  {
+    "value": "as an intensifier",
+    "i": 1493
+  },
+  {
+    "value": "with an article",
+    "i": 1494
+  },
+  {
+    "value": "in the phrase diametrically opposed",
+    "i": 1495
+  },
+  {
+    "value": "of a molecule etc.",
+    "i": 1496
+  },
+  {
+    "value": "of a computer program",
+    "i": 1497
+  },
+  {
+    "value": "of a legislative bill or resolution",
+    "i": 1498
+  },
+  {
+    "value": "of a stand-up comedian or a joke",
+    "i": 1499
+  },
+  {
+    "value": "of a food or beverage",
+    "i": 1500
+  },
+  {
+    "value": "of a univariate differentiable function f(x)",
+    "i": 1501
+  },
+  {
+    "value": "of a smooth map ϕ between smooth manifolds",
+    "i": 1502
+  },
+  {
+    "value": "of a cell or tissue",
+    "i": 1503
+  },
+  {
+    "value": "North-American",
+    "i": 1504
+  },
+  {
+    "value": "including",
+    "i": 1505
+  },
+  {
+    "value": "of wings",
+    "i": 1506
+  },
+  {
+    "value": "construed with against",
+    "i": 1507
+  },
+  {
+    "value": "with \"against\"",
+    "i": 1508
+  },
+  {
+    "value": "of dress",
+    "i": 1509
+  },
+  {
+    "value": "of a personal pronoun",
+    "i": 1510
+  },
+  {
+    "value": "of an aircraft's propeller",
+    "i": 1511
+  },
+  {
+    "value": "of a law",
+    "i": 1512
+  },
+  {
+    "value": "of an amino acid",
+    "i": 1513
+  },
+  {
+    "value": "of territory",
+    "i": 1514
+  },
+  {
+    "value": "Hebrew",
+    "i": 1515
+  },
+  {
+    "value": "of accents",
+    "i": 1516
+  },
+  {
+    "value": "of sounds",
+    "i": 1517
+  },
+  {
+    "value": "of an image etc",
+    "i": 1518
+  },
+  {
+    "value": "of a thought",
+    "i": 1519
+  },
+  {
+    "value": "of merchandise",
+    "i": 1520
+  },
+  {
+    "value": "of a property",
+    "i": 1521
+  },
+  {
+    "value": "of furniture",
+    "i": 1522
+  },
+  {
+    "value": "of securities",
+    "i": 1523
+  },
+  {
+    "value": "of lines or paths",
+    "i": 1524
+  },
+  {
+    "value": "of interests",
+    "i": 1525
+  },
+  {
+    "value": "of a line or path",
+    "i": 1526
+  },
+  {
+    "value": "of an interest",
+    "i": 1527
+  },
+  {
+    "value": "of a sequence",
+    "i": 1528
+  },
+  {
+    "value": "with by",
+    "i": 1529
+  },
+  {
+    "value": "of persons formerly married",
+    "i": 1530
+  },
+  {
+    "value": "of a film",
+    "i": 1531
+  },
+  {
+    "value": "Namibia",
+    "i": 1532
+  },
+  {
+    "value": "no-comparative",
+    "i": 1533
+  },
+  {
+    "value": "of sexual intercourse",
+    "i": 1534
+  },
+  {
+    "value": "in snakes",
+    "i": 1535
+  },
+  {
+    "value": "of notes and rests",
+    "i": 1536
+  },
+  {
+    "value": "of degree",
+    "i": 1537
+  },
+  {
+    "value": "of relative importance",
+    "i": 1538
+  },
+  {
+    "value": "strong",
+    "i": 1539
+  },
+  {
+    "value": "normally in the combination 'down with'",
+    "i": 1540
+  },
+  {
+    "value": "of a cow",
+    "i": 1541
+  },
+  {
+    "value": "of a train",
+    "i": 1542
+  },
+  {
+    "value": "as plural only",
+    "i": 1543
+  },
+  {
+    "value": "used with a singular or plural verb",
+    "i": 1544
+  },
+  {
+    "value": "of a wall",
+    "i": 1545
+  },
+  {
+    "value": "of salad",
+    "i": 1546
+  },
+  {
+    "value": "of an alcoholic beverage",
+    "i": 1547
+  },
+  {
+    "value": "of a phone call",
+    "i": 1548
+  },
+  {
+    "value": "followed by with or on",
+    "i": 1549
+  },
+  {
+    "value": "of an opening move",
+    "i": 1550
+  },
+  {
+    "value": "used vocatively",
+    "i": 1551
+  },
+  {
+    "value": "used in the vocative",
+    "i": 1552
+  },
+  {
+    "value": "as a collective noun",
+    "i": 1553
+  },
+  {
+    "value": "of pairs of animals",
+    "i": 1554
+  },
+  {
+    "value": "of pain etc",
+    "i": 1555
+  },
+  {
+    "value": "of an edge",
+    "i": 1556
+  },
+  {
+    "value": "with the verb \"take\"",
+    "i": 1557
+  },
+  {
+    "value": "of time or music",
+    "i": 1558
+  },
+  {
+    "value": "not followed by \"of\"",
+    "i": 1559
+  },
+  {
+    "value": "of brakes",
+    "i": 1560
+  },
+  {
+    "value": "of a journey or pace",
+    "i": 1561
+  },
+  {
+    "value": "in the phrase 'at a low ebb'",
+    "i": 1562
+  },
+  {
+    "value": "of a motion",
+    "i": 1563
+  },
+  {
+    "value": "of a sun",
+    "i": 1564
+  },
+  {
+    "value": "followed by with or in a compound adjective",
+    "i": 1565
+  },
+  {
+    "value": "of a cycle or divisor",
+    "i": 1566
+  },
+  {
+    "value": "for any effective theory",
+    "i": 1567
+  },
+  {
+    "value": "of a man or boy",
+    "i": 1568
+  },
+  {
+    "value": "of a gas",
+    "i": 1569
+  },
+  {
+    "value": "of igneous rock",
+    "i": 1570
+  },
+  {
+    "value": "followed by the prepositions on or upon",
+    "i": 1571
+  },
+  {
+    "value": "of certain functions",
+    "i": 1572
+  },
+  {
+    "value": "of a married person",
+    "i": 1573
+  },
+  {
+    "value": "of an unmarried person",
+    "i": 1574
+  },
+  {
+    "value": "of a water-dwelling plant",
+    "i": 1575
+  },
+  {
+    "value": "of some female animals",
+    "i": 1576
+  },
+  {
+    "value": "of a plant or tree",
+    "i": 1577
+  },
+  {
+    "value": "of a division within a pipe organ surrounded by a wooden box",
+    "i": 1578
+  },
+  {
+    "value": "said by audience members after a performance",
+    "i": 1579
+  },
+  {
+    "value": "of property",
+    "i": 1580
+  },
+  {
+    "value": "of plants and animals",
+    "i": 1581
+  },
+  {
+    "value": "of diseases",
+    "i": 1582
+  },
+  {
+    "value": "of a column",
+    "i": 1583
+  },
+  {
+    "value": "of gears or cogs",
+    "i": 1584
+  },
+  {
+    "value": "of a foetus",
+    "i": 1585
+  },
+  {
+    "value": "variant",
+    "i": 1586
+  },
+  {
+    "value": "of a complex function",
+    "i": 1587
+  },
+  {
+    "value": "of a male animal",
+    "i": 1588
+  },
+  {
+    "value": "in the US and Canada",
+    "i": 1589
+  },
+  {
+    "value": "of a morphism",
+    "i": 1590
+  },
+  {
+    "value": "of temperature",
+    "i": 1591
+  },
+  {
+    "value": "of emotions etc",
+    "i": 1592
+  },
+  {
+    "value": "of body parts",
+    "i": 1593
+  },
+  {
+    "value": "of a gyroscopic attitude indicator",
+    "i": 1594
+  },
+  {
+    "value": "of tissue",
+    "i": 1595
+  },
+  {
+    "value": "of a penis or clitoris",
+    "i": 1596
+  },
+  {
+    "value": "of a muscle",
+    "i": 1597
+  },
+  {
+    "value": "in classical scholarship",
+    "i": 1598
+  },
+  {
+    "value": "in translations of ancient texts",
+    "i": 1599
+  },
+  {
+    "value": "of an integer",
+    "i": 1600
+  },
+  {
+    "value": "of viscera",
+    "i": 1601
+  },
+  {
+    "value": "of a sequence of groups connected by homomorphisms",
+    "i": 1602
+  },
+  {
+    "value": "of a person or organization",
+    "i": 1603
+  },
+  {
+    "value": "of two people in a romantic or sexual relationship",
+    "i": 1604
+  },
+  {
+    "value": "with preceding negative adjective",
+    "i": 1605
+  },
+  {
+    "value": "of an employee or his position",
+    "i": 1606
+  },
+  {
+    "value": "of a model",
+    "i": 1607
+  },
+  {
+    "value": "of a key",
+    "i": 1608
+  },
+  {
+    "value": "of a reaction",
+    "i": 1609
+  },
+  {
+    "value": "of a woman or couple",
+    "i": 1610
+  },
+  {
+    "value": "of a process or thing",
+    "i": 1611
+  },
+  {
+    "value": "of an offer",
+    "i": 1612
+  },
+  {
+    "value": "of competition",
+    "i": 1613
+  },
+  {
+    "value": "of a typeface",
+    "i": 1614
+  },
+  {
+    "value": "as “extenuations”",
+    "i": 1615
+  },
+  {
+    "value": "of a hardware",
+    "i": 1616
+  },
+  {
+    "value": "of storage",
+    "i": 1617
+  },
+  {
+    "value": "in the C language",
+    "i": 1618
+  },
+  {
+    "value": "as a species",
+    "i": 1619
+  },
+  {
+    "value": "of a group of organisms",
+    "i": 1620
+  },
+  {
+    "value": "in a gun",
+    "i": 1621
+  },
+  {
+    "value": "of a punishment",
+    "i": 1622
+  },
+  {
+    "value": "of a knot etc",
+    "i": 1623
+  },
+  {
+    "value": "of a maze etc",
+    "i": 1624
+  },
+  {
+    "value": "of things that grow",
+    "i": 1625
+  },
+  {
+    "value": "in expressions such as 'make a face'",
+    "i": 1626
+  },
+  {
+    "value": "of points and crossovers",
+    "i": 1627
+  },
+  {
+    "value": "of a law or regulation's validity",
+    "i": 1628
+  },
+  {
+    "value": "of a number or other mathematical object",
+    "i": 1629
+  },
+  {
+    "value": "of a configuration",
+    "i": 1630
+  },
+  {
+    "value": "in US and Canada",
+    "i": 1631
+  },
+  {
+    "value": "used mainly in passive form",
+    "i": 1632
+  },
+  {
+    "value": "of a being",
+    "i": 1633
+  },
+  {
+    "value": "of agricultural land",
+    "i": 1634
+  },
+  {
+    "value": "of a decoder",
+    "i": 1635
+  },
+  {
+    "value": "impolite",
+    "i": 1636
+  },
+  {
+    "value": "as \"fart around\"",
+    "i": 1637
+  },
+  {
+    "value": "of a neutron",
+    "i": 1638
+  },
+  {
+    "value": "of a piece of hardware",
+    "i": 1639
+  },
+  {
+    "value": "of dyes or colours",
+    "i": 1640
+  },
+  {
+    "value": "of photographic film",
+    "i": 1641
+  },
+  {
+    "value": "of sleeping",
+    "i": 1642
+  },
+  {
+    "value": "Malta",
+    "i": 1643
+  },
+  {
+    "value": "of a syntactic rule",
+    "i": 1644
+  },
+  {
+    "value": "said of animals",
+    "i": 1645
+  },
+  {
+    "value": "of another part of speech",
+    "i": 1646
+  },
+  {
+    "value": "of any word",
+    "i": 1647
+  },
+  {
+    "value": "with one or more preceding words",
+    "i": 1648
+  },
+  {
+    "value": "in scientific research",
+    "i": 1649
+  },
+  {
+    "value": "in Spanish-speaking countries",
+    "i": 1650
+  },
+  {
+    "value": "cardinal",
+    "i": 1651
+  },
+  {
+    "value": "as a sentence adverb",
+    "i": 1652
+  },
+  {
+    "value": "of a natural material",
+    "i": 1653
+  },
+  {
+    "value": "after a possessive",
+    "i": 1654
+  },
+  {
+    "value": "of an intravenous needle",
+    "i": 1655
+  },
+  {
+    "value": "of thought",
+    "i": 1656
+  },
+  {
+    "value": "of processes",
+    "i": 1657
+  },
+  {
+    "value": "of products",
+    "i": 1658
+  },
+  {
+    "value": "of a market",
+    "i": 1659
+  },
+  {
+    "value": "in the phrase 'give someone the finger'",
+    "i": 1660
+  },
+  {
+    "value": "as opposed to infinite or nonfinite",
+    "i": 1661
+  },
+  {
+    "value": "with plural noun",
+    "i": 1662
+  },
+  {
+    "value": "followed by \"for\" or \"around for\"",
+    "i": 1663
+  },
+  {
+    "value": "construed with from",
+    "i": 1664
+  },
+  {
+    "value": "of a kitchen",
+    "i": 1665
+  },
+  {
+    "value": "of a nuclear weapon",
+    "i": 1666
+  },
+  {
+    "value": "of speed",
+    "i": 1667
+  },
+  {
+    "value": "of liquid",
+    "i": 1668
+  },
+  {
+    "value": "of colours",
+    "i": 1669
+  },
+  {
+    "value": "of a character",
+    "i": 1670
+  },
+  {
+    "value": "of a tire or other inflated object",
+    "i": 1671
+  },
+  {
+    "value": "of a carbonated drink",
+    "i": 1672
+  },
+  {
+    "value": "of a throw",
+    "i": 1673
+  },
+  {
+    "value": "of a consonant",
+    "i": 1674
+  },
+  {
+    "value": "of a golf club",
+    "i": 1675
+  },
+  {
+    "value": "of certain fruits",
+    "i": 1676
+  },
+  {
+    "value": "of measurements of time",
+    "i": 1677
+  },
+  {
+    "value": "of accurately measured timings",
+    "i": 1678
+  },
+  {
+    "value": "with units of time",
+    "i": 1679
+  },
+  {
+    "value": "in the phrase 'the flat'",
+    "i": 1680
+  },
+  {
+    "value": "with 'the' or attributively",
+    "i": 1681
+  },
+  {
+    "value": "with capital",
+    "i": 1682
+  },
+  {
+    "value": "of drinking",
+    "i": 1683
+  },
+  {
+    "value": "referring to the shape of a building",
+    "i": 1684
+  },
+  {
+    "value": "of an image etc.",
+    "i": 1685
+  },
+  {
+    "value": "of a spin bowler",
+    "i": 1686
+  },
+  {
+    "value": "of a tone",
+    "i": 1687
+  },
+  {
+    "value": "of bristles",
+    "i": 1688
+  },
+  {
+    "value": "of swabs",
+    "i": 1689
+  },
+  {
+    "value": "of Christmas trees",
+    "i": 1690
+  },
+  {
+    "value": "with a modifier",
+    "i": 1691
+  },
+  {
+    "value": "of a disorder",
+    "i": 1692
+  },
+  {
+    "value": "used only before the noun",
+    "i": 1693
+  },
+  {
+    "value": "of a speech or piece of writing",
+    "i": 1694
+  },
+  {
+    "value": "of an actor or announcer",
+    "i": 1695
+  },
+  {
+    "value": "of a sail",
+    "i": 1696
+  },
+  {
+    "value": "of aircraft",
+    "i": 1697
+  },
+  {
+    "value": "of a route or distance",
+    "i": 1698
+  },
+  {
+    "value": "of a lens",
+    "i": 1699
+  },
+  {
+    "value": "followed by on or upon",
+    "i": 1700
+  },
+  {
+    "value": "of an idea or plan",
+    "i": 1701
+  },
+  {
+    "value": "New-South-Wales",
+    "i": 1702
+  },
+  {
+    "value": "Tasmania",
+    "i": 1703
+  },
+  {
+    "value": "from the tool shape",
+    "i": 1704
+  },
+  {
+    "value": "from a physical fork",
+    "i": 1705
+  },
+  {
+    "value": "of an officer",
+    "i": 1706
+  },
+  {
+    "value": "of mathematics",
+    "i": 1707
+  },
+  {
+    "value": "of a storage medium",
+    "i": 1708
+  },
+  {
+    "value": "of stars",
+    "i": 1709
+  },
+  {
+    "value": "comparative-only",
+    "i": 1710
+  },
+  {
+    "value": "used in combinations",
+    "i": 1711
+  },
+  {
+    "value": "of troops",
+    "i": 1712
+  },
+  {
+    "value": "used in advertising",
+    "i": 1713
+  },
+  {
+    "value": "in rap music",
+    "i": 1714
+  },
+  {
+    "value": "of a gear",
+    "i": 1715
+  },
+  {
+    "value": "of a cyclist",
+    "i": 1716
+  },
+  {
+    "value": "of a motorist",
+    "i": 1717
+  },
+  {
+    "value": "with above or below",
+    "i": 1718
+  },
+  {
+    "value": "of plant material",
+    "i": 1719
+  },
+  {
+    "value": "of a dairy cow",
+    "i": 1720
+  },
+  {
+    "value": "of poisons",
+    "i": 1721
+  },
+  {
+    "value": "with about",
+    "i": 1722
+  },
+  {
+    "value": "said of a lawsuit",
+    "i": 1723
+  },
+  {
+    "value": "of a bank account or assets",
+    "i": 1724
+  },
+  {
+    "value": "of an egg",
+    "i": 1725
+  },
+  {
+    "value": "of electronic equipment",
+    "i": 1726
+  },
+  {
+    "value": "Derbyshire",
+    "i": 1727
+  },
+  {
+    "value": "of babies",
+    "i": 1728
+  },
+  {
+    "value": "of an infection",
+    "i": 1729
+  },
+  {
+    "value": "of a girl",
+    "i": 1730
+  },
+  {
+    "value": "of a message etc",
+    "i": 1731
+  },
+  {
+    "value": "of something written or performed",
+    "i": 1732
+  },
+  {
+    "value": "of food or drink",
+    "i": 1733
+  },
+  {
+    "value": "of a boil or sore",
+    "i": 1734
+  },
+  {
+    "value": "of a product or drug",
+    "i": 1735
+  },
+  {
+    "value": "of procedures",
+    "i": 1736
+  },
+  {
+    "value": "of a point",
+    "i": 1737
+  },
+  {
+    "value": "of a trait or a disease",
+    "i": 1738
+  },
+  {
+    "value": "of a design",
+    "i": 1739
+  },
+  {
+    "value": "of a staircase",
+    "i": 1740
+  },
+  {
+    "value": "in a perfect construction",
+    "i": 1741
+  },
+  {
+    "value": "with present-tense meaning",
+    "i": 1742
+  },
+  {
+    "value": "for specific idiomatic senses see individual entries get into",
+    "i": 1743
+  },
+  {
+    "value": "with various prepositions",
+    "i": 1744
+  },
+  {
+    "value": "of an article or published opinion",
+    "i": 1745
+  },
+  {
+    "value": "of a celestial body",
+    "i": 1746
+  },
+  {
+    "value": "North-Eastern-US",
+    "i": 1747
+  },
+  {
+    "value": "of yarn",
+    "i": 1748
+  },
+  {
+    "value": "in Europe",
+    "i": 1749
+  },
+  {
+    "value": "of a blade",
+    "i": 1750
+  },
+  {
+    "value": "of a wet or greasy surface",
+    "i": 1751
+  },
+  {
+    "value": "of machines",
+    "i": 1752
+  },
+  {
+    "value": "of pain or hunger",
+    "i": 1753
+  },
+  {
+    "value": "of a saying or aphorism",
+    "i": 1754
+  },
+  {
+    "value": "of a location",
+    "i": 1755
+  },
+  {
+    "value": "as \"the golliwogs\"",
+    "i": 1756
+  },
+  {
+    "value": "in phrases with a verb + \"the goody out of\"",
+    "i": 1757
+  },
+  {
+    "value": "Japanese",
+    "i": 1758
+  },
+  {
+    "value": "in the phrase \"get with the program\"",
+    "i": 1759
+  },
+  {
+    "value": "augmentative",
+    "i": 1760
+  },
+  {
+    "value": "of livestock",
+    "i": 1761
+  },
+  {
+    "value": "of information",
+    "i": 1762
+  },
+  {
+    "value": "of a person or group",
+    "i": 1763
+  },
+  {
+    "value": "of grapple",
+    "i": 1764
+  },
+  {
+    "value": "of egglaying animals",
+    "i": 1765
+  },
+  {
+    "value": "of traffic",
+    "i": 1766
+  },
+  {
+    "value": "said of the face",
+    "i": 1767
+  },
+  {
+    "value": "of an airman or aircraft",
+    "i": 1768
+  },
+  {
+    "value": "of trees",
+    "i": 1769
+  },
+  {
+    "value": "of a pig",
+    "i": 1770
+  },
+  {
+    "value": "of a candle",
+    "i": 1771
+  },
+  {
+    "value": "of a small flame",
+    "i": 1772
+  },
+  {
+    "value": "followed by a past participle",
+    "i": 1773
+  },
+  {
+    "value": "of a body part other than the head",
+    "i": 1774
+  },
+  {
+    "value": "of a cloth",
+    "i": 1775
+  },
+  {
+    "value": "of a ball in cricket",
+    "i": 1776
+  },
+  {
+    "value": "of a pitcher",
+    "i": 1777
+  },
+  {
+    "value": "of a piece",
+    "i": 1778
+  },
+  {
+    "value": "of an off-speed pitch",
+    "i": 1779
+  },
+  {
+    "value": "followed by for or after",
+    "i": 1780
+  },
+  {
+    "value": "of a person or product",
+    "i": 1781
+  },
+  {
+    "value": "of material or fluid",
+    "i": 1782
+  },
+  {
+    "value": "of drink or drugs",
+    "i": 1783
+  },
+  {
+    "value": "of a normally nonalcoholic drink",
+    "i": 1784
+  },
+  {
+    "value": "of a ferromagnetic material",
+    "i": 1785
+  },
+  {
+    "value": "of electromagnetic radiation",
+    "i": 1786
+  },
+  {
+    "value": "of a road intersection",
+    "i": 1787
+  },
+  {
+    "value": "of a book",
+    "i": 1788
+  },
+  {
+    "value": "in botany and forestry",
+    "i": 1789
+  },
+  {
+    "value": "of a floor",
+    "i": 1790
+  },
+  {
+    "value": "of an idea or plan etc",
+    "i": 1791
+  },
+  {
+    "value": "in driving a vehicle",
+    "i": 1792
+  },
+  {
+    "value": "of a photograph",
+    "i": 1793
+  },
+  {
+    "value": "of a phrase or compound",
+    "i": 1794
+  },
+  {
+    "value": "of beer",
+    "i": 1795
+  },
+  {
+    "value": "noun",
+    "i": 1796
+  },
+  {
+    "value": "as in \"heave line\" or \"heave horse\"",
+    "i": 1797
+  },
+  {
+    "value": "composition",
+    "i": 1798
+  },
+  {
+    "value": "of advice",
+    "i": 1799
+  },
+  {
+    "value": "of a number or amount",
+    "i": 1800
+  },
+  {
+    "value": "in many religions",
+    "i": 1801
+  },
+  {
+    "value": "of a length of time",
+    "i": 1802
+  },
+  {
+    "value": "temporal",
+    "i": 1803
+  },
+  {
+    "value": "in metatextual self-reference",
+    "i": 1804
+  },
+  {
+    "value": "of ideas or views",
+    "i": 1805
+  },
+  {
+    "value": "of an approach to problem solving",
+    "i": 1806
+  },
+  {
+    "value": "of a method or algorithm",
+    "i": 1807
+  },
+  {
+    "value": "of a domestic animal",
+    "i": 1808
+  },
+  {
+    "value": "of a landscape",
+    "i": 1809
+  },
+  {
+    "value": "of a postage stamp",
+    "i": 1810
+  },
+  {
+    "value": "of a joint",
+    "i": 1811
+  },
+  {
+    "value": "in texts about Russia",
+    "i": 1812
+  },
+  {
+    "value": "of something solid",
+    "i": 1813
+  },
+  {
+    "value": "in Spanish-speaking contexts",
+    "i": 1814
+  },
+  {
+    "value": "of a person or institution",
+    "i": 1815
+  },
+  {
+    "value": "of a measurement device",
+    "i": 1816
+  },
+  {
+    "value": "of an adverse condition",
+    "i": 1817
+  },
+  {
+    "value": "of an interval",
+    "i": 1818
+  },
+  {
+    "value": "modifying a negative adverb or adjective",
+    "i": 1819
+  },
+  {
+    "value": "not US",
+    "i": 1820
+  },
+  {
+    "value": "as a term of endearment",
+    "i": 1821
+  },
+  {
+    "value": "with 'for' or 'after'",
+    "i": 1822
+  },
+  {
+    "value": "of a car",
+    "i": 1823
+  },
+  {
+    "value": "of a macro",
+    "i": 1824
+  },
+  {
+    "value": "of a metric space or a geometry",
+    "i": 1825
+  },
+  {
+    "value": "of an automorphism",
+    "i": 1826
+  },
+  {
+    "value": "of a hypertext document",
+    "i": 1827
+  },
+  {
+    "value": "of a tissue or organ",
+    "i": 1828
+  },
+  {
+    "value": "in the study of law",
+    "i": 1829
+  },
+  {
+    "value": "after an adjective",
+    "i": 1830
+  },
+  {
+    "value": "of an issue printed for collectors",
+    "i": 1831
+  },
+  {
+    "value": "as illegals",
+    "i": 1832
+  },
+  {
+    "value": "of a manuscript",
+    "i": 1833
+  },
+  {
+    "value": "of a deity",
+    "i": 1834
+  },
+  {
+    "value": "of a mental act",
+    "i": 1835
+  },
+  {
+    "value": "of an instruction operand",
+    "i": 1836
+  },
+  {
+    "value": "with \"from\"",
+    "i": 1837
+  },
+  {
+    "value": "in games and competitions",
+    "i": 1838
+  },
+  {
+    "value": "of a growing crystal",
+    "i": 1839
+  },
+  {
+    "value": "of impurities in a growing crystal",
+    "i": 1840
+  },
+  {
+    "value": "from sense 3",
+    "i": 1841
+  },
+  {
+    "value": "of an obstacle",
+    "i": 1842
+  },
+  {
+    "value": "of currency",
+    "i": 1843
+  },
+  {
+    "value": "with “mechanical”",
+    "i": 1844
+  },
+  {
+    "value": "with “acoustic” or “sound”",
+    "i": 1845
+  },
+  {
+    "value": "of alcohol",
+    "i": 1846
+  },
+  {
+    "value": "of a verb or other word",
+    "i": 1847
+  },
+  {
+    "value": "of a concrete class",
+    "i": 1848
+  },
+  {
+    "value": "with “in”",
+    "i": 1849
+  },
+  {
+    "value": "of a person or proposition",
+    "i": 1850
+  },
+  {
+    "value": "of a demand",
+    "i": 1851
+  },
+  {
+    "value": "of an injury etc",
+    "i": 1852
+  },
+  {
+    "value": "of a panther",
+    "i": 1853
+  },
+  {
+    "value": "of a stream of particles or radiation",
+    "i": 1854
+  },
+  {
+    "value": "of radiation",
+    "i": 1855
+  },
+  {
+    "value": "of land or the like",
+    "i": 1856
+  },
+  {
+    "value": "after the adjective modified",
+    "i": 1857
+  },
+  {
+    "value": "of certain forms of limit",
+    "i": 1858
+  },
+  {
+    "value": "of growth",
+    "i": 1859
+  },
+  {
+    "value": "of inflorescences",
+    "i": 1860
+  },
+  {
+    "value": "of duties",
+    "i": 1861
+  },
+  {
+    "value": "followed by \"in\"",
+    "i": 1862
+  },
+  {
+    "value": "of a society or country",
+    "i": 1863
+  },
+  {
+    "value": "of a differential",
+    "i": 1864
+  },
+  {
+    "value": "of a parasite",
+    "i": 1865
+  },
+  {
+    "value": "of an illness",
+    "i": 1866
+  },
+  {
+    "value": "of feelings and behaviour",
+    "i": 1867
+  },
+  {
+    "value": "as an expletive",
+    "i": 1868
+  },
+  {
+    "value": "of a word",
+    "i": 1869
+  },
+  {
+    "value": "in standards and specifications",
+    "i": 1870
+  },
+  {
+    "value": "of a jet engine",
+    "i": 1871
+  },
+  {
+    "value": "of a type",
+    "i": 1872
+  },
+  {
+    "value": "of a squid or octopus",
+    "i": 1873
+  },
+  {
+    "value": "of a pitch",
+    "i": 1874
+  },
+  {
+    "value": "of an electrically conducting material",
+    "i": 1875
+  },
+  {
+    "value": "of female persons",
+    "i": 1876
+  },
+  {
+    "value": "of male persons",
+    "i": 1877
+  },
+  {
+    "value": "used by intactivists",
+    "i": 1878
+  },
+  {
+    "value": "followed by \"with\"",
+    "i": 1879
+  },
+  {
+    "value": "of a student",
+    "i": 1880
+  },
+  {
+    "value": "of computer languages or code",
+    "i": 1881
+  },
+  {
+    "value": "of a buried corpse",
+    "i": 1882
+  },
+  {
+    "value": "of a substance",
+    "i": 1883
+  },
+  {
+    "value": "of a function or operator",
+    "i": 1884
+  },
+  {
+    "value": "with against or occasionally about",
+    "i": 1885
+  },
+  {
+    "value": "Spanish",
+    "i": 1886
+  },
+  {
+    "value": "of a distinction",
+    "i": 1887
+  },
+  {
+    "value": "of a society or nation",
+    "i": 1888
+  },
+  {
+    "value": "of medicines",
+    "i": 1889
+  },
+  {
+    "value": "of debts",
+    "i": 1890
+  },
+  {
+    "value": "of a polynomial",
+    "i": 1891
+  },
+  {
+    "value": "of a fraction",
+    "i": 1892
+  },
+  {
+    "value": "of an element of a ring",
+    "i": 1893
+  },
+  {
+    "value": "of a manifold",
+    "i": 1894
+  },
+  {
+    "value": "of a representation",
+    "i": 1895
+  },
+  {
+    "value": "of languages",
+    "i": 1896
+  },
+  {
+    "value": "of a pawn",
+    "i": 1897
+  },
+  {
+    "value": "of precipitation",
+    "i": 1898
+  },
+  {
+    "value": "of a thermodynamic process",
+    "i": 1899
+  },
+  {
+    "value": "of a typeface or font",
+    "i": 1900
+  },
+  {
+    "value": "neuter",
+    "i": 1901
+  },
+  {
+    "value": "of a slot machine",
+    "i": 1902
+  },
+  {
+    "value": "empty-gloss",
+    "i": 1903
+  },
+  {
+    "value": "no-gloss",
+    "i": 1904
+  },
+  {
+    "value": "used in certain set phrases like jaw harp",
+    "i": 1905
+  },
+  {
+    "value": "of a speech or an argument",
+    "i": 1906
+  },
+  {
+    "value": "of an entertainment venue",
+    "i": 1907
+  },
+  {
+    "value": "of quails or partridges",
+    "i": 1908
+  },
+  {
+    "value": "of a fruit etc",
+    "i": 1909
+  },
+  {
+    "value": "Sikhism",
+    "i": 1910
+  },
+  {
+    "value": "followed by \"over\"",
+    "i": 1911
+  },
+  {
+    "value": "of the police",
+    "i": 1912
+  },
+  {
+    "value": "with \"off\" or \"out\"",
+    "i": 1913
+  },
+  {
+    "value": "of a party or event",
+    "i": 1914
+  },
+  {
+    "value": "in the vocative",
+    "i": 1915
+  },
+  {
+    "value": "as make a killing",
+    "i": 1916
+  },
+  {
+    "value": "of steel",
+    "i": 1917
+  },
+  {
+    "value": "of vaccine",
+    "i": 1918
+  },
+  {
+    "value": "in the form (character name) kin",
+    "i": 1919
+  },
+  {
+    "value": "of salmon",
+    "i": 1920
+  },
+  {
+    "value": "of a tie",
+    "i": 1921
+  },
+  {
+    "value": "in South Wales",
+    "i": 1922
+  },
+  {
+    "value": "of a rivet head",
+    "i": 1923
+  },
+  {
+    "value": "after certain expressions denoting fear or apprehension",
+    "i": 1924
+  },
+  {
+    "value": "of an incisor or canine",
+    "i": 1925
+  },
+  {
+    "value": "of a compound or bond",
+    "i": 1926
+  },
+  {
+    "value": "of tights",
+    "i": 1927
+  },
+  {
+    "value": "of paper",
+    "i": 1928
+  },
+  {
+    "value": "of the surface of an item",
+    "i": 1929
+  },
+  {
+    "value": "in UK English but not US English",
+    "i": 1930
+  },
+  {
+    "value": "of rocks",
+    "i": 1931
+  },
+  {
+    "value": "of a property or parcel",
+    "i": 1932
+  },
+  {
+    "value": "of a legacy",
+    "i": 1933
+  },
+  {
+    "value": "of a person or body part",
+    "i": 1934
+  },
+  {
+    "value": "Mackem",
+    "i": 1935
+  },
+  {
+    "value": "of days of the week or months of the year",
+    "i": 1936
+  },
+  {
+    "value": "of a virus",
+    "i": 1937
+  },
+  {
+    "value": "of a program",
+    "i": 1938
+  },
+  {
+    "value": "of a look or smile",
+    "i": 1939
+  },
+  {
+    "value": "of a thing or person",
+    "i": 1940
+  },
+  {
+    "value": "from \"lemon tart\"",
+    "i": 1941
+  },
+  {
+    "value": "with \"with\"",
+    "i": 1942
+  },
+  {
+    "value": "as predicate",
+    "i": 1943
+  },
+  {
+    "value": "with \"to\" and an infinitive",
+    "i": 1944
+  },
+  {
+    "value": "of a communication protocol",
+    "i": 1945
+  },
+  {
+    "value": "of a person or enterprise",
+    "i": 1946
+  },
+  {
+    "value": "of a shop or restaurant",
+    "i": 1947
+  },
+  {
+    "value": "of an activity",
+    "i": 1948
+  },
+  {
+    "value": "of flame",
+    "i": 1949
+  },
+  {
+    "value": "with 'would' and in certain other phrases",
+    "i": 1950
+  },
+  {
+    "value": "as \"the limit\"",
+    "i": 1951
+  },
+  {
+    "value": "of a penis",
+    "i": 1952
+  },
+  {
+    "value": "of a polynomial equation",
+    "i": 1953
+  },
+  {
+    "value": "of a function between vector spaces",
+    "i": 1954
+  },
+  {
+    "value": "of a function over a module",
+    "i": 1955
+  },
+  {
+    "value": "of a Web page",
+    "i": 1956
+  },
+  {
+    "value": "construed with on",
+    "i": 1957
+  },
+  {
+    "value": "of a performance or speech",
+    "i": 1958
+  },
+  {
+    "value": "of a projectile weapon",
+    "i": 1959
+  },
+  {
+    "value": "of an item offered for sale",
+    "i": 1960
+  },
+  {
+    "value": "of a resource",
+    "i": 1961
+  },
+  {
+    "value": "of a variable or identifier",
+    "i": 1962
+  },
+  {
+    "value": "of a condition or state",
+    "i": 1963
+  },
+  {
+    "value": "of a phone",
+    "i": 1964
+  },
+  {
+    "value": "of a place or time",
+    "i": 1965
+  },
+  {
+    "value": "of a study",
+    "i": 1966
+  },
+  {
+    "value": "used with at",
+    "i": 1967
+  },
+  {
+    "value": "of part of a fingerprint",
+    "i": 1968
+  },
+  {
+    "value": "of volumes of materials",
+    "i": 1969
+  },
+  {
+    "value": "of a stock car",
+    "i": 1970
+  },
+  {
+    "value": "of either a woman's anus or vagina",
+    "i": 1971
+  },
+  {
+    "value": "with off",
+    "i": 1972
+  },
+  {
+    "value": "not usually used in plural form",
+    "i": 1973
+  },
+  {
+    "value": "with \"my\"",
+    "i": 1974
+  },
+  {
+    "value": "in biology",
+    "i": 1975
+  },
+  {
+    "value": "in several set phrases",
+    "i": 1976
+  },
+  {
+    "value": "of an automobile",
+    "i": 1977
+  },
+  {
+    "value": "accompanied by \"the\"",
+    "i": 1978
+  },
+  {
+    "value": "of strata or geological time periods",
+    "i": 1979
+  },
+  {
+    "value": "of sky or environment",
+    "i": 1980
+  },
+  {
+    "value": "of sailing vessels",
+    "i": 1981
+  },
+  {
+    "value": "of a person or group of people",
+    "i": 1982
+  },
+  {
+    "value": "of vegetation",
+    "i": 1983
+  },
+  {
+    "value": "used absolutely",
+    "i": 1984
+  },
+  {
+    "value": "British-Isles",
+    "i": 1985
+  },
+  {
+    "value": "with for or about",
+    "i": 1986
+  },
+  {
+    "value": "of a compass needle",
+    "i": 1987
+  },
+  {
+    "value": "of a fortress",
+    "i": 1988
+  },
+  {
+    "value": "of force",
+    "i": 1989
+  },
+  {
+    "value": "of a behaviour or action",
+    "i": 1990
+  },
+  {
+    "value": "of a roof",
+    "i": 1991
+  },
+  {
+    "value": "followed by a \"to\" phrase",
+    "i": 1992
+  },
+  {
+    "value": "of a constituency",
+    "i": 1993
+  },
+  {
+    "value": "of a playing card",
+    "i": 1994
+  },
+  {
+    "value": "phoneme",
+    "i": 1995
+  },
+  {
+    "value": "with clause as object",
+    "i": 1996
+  },
+  {
+    "value": "of inanimate or abstract things",
+    "i": 1997
+  },
+  {
+    "value": "with a prepositional phrase of cause",
+    "i": 1998
+  },
+  {
+    "value": "used impersonally",
+    "i": 1999
+  },
+  {
+    "value": "of birds",
+    "i": 2000
+  },
+  {
+    "value": "in 16th- and 17th-century England and Europe",
+    "i": 2001
+  },
+  {
+    "value": "of a particle",
+    "i": 2002
+  },
+  {
+    "value": "of a pair of things",
+    "i": 2003
+  },
+  {
+    "value": "of a single thing",
+    "i": 2004
+  },
+  {
+    "value": "of a non-human animal",
+    "i": 2005
+  },
+  {
+    "value": "as a pro-sentence",
+    "i": 2006
+  },
+  {
+    "value": "of a person's actions",
+    "i": 2007
+  },
+  {
+    "value": "of poetry etc.",
+    "i": 2008
+  },
+  {
+    "value": "as a respectful term of address",
+    "i": 2009
+  },
+  {
+    "value": "used with \"up\"",
+    "i": 2010
+  },
+  {
+    "value": "of any object",
+    "i": 2011
+  },
+  {
+    "value": "of a color",
+    "i": 2012
+  },
+  {
+    "value": "of a moth or insect",
+    "i": 2013
+  },
+  {
+    "value": "from the philosophical sense",
+    "i": 2014
+  },
+  {
+    "value": "with “out”",
+    "i": 2015
+  },
+  {
+    "value": "of a deer",
+    "i": 2016
+  },
+  {
+    "value": "in the form micin",
+    "i": 2017
+  },
+  {
+    "value": "Jehovah's-Witnesses",
+    "i": 2018
+  },
+  {
+    "value": "of a cow or other livestock",
+    "i": 2019
+  },
+  {
+    "value": "of a mammal",
+    "i": 2020
+  },
+  {
+    "value": "of grains",
+    "i": 2021
+  },
+  {
+    "value": "of a thing done",
+    "i": 2022
+  },
+  {
+    "value": "of a party",
+    "i": 2023
+  },
+  {
+    "value": "with condition",
+    "i": 2024
+  },
+  {
+    "value": "with a copula verb",
+    "i": 2025
+  },
+  {
+    "value": "used affectionately",
+    "i": 2026
+  },
+  {
+    "value": "of problems or flaws",
+    "i": 2027
+  },
+  {
+    "value": "as \"the mitten\"",
+    "i": 2028
+  },
+  {
+    "value": "of behaviour or clothing",
+    "i": 2029
+  },
+  {
+    "value": "used questioningly to express mock surprise",
+    "i": 2030
+  },
+  {
+    "value": "in the superlative",
+    "i": 2031
+  },
+  {
+    "value": "used by young children",
+    "i": 2032
+  },
+  {
+    "value": "retronym",
+    "i": 2033
+  },
+  {
+    "value": "of sound reproduction",
+    "i": 2034
+  },
+  {
+    "value": "of speech or a sound",
+    "i": 2035
+  },
+  {
+    "value": "of an organic compound",
+    "i": 2036
+  },
+  {
+    "value": "of a steak",
+    "i": 2037
+  },
+  {
+    "value": "of a night",
+    "i": 2038
+  },
+  {
+    "value": "of an inanimate object",
+    "i": 2039
+  },
+  {
+    "value": "of a narrative",
+    "i": 2040
+  },
+  {
+    "value": "of a sin",
+    "i": 2041
+  },
+  {
+    "value": "used passively",
+    "i": 2042
+  },
+  {
+    "value": "with as or like",
+    "i": 2043
+  },
+  {
+    "value": "of a problem or task",
+    "i": 2044
+  },
+  {
+    "value": "in combinations such as 'as much'",
+    "i": 2045
+  },
+  {
+    "value": "New-Age",
+    "i": 2046
+  },
+  {
+    "value": "of lawsuits",
+    "i": 2047
+  },
+  {
+    "value": "of a food",
+    "i": 2048
+  },
+  {
+    "value": "of a business organization",
+    "i": 2049
+  },
+  {
+    "value": "of a rocket",
+    "i": 2050
+  },
+  {
+    "value": "in various subcultures",
+    "i": 2051
+  },
+  {
+    "value": "as \"the mundane\"",
+    "i": 2052
+  },
+  {
+    "value": "in jurisdictions which use the felony murder rule",
+    "i": 2053
+  },
+  {
+    "value": "used as a predicative noun",
+    "i": 2054
+  },
+  {
+    "value": "of a bullet",
+    "i": 2055
+  },
+  {
+    "value": "of color",
+    "i": 2056
+  },
+  {
+    "value": "Relating to a company",
+    "i": 2057
+  },
+  {
+    "value": "modifying a singular noun",
+    "i": 2058
+  },
+  {
+    "value": "modifying a plural noun",
+    "i": 2059
+  },
+  {
+    "value": "of art",
+    "i": 2060
+  },
+  {
+    "value": "of a derivative contract",
+    "i": 2061
+  },
+  {
+    "value": "of food or other consumer products",
+    "i": 2062
+  },
+  {
+    "value": "of a singularity",
+    "i": 2063
+  },
+  {
+    "value": "of rename",
+    "i": 2064
+  },
+  {
+    "value": "of a child",
+    "i": 2065
+  },
+  {
+    "value": "of a boat",
+    "i": 2066
+  },
+  {
+    "value": "of a balloon",
+    "i": 2067
+  },
+  {
+    "value": "of a tide",
+    "i": 2068
+  },
+  {
+    "value": "of circumstances",
+    "i": 2069
+  },
+  {
+    "value": "of a treenail",
+    "i": 2070
+  },
+  {
+    "value": "used pejoratively",
+    "i": 2071
+  },
+  {
+    "value": "of a quality or interest",
+    "i": 2072
+  },
+  {
+    "value": "of a task",
+    "i": 2073
+  },
+  {
+    "value": "after possessive pronoun",
+    "i": 2074
+  },
+  {
+    "value": "with away at",
+    "i": 2075
+  },
+  {
+    "value": "in comparisons",
+    "i": 2076
+  },
+  {
+    "value": "of an occurrence",
+    "i": 2077
+  },
+  {
+    "value": "of a tumour",
+    "i": 2078
+  },
+  {
+    "value": "of a set of points",
+    "i": 2079
+  },
+  {
+    "value": "of a molecule",
+    "i": 2080
+  },
+  {
+    "value": "East-Midlands",
+    "i": 2081
+  },
+  {
+    "value": "of a real number",
+    "i": 2082
+  },
+  {
+    "value": "of a subgroup",
+    "i": 2083
+  },
+  {
+    "value": "of a field extension of a field K",
+    "i": 2084
+  },
+  {
+    "value": "of a distribution",
+    "i": 2085
+  },
+  {
+    "value": "of a random variable",
+    "i": 2086
+  },
+  {
+    "value": "of a family of continuous functions",
+    "i": 2087
+  },
+  {
+    "value": "of a function from the ordinals to the ordinals",
+    "i": 2088
+  },
+  {
+    "value": "of a matrix",
+    "i": 2089
+  },
+  {
+    "value": "of a Hilbert space operator",
+    "i": 2090
+  },
+  {
+    "value": "of a topology",
+    "i": 2091
+  },
+  {
+    "value": "with “about”",
+    "i": 2092
+  },
+  {
+    "value": "of a school",
+    "i": 2093
+  },
+  {
+    "value": "of a mode in an oscillating system",
+    "i": 2094
+  },
+  {
+    "value": "of a wind etc",
+    "i": 2095
+  },
+  {
+    "value": "of a solution or response",
+    "i": 2096
+  },
+  {
+    "value": "of a mutation",
+    "i": 2097
+  },
+  {
+    "value": "of a position or setting",
+    "i": 2098
+  },
+  {
+    "value": "with among",
+    "i": 2099
+  },
+  {
+    "value": "in the form \"nutting\"",
+    "i": 2100
+  },
+  {
+    "value": "New-York-City",
+    "i": 2101
+  },
+  {
+    "value": "modifying a numeral",
+    "i": 2102
+  },
+  {
+    "value": "with-numeral",
+    "i": 2103
+  },
+  {
+    "value": "of a dragonfly",
+    "i": 2104
+  },
+  {
+    "value": "of branches or roots",
+    "i": 2105
+  },
+  {
+    "value": "of speech or narration",
+    "i": 2106
+  },
+  {
+    "value": "of a holiday",
+    "i": 2107
+  },
+  {
+    "value": "construed with over",
+    "i": 2108
+  },
+  {
+    "value": "of inanimate things",
+    "i": 2109
+  },
+  {
+    "value": "of a facial feature",
+    "i": 2110
+  },
+  {
+    "value": "of a house etc",
+    "i": 2111
+  },
+  {
+    "value": "used in combinations from phrasal verbs",
+    "i": 2112
+  },
+  {
+    "value": "Protestant",
+    "i": 2113
+  },
+  {
+    "value": "in large organizations",
+    "i": 2114
+  },
+  {
+    "value": "with clarifying modifier",
+    "i": 2115
+  },
+  {
+    "value": "of a canal",
+    "i": 2116
+  },
+  {
+    "value": "of manner or speech",
+    "i": 2117
+  },
+  {
+    "value": "of a speech sound",
+    "i": 2118
+  },
+  {
+    "value": "in Freudian theory",
+    "i": 2119
+  },
+  {
+    "value": "of a society",
+    "i": 2120
+  },
+  {
+    "value": "of an element of a group",
+    "i": 2121
+  },
+  {
+    "value": "of a judge",
+    "i": 2122
+  },
+  {
+    "value": "of search results",
+    "i": 2123
+  },
+  {
+    "value": "with with or in",
+    "i": 2124
+  },
+  {
+    "value": "of a potato chip",
+    "i": 2125
+  },
+  {
+    "value": "animate",
+    "i": 2126
+  },
+  {
+    "value": "inanimate",
+    "i": 2127
+  },
+  {
+    "value": "of a stratum",
+    "i": 2128
+  },
+  {
+    "value": "in some African communities",
+    "i": 2129
+  },
+  {
+    "value": "of an act",
+    "i": 2130
+  },
+  {
+    "value": "of goods or services",
+    "i": 2131
+  },
+  {
+    "value": "of a dish",
+    "i": 2132
+  },
+  {
+    "value": "of a loop in rope",
+    "i": 2133
+  },
+  {
+    "value": "followed by a noun or prepositional phrase indicating a security or type of security",
+    "i": 2134
+  },
+  {
+    "value": "of a trans man or drag king",
+    "i": 2135
+  },
+  {
+    "value": "of the forwards in a rugby team",
+    "i": 2136
+  },
+  {
+    "value": "of a segment such as a vowel",
+    "i": 2137
+  },
+  {
+    "value": "of a painting",
+    "i": 2138
+  },
+  {
+    "value": "North-America",
+    "i": 2139
+  },
+  {
+    "value": "of black and white film",
+    "i": 2140
+  },
+  {
+    "value": "without a qualifying word",
+    "i": 2141
+  },
+  {
+    "value": "of a male person",
+    "i": 2142
+  },
+  {
+    "value": "of vehicles",
+    "i": 2143
+  },
+  {
+    "value": "said of a pair of lines",
+    "i": 2144
+  },
+  {
+    "value": "of realities",
+    "i": 2145
+  },
+  {
+    "value": "of loving",
+    "i": 2146
+  },
+  {
+    "value": "with “these”",
+    "i": 2147
+  },
+  {
+    "value": "followed by the preposition to",
+    "i": 2148
+  },
+  {
+    "value": "since the 2020s",
+    "i": 2149
+  },
+  {
+    "value": "of a road or path",
+    "i": 2150
+  },
+  {
+    "value": "of a debt",
+    "i": 2151
+  },
+  {
+    "value": "as a noun modifier",
+    "i": 2152
+  },
+  {
+    "value": "of the sense ‘beak’",
+    "i": 2153
+  },
+  {
+    "value": "from the expression ‘keep one's pecker up’",
+    "i": 2154
+  },
+  {
+    "value": "of a place or circumstance",
+    "i": 2155
+  },
+  {
+    "value": "of a sentence",
+    "i": 2156
+  },
+  {
+    "value": "in US usually formal",
+    "i": 2157
+  },
+  {
+    "value": "after a stroke",
+    "i": 2158
+  },
+  {
+    "value": "of a tense or verb form",
+    "i": 2159
+  },
+  {
+    "value": "of a cocktail",
+    "i": 2160
+  },
+  {
+    "value": "in warfare",
+    "i": 2161
+  },
+  {
+    "value": "of a footpath",
+    "i": 2162
+  },
+  {
+    "value": "in a compound noun or noun phrase",
+    "i": 2163
+  },
+  {
+    "value": "of a part of the body",
+    "i": 2164
+  },
+  {
+    "value": "of a verdict",
+    "i": 2165
+  },
+  {
+    "value": "with in or out",
+    "i": 2166
+  },
+  {
+    "value": "of medical sciences",
+    "i": 2167
+  },
+  {
+    "value": "of or with fingers",
+    "i": 2168
+  },
+  {
+    "value": "in extended use",
+    "i": 2169
+  },
+  {
+    "value": "of fishes",
+    "i": 2170
+  },
+  {
+    "value": "with 'with'",
+    "i": 2171
+  },
+  {
+    "value": "with together",
+    "i": 2172
+  },
+  {
+    "value": "of swine",
+    "i": 2173
+  },
+  {
+    "value": "used with the preposition \"up\"",
+    "i": 2174
+  },
+  {
+    "value": "of a locomotive",
+    "i": 2175
+  },
+  {
+    "value": "of a person or their face",
+    "i": 2176
+  },
+  {
+    "value": "of a suit",
+    "i": 2177
+  },
+  {
+    "value": "in informal contexts",
+    "i": 2178
+  },
+  {
+    "value": "of a battle",
+    "i": 2179
+  },
+  {
+    "value": "of a floating ship",
+    "i": 2180
+  },
+  {
+    "value": "in several forms of football",
+    "i": 2181
+  },
+  {
+    "value": "of a gear train",
+    "i": 2182
+  },
+  {
+    "value": "as biologically inaccurate",
+    "i": 2183
+  },
+  {
+    "value": "in more positive sense",
+    "i": 2184
+  },
+  {
+    "value": "of play",
+    "i": 2185
+  },
+  {
+    "value": "of a musical work",
+    "i": 2186
+  },
+  {
+    "value": "of a video game",
+    "i": 2187
+  },
+  {
+    "value": "of an audio or visual recording",
+    "i": 2188
+  },
+  {
+    "value": "of a ball or shuttlecock",
+    "i": 2189
+  },
+  {
+    "value": "followed by a location",
+    "i": 2190
+  },
+  {
+    "value": "of pluck",
+    "i": 2191
+  },
+  {
+    "value": "of the strings of an instrument",
+    "i": 2192
+  },
+  {
+    "value": "of the neckline of a dress",
+    "i": 2193
+  },
+  {
+    "value": "of a raven",
+    "i": 2194
+  },
+  {
+    "value": "of spouses",
+    "i": 2195
+  },
+  {
+    "value": "followed by 'up'",
+    "i": 2196
+  },
+  {
+    "value": "of a smell",
+    "i": 2197
+  },
+  {
+    "value": "of a look",
+    "i": 2198
+  },
+  {
+    "value": "of an abscess",
+    "i": 2199
+  },
+  {
+    "value": "of a comment or inference",
+    "i": 2200
+  },
+  {
+    "value": "of a living thing",
+    "i": 2201
+  },
+  {
+    "value": "of walking routes",
+    "i": 2202
+  },
+  {
+    "value": "in extended senses of the above",
+    "i": 2203
+  },
+  {
+    "value": "with adverb",
+    "i": 2204
+  },
+  {
+    "value": "of kinds of livestock which typically have horns",
+    "i": 2205
+  },
+  {
+    "value": "in common use",
+    "i": 2206
+  },
+  {
+    "value": "of a solid or surface",
+    "i": 2207
+  },
+  {
+    "value": "of a fixed-wing aircraft",
+    "i": 2208
+  },
+  {
+    "value": "of spoken or written language",
+    "i": 2209
+  },
+  {
+    "value": "of a fat or oil",
+    "i": 2210
+  },
+  {
+    "value": "in the phrase \"a pop\"",
+    "i": 2211
+  },
+  {
+    "value": "of the ears",
+    "i": 2212
+  },
+  {
+    "value": "in set phrases",
+    "i": 2213
+  },
+  {
+    "value": "vocative",
+    "i": 2214
+  },
+  {
+    "value": "of a guinea pig or chinchilla",
+    "i": 2215
+  },
+  {
+    "value": "of a political policy",
+    "i": 2216
+  },
+  {
+    "value": "singulative",
+    "i": 2217
+  },
+  {
+    "value": "in the phrase \"to pose as\"",
+    "i": 2218
+  },
+  {
+    "value": "in Ireland",
+    "i": 2219
+  },
+  {
+    "value": "normally in the phrasal verb posh up",
+    "i": 2220
+  },
+  {
+    "value": "with to or an adverb",
+    "i": 2221
+  },
+  {
+    "value": "in later use chiefly US",
+    "i": 2222
+  },
+  {
+    "value": "modifying a clause or predicate",
+    "i": 2223
+  },
+  {
+    "value": "modifying a verb",
+    "i": 2224
+  },
+  {
+    "value": "of a symptom or condition",
+    "i": 2225
+  },
+  {
+    "value": "of alcoholic drinks",
+    "i": 2226
+  },
+  {
+    "value": "of drugs",
+    "i": 2227
+  },
+  {
+    "value": "of a cell",
+    "i": 2228
+  },
+  {
+    "value": "of a biographical or historical account",
+    "i": 2229
+  },
+  {
+    "value": "of Native Americans and by extension other groups",
+    "i": 2230
+  },
+  {
+    "value": "after 366 BC",
+    "i": 2231
+  },
+  {
+    "value": "followed by about",
+    "i": 2232
+  },
+  {
+    "value": "of experimental results",
+    "i": 2233
+  },
+  {
+    "value": "of an opinion or notion",
+    "i": 2234
+  },
+  {
+    "value": "of intersymbol interference",
+    "i": 2235
+  },
+  {
+    "value": "of an adjective",
+    "i": 2236
+  },
+  {
+    "value": "of an adjectival or nominal phrase",
+    "i": 2237
+  },
+  {
+    "value": "of theories",
+    "i": 2238
+  },
+  {
+    "value": "of a high-level bid",
+    "i": 2239
+  },
+  {
+    "value": "of prefigure",
+    "i": 2240
+  },
+  {
+    "value": "as pre-history",
+    "i": 2241
+  },
+  {
+    "value": "of a culture",
+    "i": 2242
+  },
+  {
+    "value": "as noun adjunct",
+    "i": 2243
+  },
+  {
+    "value": "of a linguistic form",
+    "i": 2244
+  },
+  {
+    "value": "of a tense",
+    "i": 2245
+  },
+  {
+    "value": "with present-tense constructions",
+    "i": 2246
+  },
+  {
+    "value": "with past-tense constructions",
+    "i": 2247
+  },
+  {
+    "value": "as prick up",
+    "i": 2248
+  },
+  {
+    "value": "of ears",
+    "i": 2249
+  },
+  {
+    "value": "of a steam boiler",
+    "i": 2250
+  },
+  {
+    "value": "of a name",
+    "i": 2251
+  },
+  {
+    "value": "followed by “of”",
+    "i": 2252
+  },
+  {
+    "value": "of a person or an animal",
+    "i": 2253
+  },
+  {
+    "value": "of a rule",
+    "i": 2254
+  },
+  {
+    "value": "followed by of or with",
+    "i": 2255
+  },
+  {
+    "value": "of a measurement",
+    "i": 2256
+  },
+  {
+    "value": "of an affix or word construction rule",
+    "i": 2257
+  },
+  {
+    "value": "of affixes",
+    "i": 2258
+  },
+  {
+    "value": "of an income tax or other tax",
+    "i": 2259
+  },
+  {
+    "value": "of a contractual provision",
+    "i": 2260
+  },
+  {
+    "value": "with \"up\" - see prop up",
+    "i": 2261
+  },
+  {
+    "value": "of animals or plants",
+    "i": 2262
+  },
+  {
+    "value": "of writing or speaking",
+    "i": 2263
+  },
+  {
+    "value": "of writing or speaking but also figurative",
+    "i": 2264
+  },
+  {
+    "value": "in a modern theater",
+    "i": 2265
+  },
+  {
+    "value": "in an ancient theater",
+    "i": 2266
+  },
+  {
+    "value": "of research",
+    "i": 2267
+  },
+  {
+    "value": "Roman-Empire",
+    "i": 2268
+  },
+  {
+    "value": "used in passive",
+    "i": 2269
+  },
+  {
+    "value": "of graphics",
+    "i": 2270
+  },
+  {
+    "value": "of content",
+    "i": 2271
+  },
+  {
+    "value": "of an author or editor",
+    "i": 2272
+  },
+  {
+    "value": "of cereals",
+    "i": 2273
+  },
+  {
+    "value": "with \"out\" or \"up\"",
+    "i": 2274
+  },
+  {
+    "value": "of a branch of science",
+    "i": 2275
+  },
+  {
+    "value": "in Netherlands and Belgium",
+    "i": 2276
+  },
+  {
+    "value": "of a sector",
+    "i": 2277
+  },
+  {
+    "value": "construed with to",
+    "i": 2278
+  },
+  {
+    "value": "as a plural",
+    "i": 2279
+  },
+  {
+    "value": "of a sound system",
+    "i": 2280
+  },
+  {
+    "value": "of people or tempers",
+    "i": 2281
+  },
+  {
+    "value": "of a vein of ore",
+    "i": 2282
+  },
+  {
+    "value": "of a motor",
+    "i": 2283
+  },
+  {
+    "value": "of buildings",
+    "i": 2284
+  },
+  {
+    "value": "of an ideal",
+    "i": 2285
+  },
+  {
+    "value": "of a ring",
+    "i": 2286
+  },
+  {
+    "value": "of a module",
+    "i": 2287
+  },
+  {
+    "value": "of a sleeve",
+    "i": 2288
+  },
+  {
+    "value": "of rolling stock",
+    "i": 2289
+  },
+  {
+    "value": "used with “of”",
+    "i": 2290
+  },
+  {
+    "value": "of a flop",
+    "i": 2291
+  },
+  {
+    "value": "of the market",
+    "i": 2292
+  },
+  {
+    "value": "of artillery",
+    "i": 2293
+  },
+  {
+    "value": "of a projectile",
+    "i": 2294
+  },
+  {
+    "value": "of a gas etc.",
+    "i": 2295
+  },
+  {
+    "value": "of a person or personal characteristics",
+    "i": 2296
+  },
+  {
+    "value": "followed by \"about\"",
+    "i": 2297
+  },
+  {
+    "value": "of threads etc.",
+    "i": 2298
+  },
+  {
+    "value": "Southeastern",
+    "i": 2299
+  },
+  {
+    "value": "of an object or concept",
+    "i": 2300
+  },
+  {
+    "value": "of seed",
+    "i": 2301
+  },
+  {
+    "value": "in New England and rural US since end of 20th century",
+    "i": 2302
+  },
+  {
+    "value": "of engine types",
+    "i": 2303
+  },
+  {
+    "value": "of other machines",
+    "i": 2304
+  },
+  {
+    "value": "of persons or their actions",
+    "i": 2305
+  },
+  {
+    "value": "of areas of discussion or research",
+    "i": 2306
+  },
+  {
+    "value": "of scholars",
+    "i": 2307
+  },
+  {
+    "value": "of writers",
+    "i": 2308
+  },
+  {
+    "value": "of a wave",
+    "i": 2309
+  },
+  {
+    "value": "of a sound or voice",
+    "i": 2310
+  },
+  {
+    "value": "of paddles",
+    "i": 2311
+  },
+  {
+    "value": "with back",
+    "i": 2312
+  },
+  {
+    "value": "as \"be reeling\"",
+    "i": 2313
+  },
+  {
+    "value": "with preposition \"from\"",
+    "i": 2314
+  },
+  {
+    "value": "of a tax",
+    "i": 2315
+  },
+  {
+    "value": "of a Borel measure",
+    "i": 2316
+  },
+  {
+    "value": "of topography",
+    "i": 2317
+  },
+  {
+    "value": "of a URL",
+    "i": 2318
+  },
+  {
+    "value": "of codes and regulations",
+    "i": 2319
+  },
+  {
+    "value": "of substance",
+    "i": 2320
+  },
+  {
+    "value": "of guitars",
+    "i": 2321
+  },
+  {
+    "value": "of a surface",
+    "i": 2322
+  },
+  {
+    "value": "with an object consisting of direct speech or a clause beginning with that",
+    "i": 2323
+  },
+  {
+    "value": "with respect to likelihood",
+    "i": 2324
+  },
+  {
+    "value": "of an experiment or procedure",
+    "i": 2325
+  },
+  {
+    "value": "of a circuit",
+    "i": 2326
+  },
+  {
+    "value": "with \"last\" or \"final",
+    "i": 2327
+  },
+  {
+    "value": "of a job or position",
+    "i": 2328
+  },
+  {
+    "value": "with \"well\"",
+    "i": 2329
+  },
+  {
+    "value": "apocopic",
+    "i": 2330
+  },
+  {
+    "value": "of a chemical reaction",
+    "i": 2331
+  },
+  {
+    "value": "of a phase change",
+    "i": 2332
+  },
+  {
+    "value": "in Muslim usage",
+    "i": 2333
+  },
+  {
+    "value": "of fruits",
+    "i": 2334
+  },
+  {
+    "value": "used with with",
+    "i": 2335
+  },
+  {
+    "value": "of a river",
+    "i": 2336
+  },
+  {
+    "value": "of an aircraft or vessel",
+    "i": 2337
+  },
+  {
+    "value": "in folk songs",
+    "i": 2338
+  },
+  {
+    "value": "of a camera",
+    "i": 2339
+  },
+  {
+    "value": "of birds or bats",
+    "i": 2340
+  },
+  {
+    "value": "of a tree or graph",
+    "i": 2341
+  },
+  {
+    "value": "of milk or another liquid",
+    "i": 2342
+  },
+  {
+    "value": "with initial capital",
+    "i": 2343
+  },
+  {
+    "value": "of a vowel etc.",
+    "i": 2344
+  },
+  {
+    "value": "of cloth",
+    "i": 2345
+  },
+  {
+    "value": "of a game controller",
+    "i": 2346
+  },
+  {
+    "value": "of a horse or other animal",
+    "i": 2347
+  },
+  {
+    "value": "in the Go programming language",
+    "i": 2348
+  },
+  {
+    "value": "of a marsh etc",
+    "i": 2349
+  },
+  {
+    "value": "of apples",
+    "i": 2350
+  },
+  {
+    "value": "of a road etc",
+    "i": 2351
+  },
+  {
+    "value": "with “and ashes”",
+    "i": 2352
+  },
+  {
+    "value": "followed by the preposition \"to\"",
+    "i": 2353
+  },
+  {
+    "value": "of an object ball",
+    "i": 2354
+  },
+  {
+    "value": "used after a noun",
+    "i": 2355
+  },
+  {
+    "value": "of pants or shorts",
+    "i": 2356
+  },
+  {
+    "value": "of a person or clothes",
+    "i": 2357
+  },
+  {
+    "value": "of a quadruped",
+    "i": 2358
+  },
+  {
+    "value": "of light skin",
+    "i": 2359
+  },
+  {
+    "value": "of objects or dim light",
+    "i": 2360
+  },
+  {
+    "value": "of discarded goods",
+    "i": 2361
+  },
+  {
+    "value": "of a person etc.",
+    "i": 2362
+  },
+  {
+    "value": "of a solution",
+    "i": 2363
+  },
+  {
+    "value": "in compound adjectives",
+    "i": 2364
+  },
+  {
+    "value": "of a vowel sound",
+    "i": 2365
+  },
+  {
+    "value": "of food ingredients",
+    "i": 2366
+  },
+  {
+    "value": "of a project or plan",
+    "i": 2367
+  },
+  {
+    "value": "in transaction processing systems",
+    "i": 2368
+  },
+  {
+    "value": "of a sore throat",
+    "i": 2369
+  },
+  {
+    "value": "of an analogue radio transmission",
+    "i": 2370
+  },
+  {
+    "value": "of a phonograph record",
+    "i": 2371
+  },
+  {
+    "value": "with object \"one's face\"",
+    "i": 2372
+  },
+  {
+    "value": "of a forward",
+    "i": 2373
+  },
+  {
+    "value": "of a pain",
+    "i": 2374
+  },
+  {
+    "value": "of an investigation",
+    "i": 2375
+  },
+  {
+    "value": "with superlative",
+    "i": 2376
+  },
+  {
+    "value": "of goods",
+    "i": 2377
+  },
+  {
+    "value": "of a dealer",
+    "i": 2378
+  },
+  {
+    "value": "of cigarette or cigar smoke",
+    "i": 2379
+  },
+  {
+    "value": "of organs",
+    "i": 2380
+  },
+  {
+    "value": "of a person or their behaviour",
+    "i": 2381
+  },
+  {
+    "value": "of a human population",
+    "i": 2382
+  },
+  {
+    "value": "of a rock",
+    "i": 2383
+  },
+  {
+    "value": "in English common law",
+    "i": 2384
+  },
+  {
+    "value": "of a rose",
+    "i": 2385
+  },
+  {
+    "value": "of an institution",
+    "i": 2386
+  },
+  {
+    "value": "of a disk jockey",
+    "i": 2387
+  },
+  {
+    "value": "of a detail or distinction",
+    "i": 2388
+  },
+  {
+    "value": "of an issue",
+    "i": 2389
+  },
+  {
+    "value": "of a pathogen",
+    "i": 2390
+  },
+  {
+    "value": "followed by “from”",
+    "i": 2391
+  },
+  {
+    "value": "of a stone or slab",
+    "i": 2392
+  },
+  {
+    "value": "of a verb and adjective form in Korean",
+    "i": 2393
+  },
+  {
+    "value": "of a relationship",
+    "i": 2394
+  },
+  {
+    "value": "in Jordan",
+    "i": 2395
+  },
+  {
+    "value": "of a thing or concept",
+    "i": 2396
+  },
+  {
+    "value": "of a defensive player",
+    "i": 2397
+  },
+  {
+    "value": "of a spear",
+    "i": 2398
+  },
+  {
+    "value": "as \"shake on\"",
+    "i": 2399
+  },
+  {
+    "value": "in Australia",
+    "i": 2400
+  },
+  {
+    "value": "in compound terms",
+    "i": 2401
+  },
+  {
+    "value": "of food etc",
+    "i": 2402
+  },
+  {
+    "value": "of intelligence",
+    "i": 2403
+  },
+  {
+    "value": "of straw",
+    "i": 2404
+  },
+  {
+    "value": "of a person's eyes",
+    "i": 2405
+  },
+  {
+    "value": "as \"shin up\"",
+    "i": 2406
+  },
+  {
+    "value": "with dummy it",
+    "i": 2407
+  },
+  {
+    "value": "as past participle",
+    "i": 2408
+  },
+  {
+    "value": "in the Microsoft family of operating systems",
+    "i": 2409
+  },
+  {
+    "value": "of a table",
+    "i": 2410
+  },
+  {
+    "value": "of radio waves",
+    "i": 2411
+  },
+  {
+    "value": "of radio equipment",
+    "i": 2412
+  },
+  {
+    "value": "of material",
+    "i": 2413
+  },
+  {
+    "value": "of bugs",
+    "i": 2414
+  },
+  {
+    "value": "of a complaint or demand",
+    "i": 2415
+  },
+  {
+    "value": "of reshuffle",
+    "i": 2416
+  },
+  {
+    "value": "of laughter",
+    "i": 2417
+  },
+  {
+    "value": "TV",
+    "i": 2418
+  },
+  {
+    "value": "of a radio",
+    "i": 2419
+  },
+  {
+    "value": "as \"the sillies\"",
+    "i": 2420
+  },
+  {
+    "value": "of a set of equations",
+    "i": 2421
+  },
+  {
+    "value": "of matrix",
+    "i": 2422
+  },
+  {
+    "value": "of transformation",
+    "i": 2423
+  },
+  {
+    "value": "of a cardinal number",
+    "i": 2424
+  },
+  {
+    "value": "of ships",
+    "i": 2425
+  },
+  {
+    "value": "of an agreement or arrangement",
+    "i": 2426
+  },
+  {
+    "value": "North-Wales",
+    "i": 2427
+  },
+  {
+    "value": "not used in the plural",
+    "i": 2428
+  },
+  {
+    "value": "in the names of dishes in Asian cuisine etc.",
+    "i": 2429
+  },
+  {
+    "value": "of fluids",
+    "i": 2430
+  },
+  {
+    "value": "since after it moves out of check",
+    "i": 2431
+  },
+  {
+    "value": "of food or beverages",
+    "i": 2432
+  },
+  {
+    "value": "Merseyside",
+    "i": 2433
+  },
+  {
+    "value": "normally said of a rope",
+    "i": 2434
+  },
+  {
+    "value": "of something said",
+    "i": 2435
+  },
+  {
+    "value": "of a person or a person's build",
+    "i": 2436
+  },
+  {
+    "value": "of a workforce",
+    "i": 2437
+  },
+  {
+    "value": "of something abstract like a chance or margin",
+    "i": 2438
+  },
+  {
+    "value": "with knob",
+    "i": 2439
+  },
+  {
+    "value": "of ice or snow",
+    "i": 2440
+  },
+  {
+    "value": "as used by Magnavox clock radios",
+    "i": 2441
+  },
+  {
+    "value": "with around",
+    "i": 2442
+  },
+  {
+    "value": "without a modifier",
+    "i": 2443
+  },
+  {
+    "value": "in extreme programming",
+    "i": 2444
+  },
+  {
+    "value": "as present participle",
+    "i": 2445
+  },
+  {
+    "value": "of a person's voice",
+    "i": 2446
+  },
+  {
+    "value": "of muscles",
+    "i": 2447
+  },
+  {
+    "value": "of a fire",
+    "i": 2448
+  },
+  {
+    "value": "of submarines",
+    "i": 2449
+  },
+  {
+    "value": "of bread",
+    "i": 2450
+  },
+  {
+    "value": "Middle",
+    "i": 2451
+  },
+  {
+    "value": "in more general use",
+    "i": 2452
+  },
+  {
+    "value": "of drawn lines",
+    "i": 2453
+  },
+  {
+    "value": "of someone or something",
+    "i": 2454
+  },
+  {
+    "value": "with really or quite",
+    "i": 2455
+  },
+  {
+    "value": "in certain set combinations",
+    "i": 2456
+  },
+  {
+    "value": "Yukon",
+    "i": 2457
+  },
+  {
+    "value": "with “new”",
+    "i": 2458
+  },
+  {
+    "value": "of a character or object",
+    "i": 2459
+  },
+  {
+    "value": "of flavors",
+    "i": 2460
+  },
+  {
+    "value": "of flavors or odors",
+    "i": 2461
+  },
+  {
+    "value": "of expression or behavior",
+    "i": 2462
+  },
+  {
+    "value": "of a pilot",
+    "i": 2463
+  },
+  {
+    "value": "of a seed",
+    "i": 2464
+  },
+  {
+    "value": "of a short exact sequence",
+    "i": 2465
+  },
+  {
+    "value": "of an order",
+    "i": 2466
+  },
+  {
+    "value": "of quotations",
+    "i": 2467
+  },
+  {
+    "value": "of an email",
+    "i": 2468
+  },
+  {
+    "value": "with cardinal adverbs",
+    "i": 2469
+  },
+  {
+    "value": "of mechanisms",
+    "i": 2470
+  },
+  {
+    "value": "with \"apart\" or \"open\"",
+    "i": 2471
+  },
+  {
+    "value": "perfective",
+    "i": 2472
+  },
+  {
+    "value": "of arches",
+    "i": 2473
+  },
+  {
+    "value": "of rattles",
+    "i": 2474
+  },
+  {
+    "value": "of a spar",
+    "i": 2475
+  },
+  {
+    "value": "of pain",
+    "i": 2476
+  },
+  {
+    "value": "of a sorting algorithm",
+    "i": 2477
+  },
+  {
+    "value": "of a rail vehicle",
+    "i": 2478
+  },
+  {
+    "value": "of computer software",
+    "i": 2479
+  },
+  {
+    "value": "of tears",
+    "i": 2480
+  },
+  {
+    "value": "of a tree or shrub",
+    "i": 2481
+  },
+  {
+    "value": "of a motor vehicle",
+    "i": 2482
+  },
+  {
+    "value": "in translations of Japanese pornography",
+    "i": 2483
+  },
+  {
+    "value": "with a film as its subject",
+    "i": 2484
+  },
+  {
+    "value": "used to modify another noun",
+    "i": 2485
+  },
+  {
+    "value": "with 'in'",
+    "i": 2486
+  },
+  {
+    "value": "with 'off'",
+    "i": 2487
+  },
+  {
+    "value": "of the rake of a ship's mast",
+    "i": 2488
+  },
+  {
+    "value": "Netherlands",
+    "i": 2489
+  },
+  {
+    "value": "in the narrow sense",
+    "i": 2490
+  },
+  {
+    "value": "in the broad sense",
+    "i": 2491
+  },
+  {
+    "value": "of a setting",
+    "i": 2492
+  },
+  {
+    "value": "of a window",
+    "i": 2493
+  },
+  {
+    "value": "of threads on a bulletin board",
+    "i": 2494
+  },
+  {
+    "value": "of a website",
+    "i": 2495
+  },
+  {
+    "value": "of an insect or arachnid",
+    "i": 2496
+  },
+  {
+    "value": "of mares",
+    "i": 2497
+  },
+  {
+    "value": "of stir",
+    "i": 2498
+  },
+  {
+    "value": "in a card game",
+    "i": 2499
+  },
+  {
+    "value": "of a race car",
+    "i": 2500
+  },
+  {
+    "value": "of a piece of wire",
+    "i": 2501
+  },
+  {
+    "value": "of expenses or costs",
+    "i": 2502
+  },
+  {
+    "value": "of sex",
+    "i": 2503
+  },
+  {
+    "value": "of society",
+    "i": 2504
+  },
+  {
+    "value": "of a warship",
+    "i": 2505
+  },
+  {
+    "value": "of employees",
+    "i": 2506
+  },
+  {
+    "value": "of a car engine",
+    "i": 2507
+  },
+  {
+    "value": "in tabular matter",
+    "i": 2508
+  },
+  {
+    "value": "takes a reflexive pronoun",
+    "i": 2509
+  },
+  {
+    "value": "of a wicket keeper",
+    "i": 2510
+  },
+  {
+    "value": "of animates",
+    "i": 2511
+  },
+  {
+    "value": "from sense 1.1",
+    "i": 2512
+  },
+  {
+    "value": "as \"sub on\"",
+    "i": 2513
+  },
+  {
+    "value": "mixed",
+    "i": 2514
+  },
+  {
+    "value": "of a clause",
+    "i": 2515
+  },
+  {
+    "value": "of a stream or faultline",
+    "i": 2516
+  },
+  {
+    "value": "of a set S",
+    "i": 2517
+  },
+  {
+    "value": "of a speed",
+    "i": 2518
+  },
+  {
+    "value": "of a flow",
+    "i": 2519
+  },
+  {
+    "value": "of a rank or appointment",
+    "i": 2520
+  },
+  {
+    "value": "in the phrase \"substitute X for Y\"",
+    "i": 2521
+  },
+  {
+    "value": "in the phrase \"substitute X with/by Y\"",
+    "i": 2522
+  },
+  {
+    "value": "of a cyclone",
+    "i": 2523
+  },
+  {
+    "value": "demonstrative",
+    "i": 2524
+  },
+  {
+    "value": "of a voluntarily-chosen course of action",
+    "i": 2525
+  },
+  {
+    "value": "for or an adverb",
+    "i": 2526
+  },
+  {
+    "value": "of two or more cards",
+    "i": 2527
+  },
+  {
+    "value": "said of two or more cards",
+    "i": 2528
+  },
+  {
+    "value": "of eyes or cheeks",
+    "i": 2529
+  },
+  {
+    "value": "of a vapor",
+    "i": 2530
+  },
+  {
+    "value": "of the hand",
+    "i": 2531
+  },
+  {
+    "value": "said of electronic devices",
+    "i": 2532
+  },
+  {
+    "value": "of information or facts",
+    "i": 2533
+  },
+  {
+    "value": "Classical-studies",
+    "i": 2534
+  },
+  {
+    "value": "of an ovule",
+    "i": 2535
+  },
+  {
+    "value": "of a chord",
+    "i": 2536
+  },
+  {
+    "value": "used as a title",
+    "i": 2537
+  },
+  {
+    "value": "of a body of water or part thereof",
+    "i": 2538
+  },
+  {
+    "value": "of an aircraft wing",
+    "i": 2539
+  },
+  {
+    "value": "of a hairstyle",
+    "i": 2540
+  },
+  {
+    "value": "in modern times Southern US",
+    "i": 2541
+  },
+  {
+    "value": "of communication",
+    "i": 2542
+  },
+  {
+    "value": "of a news article",
+    "i": 2543
+  },
+  {
+    "value": "construed with with",
+    "i": 2544
+  },
+  {
+    "value": "of a SNP",
+    "i": 2545
+  },
+  {
+    "value": "of meteorological data",
+    "i": 2546
+  },
+  {
+    "value": "Northern-UK",
+    "i": 2547
+  },
+  {
+    "value": "in Polynesia",
+    "i": 2548
+  },
+  {
+    "value": "of a broker",
+    "i": 2549
+  },
+  {
+    "value": "of a book etc.",
+    "i": 2550
+  },
+  {
+    "value": "in professional sports",
+    "i": 2551
+  },
+  {
+    "value": "of track",
+    "i": 2552
+  },
+  {
+    "value": "of leather",
+    "i": 2553
+  },
+  {
+    "value": "from ticker tape",
+    "i": 2554
+  },
+  {
+    "value": "of one's reputation",
+    "i": 2555
+  },
+  {
+    "value": "used in titles",
+    "i": 2556
+  },
+  {
+    "value": "of a machine or of software",
+    "i": 2557
+  },
+  {
+    "value": "of a theory",
+    "i": 2558
+  },
+  {
+    "value": "Old-English",
+    "i": 2559
+  },
+  {
+    "value": "followed by a to-infinitive",
+    "i": 2560
+  },
+  {
+    "value": "followed by particle \"to\" + verb",
+    "i": 2561
+  },
+  {
+    "value": "of a patent",
+    "i": 2562
+  },
+  {
+    "value": "of missile guidance",
+    "i": 2563
+  },
+  {
+    "value": "normally \"Test\"",
+    "i": 2564
+  },
+  {
+    "value": "with a superlative adjective",
+    "i": 2565
+  },
+  {
+    "value": "used possessively",
+    "i": 2566
+  },
+  {
+    "value": "with \"do\"",
+    "i": 2567
+  },
+  {
+    "value": "with a reversal of meaning",
+    "i": 2568
+  },
+  {
+    "value": "used to show obviousness or agreement",
+    "i": 2569
+  },
+  {
+    "value": "in dates",
+    "i": 2570
+  },
+  {
+    "value": "of a time reference",
+    "i": 2571
+  },
+  {
+    "value": "with stress on this",
+    "i": 2572
+  },
+  {
+    "value": "of a pulse",
+    "i": 2573
+  },
+  {
+    "value": "of a plant or animal",
+    "i": 2574
+  },
+  {
+    "value": "with reference to a voice",
+    "i": 2575
+  },
+  {
+    "value": "with reference to a sheep or dog",
+    "i": 2576
+  },
+  {
+    "value": "in public houses",
+    "i": 2577
+  },
+  {
+    "value": "as someone's time",
+    "i": 2578
+  },
+  {
+    "value": "with adjective",
+    "i": 2579
+  },
+  {
+    "value": "in past participle form",
+    "i": 2580
+  },
+  {
+    "value": "with \"little\"",
+    "i": 2581
+  },
+  {
+    "value": "of a fielder",
+    "i": 2582
+  },
+  {
+    "value": "of items",
+    "i": 2583
+  },
+  {
+    "value": "of a DJ",
+    "i": 2584
+  },
+  {
+    "value": "with noun qualifier",
+    "i": 2585
+  },
+  {
+    "value": "in Mesoamerican mythology",
+    "i": 2586
+  },
+  {
+    "value": "of sense 1",
+    "i": 2587
+  },
+  {
+    "value": "in restaurants",
+    "i": 2588
+  },
+  {
+    "value": "as \"toss one's cookies\"",
+    "i": 2589
+  },
+  {
+    "value": "of a train etc.",
+    "i": 2590
+  },
+  {
+    "value": "of a decision problem",
+    "i": 2591
+  },
+  {
+    "value": "after forms of gain",
+    "i": 2592
+  },
+  {
+    "value": "in tabloid newspapers",
+    "i": 2593
+  },
+  {
+    "value": "in apposition",
+    "i": 2594
+  },
+  {
+    "value": "of a number or an element of an extension field",
+    "i": 2595
+  },
+  {
+    "value": "of an extension field",
+    "i": 2596
+  },
+  {
+    "value": "of a traveler",
+    "i": 2597
+  },
+  {
+    "value": "narrowly",
+    "i": 2598
+  },
+  {
+    "value": "of a relation on a set",
+    "i": 2599
+  },
+  {
+    "value": "of a group action",
+    "i": 2600
+  },
+  {
+    "value": "of the soul",
+    "i": 2601
+  },
+  {
+    "value": "of a message or program",
+    "i": 2602
+  },
+  {
+    "value": "of a material or object",
+    "i": 2603
+  },
+  {
+    "value": "of a system or organization",
+    "i": 2604
+  },
+  {
+    "value": "of the European Union",
+    "i": 2605
+  },
+  {
+    "value": "with certain adverbs of manner",
+    "i": 2606
+  },
+  {
+    "value": "of a male bird",
+    "i": 2607
+  },
+  {
+    "value": "followed by upon",
+    "i": 2608
+  },
+  {
+    "value": "of a vessel's sails",
+    "i": 2609
+  },
+  {
+    "value": "of timber",
+    "i": 2610
+  },
+  {
+    "value": "of a vaccine",
+    "i": 2611
+  },
+  {
+    "value": "in medieval universities",
+    "i": 2612
+  },
+  {
+    "value": "with go",
+    "i": 2613
+  },
+  {
+    "value": "with \"good\" or \"bad\"",
+    "i": 2614
+  },
+  {
+    "value": "as 'the trots'",
+    "i": 2615
+  },
+  {
+    "value": "in clothing retail and fashion",
+    "i": 2616
+  },
+  {
+    "value": "used teasingly",
+    "i": 2617
+  },
+  {
+    "value": "as Tube",
+    "i": 2618
+  },
+  {
+    "value": "of a drag queen",
+    "i": 2619
+  },
+  {
+    "value": "said of a poker tournament",
+    "i": 2620
+  },
+  {
+    "value": "of language or style",
+    "i": 2621
+  },
+  {
+    "value": "of a gastropod shell",
+    "i": 2622
+  },
+  {
+    "value": "of a specified quality",
+    "i": 2623
+  },
+  {
+    "value": "of ground or a plant",
+    "i": 2624
+  },
+  {
+    "value": "of a programming language",
+    "i": 2625
+  },
+  {
+    "value": "of a pollen grain",
+    "i": 2626
+  },
+  {
+    "value": "of a book or document",
+    "i": 2627
+  },
+  {
+    "value": "of an atomic nucleus",
+    "i": 2628
+  },
+  {
+    "value": "of a gemstone",
+    "i": 2629
+  },
+  {
+    "value": "of a play",
+    "i": 2630
+  },
+  {
+    "value": "in various ball games",
+    "i": 2631
+  },
+  {
+    "value": "of a payment etc",
+    "i": 2632
+  },
+  {
+    "value": "of a margin",
+    "i": 2633
+  },
+  {
+    "value": "of a polymer",
+    "i": 2634
+  },
+  {
+    "value": "of a school district",
+    "i": 2635
+  },
+  {
+    "value": "of a system of government or administration",
+    "i": 2636
+  },
+  {
+    "value": "of an algebra",
+    "i": 2637
+  },
+  {
+    "value": "of a matrix or operator",
+    "i": 2638
+  },
+  {
+    "value": "of gasoline",
+    "i": 2639
+  },
+  {
+    "value": "of undesirable events",
+    "i": 2640
+  },
+  {
+    "value": "of the sun or moon",
+    "i": 2641
+  },
+  {
+    "value": "not used attributively",
+    "i": 2642
+  },
+  {
+    "value": "of a railway line or train",
+    "i": 2643
+  },
+  {
+    "value": "followed by with or for",
+    "i": 2644
+  },
+  {
+    "value": "followed by \"to\" before the object",
+    "i": 2645
+  },
+  {
+    "value": "of a penalty",
+    "i": 2646
+  },
+  {
+    "value": "since circa 1678",
+    "i": 2647
+  },
+  {
+    "value": "of a stomach or gastrointestinal tract",
+    "i": 2648
+  },
+  {
+    "value": "of a nose etc.",
+    "i": 2649
+  },
+  {
+    "value": "of caterpillars",
+    "i": 2650
+  },
+  {
+    "value": "of flavor",
+    "i": 2651
+  },
+  {
+    "value": "of a vein or set of veins",
+    "i": 2652
+  },
+  {
+    "value": "of the members of a group",
+    "i": 2653
+  },
+  {
+    "value": "of a product or practice",
+    "i": 2654
+  },
+  {
+    "value": "of a wart etc",
+    "i": 2655
+  },
+  {
+    "value": "of a cat's claws",
+    "i": 2656
+  },
+  {
+    "value": "of blood",
+    "i": 2657
+  },
+  {
+    "value": "with at or on",
+    "i": 2658
+  },
+  {
+    "value": "in composing a fiction",
+    "i": 2659
+  },
+  {
+    "value": "of a party or entity",
+    "i": 2660
+  },
+  {
+    "value": "of a rule or law",
+    "i": 2661
+  },
+  {
+    "value": "of ceramics",
+    "i": 2662
+  },
+  {
+    "value": "of perception",
+    "i": 2663
+  },
+  {
+    "value": "of an animal or animal species",
+    "i": 2664
+  },
+  {
+    "value": "of a plant or plant species",
+    "i": 2665
+  },
+  {
+    "value": "of education",
+    "i": 2666
+  },
+  {
+    "value": "of a function or method",
+    "i": 2667
+  },
+  {
+    "value": "of a price etc",
+    "i": 2668
+  },
+  {
+    "value": "of a variable etc.",
+    "i": 2669
+  },
+  {
+    "value": "of an inflectional class or inflected form",
+    "i": 2670
+  },
+  {
+    "value": "of a person or a manner of speaking",
+    "i": 2671
+  },
+  {
+    "value": "Essex",
+    "i": 2672
+  },
+  {
+    "value": "of an organ",
+    "i": 2673
+  },
+  {
+    "value": "in fantasy",
+    "i": 2674
+  },
+  {
+    "value": "of a clock",
+    "i": 2675
+  },
+  {
+    "value": "referring to flatware",
+    "i": 2676
+  },
+  {
+    "value": "as the final element in compounds",
+    "i": 2677
+  },
+  {
+    "value": "of verbs",
+    "i": 2678
+  },
+  {
+    "value": "of nouns",
+    "i": 2679
+  },
+  {
+    "value": "of adjectives",
+    "i": 2680
+  },
+  {
+    "value": "normally \"wean off\"",
+    "i": 2681
+  },
+  {
+    "value": "of an airplane or missile",
+    "i": 2682
+  },
+  {
+    "value": "of feet or hands",
+    "i": 2683
+  },
+  {
+    "value": "of a wound or sore",
+    "i": 2684
+  },
+  {
+    "value": "with negative",
+    "i": 2685
+  },
+  {
+    "value": "from sense 1.2",
+    "i": 2686
+  },
+  {
+    "value": "of she-dog",
+    "i": 2687
+  },
+  {
+    "value": "with a possessive",
+    "i": 2688
+  },
+  {
+    "value": "of bread or flour",
+    "i": 2689
+  },
+  {
+    "value": "of inanimate objects",
+    "i": 2690
+  },
+  {
+    "value": "of a motion picture",
+    "i": 2691
+  },
+  {
+    "value": "of a previously married person",
+    "i": 2692
+  },
+  {
+    "value": "of seeds",
+    "i": 2693
+  },
+  {
+    "value": "of people or communities",
+    "i": 2694
+  },
+  {
+    "value": "construed with to or for",
+    "i": 2695
+  },
+  {
+    "value": "of thinking",
+    "i": 2696
+  },
+  {
+    "value": "of bodies of water",
+    "i": 2697
+  },
+  {
+    "value": "of windows",
+    "i": 2698
+  },
+  {
+    "value": "of a facial expression",
+    "i": 2699
+  },
+  {
+    "value": "of American English",
+    "i": 2700
+  },
+  {
+    "value": "of something prepared with a yeasted dough",
+    "i": 2701
+  },
+  {
+    "value": "of mail",
+    "i": 2702
+  },
+  {
+    "value": "of a vowel-containing linguistic component",
+    "i": 2703
+  },
+  {
+    "value": "from acrophobia",
+    "i": 2704
+  },
+  {
+    "value": "not attributive",
+    "i": 2705
+  },
+  {
+    "value": "of an act or action",
+    "i": 2706
+  },
+  {
+    "value": "normally archaic",
+    "i": 2707
+  },
+  {
+    "value": "of an echinoderm",
+    "i": 2708
+  },
+  {
+    "value": "Oxford",
+    "i": 2709
+  },
+  {
+    "value": "of streams and rivers",
+    "i": 2710
+  },
+  {
+    "value": "of rivers",
+    "i": 2711
+  },
+  {
+    "value": "as used before Rudolf Steiner",
+    "i": 2712
+  },
+  {
+    "value": "in anti-Israel discourse",
+    "i": 2713
+  },
+  {
+    "value": "used connotatively",
+    "i": 2714
+  },
+  {
+    "value": "followed by “for”",
+    "i": 2715
+  },
+  {
+    "value": "of a water supply",
+    "i": 2716
+  },
+  {
+    "value": "of a sound or syllable",
+    "i": 2717
+  },
+  {
+    "value": "unstressed",
+    "i": 2718
+  },
+  {
+    "value": "of a gene",
+    "i": 2719
+  },
+  {
+    "value": "of a work of art or literature",
+    "i": 2720
+  },
+  {
+    "value": "before-vowel",
+    "i": 2721
+  },
+  {
+    "value": "of an area of land",
+    "i": 2722
+  },
+  {
+    "value": "after a qualification",
+    "i": 2723
+  },
+  {
+    "value": "of a microphone",
+    "i": 2724
+  },
+  {
+    "value": "used on maps",
+    "i": 2725
+  },
+  {
+    "value": "Manila",
+    "i": 2726
+  },
+  {
+    "value": "from the Ming Dynasty. Smithsonian Institution",
+    "i": 2727
+  },
+  {
+    "value": "used as a size classification by fish merchants",
+    "i": 2728
+  },
+  {
+    "value": "of a poison pill",
+    "i": 2729
+  },
+  {
+    "value": "with \"years\" or \"age\"",
+    "i": 2730
+  },
+  {
+    "value": "of a physique",
+    "i": 2731
+  },
+  {
+    "value": "of a community",
+    "i": 2732
+  },
+  {
+    "value": "of rock",
+    "i": 2733
+  },
+  {
+    "value": "of evidence",
+    "i": 2734
+  },
+  {
+    "value": "of soil or earth",
+    "i": 2735
+  },
+  {
+    "value": "of clothing etc.",
+    "i": 2736
+  },
+  {
+    "value": "of a type of horse",
+    "i": 2737
+  },
+  {
+    "value": "in communist states",
+    "i": 2738
+  },
+  {
+    "value": "of a light beam",
+    "i": 2739
+  },
+  {
+    "value": "of a newly ordained priest",
+    "i": 2740
+  },
+  {
+    "value": "of a transformation",
+    "i": 2741
+  },
+  {
+    "value": "of a map projection",
+    "i": 2742
+  },
+  {
+    "value": "of a regular polygon",
+    "i": 2743
+  },
+  {
+    "value": "of a ship or cookware",
+    "i": 2744
+  },
+  {
+    "value": "in British English",
+    "i": 2745
+  },
+  {
+    "value": "in street addresses",
+    "i": 2746
+  },
+  {
+    "value": "Durham",
+    "i": 2747
+  },
+  {
+    "value": "of a flower",
+    "i": 2748
+  },
+  {
+    "value": "of fish scales",
+    "i": 2749
+  },
+  {
+    "value": "dative",
+    "i": 2750
+  },
+  {
+    "value": "of schemes",
+    "i": 2751
+  },
+  {
+    "value": "of a port",
+    "i": 2752
+  },
+  {
+    "value": "of an aircraft flight recorder",
+    "i": 2753
+  },
+  {
+    "value": "of an athlete",
+    "i": 2754
+  },
+  {
+    "value": "of a latent image",
+    "i": 2755
+  },
+  {
+    "value": "of facial features",
+    "i": 2756
+  },
+  {
+    "value": "of names",
+    "i": 2757
+  },
+  {
+    "value": "of a jacket or coat",
+    "i": 2758
+  },
+  {
+    "value": "of a building etc.",
+    "i": 2759
+  },
+  {
+    "value": "of an establishment",
+    "i": 2760
+  },
+  {
+    "value": "followed by \"of\" or \"with\"",
+    "i": 2761
+  },
+  {
+    "value": "in the passive",
+    "i": 2762
+  },
+  {
+    "value": "of a phoneme or syllable",
+    "i": 2763
+  },
+  {
+    "value": "of an automobile or similar machine",
+    "i": 2764
+  },
+  {
+    "value": "of a knowing agent",
+    "i": 2765
+  },
+  {
+    "value": "in dialects",
+    "i": 2766
+  },
+  {
+    "value": "of humans",
+    "i": 2767
+  },
+  {
+    "value": "of the heart",
+    "i": 2768
+  },
+  {
+    "value": "of a toilet",
+    "i": 2769
+  },
+  {
+    "value": "of a fight",
+    "i": 2770
+  },
+  {
+    "value": "of a newspaper or magazine article",
+    "i": 2771
+  },
+  {
+    "value": "of a model or replica",
+    "i": 2772
+  },
+  {
+    "value": "in Latin grammar",
+    "i": 2773
+  },
+  {
+    "value": "in English grammar",
+    "i": 2774
+  },
+  {
+    "value": "of pages of a book etc",
+    "i": 2775
+  },
+  {
+    "value": "used only before the noun qualified",
+    "i": 2776
+  },
+  {
+    "value": "of an animal or plant",
+    "i": 2777
+  },
+  {
+    "value": "of a portrait",
+    "i": 2778
+  },
+  {
+    "value": "of drinks",
+    "i": 2779
+  },
+  {
+    "value": "of an optical instrument",
+    "i": 2780
+  },
+  {
+    "value": "of eyeglasses",
+    "i": 2781
+  },
+  {
+    "value": "of an injury",
+    "i": 2782
+  },
+  {
+    "value": "from 1974 to 1996",
+    "i": 2783
+  },
+  {
+    "value": "of T waves on ECGs",
+    "i": 2784
+  },
+  {
+    "value": "of missing data",
+    "i": 2785
+  },
+  {
+    "value": "of training etc.",
+    "i": 2786
+  },
+  {
+    "value": "of two real numbers",
+    "i": 2787
+  },
+  {
+    "value": "of two integers",
+    "i": 2788
+  },
+  {
+    "value": "of a vector field",
+    "i": 2789
+  },
+  {
+    "value": "of vocabulary",
+    "i": 2790
+  },
+  {
+    "value": "of a disease or condition",
+    "i": 2791
+  },
+  {
+    "value": "of a function or matrix",
+    "i": 2792
+  },
+  {
+    "value": "of shells",
+    "i": 2793
+  },
+  {
+    "value": "of the legs",
+    "i": 2794
+  },
+  {
+    "value": "German",
+    "i": 2795
+  },
+  {
+    "value": "used in Cork",
+    "i": 2796
+  },
+  {
+    "value": "of a map or image",
+    "i": 2797
+  },
+  {
+    "value": "of magic",
+    "i": 2798
+  },
+  {
+    "value": "of any representation",
+    "i": 2799
+  },
+  {
+    "value": "of the copying of text",
+    "i": 2800
+  },
+  {
+    "value": "of a plant or a tea",
+    "i": 2801
+  },
+  {
+    "value": "of an algorithm for converting or compressing data",
+    "i": 2802
+  },
+  {
+    "value": "of a place or region",
+    "i": 2803
+  },
+  {
+    "value": "of a disease or tumor",
+    "i": 2804
+  },
+  {
+    "value": "of a man or his face",
+    "i": 2805
+  },
+  {
+    "value": "of rope",
+    "i": 2806
+  },
+  {
+    "value": "Shia",
+    "i": 2807
+  },
+  {
+    "value": "of a modality",
+    "i": 2808
+  },
+  {
+    "value": "used in the past participle",
+    "i": 2809
+  },
+  {
+    "value": "of things or settings",
+    "i": 2810
+  },
+  {
+    "value": "no-past",
+    "i": 2811
+  },
+  {
+    "value": "from Gerard Manley Hopkins' writings",
+    "i": 2812
+  },
+  {
+    "value": "of a four-legged animal",
+    "i": 2813
+  },
+  {
+    "value": "Persian",
+    "i": 2814
+  },
+  {
+    "value": "used by early Protestants",
+    "i": 2815
+  },
+  {
+    "value": "of a potted plant",
+    "i": 2816
+  },
+  {
+    "value": "of an axis of rotation",
+    "i": 2817
+  },
+  {
+    "value": "of a rotating object",
+    "i": 2818
+  },
+  {
+    "value": "of a part of speech",
+    "i": 2819
+  },
+  {
+    "value": "with generated",
+    "i": 2820
+  },
+  {
+    "value": "of a calendar",
+    "i": 2821
+  },
+  {
+    "value": "of pleasure",
+    "i": 2822
+  },
+  {
+    "value": "of causation",
+    "i": 2823
+  },
+  {
+    "value": "of humour",
+    "i": 2824
+  },
+  {
+    "value": "of a hedge etc",
+    "i": 2825
+  },
+  {
+    "value": "of a ukulele",
+    "i": 2826
+  },
+  {
+    "value": "of mind",
+    "i": 2827
+  },
+  {
+    "value": "of a lion’s tail",
+    "i": 2828
+  },
+  {
+    "value": "of a bicycle",
+    "i": 2829
+  },
+  {
+    "value": "of deodorant",
+    "i": 2830
+  },
+  {
+    "value": "of a screw",
+    "i": 2831
+  },
+  {
+    "value": "of a clockwork mechanism",
+    "i": 2832
+  },
+  {
+    "value": "in quotations/citations",
+    "i": 2833
+  },
+  {
+    "value": "of flour",
+    "i": 2834
+  },
+  {
+    "value": "as a qualifier",
+    "i": 2835
+  },
+  {
+    "value": "of a word or words",
+    "i": 2836
+  },
+  {
+    "value": "of certain spiral shells",
+    "i": 2837
+  },
+  {
+    "value": "of a boiled egg",
+    "i": 2838
+  },
+  {
+    "value": "of an electronic component",
+    "i": 2839
+  },
+  {
+    "value": "of batteries",
+    "i": 2840
+  },
+  {
+    "value": "of a test",
+    "i": 2841
+  },
+  {
+    "value": "with the particle \"out\"",
+    "i": 2842
+  },
+  {
+    "value": "of a hit",
+    "i": 2843
+  },
+  {
+    "value": "of a dosage",
+    "i": 2844
+  },
+  {
+    "value": "of plants and other objects",
+    "i": 2845
+  },
+  {
+    "value": "of places or objects",
+    "i": 2846
+  },
+  {
+    "value": "of a fissile material",
+    "i": 2847
+  },
+  {
+    "value": "of a default",
+    "i": 2848
+  },
+  {
+    "value": "of inanimate entities",
+    "i": 2849
+  },
+  {
+    "value": "of a liquid crystal",
+    "i": 2850
+  },
+  {
+    "value": "of a seat",
+    "i": 2851
+  },
+  {
+    "value": "of a retirement plan",
+    "i": 2852
+  },
+  {
+    "value": "of a craft",
+    "i": 2853
+  },
+  {
+    "value": "of an edged weapon etc",
+    "i": 2854
+  },
+  {
+    "value": "of a highway",
+    "i": 2855
+  },
+  {
+    "value": "of a project",
+    "i": 2856
+  },
+  {
+    "value": "added to adjectives or past participles",
+    "i": 2857
+  },
+  {
+    "value": "added to nouns",
+    "i": 2858
+  },
+  {
+    "value": "of words and abbreviations",
+    "i": 2859
+  },
+  {
+    "value": "of a person or party",
+    "i": 2860
+  },
+  {
+    "value": "of a statement or argument",
+    "i": 2861
+  },
+  {
+    "value": "of peoples",
+    "i": 2862
+  },
+  {
+    "value": "of research etc",
+    "i": 2863
+  },
+  {
+    "value": "of a node in a graph",
+    "i": 2864
+  },
+  {
+    "value": "before the noun",
+    "i": 2865
+  },
+  {
+    "value": "of a planet or star",
+    "i": 2866
+  },
+  {
+    "value": "used in combination",
+    "i": 2867
+  },
+  {
+    "value": "of a bird or gliding animal",
+    "i": 2868
+  },
+  {
+    "value": "of water etc",
+    "i": 2869
+  },
+  {
+    "value": "of a sailing vessel",
+    "i": 2870
+  },
+  {
+    "value": "of woodwork",
+    "i": 2871
+  },
+  {
+    "value": "of heavenly bodies",
+    "i": 2872
+  },
+  {
+    "value": "of bread etc",
+    "i": 2873
+  },
+  {
+    "value": "said of a man",
+    "i": 2874
+  },
+  {
+    "value": "of the molecules of a polymer",
+    "i": 2875
+  },
+  {
+    "value": "of a projection",
+    "i": 2876
+  },
+  {
+    "value": "clitic",
+    "i": 2877
+  },
+  {
+    "value": "of a religion",
+    "i": 2878
+  },
+  {
+    "value": "of Britain",
+    "i": 2879
+  },
+  {
+    "value": "in in the plural",
+    "i": 2880
+  },
+  {
+    "value": "of a bacterium",
+    "i": 2881
+  },
+  {
+    "value": "from 1974",
+    "i": 2882
+  },
+  {
+    "value": "used in Ireland",
+    "i": 2883
+  },
+  {
+    "value": "from 1929",
+    "i": 2884
+  },
+  {
+    "value": "with capital letter S",
+    "i": 2885
+  },
+  {
+    "value": "of a constructed language",
+    "i": 2886
+  },
+  {
+    "value": "of a hypothesis",
+    "i": 2887
+  },
+  {
+    "value": "Sri-Lanka",
+    "i": 2888
+  },
+  {
+    "value": "of pasta",
+    "i": 2889
+  },
+  {
+    "value": "of a doll",
+    "i": 2890
+  },
+  {
+    "value": "of an item",
+    "i": 2891
+  },
+  {
+    "value": "of a draw",
+    "i": 2892
+  },
+  {
+    "value": "in the expression take a back seat",
+    "i": 2893
+  },
+  {
+    "value": "of women's clothing",
+    "i": 2894
+  },
+  {
+    "value": "of anger",
+    "i": 2895
+  },
+  {
+    "value": "Botswana",
+    "i": 2896
+  },
+  {
+    "value": "of chicken",
+    "i": 2897
+  },
+  {
+    "value": "used in America",
+    "i": 2898
+  },
+  {
+    "value": "used in the European Union",
+    "i": 2899
+  },
+  {
+    "value": "as office holder",
+    "i": 2900
+  },
+  {
+    "value": "Macau",
+    "i": 2901
+  },
+  {
+    "value": "translation-hub",
+    "i": 2902
+  },
+  {
+    "value": "of a person or couple",
+    "i": 2903
+  },
+  {
+    "value": "in Russia",
+    "i": 2904
+  },
+  {
+    "value": "of a heavenly body",
+    "i": 2905
+  },
+  {
+    "value": "in relation to the Apollo program",
+    "i": 2906
+  },
+  {
+    "value": "with 'on'",
+    "i": 2907
+  },
+  {
+    "value": "of a social event",
+    "i": 2908
+  },
+  {
+    "value": "of data or research",
+    "i": 2909
+  },
+  {
+    "value": "of a player",
+    "i": 2910
+  },
+  {
+    "value": "of a shot in snooker or other cue sports",
+    "i": 2911
+  },
+  {
+    "value": "with into or on",
+    "i": 2912
+  },
+  {
+    "value": "of an employee",
+    "i": 2913
+  },
+  {
+    "value": "of two people",
+    "i": 2914
+  },
+  {
+    "value": "with 'as'",
+    "i": 2915
+  },
+  {
+    "value": "of a place or facility",
+    "i": 2916
+  },
+  {
+    "value": "of a capture in chess",
+    "i": 2917
+  },
+  {
+    "value": "of capturing an enemy pawn in chess",
+    "i": 2918
+  },
+  {
+    "value": "of a bathroom etc.",
+    "i": 2919
+  },
+  {
+    "value": "of a bedroom etc.",
+    "i": 2920
+  },
+  {
+    "value": "of each of two statements",
+    "i": 2921
+  },
+  {
+    "value": "of an acid",
+    "i": 2922
+  },
+  {
+    "value": "IUPAC",
+    "i": 2923
+  },
+  {
+    "value": "of a girl or woman",
+    "i": 2924
+  },
+  {
+    "value": "of a dress",
+    "i": 2925
+  },
+  {
+    "value": "in LGBT and communities of color",
+    "i": 2926
+  },
+  {
+    "value": "of a gas station",
+    "i": 2927
+  },
+  {
+    "value": "of noises by objects",
+    "i": 2928
+  },
+  {
+    "value": "in old westerns",
+    "i": 2929
+  },
+  {
+    "value": "progressive",
+    "i": 2930
+  },
+  {
+    "value": "with with or to",
+    "i": 2931
+  },
+  {
+    "value": "with at or against",
+    "i": 2932
+  },
+  {
+    "value": "in an interrogative sentence",
+    "i": 2933
+  },
+  {
+    "value": "of someone or something that is or has been missing",
+    "i": 2934
+  },
+  {
+    "value": "used as an adjective",
+    "i": 2935
+  },
+  {
+    "value": "used in the shortened form ginger",
+    "i": 2936
+  },
+  {
+    "value": "said of a tempo",
+    "i": 2937
+  },
+  {
+    "value": "of a pugilist",
+    "i": 2938
+  },
+  {
+    "value": "of an implement",
+    "i": 2939
+  },
+  {
+    "value": "of a supply",
+    "i": 2940
+  },
+  {
+    "value": "of a fact or concept",
+    "i": 2941
+  },
+  {
+    "value": "of epoxy resins",
+    "i": 2942
+  },
+  {
+    "value": "of one's heart",
+    "i": 2943
+  },
+  {
+    "value": "of projects",
+    "i": 2944
+  },
+  {
+    "value": "of laws",
+    "i": 2945
+  },
+  {
+    "value": "in context",
+    "i": 2946
+  },
+  {
+    "value": "of a plan etc",
+    "i": 2947
+  },
+  {
+    "value": "of rules",
+    "i": 2948
+  },
+  {
+    "value": "with to-infinitive",
+    "i": 2949
+  },
+  {
+    "value": "of horse racing",
+    "i": 2950
+  },
+  {
+    "value": "of an elementary particle",
+    "i": 2951
+  },
+  {
+    "value": "of persons with developmental or intellectual disability or mental illness",
+    "i": 2952
+  },
+  {
+    "value": "of persons with autism",
+    "i": 2953
+  },
+  {
+    "value": "of a pet",
+    "i": 2954
+  },
+  {
+    "value": "of a runner",
+    "i": 2955
+  },
+  {
+    "value": "as modifier",
+    "i": 2956
+  },
+  {
+    "value": "in languages with case distinctions also",
+    "i": 2957
+  },
+  {
+    "value": "in England and Wales",
+    "i": 2958
+  },
+  {
+    "value": "of multiple things",
+    "i": 2959
+  },
+  {
+    "value": "of process",
+    "i": 2960
+  },
+  {
+    "value": "of two compounds",
+    "i": 2961
+  },
+  {
+    "value": "of two solutions",
+    "i": 2962
+  },
+  {
+    "value": "of a medical solution",
+    "i": 2963
+  },
+  {
+    "value": "of two muscles",
+    "i": 2964
+  },
+  {
+    "value": "in the context of Japanese culture",
+    "i": 2965
+  },
+  {
+    "value": "of an idea or an object",
+    "i": 2966
+  },
+  {
+    "value": "of an application",
+    "i": 2967
+  },
+  {
+    "value": "in teaching polite behaviour to children",
+    "i": 2968
+  },
+  {
+    "value": "in some countries",
+    "i": 2969
+  },
+  {
+    "value": "of anatomy",
+    "i": 2970
+  },
+  {
+    "value": "of a cosmetic",
+    "i": 2971
+  },
+  {
+    "value": "in a Jewish context",
+    "i": 2972
+  },
+  {
+    "value": "in non-Jewish contexts",
+    "i": 2973
+  },
+  {
+    "value": "of cooking",
+    "i": 2974
+  },
+  {
+    "value": "in entertainment",
+    "i": 2975
+  },
+  {
+    "value": "with \"wire\"",
+    "i": 2976
+  },
+  {
+    "value": "of a semigroup",
+    "i": 2977
+  },
+  {
+    "value": "of a twin",
+    "i": 2978
+  },
+  {
+    "value": "of cattle or deer",
+    "i": 2979
+  },
+  {
+    "value": "of an organism",
+    "i": 2980
+  },
+  {
+    "value": "of an eyeglass lens",
+    "i": 2981
+  },
+  {
+    "value": "of quantum entanglement",
+    "i": 2982
+  },
+  {
+    "value": "in jazz",
+    "i": 2983
+  },
+  {
+    "value": "of a college admission policy",
+    "i": 2984
+  },
+  {
+    "value": "of vehicle insurance",
+    "i": 2985
+  },
+  {
+    "value": "of a divorce or an eviction",
+    "i": 2986
+  },
+  {
+    "value": "of a fatty acid",
+    "i": 2987
+  },
+  {
+    "value": "of a list of examples",
+    "i": 2988
+  },
+  {
+    "value": "of a mosquito or other female insect",
+    "i": 2989
+  },
+  {
+    "value": "of a baserunner",
+    "i": 2990
+  },
+  {
+    "value": "of snow or ski-runs",
+    "i": 2991
+  },
+  {
+    "value": "of training",
+    "i": 2992
+  },
+  {
+    "value": "of reading or reading material",
+    "i": 2993
+  },
+  {
+    "value": "followed by on or for to designate the kind of animal hunted",
+    "i": 2994
+  },
+  {
+    "value": "followed by on or for",
+    "i": 2995
+  },
+  {
+    "value": "adjectival",
+    "i": 2996
+  },
+  {
+    "value": "of soldiers",
+    "i": 2997
+  },
+  {
+    "value": "for women",
+    "i": 2998
+  },
+  {
+    "value": "of shoes",
+    "i": 2999
+  },
+  {
+    "value": "in Asia",
+    "i": 3000
+  },
+  {
+    "value": "of a telephone call",
+    "i": 3001
+  },
+  {
+    "value": "of a loan",
+    "i": 3002
+  },
+  {
+    "value": "of an adjective or other modifier",
+    "i": 3003
+  },
+  {
+    "value": "of an allocation",
+    "i": 3004
+  },
+  {
+    "value": "of a consumer product",
+    "i": 3005
+  },
+  {
+    "value": "of a pun",
+    "i": 3006
+  },
+  {
+    "value": "referring to wine",
+    "i": 3007
+  },
+  {
+    "value": "of a series of questions",
+    "i": 3008
+  },
+  {
+    "value": "of the ball",
+    "i": 3009
+  },
+  {
+    "value": "of an English accent",
+    "i": 3010
+  },
+  {
+    "value": "of a phoneme",
+    "i": 3011
+  },
+  {
+    "value": "used in the passive voice",
+    "i": 3012
+  },
+  {
+    "value": "used with \"with\"",
+    "i": 3013
+  },
+  {
+    "value": "of a piece of paper",
+    "i": 3014
+  },
+  {
+    "value": "in large houses",
+    "i": 3015
+  },
+  {
+    "value": "of a machine or tool",
+    "i": 3016
+  },
+  {
+    "value": "of a house",
+    "i": 3017
+  },
+  {
+    "value": "of a plan",
+    "i": 3018
+  },
+  {
+    "value": "of a nuclear chain reaction",
+    "i": 3019
+  },
+  {
+    "value": "of a search engine",
+    "i": 3020
+  },
+  {
+    "value": "with singular verb",
+    "i": 3021
+  },
+  {
+    "value": "of library books",
+    "i": 3022
+  },
+  {
+    "value": "of a line or queue",
+    "i": 3023
+  },
+  {
+    "value": "of a romantic relationship",
+    "i": 3024
+  },
+  {
+    "value": "of a style of dress",
+    "i": 3025
+  },
+  {
+    "value": "of lighting",
+    "i": 3026
+  },
+  {
+    "value": "used hyperbolically",
+    "i": 3027
+  },
+  {
+    "value": "of a coupon or similar offer",
+    "i": 3028
+  },
+  {
+    "value": "with the verb exit or enter",
+    "i": 3029
+  },
+  {
+    "value": "of a person or narrative",
+    "i": 3030
+  },
+  {
+    "value": "of a wicket-keeper",
+    "i": 3031
+  },
+  {
+    "value": "of reactants",
+    "i": 3032
+  },
+  {
+    "value": "of a case or matter before a court",
+    "i": 3033
+  },
+  {
+    "value": "of a lead-acid battery",
+    "i": 3034
+  },
+  {
+    "value": "not currently productive",
+    "i": 3035
+  },
+  {
+    "value": "Doric",
+    "i": 3036
+  },
+  {
+    "value": "with to + d.o.",
+    "i": 3037
+  },
+  {
+    "value": "used in the plural",
+    "i": 3038
+  },
+  {
+    "value": "of a keyboard",
+    "i": 3039
+  },
+  {
+    "value": "of a passage",
+    "i": 3040
+  },
+  {
+    "value": "absolute",
+    "i": 3041
+  },
+  {
+    "value": "of a road or highway",
+    "i": 3042
+  },
+  {
+    "value": "as a pair",
+    "i": 3043
+  },
+  {
+    "value": "in digital libraries",
+    "i": 3044
+  },
+  {
+    "value": "of an idea",
+    "i": 3045
+  },
+  {
+    "value": "of a road vehicle",
+    "i": 3046
+  },
+  {
+    "value": "of particles",
+    "i": 3047
+  },
+  {
+    "value": "of a male person or animal",
+    "i": 3048
+  },
+  {
+    "value": "of a field or land",
+    "i": 3049
+  },
+  {
+    "value": "in the context of political and social justice issues",
+    "i": 3050
+  },
+  {
+    "value": "of a coin",
+    "i": 3051
+  },
+  {
+    "value": "of a facility",
+    "i": 3052
+  },
+  {
+    "value": "of a closet",
+    "i": 3053
+  },
+  {
+    "value": "of a thief or theft",
+    "i": 3054
+  },
+  {
+    "value": "of an apartment etc",
+    "i": 3055
+  },
+  {
+    "value": "of a block of apartments",
+    "i": 3056
+  },
+  {
+    "value": "of a service",
+    "i": 3057
+  },
+  {
+    "value": "of carpeting",
+    "i": 3058
+  },
+  {
+    "value": "of cooked food",
+    "i": 3059
+  },
+  {
+    "value": "of a radioactive or other substance",
+    "i": 3060
+  },
+  {
+    "value": "of a situation or outcome",
+    "i": 3061
+  },
+  {
+    "value": "in the names of certain organisms",
+    "i": 3062
+  },
+  {
+    "value": "as \"chirk up\"",
+    "i": 3063
+  },
+  {
+    "value": "Late",
+    "i": 3064
+  },
+  {
+    "value": "of airflow",
+    "i": 3065
+  },
+  {
+    "value": "in German history from the mid-nineteenth to mid-twentieth Centuries",
+    "i": 3066
+  },
+  {
+    "value": "in early usage",
+    "i": 3067
+  },
+  {
+    "value": "in later usage",
+    "i": 3068
+  },
+  {
+    "value": "with reference to nations and peoples",
+    "i": 3069
+  },
+  {
+    "value": "followed by “out”",
+    "i": 3070
+  },
+  {
+    "value": "of a numerical amount",
+    "i": 3071
+  },
+  {
+    "value": "of the hair",
+    "i": 3072
+  },
+  {
+    "value": "of an election or elected position",
+    "i": 3073
+  },
+  {
+    "value": "of people or groups",
+    "i": 3074
+  },
+  {
+    "value": "of a blockage",
+    "i": 3075
+  },
+  {
+    "value": "with a negative",
+    "i": 3076
+  },
+  {
+    "value": "of raising a child",
+    "i": 3077
+  },
+  {
+    "value": "followed by being",
+    "i": 3078
+  },
+  {
+    "value": "as of a thing or person",
+    "i": 3079
+  },
+  {
+    "value": "of a mast or rigging",
+    "i": 3080
+  },
+  {
+    "value": "with \"on the\"",
+    "i": 3081
+  },
+  {
+    "value": "of a hard drive",
+    "i": 3082
+  },
+  {
+    "value": "in sports",
+    "i": 3083
+  },
+  {
+    "value": "in languages without cases",
+    "i": 3084
+  },
+  {
+    "value": "in languages with case distinctions",
+    "i": 3085
+  },
+  {
+    "value": "of viviparous animals",
+    "i": 3086
+  },
+  {
+    "value": "as command to the crew",
+    "i": 3087
+  },
+  {
+    "value": "with in love",
+    "i": 3088
+  },
+  {
+    "value": "of a ship or other naval vessel",
+    "i": 3089
+  },
+  {
+    "value": "in an insect with two pairs of wings",
+    "i": 3090
+  },
+  {
+    "value": "of knowledge",
+    "i": 3091
+  },
+  {
+    "value": "of characteristic existence",
+    "i": 3092
+  },
+  {
+    "value": "of a television",
+    "i": 3093
+  },
+  {
+    "value": "in time with",
+    "i": 3094
+  },
+  {
+    "value": "from a Landmine™ developed in 1999 by a US company called Sorinex",
+    "i": 3095
+  },
+  {
+    "value": "of a bookmaker",
+    "i": 3096
+  },
+  {
+    "value": "in the positive",
+    "i": 3097
+  },
+  {
+    "value": "with object before go",
+    "i": 3098
+  },
+  {
+    "value": "used to convey serious intent",
+    "i": 3099
+  },
+  {
+    "value": "of two parties",
+    "i": 3100
+  },
+  {
+    "value": "followed by a phrase",
+    "i": 3101
+  },
+  {
+    "value": "not followed by a phrase",
+    "i": 3102
+  },
+  {
+    "value": "of a human activity",
+    "i": 3103
+  },
+  {
+    "value": "of persons and their health",
+    "i": 3104
+  },
+  {
+    "value": "of situations or things",
+    "i": 3105
+  },
+  {
+    "value": "followed by a number",
+    "i": 3106
+  },
+  {
+    "value": "of medicine and other treatments",
+    "i": 3107
+  },
+  {
+    "value": "with over as adverbial particle",
+    "i": 3108
+  },
+  {
+    "value": "with over as preposition",
+    "i": 3109
+  },
+  {
+    "value": "with an adjective indicating degree",
+    "i": 3110
+  },
+  {
+    "value": "used with \"to\"",
+    "i": 3111
+  },
+  {
+    "value": "of flowing water",
+    "i": 3112
+  },
+  {
+    "value": "followed by “on”",
+    "i": 3113
+  },
+  {
+    "value": "of a transformer etc",
+    "i": 3114
+  },
+  {
+    "value": "of a term",
+    "i": 3115
+  },
+  {
+    "value": "of an aircraft or spacecraft",
+    "i": 3116
+  },
+  {
+    "value": "of workers",
+    "i": 3117
+  },
+  {
+    "value": "of time or space",
+    "i": 3118
+  },
+  {
+    "value": "of a performer",
+    "i": 3119
+  },
+  {
+    "value": "of meat etc",
+    "i": 3120
+  },
+  {
+    "value": "with \"give someone\"",
+    "i": 3121
+  },
+  {
+    "value": "of a female animal",
+    "i": 3122
+  },
+  {
+    "value": "of an environment or habitat",
+    "i": 3123
+  },
+  {
+    "value": "of an academic course",
+    "i": 3124
+  },
+  {
+    "value": "of animals or wings",
+    "i": 3125
+  },
+  {
+    "value": "of an imaging system",
+    "i": 3126
+  },
+  {
+    "value": "in art",
+    "i": 3127
+  },
+  {
+    "value": "of a warm air current",
+    "i": 3128
+  },
+  {
+    "value": "Ancient-Greek",
+    "i": 3129
+  },
+  {
+    "value": "of the notes of a chord",
+    "i": 3130
+  },
+  {
+    "value": "of a term or phrase",
+    "i": 3131
+  },
+  {
+    "value": "of a bishop",
+    "i": 3132
+  },
+  {
+    "value": "of a function in two variables",
+    "i": 3133
+  },
+  {
+    "value": "of a square matrix",
+    "i": 3134
+  },
+  {
+    "value": "of two sets",
+    "i": 3135
+  },
+  {
+    "value": "in the context of anime and comics",
+    "i": 3136
+  },
+  {
+    "value": "of an object or a geometrical figure",
+    "i": 3137
+  },
+  {
+    "value": "of a finite set of points",
+    "i": 3138
+  },
+  {
+    "value": "of a cluster of points",
+    "i": 3139
+  },
+  {
+    "value": "of mud",
+    "i": 3140
+  },
+  {
+    "value": "of a roof in a mine",
+    "i": 3141
+  },
+  {
+    "value": "of a fracture",
+    "i": 3142
+  },
+  {
+    "value": "of a mineral",
+    "i": 3143
+  },
+  {
+    "value": "since 2020",
+    "i": 3144
+  },
+  {
+    "value": "of the transmission of a signal",
+    "i": 3145
+  },
+  {
+    "value": "Tibetan",
+    "i": 3146
+  },
+  {
+    "value": "of a poison",
+    "i": 3147
+  },
+  {
+    "value": "of an optically active compound or crystal",
+    "i": 3148
+  },
+  {
+    "value": "of a base",
+    "i": 3149
+  },
+  {
+    "value": "of a kite or an aeroplane",
+    "i": 3150
+  },
+  {
+    "value": "of a river or waters",
+    "i": 3151
+  },
+  {
+    "value": "of a pathogenic organism",
+    "i": 3152
+  },
+  {
+    "value": "of a hen",
+    "i": 3153
+  },
+  {
+    "value": "of a phrase or compound word",
+    "i": 3154
+  },
+  {
+    "value": "in modern Greece",
+    "i": 3155
+  },
+  {
+    "value": "of a fold of skin",
+    "i": 3156
+  },
+  {
+    "value": "of or relating to a compound term",
+    "i": 3157
+  },
+  {
+    "value": "of friends",
+    "i": 3158
+  },
+  {
+    "value": "said of a person",
+    "i": 3159
+  },
+  {
+    "value": "of burns",
+    "i": 3160
+  },
+  {
+    "value": "in imperative utterances",
+    "i": 3161
+  },
+  {
+    "value": "of architecture",
+    "i": 3162
+  },
+  {
+    "value": "phrasal",
+    "i": 3163
+  },
+  {
+    "value": "with be",
+    "i": 3164
+  },
+  {
+    "value": "of a cyclic compound",
+    "i": 3165
+  },
+  {
+    "value": "in company names",
+    "i": 3166
+  },
+  {
+    "value": "of cancer cells",
+    "i": 3167
+  },
+  {
+    "value": "of flowers such as the snapdragon",
+    "i": 3168
+  },
+  {
+    "value": "inclusive",
+    "i": 3169
+  },
+  {
+    "value": "of a married couple",
+    "i": 3170
+  },
+  {
+    "value": "of a people or culture",
+    "i": 3171
+  },
+  {
+    "value": "in Luke’s genealogy of Christ",
+    "i": 3172
+  },
+  {
+    "value": "hortative",
+    "i": 3173
+  },
+  {
+    "value": "construed as pejorative",
+    "i": 3174
+  },
+  {
+    "value": "from Kantian philosophy on",
+    "i": 3175
+  },
+  {
+    "value": "of a railway",
+    "i": 3176
+  },
+  {
+    "value": "Palestinian",
+    "i": 3177
+  },
+  {
+    "value": "of a group or society",
+    "i": 3178
+  },
+  {
+    "value": "of an instance of a phoneme",
+    "i": 3179
+  },
+  {
+    "value": "of a mutex",
+    "i": 3180
+  },
+  {
+    "value": "of a part of a rocket",
+    "i": 3181
+  },
+  {
+    "value": "of a ukulele or similar instrument",
+    "i": 3182
+  },
+  {
+    "value": "of cultivated roses",
+    "i": 3183
+  },
+  {
+    "value": "of a collected item",
+    "i": 3184
+  },
+  {
+    "value": "of a leaf",
+    "i": 3185
+  },
+  {
+    "value": "in workers’ compensation cases",
+    "i": 3186
+  },
+  {
+    "value": "in Manchester and Merseyside",
+    "i": 3187
+  },
+  {
+    "value": "of the colouring of some insects etc.",
+    "i": 3188
+  },
+  {
+    "value": "from the previous",
+    "i": 3189
+  },
+  {
+    "value": "of music genres",
+    "i": 3190
+  },
+  {
+    "value": "of a disease or medical condition",
+    "i": 3191
+  },
+  {
+    "value": "of a pistil",
+    "i": 3192
+  },
+  {
+    "value": "in ancient religion",
+    "i": 3193
+  },
+  {
+    "value": "of a gel",
+    "i": 3194
+  },
+  {
+    "value": "of a salt",
+    "i": 3195
+  },
+  {
+    "value": "of a shell or fossil",
+    "i": 3196
+  },
+  {
+    "value": "of a transmission in ships and locomotives",
+    "i": 3197
+  },
+  {
+    "value": "of a mushroom etc",
+    "i": 3198
+  },
+  {
+    "value": "in collocations in ure",
+    "i": 3199
+  },
+  {
+    "value": "with-noun-phrase",
+    "i": 3200
+  },
+  {
+    "value": "of an older person",
+    "i": 3201
+  },
+  {
+    "value": "of an old",
+    "i": 3202
+  },
+  {
+    "value": "revived on the internet",
+    "i": 3203
+  },
+  {
+    "value": "of the proper noun",
+    "i": 3204
+  }
+]

@@ -102,5 +102,102 @@
   {
     "i": 25,
     "value": "collocation"
+  },
+
+  {
+    "i": 3,
+    "use": "adjective",
+    "value": "adj"
+  },
+  {
+    "i": 4,
+    "use": "adverb",
+    "value": "adv"
+  },
+  {
+    "i": 9,
+    "use": "preposition",
+    "value": "prep"
+  },
+
+  {
+    "i": 11,
+    "use": "interjection",
+    "value": "intj"
+  },
+
+  {
+    "i": 22,
+    "use": "number",
+    "value": "num"
+  },
+  {
+    "i": 17,
+    "use": "determiner",
+    "value": "det"
+  },
+  {
+    "i": 5,
+    "use": "pronoun",
+    "value": "pron"
+  },
+
+  {
+    "i": 7,
+    "use": "conjunction",
+    "value": "conj"
+  },
+  {
+    "i": 26,
+    "value": "proverb"
+  },
+  {
+    "i": 27,
+    "value": "postp"
+  },
+  {
+    "i": 28,
+    "value": "punct"
+  },
+  {
+    "i": 29,
+    "value": "infix"
+  },
+
+  {
+    "i": 30,
+    "value": "particle"
+  },
+  {
+    "i": 31,
+    "value": "character"
+  },
+  {
+    "i": 32,
+    "value": "symbol"
+  },
+  {
+    "i": 33,
+    "value": "symbol"
+  },
+  {
+    "i": 34,
+    "value": "phrase"
+  },
+  {
+    "i": 35,
+    "value": "prep_phrase"
+  },
+  {
+    "i": 36,
+    "value": "article"
+  },
+  {
+    "i": 37,
+    "value": "name"
+  },
+  {
+    "i": 38,
+    "value": "contraction"
   }
 ]

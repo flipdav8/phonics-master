@@ -384,6 +384,10 @@ export default defineComponent({
     },
 
     orderGraphemes(letters) {
+      if (letters == undefined) {
+        console.log("no letters?", this.word);
+        this.ordered_letters = [];
+      }
       if (letters.length > 1) {
         // console.log("letters", letters);
         //split spellings
@@ -435,10 +439,10 @@ export default defineComponent({
           }
         }
 
-        // if (this.word === "abandoned") {
-        //   console.log("not_touching", not_touching);
-        //   console.log("touching", touching);
-        // }
+        if (this.word === "abandoned") {
+          console.log("not_touching", not_touching);
+          console.log("touching", touching);
+        }
 
         this.ordered_letters = [...not_touching, ...touching];
       } else {

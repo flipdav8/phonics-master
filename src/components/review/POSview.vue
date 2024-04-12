@@ -1,16 +1,13 @@
 <template>
-  <div class="flex row full-width">
-    <div class="flex row" v-for="(group, idx) in pos" :key="idx">
-      <!-- {{ group }} -->
-      <q-chip
-        v-for="pos in group.pos"
-        :key="pos"
-        :color="$q.dark.mode ? 'teal-10' : 'teal-2'"
-        size="md"
-      >
-        {{ getPOS(pos) }}
-      </q-chip>
-    </div>
+  <div class="flex row full-width hidden">
+    <q-chip
+      v-for="(pos, i) in pos"
+      :key="i"
+      :color="$q.dark.mode ? 'teal-10' : 'teal-2'"
+      size="md"
+    >
+      {{ getPOS(pos) }}
+    </q-chip>
   </div>
 </template>
 

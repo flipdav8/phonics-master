@@ -1,0 +1,566 @@
+[
+  {
+    "value": "self",
+    "i": 0
+  },
+  {
+    "value": "common",
+    "i": 1
+  },
+  {
+    "value": "countable",
+    "i": 2
+  },
+  {
+    "value": "uncountable",
+    "i": 3
+  },
+  {
+    "value": "has plural",
+    "i": 4
+  },
+  {
+    "value": "+s form",
+    "i": 5
+  },
+  {
+    "value": "plural",
+    "i": 6
+  },
+  {
+    "value": "transitive",
+    "i": 7
+  },
+  {
+    "value": "~s, ~ing, ~ed",
+    "i": 8
+  },
+  {
+    "value": "present",
+    "i": 9
+  },
+  {
+    "value": "singular",
+    "i": 10
+  },
+  {
+    "value": "third-person",
+    "i": 11
+  },
+  {
+    "value": "participle",
+    "i": 12
+  },
+  {
+    "value": "past",
+    "i": 13
+  },
+  {
+    "value": "intransitive",
+    "i": 14
+  },
+  {
+    "value": "irregular",
+    "i": 15
+  },
+  {
+    "value": "archaic",
+    "i": 16
+  },
+  {
+    "value": "nonstandard",
+    "i": 17
+  },
+  {
+    "value": "infinitive",
+    "i": 18
+  },
+  {
+    "value": "comparative",
+    "i": 19
+  },
+  {
+    "value": "superlative",
+    "i": 20
+  },
+  {
+    "value": "~s, ~[e]ing, ~d",
+    "i": 21
+  },
+  {
+    "value": "e-dropping",
+    "i": 22
+  },
+  {
+    "value": "dialectal",
+    "i": 23
+  },
+  {
+    "value": "simple",
+    "i": 24
+  },
+  {
+    "value": "form-of",
+    "i": 25
+  },
+  {
+    "value": "anomalous",
+    "i": 26
+  },
+  {
+    "value": "obsolete",
+    "i": 27
+  },
+  {
+    "value": "y-dropping",
+    "i": 28
+  },
+  {
+    "value": "+ies form",
+    "i": 29
+  },
+  {
+    "value": "proper",
+    "i": 30
+  },
+  {
+    "value": "names",
+    "i": 31
+  },
+  {
+    "value": "people",
+    "i": 32
+  },
+  {
+    "value": "oblique",
+    "i": 33
+  },
+  {
+    "value": "reflexive",
+    "i": 34
+  },
+  {
+    "value": "possessive",
+    "i": 35
+  },
+  {
+    "value": "colloquial",
+    "i": 36
+  },
+  {
+    "value": "no plural",
+    "i": 37
+  },
+  {
+    "value": "Scotland",
+    "i": 38
+  },
+  {
+    "value": "+es form",
+    "i": 39
+  },
+  {
+    "value": "~s; ~CCing, ~CCed",
+    "i": 40
+  },
+  {
+    "value": "doubling",
+    "i": 41
+  },
+  {
+    "value": "is also plural",
+    "i": 42
+  },
+  {
+    "value": "UK",
+    "i": 43
+  },
+  {
+    "value": "feminine",
+    "i": 44
+  },
+  {
+    "value": "rare",
+    "i": 45
+  },
+  {
+    "value": "US",
+    "i": 46
+  },
+  {
+    "value": "~[y]ies, ~ying, ~[y]ied",
+    "i": 47
+  },
+  {
+    "value": "~es, ~ing, ~ed",
+    "i": 48
+  },
+  {
+    "value": "standard",
+    "i": 49
+  },
+  {
+    "value": "canonical",
+    "i": 50
+  },
+  {
+    "value": "humorous",
+    "i": 51
+  },
+  {
+    "value": "uncommon",
+    "i": 52
+  },
+  {
+    "value": "adjective",
+    "i": 53
+  },
+  {
+    "value": "attributive",
+    "i": 54
+  },
+  {
+    "value": "other",
+    "i": 55
+  },
+  {
+    "value": "places",
+    "i": 56
+  },
+  {
+    "value": "cities",
+    "i": 57
+  },
+  {
+    "value": "towns",
+    "i": 58
+  },
+  {
+    "value": "Internet",
+    "i": 59
+  },
+  {
+    "value": "error-unknown-tag",
+    "i": 60
+  },
+  {
+    "value": "countries",
+    "i": 61
+  },
+  {
+    "value": "states",
+    "i": 62
+  },
+  {
+    "value": "informal",
+    "i": 63
+  },
+  {
+    "value": "objective",
+    "i": 64
+  },
+  {
+    "value": "noun",
+    "i": 65
+  },
+  {
+    "value": "poetic",
+    "i": 66
+  },
+  {
+    "value": "determiner",
+    "i": 67
+  },
+  {
+    "value": "pronoun",
+    "i": 68
+  },
+  {
+    "value": "without-noun",
+    "i": 69
+  },
+  {
+    "value": "Commonwealth",
+    "i": 70
+  },
+  {
+    "value": "Northern-England",
+    "i": 71
+  },
+  {
+    "value": "abbreviation",
+    "i": 72
+  },
+  {
+    "value": "formal",
+    "i": 73
+  },
+  {
+    "value": "Australian",
+    "i": 74
+  },
+  {
+    "value": "Canada",
+    "i": 75
+  },
+  {
+    "value": "New-Zealand",
+    "i": 76
+  },
+  {
+    "value": "in most senses",
+    "i": 77
+  },
+  {
+    "value": "positive",
+    "i": 78
+  },
+  {
+    "value": "adverb",
+    "i": 79
+  },
+  {
+    "value": "singular-like",
+    "i": 80
+  },
+  {
+    "value": "lowercase",
+    "i": 81
+  },
+  {
+    "value": "uppercase",
+    "i": 82
+  },
+  {
+    "value": "symbol",
+    "i": 83
+  },
+  {
+    "value": "suppletive",
+    "i": 84
+  },
+  {
+    "value": "mainly",
+    "i": 85
+  },
+  {
+    "value": "accusative",
+    "i": 86
+  },
+  {
+    "value": "subjective",
+    "i": 87
+  },
+  {
+    "value": "emphatic",
+    "i": 88
+  },
+  {
+    "value": "of male given name",
+    "i": 89
+  },
+  {
+    "value": "Lao",
+    "i": 90
+  },
+  {
+    "value": "proscribed",
+    "i": 91
+  },
+  {
+    "value": "sometimes",
+    "i": 92
+  },
+  {
+    "value": "Roman",
+    "i": 93
+  },
+  {
+    "value": "in New Zealand",
+    "i": 94
+  },
+  {
+    "value": "as unit of mass",
+    "i": 95
+  },
+  {
+    "value": "masculine",
+    "i": 96
+  },
+  {
+    "value": "hypercorrect",
+    "i": 97
+  },
+  {
+    "value": "possibly",
+    "i": 98
+  },
+  {
+    "value": "especially",
+    "i": 99
+  },
+  {
+    "value": "Ireland",
+    "i": 100
+  },
+  {
+    "value": "dated",
+    "i": 101
+  },
+  {
+    "value": "contraction",
+    "i": 102
+  },
+  {
+    "value": "verb+not",
+    "i": 103
+  },
+  {
+    "value": "Pakistan",
+    "i": 104
+  },
+  {
+    "value": "gender-neutral",
+    "i": 105
+  },
+  {
+    "value": "Southern",
+    "i": 106
+  },
+  {
+    "value": "also",
+    "i": 107
+  },
+  {
+    "value": "misconstruction",
+    "i": 108
+  },
+  {
+    "value": "South-Africa",
+    "i": 109
+  },
+  {
+    "value": "ordinal",
+    "i": 110
+  },
+  {
+    "value": "literary",
+    "i": 111
+  },
+  {
+    "value": "in-compounds",
+    "i": 112
+  },
+  {
+    "value": "usually",
+    "i": 113
+  },
+  {
+    "value": "Geordie",
+    "i": 114
+  },
+  {
+    "value": "reflexive-of",
+    "i": 115
+  },
+  {
+    "value": "neuter",
+    "i": 116
+  },
+  {
+    "value": "in use in the 17th century",
+    "i": 117
+  },
+  {
+    "value": "pron+verb",
+    "i": 118
+  },
+  {
+    "value": "regional",
+    "i": 119
+  },
+  {
+    "value": "gerund",
+    "i": 120
+  },
+  {
+    "value": "plural-of",
+    "i": 121
+  },
+  {
+    "value": "North-America",
+    "i": 122
+  },
+  {
+    "value": "alternative",
+    "i": 123
+  },
+  {
+    "value": "often",
+    "i": 124
+  },
+  {
+    "value": "slang",
+    "i": 125
+  },
+  {
+    "value": "nominative",
+    "i": 126
+  },
+  {
+    "value": "first-person",
+    "i": 127
+  },
+  {
+    "value": "indicative",
+    "i": 128
+  },
+  {
+    "value": "second-person",
+    "i": 129
+  },
+  {
+    "value": "inflection-template",
+    "i": 130
+  },
+  {
+    "value": "imperative",
+    "i": 131
+  },
+  {
+    "value": "North-American",
+    "i": 132
+  },
+  {
+    "value": "South",
+    "i": 133
+  },
+  {
+    "value": "Italy",
+    "i": 134
+  },
+  {
+    "value": "New-Age",
+    "i": 135
+  },
+  {
+    "value": "TV",
+    "i": 136
+  },
+  {
+    "value": "Jawi",
+    "i": 137
+  },
+  {
+    "value": "initialism",
+    "i": 138
+  },
+  {
+    "value": "common-gender",
+    "i": 139
+  },
+  {
+    "value": "Multicultural-London-English",
+    "i": 140
+  }
+]
