@@ -9,7 +9,7 @@
             ? getActualWords()
             : (show_loaded = !show_loaded)
         "
-        >Load</q-btn
+        >Load forms</q-btn
       >
       <q-space></q-space>
       <q-btn flat no-caps @click="show_hidden = !show_hidden" size="sm">
@@ -33,13 +33,13 @@
         <div class="flex row full-width items-center">
           <span class="col-2">{{ actual.word }}</span>
           <GraphemesView
+            :ref="actual.id + '-review'"
             class="col-grow"
             :class="{
-              'bg-orange-2': !actual.pids.toString().includes(pids.toString())
+              'bg-orange-6': !actual.pids.toString().includes(pids.toString())
                 ? true
                 : false,
             }"
-            :ref="actual.id"
             :letters="actual.lids"
             :pids="actual.pids"
             :stress="actual.stress"
@@ -47,11 +47,24 @@
             :search_phonemes="[]"
             :approvals="actual.approved_1"
             :word="actual.word"
+            :id="actual.id"
             @changeVariation="(e) => (actual.select_variation = e)"
+            :form_changes="form_changes"
+            @changes="(e) => (form_changes = e)"
           ></GraphemesView>
-          <q-btn :disable="true" no-caps flat color="green" size="sm"
-            >Approve</q-btn
+          <q-btn
+            :disable="actual.approve_au || actual.approved"
+            no-caps
+            flat
+            color="green"
+            size="sm"
+            @click="approve(actual)"
           >
+            {{ actual.approve_au || actual.approved ? "Approved" : "Approve" }}
+          </q-btn>
+          <div v-if="actual.approve_au || actual.approved">
+            <q-icon name="mdi-check-circle" color="green" size="md"></q-icon>
+          </div>
         </div>
       </div>
     </div>
@@ -83,9 +96,28 @@
             }"
           >
             {{ form.w }}
+            <q-badge
+              v-if="
+                actual_words.length > 0 &&
+                !actual_words.map((e) => e.word_id).includes(form.i)
+              "
+              floating
+              color="warning text-black"
+            >
+              +
+            </q-badge>
+
             <q-tooltip>
               <div v-for="(tag, iii) in form.t" :key="iii">
                 {{ getWordTag(tag) }}
+              </div>
+              <div
+                v-if="
+                  actual_words.length > 0 &&
+                  !actual_words.map((e) => e.word_id).includes(form.i)
+                "
+              >
+                Not in list but (maybe) add.
               </div>
             </q-tooltip>
           </q-chip>
@@ -95,7 +127,7 @@
 
     <q-separator />
     <div>
-      <q-btn class="q-mt-sm" no-caps flat @click="getMore()">More</q-btn>
+      <q-btn class="q-mt-sm" no-caps flat @click="getMore()">More forms</q-btn>
     </div>
     <!-- v-if="other != undefined && other.length > 0" -->
     <div v-if="more_data.length > 0 && show_more" class="flex row full-width">
@@ -109,9 +141,7 @@
             hidden: !show_hidden && form.i == null,
           }"
         >
-          <q-chip>
-            {{ form.w }}
-          </q-chip>
+          <q-chip> {{ form.w }} </q-chip>
         </div>
       </div>
 
@@ -234,6 +264,7 @@ export default defineComponent({
       more_data: [],
       actual_words: [],
       show_loaded: false,
+      form_changes: [],
     };
   },
   mounted() {
@@ -347,29 +378,209 @@ export default defineComponent({
 
       let or = all_forms.map((e) => `word_id.eq.${e}`).join(",");
 
-      // console.log("all_forms (or)", or);
+      console.log("all_forms (or)", or);
 
       // let select = `id,word_id,word,pids,lids,pos,stress,lemma,tags,inlist0,inlist4,
       // approved_1(id),words(sim),grammar_forms(*)`;
       let select = `id,word_id,word,pids,lids,pos,stress,lemma,tags,inlist0,inlist4,
-      approved_1(id),words(sim)`;
+      approved_1(id),words(sim), approve_au`;
 
-      const { data, count, error } = await supabase
-        .from("combine")
-        .select(select)
-        .or(or);
-      // .ilike("word", spelling)
-      // .contains("pids", filter_pids) //
-      // .overlaps("pos", filter_pos)
-      // .eq("combine_id", combine_id)
-      // .eq("inlist4", this.restrict_to === "list4" ? true : false)
-      // .order("word", { ascending: true })
-      // .order("id", { ascending: true })
-      // .limit(10);
+      let query = supabase.from("combine").select(select);
 
+      if (or.length > 0) {
+        query = query.or(or);
+      } else {
+        return;
+      }
+
+      const { data, count, error } = await query;
+
+      if (data === null) return;
       console.log("data", data);
       // this.more_data = data;
       this.actual_words = data;
+    },
+
+    async approve(word) {
+      //
+      console.log(word);
+      await this.markCorrectCOMBINE(word);
+    },
+
+    async markCorrectCOMBINE(word) {
+      if (word["approve_loading"]) {
+        return;
+      }
+      word["approve_loading"] = true;
+      let session = await supabase.auth.getSession();
+      let email = session?.data?.session.user.email;
+
+      let combine_id = word.id;
+      let word_id = word.word_id;
+      let by = [email];
+
+      let insert_data = {
+        word_id: word_id,
+        combine_id: combine_id,
+        by: by,
+      };
+
+      let view = undefined;
+      view = this.$refs[combine_id + "-review"];
+
+      if (view[0] === undefined) {
+        return;
+      }
+
+      let given_pids = view[0].pids;
+      let current_pids = view[0].use_pids;
+
+      if (given_pids.toString() !== current_pids.toString()) {
+        insert_data["pids_changed"] = true;
+        this.trackMods({
+          data: insert_data,
+          type: "phoneme",
+          from_pids: given_pids,
+          to_pids: current_pids,
+        });
+      }
+
+      let current_letters = view[0].ordered_letters[view[0].variation_index];
+      let letters_changed = view[0].letters_changed;
+      if (letters_changed) {
+        insert_data["lids_changed"] = true;
+      } else if (view[0].letters.length > 1) {
+        // note down letters.. or
+      }
+
+      // console.log("current_letters", current_letters);
+
+      if (view[0].valid_letters === false) {
+        alert("non valid letters");
+        return;
+      }
+
+      insert_data["pids"] = current_pids;
+      insert_data["lids"] = current_letters;
+
+      console.log("insert_data", insert_data);
+
+      let error = await this.approveRecord(word, insert_data);
+      if (error !== null) {
+        return;
+      }
+
+      await this.approveTable(insert_data);
+      word["approve_loading"] = false;
+      word["approved"] = true;
+    },
+
+    async approveRecord(word, insert_data) {
+      let update = {
+        id: word.id,
+        approve_au: true,
+        lids: [insert_data["lids"]],
+      };
+      if (insert_data["pids_changed"]) {
+        update["pids"] = insert_data["pids"];
+        update["pids_reject"] = word.pids;
+      }
+      const { data, error } = await supabase.from("combine").upsert(update);
+
+      return error;
+    },
+
+    async approveTable(insert_data) {
+      let check = await this.checkExistsCOMBINE(insert_data);
+      if (check !== null && check.length > 0) {
+        let update_data = insert_data;
+        update_data["id"] = check[0].id;
+        update_data["by"] = [...insert_data.by, ...check[0].by];
+        const { data, error } = await supabase
+          .from("approved_1")
+          .upsert(update_data);
+        console.log("update error", error);
+        console.log("update data", data);
+      } else {
+        const { data, error } = await supabase
+          .from("approved_1")
+          .insert(insert_data);
+
+        console.log("error", error);
+        console.log("data", data);
+      }
+    },
+
+    async checkExistsCOMBINE(insert_data) {
+      const { data, error } = await supabase
+        .from("approved_1")
+        .select()
+        .eq("word_id", insert_data.word_id)
+        .eq("combine_id", insert_data.combine_id);
+
+      return data;
+    },
+
+    async trackMods(payload) {
+      // setup table to insert..
+      // console.log("track mods", payload);
+      if (payload.type === "phoneme") {
+        function compareArrays(fromArray, toArray) {
+          const outputArray = [];
+          for (let i = 0; i < fromArray.length; i++) {
+            if (fromArray[i] !== toArray[i]) {
+              outputArray.push({
+                from: fromArray[i],
+                to: toArray[i],
+                // index: i,
+              });
+            }
+          }
+
+          return outputArray;
+        }
+
+        // Example usage:
+        const fromArray = payload.from_pids;
+        const toArray = payload.to_pids;
+
+        if (fromArray.length !== toArray.length) {
+          return;
+        }
+
+        const compare_results = compareArrays(fromArray, toArray);
+        // console.log(compare_results); // Output: [{ from: '1', to: '2', index: 0 }]
+
+        for (let index = 0; index < compare_results.length; index++) {
+          const result = compare_results[index];
+          let check = await this.checkModExists(result);
+          if (check.length > 0) {
+            let update_data = check[0];
+            update_data["count"] = parseInt(update_data["count"]) + 1;
+            const { data, error } = await supabase
+              .from("mods")
+              .upsert(update_data);
+            console.log("update error", error);
+            console.log("update data", data);
+          } else {
+            const { data, error } = await supabase
+              .from("mods")
+              .insert({ ...result, count: 1 });
+            console.log("error", error);
+            console.log("data", data);
+          }
+        }
+      } else {
+      }
+    },
+    async checkModExists(compare_result) {
+      const { data, error } = await supabase
+        .from("mods")
+        .select()
+        .eq("from", compare_result.from)
+        .eq("to", compare_result.to);
+
+      return data;
     },
   },
 });

@@ -1,0 +1,290 @@
+[
+	{
+		"list_id": 0,
+		"respell": "a"
+	},
+	{
+		"list_id": 9,
+		"respell": "eer"
+	},
+	{
+		"list_id": 10,
+		"respell": "ur"
+	},
+	{
+		"list_id": 11,
+		"respell": "f"
+	},
+	{
+		"list_id": 12,
+		"respell": "g"
+	},
+	{
+		"list_id": 13,
+		"respell": "gz"
+	},
+	{
+		"list_id": "13a",
+		"respell": "gzh"
+	},
+	{
+		"list_id": 14,
+		"respell": "h"
+	},
+	{
+		"list_id": 15,
+		"respell": "i"
+	},
+	{
+		"list_id": 16,
+		"respell": "eye"
+	},
+	{
+		"list_id": 17,
+		"respell": "j"
+	},
+	{
+		"list_id": 1,
+		"respell": "ay"
+	},
+	{
+		"list_id": 18,
+		"respell": "k"
+	},
+	{
+		"list_id": 19,
+		"respell": "ks"
+	},
+	{
+		"list_id": 20,
+		"respell": "l"
+	},
+	{
+		"list_id": 21,
+		"respell": "m"
+	},
+	{
+		"list_id": 22,
+		"respell": "n"
+	},
+	{
+		"list_id": 23,
+		"respell": "ng"
+	},
+	{
+		"list_id": 24,
+		"respell": "o"
+	},
+	{
+		"list_id": 25,
+		"respell": "oh"
+	},
+	{
+		"list_id": 26,
+		"respell": "oy"
+	},
+	{
+		"list_id": 27,
+		"respell": "uu"
+	},
+	{
+		"list_id": 2,
+		"respell": "air"
+	},
+	{
+		"list_id": 28,
+		"respell": "oo"
+	},
+	{
+		"list_id": 29,
+		"respell": "oh"
+	},
+	{
+		"list_id": 30,
+		"respell": "oo"
+	},
+	{
+		"list_id": 31,
+		"respell": "aw"
+	},
+	{
+		"list_id": 32,
+		"respell": "ow"
+	},
+	{
+		"list_id": 33,
+		"respell": "p"
+	},
+	{
+		"list_id": 34,
+		"respell": "kw"
+	},
+	{
+		"list_id": 35,
+		"respell": "r"
+	},
+	{
+		"list_id": 36,
+		"respell": "s"
+	},
+	{
+		"list_id": 37,
+		"respell": "uh"
+	},
+	{
+		"list_id": 3,
+		"respell": "aa"
+	},
+	{
+		"list_id": 38,
+		"respell": "sh"
+	},
+	{
+		"list_id": 39,
+		"respell": "t"
+	},
+	{
+		"list_id": 40,
+		"respell": "th"
+	},
+	{
+		"list_id": 41,
+		"respell": "dh"
+	},
+	{
+		"list_id": 42,
+		"respell": "u"
+	},
+	{
+		"list_id": 43,
+		"respell": "v"
+	},
+	{
+		"list_id": 44,
+		"respell": "w"
+	},
+	{
+		"list_id": 45,
+		"respell": "y"
+	},
+	{
+		"list_id": 46,
+		"respell": "yoo"
+	},
+	{
+		"list_id": 47,
+		"respell": "yoo"
+	},
+	{
+		"list_id": 91,
+		"respell": "yoo"
+	},
+	{
+		"list_id": 92,
+		"respell": "yoo"
+	},
+	{
+		"list_id": 4,
+		"respell": "b"
+	},
+	{
+		"list_id": 48,
+		"respell": "z"
+	},
+	{
+		"list_id": 49,
+		"respell": "zh"
+	},
+	{
+		"list_id": 52,
+		"respell": "dy"
+	},
+	{
+		"list_id": 55,
+		"respell": "ny"
+	},
+	{
+		"list_id": 56,
+		"respell": "sy"
+	},
+	{
+		"list_id": 57,
+		"respell": "ty"
+	},
+	{
+		"list_id": 5,
+		"respell": "ch"
+	},
+	{
+		"list_id": 60,
+		"respell": "uhl"
+	},
+	{
+		"list_id": "60a",
+		"respell": "yuh"
+	},
+	{
+		"list_id": "60aa",
+		"respell": "yuu"
+	},
+	{
+		"list_id": "60b",
+		"respell": "tsz"
+	},
+	{
+		"list_id": "60c",
+		"respell": "ksh"
+	},
+	{
+		"list_id": "60d",
+		"respell": "wu"
+	},
+	{
+		"list_id": "60e",
+		"respell": "waa"
+	},
+	{
+		"list_id": "60f",
+		"respell": "gd"
+	},
+	{
+		"list_id": 6,
+		"respell": "d"
+	},
+	{
+		"list_id": 61,
+		"respell": "uhn"
+	},
+	{
+		"list_id": 62,
+		"respell": "uhm"
+	},
+	{
+		"list_id": 63,
+		"respell": "kh"
+	},
+	{
+		"list_id": 64,
+		"respell": "ts"
+	},
+	{
+		"list_id": 65,
+		"respell": "dz"
+	},
+	{
+		"list_id": 7,
+		"respell": "e"
+	},
+	{
+		"list_id": 74,
+		"respell": "oo"
+	},
+	{
+		"list_id": 76,
+		"respell": "uhr"
+	},
+	{
+		"list_id": 8,
+		"respell": "ee"
+	}
+]

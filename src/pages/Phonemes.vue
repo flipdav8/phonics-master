@@ -73,6 +73,12 @@
               <div v-if="col.name === 'actions'">
                 <q-btn no-caps @click="edit(props.row)">Edit</q-btn>
                 <q-btn no-caps @click="clone(props.row)">Clone</q-btn>
+                <q-btn no-caps @click="playAzure(props.row)">Play</q-btn>
+                <q-icon
+                  name="mdi-check"
+                  size="xs"
+                  v-if="props.row['tts']"
+                ></q-icon>
               </div>
               <div v-else-if="col.name === 'icon_name'">
                 <span v-if="props.row['classes'] != undefined">
@@ -111,7 +117,7 @@
 
                 <component
                   :is="col.value"
-                  :color="'grey-10'"
+                  :color="$q.dark.mode ? 'grey-1' : 'grey-10'"
                   :label="false"
                   :dots="false"
                   :center="true"
@@ -166,10 +172,13 @@
               <!-- <q-btn @click="props.row['replace_with'] = undefined"
                 >remove replce with</q-btn
               > -->
-              <q-btn @click="props.row['test'] = ['a']">change..</q-btn>
+              <!-- <q-btn @click="props.row['test'] = ['a']">change..</q-btn> -->
 
-              <q-btn @click="props.row['extra'] = true">extra</q-btn>
-              <q-btn @click="props.row['redo_round'] = true">redo</q-btn>
+              <div class="hidden">
+                <q-btn @click="props.row['extra'] = true">extra</q-btn>
+                <q-btn @click="props.row['redo_round'] = true">redo</q-btn>
+              </div>
+
               <q-btn @click="playAzure(props.row)">play</q-btn>
 
               <div class="flex q-gutter-md q-ma-sm">
@@ -233,72 +242,84 @@
 
               <div class="flex q-gutter-md q-ma-sm">
                 <q-input
-                  v-model="props.row['accent variations']"
-                  label="accent variations"
+                  v-model="props.row['rspl']"
+                  label="Respellling"
                   outlined
                   dense
                 ></q-input>
               </div>
 
-              <div class="flex q-gutter-md q-ma-sm">
-                <q-input
-                  v-model="props.row['replace_with']"
-                  label="replace with"
-                  outlined
-                  dense
-                ></q-input>
-              </div>
+              <div class="hidden">
+                <div class="flex q-gutter-md q-ma-sm">
+                  <q-input
+                    v-model="props.row['accent variations']"
+                    label="accent variations"
+                    outlined
+                    dense
+                  ></q-input>
+                </div>
 
-              <div class="flex q-gutter-md q-ma-sm">
-                <q-input
-                  v-model="props.row['notes']"
-                  label="notes"
-                  outlined
-                  dense
-                  autogrow
-                  type="textarea"
-                ></q-input>
-              </div>
+                <div class="flex q-gutter-md q-ma-sm">
+                  <q-input
+                    v-model="props.row['replace_with']"
+                    label="replace with"
+                    outlined
+                    dense
+                  ></q-input>
+                </div>
 
-              <div class="flex q-gutter-md q-ma-sm">
-                <q-input
-                  v-model="extra_spelling"
-                  label="more spelling"
-                  outlined
-                  dense
-                ></q-input>
+                <div class="flex q-gutter-md q-ma-sm">
+                  <q-input
+                    v-model="props.row['notes']"
+                    label="notes"
+                    outlined
+                    dense
+                    autogrow
+                    type="textarea"
+                  ></q-input>
+                </div>
 
-                <q-btn @click="props.row['more_spellings'].push(extra_spelling)"
-                  >Add More Spelling</q-btn
-                >
-                <!-- <q-btn @click="props.row['more_spellings'].pop()"
-                  >Remove last Spelling</q-btn
-                > -->
+                <div class="flex q-gutter-md q-ma-sm">
+                  <q-input
+                    v-model="extra_spelling"
+                    label="more spelling"
+                    outlined
+                    dense
+                  ></q-input>
 
-                <!-- <q-btn @click="props.row['more_spellings'] = []"
-                  >Add spellings</q-btn
-                > -->
-              </div>
+                  <q-btn
+                    @click="props.row['more_spellings'].push(extra_spelling)"
+                    >Add More Spelling</q-btn
+                  >
+                  <!-- <q-btn @click="props.row['more_spellings'].pop()"
+                    >Remove last Spelling</q-btn
+                  > -->
 
-              <div class="flex q-gutter-md q-ma-sm">
-                <q-input
-                  v-model="extra_spelling"
-                  label="extra spelling"
-                  outlined
-                  dense
-                ></q-input>
+                  <!-- <q-btn @click="props.row['more_spellings'] = []"
+                    >Add spellings</q-btn
+                  > -->
+                </div>
 
-                <q-btn
-                  @click="props.row['extra_spellings'].push(extra_spelling)"
-                  >Add Extra Spelling</q-btn
-                >
-                <!-- <q-btn @click="props.row['extra_spellings'].pop()"
-                  >Remove last Spelling</q-btn
-                > -->
+                <div class="flex q-gutter-md q-ma-sm">
+                  <q-input
+                    v-model="extra_spelling"
+                    label="extra spelling"
+                    outlined
+                    dense
+                  ></q-input>
 
-                <q-btn @click="props.row['extra_spellings'] = []"
-                  >Add Extra</q-btn
-                >
+                  <q-btn
+                    @click="props.row['extra_spellings'].push(extra_spelling)"
+                    >Add Extra Spelling</q-btn
+                  >
+                  <!-- <q-btn @click="props.row['extra_spellings'].pop()"
+                    >Remove last Spelling</q-btn
+                  > -->
+
+                  <q-btn @click="props.row['extra_spellings'] = []"
+                    >Add Extra</q-btn
+                  >
+                </div>
               </div>
 
               <div style="max-width: 1600px; overflow: hidden">
@@ -365,6 +386,13 @@ export default defineComponent({
           name: "label",
           field: "label",
           label: "label",
+          sortable: true,
+          align: "center",
+        },
+        {
+          name: "rspl",
+          field: "rspl",
+          label: "rspl",
           sortable: true,
           align: "center",
         },
@@ -549,7 +577,7 @@ export default defineComponent({
           },
         })
         .then(function (response) {
-          // console.log("UNITS api", response);
+          // console.log("phonemes", response);
           vm.phonemes = response.data;
           vm.rows = vm.phonemes;
           // vm.createRows
@@ -784,7 +812,12 @@ export default defineComponent({
     },
 
     consoleList() {
-      console.log(this.rows);
+      // console.log(this.rows);
+      console.log(
+        this.rows
+          .filter((e) => e.rspl !== undefined && e.rspl.length > 0)
+          .map((e) => ({ list_id: e.list_id, respell: e.rspl }))
+      );
     },
   },
 });

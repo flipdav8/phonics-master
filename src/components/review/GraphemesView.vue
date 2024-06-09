@@ -7,8 +7,18 @@
     >
       modifications made.. load todo..
     </div>
+
     <div class="flex row" v-for="(group, i) in ordered_letters" :key="i">
       <div class="flex row items-center" v-show="variation_index === i">
+        <q-icon
+          v-if="id !== undefined"
+          :name="pause_propogate ? 'mdi-pause' : 'mdi-animation-play'"
+          class="cursor-pointer"
+          @click="pause_propogate = !pause_propogate"
+        >
+          <q-tooltip>Toggle changes to apply to other forms</q-tooltip>
+        </q-icon>
+
         <div class="flex row" v-for="(l, idx) in group" :key="idx">
           <q-chip
             size="md"
@@ -48,7 +58,9 @@
             ></component>
             <div v-else>
               <q-icon name="mdi-help"> </q-icon>
-              {{ phonemes.find((e) => e.list_id == use_pids[idx]).label }}
+              <span v-if="use_pids[idx] !== undefined">
+                {{ phonemes.find((e) => e.list_id == use_pids[idx]).label }}
+              </span>
             </div>
             <q-badge
               floating
@@ -85,6 +97,42 @@
       </div>
     </div>
 
+    <!-- FINal mods -->
+    <div v-if="mod" class="q-my-md">
+      <div class="flex row items-center">
+        <div class="flex row" v-for="(pat, idx) in final_pattern" :key="idx">
+          <q-chip size="md" class="q-mt-md q-pa-none" square>
+            <!-- v-show="mod_changes.includes(idx)" -->
+            <component
+              v-if="
+                phonemes.find((e) => e.list_id == pat.p)?.icon_name != undefined
+              "
+              :is="phonemes.find((e) => e.list_id == pat.p)?.icon_name"
+              :color="$q.dark.mode ? 'grey-1' : 'grey-10'"
+              :label="false"
+              :dots="false"
+              :center="true"
+              :scale="true"
+              style="border-radius: 10px; font-size: 20px"
+              class="overflow-hidden cursor-pointer"
+            ></component>
+            <div v-else>
+              <q-icon name="mdi-help"> </q-icon>
+              {{ phonemes.find((e) => e.list_id == pat.p).label }}
+            </div>
+            <q-badge
+              floating
+              style="top: -15px"
+              class="q-pa-xs text-black"
+              color="grey"
+            >
+              {{ pat.g }}
+            </q-badge>
+          </q-chip>
+        </div>
+      </div>
+    </div>
+
     <div v-if="letters.length > 1 && show_variations_button" class="col-12">
       <br />
       <div v-if="!letters_changed">
@@ -109,6 +157,10 @@
           <q-btn size="sm" no-caps flat @click="revertChanges()">Reset</q-btn>
         </template>
       </q-banner>
+    </div>
+
+    <div v-if="respell !== null && id === undefined" class="q-mt-md">
+      {{ respell }}
     </div>
 
     <q-dialog v-model="dialog" @hide="closedDialog()">
@@ -151,9 +203,11 @@
                     ></component>
                     <div v-else>
                       <q-icon name="mdi-help"> </q-icon>
-                      {{
-                        phonemes.find((e) => e.list_id == use_pids[idx]).label
-                      }}
+                      <span v-if="use_pids[idx] !== undefined">
+                        {{
+                          phonemes.find((e) => e.list_id == use_pids[idx]).label
+                        }}
+                      </span>
                     </div>
                   </div>
                   <div v-else>
@@ -257,6 +311,11 @@
             :placeholder="`currently: ${ordered_letters[variation_index][mod_index]}`"
           ></q-input>
           <br />
+          <q-item>
+            <q-btn color="red" outline no-caps @click="removePIDs()"
+              >Remove</q-btn
+            >
+          </q-item>
         </q-card-section>
         <q-separator />
         <q-card-section class="flex row">
@@ -281,27 +340,10 @@ import { syncdb } from "src/database/dbCloud";
 import PHONEMES from "/src/components/icons/phonemes.js";
 const phonemes = PHONEMES.list;
 
-function shuffle(array) {
-  let currentIndex = array.length,
-    randomIndex;
+import FINALSTEP from "./final-touches.js";
 
-  // While there remain elements to shuffle.
-  while (currentIndex > 0) {
-    // Pick a remaining element.
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
-  }
-
-  return array;
-}
-
-// import MoveLetters from "/src/components/animations/MoveLetters.vue";
+import ORDER from "./helpers/order";
+import STRESS from "./helpers/stress-respell";
 
 export default defineComponent({
   name: "next-unit",
@@ -316,6 +358,8 @@ export default defineComponent({
     search_phonemes: {},
     approvals: {},
     word: {},
+    form_changes: {},
+    id: {},
   },
   setup() {
     return {
@@ -325,6 +369,7 @@ export default defineComponent({
   data() {
     return {
       pattern: [],
+      final_pattern: [],
       mounted: false,
       icon_name: null,
       stress_array: [],
@@ -347,12 +392,17 @@ export default defineComponent({
       valid_letters: null,
       letters_changed: false,
       show_variations_button: false,
+      mod: false,
+      mod_changes: [],
+      removed_mod_index: null,
+      pause_propogate: false,
+      respell: null,
     };
   },
   mounted() {
-    // this.setupWord();
     if (this.stress != undefined) {
-      this.stress_array = this.stress;
+      this.stress_array = STRESS.makeStressPattern(this.pids, this.stress);
+      this.respell = STRESS.doRespell(this.pids, [this.stress]);
     }
 
     this.orderGraphemes(this.letters);
@@ -362,21 +412,41 @@ export default defineComponent({
     this.phonemes_options = phonemes;
     this.options = this.phonemes_options.filter((e) => e.icon_name != null);
 
+    this.setupFinalWord();
+
     this.mounted = true;
+  },
+
+  watch: {
+    form_changes() {
+      if (this.id !== this.form_changes.id) {
+        // console.log("form_changes", this.form_changes);
+        this.propogateChanges(this.form_changes);
+      }
+    },
   },
   methods: {
     getIconName() {},
 
-    setupWord() {
+    setupFinalWord() {
       let pattern = [];
-      for (let index = 0; index < this.phonemes.length; index++) {
-        const ph = this.phonemes[index];
+      let { pids, lids, mod, changes } = FINALSTEP.finalTouches(
+        this.pids,
+        this.ordered_letters[this.variation_index]
+      );
+
+      this.mod = mod;
+      this.mod_changes = changes;
+
+      for (let index = 0; index < pids.length; index++) {
         pattern.push({
-          letters: this.letters[index],
-          options: shuffle(ph.more_spellings),
+          g: lids[index],
+          p: pids[index],
         });
       }
-      this.pattern = pattern;
+      this.final_pattern = pattern;
+
+      // console.log("this.final_pattern", this.final_pattern);
     },
     changeVariation() {
       if (this.letters_changed) {
@@ -391,74 +461,11 @@ export default defineComponent({
     },
 
     orderGraphemes(letters) {
-      if (letters == undefined) {
-        console.log("no letters?", this.word);
-        this.ordered_letters = [];
-      }
-      if (letters.length > 1) {
-        // console.log("letters", letters);
-        //split spellings
-        //double letters > other combos
-
-        let vowels = ["a", "e", "i", "o", "u"];
-        let touching = [];
-        let not_touching = [];
-
-        let array = JSON.parse(JSON.stringify(letters));
-        for (let index = 0; index < array.length; index++) {
-          const pattern = array[index];
-          let touch_array = [];
-          for (let xx = 0; xx < pattern.length; xx++) {
-            const graphemes = pattern[xx];
-            if (graphemes.includes("-") || graphemes.includes("^")) {
-              touch_array.push(false);
-              break;
-            }
-
-            if (this.word.includes("tion") && graphemes == "ti") {
-              touch_array.push(false);
-              break;
-            }
-            let chars = graphemes.split("");
-
-            let char_types = [];
-            for (let ww = 0; ww < chars.length; ww++) {
-              const char = chars[ww];
-
-              if (vowels.includes(char)) {
-                char_types.push("v");
-              } else {
-                char_types.push("c");
-              }
-            }
-
-            if (char_types.includes("v") && char_types.includes("c")) {
-              touch_array.push(true);
-            } else {
-              touch_array.push(false);
-            }
-          }
-
-          if (touch_array.filter((e) => e).length > 0) {
-            touching.push(pattern);
-          } else {
-            not_touching.push(pattern);
-          }
-        }
-
-        if (this.word === "abandoned") {
-          console.log("not_touching", not_touching);
-          console.log("touching", touching);
-        }
-
-        this.ordered_letters = [...not_touching, ...touching];
-      } else {
-        this.ordered_letters = JSON.parse(JSON.stringify(letters));
-      }
-
-      // this.ordered_letters = JSON.parse(JSON.stringify(letters));
-      // this.ordered_letters = shuffle(letters);
-      // return letters;
+      this.ordered_letters = ORDER.orderGraphemes(
+        letters,
+        this.pids,
+        this.word
+      );
     },
 
     clickPhoneme(index) {
@@ -529,14 +536,15 @@ export default defineComponent({
 
         this.modified_letters.push(this.mod_index);
 
-        let check_with = this.letters[0].filter((e) => e !== "^").join("");
-        let new_word = this.ordered_letters[0]
+        // let check_with = this.letters[0].filter((e) => e !== "^").join("");
+        let check_with = this.word.toLowerCase();
+        let new_word = this.ordered_letters[this.variation_index]
           .filter((e) => e !== "^")
           .join("");
 
         console.log("check_with", check_with);
         console.log("new_word", new_word);
-        if (check_with !== new_word) {
+        if (check_with !== new_word.toLowerCase()) {
           console.log("not yet valid..");
           this.valid_letters = false;
         } else {
@@ -549,6 +557,20 @@ export default defineComponent({
       this.change_letters = "";
 
       this.dialog = false;
+      this.updateFinal();
+
+      if (this.pause_propogate) return;
+
+      this.$emit("changes", {
+        id: this.id,
+        og_pids: this.pids,
+        use_pids: this.use_pids,
+        use_lids: this.ordered_letters[this.variation_index],
+        remove_mod_index: this.removed_mod_index,
+        modified: this.modified,
+        modified_letters: this.modified_letters,
+      });
+      this.removed_mod_index = null;
     },
 
     revertChanges() {
@@ -564,6 +586,81 @@ export default defineComponent({
 
       this.letters_changed = false;
       this.valid_letters = null;
+    },
+
+    removePIDs() {
+      this.dialog = false;
+
+      this.use_pids.splice(this.mod_index, 1);
+      this.ordered_letters[this.variation_index].splice(this.mod_index, 1);
+      this.removed_mod_index = this.mod_index;
+
+      this.mod_index = null;
+      this.change_phoneme = null;
+      this.change_letters = "..";
+
+      this.makeChange();
+    },
+    updateFinal() {
+      // if (this.mod) {
+      let pattern = [];
+      let { pids, lids, mod, changes } = FINALSTEP.finalTouches(
+        this.use_pids,
+        this.ordered_letters[this.variation_index]
+      );
+
+      this.mod = mod;
+      this.mod_changes = changes;
+
+      for (let index = 0; index < pids.length; index++) {
+        pattern.push({
+          g: lids[index],
+          p: pids[index],
+        });
+      }
+      this.final_pattern = pattern;
+      // }
+    },
+
+    propogateChanges(changes) {
+      if (this.pause_propogate) return;
+      ///apply apply if form of
+      if (!changes.og_pids.join("-").includes(this.pids.join("-"))) {
+        console.log("changes", changes);
+
+        let og_length = changes.og_pids.length;
+
+        let keep_ending = this.pids.slice(og_length);
+        let new_use_pids = changes.use_pids.slice();
+        new_use_pids.push(...keep_ending);
+        this.use_pids = new_use_pids;
+
+        let keep_ending_g = this.letters[0].slice(og_length);
+        let new_use_lids = changes.use_lids.slice();
+        new_use_lids.push(...keep_ending_g);
+        this.ordered_letters[this.variation_index] = new_use_lids;
+
+        this.modified = changes.modified;
+        this.modified_letters = changes.modified_letters;
+        console.log("old", this.pids);
+        console.log("new", new_use_pids);
+
+        let check_with = this.word.toLowerCase();
+        let new_word = this.ordered_letters[this.variation_index]
+          .filter((e) => e !== "^")
+          .join("");
+
+        if (check_with !== new_word.toLowerCase()) {
+          this.letters_changed = true;
+          this.valid_letters = false;
+        } else {
+          this.valid_letters = true;
+        }
+
+        if (this.modified_letters.length > 0) {
+          this.letters_changed = true;
+        }
+      }
     },
   },
 });

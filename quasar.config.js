@@ -14,7 +14,7 @@ const {
 } = require('quasar/wrappers');
 
 
-module.exports = configure(function ( /* ctx */ ) {
+module.exports = configure(function ( /* ctx */) {
   require('dotenv').config()
 
   return {
@@ -81,6 +81,9 @@ module.exports = configure(function ( /* ctx */ ) {
         SUPABASE_KEY: process.env.SUPABASE_KEY,
         SUPABASE_URL_EXTRA: process.env.SUPABASE_URL_EXTRA,
         SUPABASE_KEY_EXTRA: process.env.SUPABASE_KEY_EXTRA,
+
+        AI_KEY: process.env.AI_KEY,
+        ELEVEN_KEY: process.env.ELEVEN_KEY,
       },
       // vueRouterBase,
       // vueDevtools,

@@ -3,7 +3,7 @@
 
 
 
-let fileNames = [
+let fileNames1 = [
   "air.svg", "aisle.svg", "ate.svg", "awe.svg", "aye.svg", "bare.svg", "bear.svg", "bee.svg", "be.svg",
   "bight.svg", "bite.svg", "blue.svg", "board-2.svg", "board.svg", "boar.svg", "bold-2.svg", "bolder.svg",
   "bold.svg", "bore-2.svg", "bore.svg", "bough.svg", "boulder.svg", "bow-boat.svg", "bowled.svg", "bow-respect.svg",
@@ -298,6 +298,24 @@ let fileNames = [
 
 ];
 
+let fileNames = ["wry.svg",
+  "tie-2.svg",
+  "tie-1.svg",
+  "thai.svg",
+  "stare.svg",
+  "rye.svg",
+  "read-present-tense.svg",
+  "neigh.svg",
+  "nay.svg",
+  "mourning.svg",
+  "morning.svg",
+  "ghana.svg",
+  "garner.svg",
+  "doe.svg",
+  "buy.svg",
+  "bored-2.svg",
+  "bored-1.svg",]
+
 // let objects = fileNames.map(name => {
 //   let fileNameWithoutExtension = name.split('.')[0];
 //   return {
@@ -310,7 +328,8 @@ let fileNames = [
 // console.log(objects);
 
 
-const list = [{
+const list = [
+  {
     "id": 1,
     "label": "air",
     "value": "a/air",
@@ -2661,6 +2680,114 @@ const list = [{
     "ready": true,
     "text": "",
     "id": 321
+  },
+  {
+    "label": "wry",
+    "value": "w/wry",
+    "ready": true,
+    "id": 337
+  },
+  {
+    "label": "tie-2",
+    "value": "t/tie-2",
+    "ready": true,
+    "id": 338
+  },
+  {
+    "label": "tie-1",
+    "value": "t/tie-1",
+    "ready": true,
+    "id": 339
+  },
+  {
+    "label": "thai",
+    "value": "t/thai",
+    "ready": true,
+    "id": 340
+  },
+  {
+    "label": "stare",
+    "value": "s/stare",
+    "ready": true,
+    "id": 341
+  },
+  {
+    "label": "rye",
+    "value": "r/rye",
+    "ready": true,
+    "id": 342
+  },
+  {
+    "label": "read-present-tense",
+    "value": "r/read-present-tense",
+    "ready": true,
+    "id": 343
+  },
+  {
+    "label": "neigh",
+    "value": "n/neigh",
+    "ready": true,
+    "id": 344
+  },
+  {
+    "label": "nay",
+    "value": "n/nay",
+    "ready": true,
+    "id": 345
+  },
+  {
+    "label": "mourning",
+    "value": "m/mourning",
+    "ready": true,
+    "id": 346
+  },
+  {
+    "label": "morning",
+    "value": "m/morning",
+    "ready": true,
+    "id": 347
+  },
+  {
+    "label": "ghana",
+    "value": "g/ghana",
+    "ready": true,
+    "id": 348
+  },
+  {
+    "label": "garner",
+    "value": "g/garner",
+    "ready": true,
+    "id": 349
+  },
+  {
+    "label": "doe",
+    "value": "d/doe",
+    "ready": true,
+    "id": 350
+  },
+  {
+    "label": "buy",
+    "value": "b/buy",
+    "ready": true,
+    "id": 351
+  },
+  {
+    "label": "bored-2",
+    "value": "b/bored-2",
+    "ready": true,
+    "id": 352
+  },
+  {
+    "label": "bored-1",
+    "value": "b/bored-1",
+    "ready": true,
+    "id": 353
+  },
+  {
+    "label": "dough",
+    "value": "d/dough",
+    "ready": true,
+    "id": 354
   }
 ]
 // let lost = []
@@ -2673,7 +2800,9 @@ const list = [{
 // console.log(lost);
 
 // for (let i = 0; i < list.length; i++) {
-//   list[i].id = i + 1;
+//   if (list[i].id == undefined) {
+//     list[i].id = i + 1;
+//   }
 // }
 
 // list.sort((a, b) => a.label.localeCompare(b.label))

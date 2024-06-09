@@ -8,9 +8,11 @@
       "
       class="column q-gutter-y-sm"
     >
-      <q-btn @click="dashboard()">Dashboard</q-btn>
-      <q-btn @click="dashboardNew()">Dashboard (sample)</q-btn>
-      <q-btn @click="dashboardSupa()">Dashboard 2.1 (supa)</q-btn>
+      <q-btn @click="dashboard()">Dashboard (current)</q-btn>
+      <!-- <q-btn @click="dashboardNew()">Dashboard (sample)</q-btn> -->
+      <q-btn @click="dashboardSupa()"
+        >Dashboard 2.1 (supabase... upcoming version)</q-btn
+      >
       <q-btn @click="gotoPhonemes()">Phonemes</q-btn>
 
       <AuthSupa></AuthSupa>

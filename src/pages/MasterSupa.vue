@@ -285,9 +285,13 @@
                 v-for="col in props.cols"
                 :key="col.name"
                 :props="props"
-                auto-width
+                class="full-width"
               >
-                <div v-if="col.name == 'lttrs'" class="column items-start">
+                <div
+                  v-if="col.name == 'lttrs'"
+                  class="row items-center justify-between"
+                >
+                  <q-space></q-space>
                   <GraphemesView
                     :ref="props.row.id"
                     :letters="props.row.lids"
@@ -301,7 +305,32 @@
                     :approvals="props.row.approved_1"
                     :word="props.row.word"
                   ></GraphemesView>
+                  <q-space></q-space>
+                  <div>
+                    <q-btn
+                      :disable="props.row.approve_au || props.row.approved"
+                      no-caps
+                      flat
+                      color="green"
+                      size="sm"
+                      @click="approve(props.row)"
+                    >
+                      {{
+                        props.row.approve_au || props.row.approved
+                          ? "Approved"
+                          : "Approve"
+                      }}
+                    </q-btn>
+                    <div v-if="props.row.approve_au || props.row.approved">
+                      <q-icon
+                        name="mdi-check-circle"
+                        color="green"
+                        size="md"
+                      ></q-icon>
+                    </div>
+                  </div>
                 </div>
+
                 <!-- <div v-else>{{ col.value }}</div> -->
               </div>
             </q-card-section>
@@ -316,6 +345,15 @@
               ></FormsView>
             </q-card-section>
 
+            <q-card-section class="flex row">
+              <q-separator />
+              <PlaySound
+                :row="props.row"
+                :word="props.row.word"
+                :ref_view="$refs[props.row.id]"
+              ></PlaySound>
+            </q-card-section>
+
             <q-separator />
 
             <q-card-section class="flex row">
@@ -327,22 +365,16 @@
               ></SentenceView>
             </q-card-section>
 
-            <q-separator />
             <q-card-section class="flex row">
-              <!-- <q-btn
-                no-caps
-                flat
-                color="warning"
-                >Incorrect</q-btn
-              >
-              <q-space></q-space>
-              <q-btn
-                no-caps
-                flat
-                color="grey"
-                size="sm"
-                >Skip</q-btn
-              > -->
+              <q-separator />
+              <UploadImage
+                :row="props.row"
+                :word="props.row.word"
+              ></UploadImage>
+            </q-card-section>
+
+            <q-separator />
+            <q-card-section class="flex row hidden">
               <q-space></q-space>
               <q-btn
                 v-if="!props.row.approve_loading"
@@ -381,6 +413,8 @@ import FormsView from "/src/components/review/FormsView.vue";
 import POSview from "/src/components/review/POSview.vue";
 import GlossView from "/src/components/review/GlossView.vue";
 import SentenceView from "/src/components/review/SentenceView.vue";
+import UploadImage from "/src/components/review/UploadImage.vue";
+import PlaySound from "/src/components/review/PlaySound.vue";
 
 // import { createClient } from "@supabase/supabase-js";
 
@@ -393,6 +427,8 @@ import { supabase } from "src/components/supabase/supabase.js";
 
 import pos_options from "/src/components/review/pos-options-groups.json";
 
+import APPROVE from "src/components/review/approve.js";
+
 export default defineComponent({
   name: "IndexPage2.1",
   components: {
@@ -402,6 +438,8 @@ export default defineComponent({
     POSview,
     GlossView,
     SentenceView,
+    UploadImage,
+    PlaySound,
   },
   setup() {
     const accounts = useAccountsStore();
@@ -467,7 +505,7 @@ export default defineComponent({
       select_list: 0,
       ready_lists: [0, 1, 6],
 
-      restrict_to: "list4",
+      restrict_to: "any",
       restrict_options: [
         {
           value: "list4",
@@ -475,7 +513,7 @@ export default defineComponent({
         },
         {
           value: "any",
-          label: "not list4",
+          label: "Any",
         },
       ],
       from_lists: "list6",
@@ -490,7 +528,8 @@ export default defineComponent({
         // },
       ],
 
-      filter_pos: [0, 1, 2, 3, 4],
+      // filter_pos: [0, 1, 2, 3, 4],
+      filter_pos: [],
 
       loading: false,
       search_count: null,
@@ -501,26 +540,19 @@ export default defineComponent({
     // this.setup();
   },
   computed: {
-    // pagesNumber() {
-    //   return Math.ceil(this.rows.length / this.initialPagination.rowsPerPage);
-    // },
+    //
   },
   methods: {
     async makeNewSearchCOMBINE(page) {
       this.loading = true;
       this.search_count = null;
-
       let records_per_page = 100;
       let page_number = 1;
       if (page !== undefined) page_number = page;
       let { from, to } = this.getPagination(page_number - 1, records_per_page);
-      // from = 1;
-      console.log("from", from);
-      console.log("to", to);
-      // return;
 
       let select = `id,word_id,word,pids,lids,pos,stress,lemma,tags,inlist0,inlist4,
-      approved_1(id),words(sim),grammar_forms(*)`;
+      approved_1(id),words(sim),grammar_forms(*), imgs, approve_au`;
       // other_forms(forms)
 
       let restrict = "";
@@ -528,29 +560,41 @@ export default defineComponent({
         restrict = this.restrict_to.replace("list", "");
       }
 
-      let spelling = "%%";
-
-      if (this.search_spelling.length > 0) {
-        spelling = `${this.search_spelling}`;
-      }
-      let filter_pids = this.search_phonemes.map((e) => e.list_id.toString());
-      console.log(this.filter_pos);
-      let filter_pos = this.filter_pos.map((e) => e.toString());
-
-      const { data, count, error } = await supabase
+      let query = supabase
         .from("combine")
         .select(select, { count: "exact" })
-        .ilike("word", spelling)
-        .contains("pids", filter_pids) //
-        .overlaps("pos", filter_pos)
-        // .eq("inlist0", false)
-        .eq("inlist4", true)
-        .eq("lemma", true)
-        // .eq("inlist4", this.restrict_to === "list4" ? true : false)
-        // .order("word", { ascending: true })
-        .order("id", { ascending: true })
+        // .contains("tags", ["m"]) //
+
+        .order("word", { ascending: true });
+
+      if (this.search_spelling.length > 0) {
+        let spelling = "%%";
+        spelling = `${this.search_spelling}`;
+        query = query.ilike("word", spelling);
+      }
+
+      let filter_pids = this.search_phonemes.map((e) => e.list_id.toString());
+      if (filter_pids.length > 0) {
+        query = query.contains("pids", filter_pids); //
+      }
+
+      let filter_pos = this.filter_pos.map((e) => e.toString());
+      if (filter_pos.length > 0) {
+        query = query.contains("pos", filter_pos);
+      }
+
+      if (this.restrict_to !== "any") {
+        query = query.eq("inlist4", true);
+        //  .eq("inlist0", true)
+      }
+
+      let lemma = false;
+      if (lemma) query = query.eq("lemma", true);
+
+      const { data, count, error } = await query
         .limit(records_per_page)
         // .range(1, 2);
+        // .order("id", { ascending: true })
         .range(from, to);
 
       this.serverPages = Math.ceil(count / records_per_page);
@@ -584,6 +628,7 @@ export default defineComponent({
           forms: element.grammar_forms,
           other: element.other_forms,
           sim: element.words.sim,
+          imgs: element.imgs,
           approved_1: element.approved_1,
           approved:
             element.approved_1 == null
@@ -601,6 +646,11 @@ export default defineComponent({
 
         let multi_entry = data.filter((e) => e.word_id === element.word_id);
         if (multi_entry.length > 1) row["multi"] = true;
+
+        // let same_name = data.filter(
+        //   (e) => e.word.toLowerCase() === element.word.toLowerCase()
+        // );
+        // if (same_name.length > 1) { }
 
         rows.push(row);
       }
@@ -669,6 +719,7 @@ export default defineComponent({
     },
 
     async markCorrectCOMBINE(props) {
+      return;
       if (props.row["approve_loading"]) {
         return;
       }
@@ -878,6 +929,18 @@ export default defineComponent({
       // console.log("this.ser", this.serverPagination);
       this.rows = [];
       this.makeNewSearchCOMBINE(this.serverPagination.page);
+    },
+
+    approve(word) {
+      APPROVE.setup(supabase);
+      let ref_view = undefined;
+      let combine_id = word.id;
+      if (this.show_grid) {
+        ref_view = this.$refs[combine_id];
+      } else {
+        ref_view = this.$refs[combine_id + "-table"];
+      }
+      APPROVE.approve(word, ref_view);
     },
   },
 });
